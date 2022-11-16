@@ -1,112 +1,428 @@
 <template>
   <div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto">Form Layout</h2>
+    <h2 class="text-lg font-medium mr-auto">Damaged & Lost Equipment Report</h2>
+    
   </div>
-  <div class="grid grid-cols-12 gap-6 mt-5">
-    <div class="intro-y col-span-12 lg:col-span-6">
-      <!-- BEGIN: Form Layout -->
-      <div class="intro-y box p-5">
-        <div>
-          <label for="crud-form-1" class="form-label">Product Name</label>
-          <input
-            id="crud-form-1"
-            type="text"
-            class="form-control w-full"
-            placeholder="Input text"
-          />
-        </div>
-        <div class="mt-3">
-          <label for="crud-form-2" class="form-label">Category</label>
-          <TomSelect
-            id="crud-form-2"
-            v-model="categories"
-            class="w-full"
-            multiple
+  <div class="mt-2">
+      Modula employees are required to report any damage, loss or theft of company owned and operated equipment as soon as possible. Completed copies of this form must be submitted within 24 hours of an incident. Please note that where an injury occurs as a result of any damage, loss or theft of Modula owned and operated equipment, employees are required to report the incident and notify the Safety Department immediately.
+
+                    </div>
+  <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
+    <div class="intro-y col-span-11 2xl:col-span-9">
+      <!-- BEGIN: Product Information -->
+      <div class="intro-y box p-5 mt-5">
+        <div
+          class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5"
+        >
+          <div
+            class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
           >
-            <option value="1">Sport & Outdoor</option>
-            <option value="2">PC & Laptop</option>
-            <option value="3">Smartphone & Tablet</option>
-            <option value="4">Photography</option>
-          </TomSelect>
-        </div>
-        <div class="mt-3">
-          <label for="crud-form-3" class="form-label">Quantity</label>
-          <div class="input-group">
-            <input
-              id="crud-form-3"
-              type="text"
-              class="form-control"
-              placeholder="Quantity"
-              aria-describedby="input-group-1"
-            />
-            <div id="input-group-1" class="input-group-text">pcs</div>
+            <ChevronDownIcon class="w-4 h-4 mr-2" /> Employee Information
           </div>
-        </div>
-        <div class="mt-3">
-          <label for="crud-form-4" class="form-label">Weight</label>
-          <div class="input-group">
-            <input
-              id="crud-form-4"
-              type="text"
-              class="form-control"
-              placeholder="Weight"
-              aria-describedby="input-group-2"
-            />
-            <div id="input-group-2" class="input-group-text">grams</div>
-          </div>
-        </div>
-        <div class="mt-3">
-          <label class="form-label">Price</label>
-          <div class="sm:grid grid-cols-3 gap-2">
-            <div class="input-group">
-              <div id="input-group-3" class="input-group-text">Unit</div>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Unit"
-                aria-describedby="input-group-3"
-              />
+          <div class="mt-5">
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">Full Name</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="Full-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Full name"
+                />
+               
+              </div>
             </div>
-            <div class="input-group mt-2 sm:mt-0">
-              <div id="input-group-4" class="input-group-text">Wholesale</div>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Wholesale"
-                aria-describedby="input-group-4"
-              />
+            
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">Location</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <select id="category" class="form-select">
+                  <option
+                    v-for="(faker, fakerKey) in $_.take($f(), 9)"
+                    :key="fakerKey"
+                    :value="faker.categories[0].name"
+                  >
+                    {{ faker.categories[0].name }}
+                  </option>
+                </select>
+              </div>
             </div>
-            <div class="input-group mt-2 sm:mt-0">
-              <div id="input-group-5" class="input-group-text">Bulk</div>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Bulk"
-                aria-describedby="input-group-5"
-              />
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Phone Number</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="phone-no"
+                  type="number"
+                  class="form-control"
+                  placeholder="Phone Number"
+                />
+              </div>
+            </div>
+            
+              <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Email</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">Department</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <select id="category" class="form-select">
+                  <option
+                    v-for="(faker, fakerKey) in $_.take($f(), 9)"
+                    :key="fakerKey"
+                    :value="faker.categories[0].name"
+                  >
+                    {{ faker.categories[0].name }}
+                  </option>
+                </select>
+              </div>
+            </div>
+              <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Position/​Title</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Position/​Title"
+                />
+              </div>
+            </div>
+              <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Address</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <div class="relative w-full mx-auto">
+                  <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                        <CalendarIcon class="w-4 h-4" />
+                  </div>
+                  <Litepicker v-model="date" :options="{
+                                    autoApply: false,
+                                    showWeekNumbers: true,
+                                    dropdowns: {
+                                      minYear: 1990,
+                                      maxYear: null,
+                                      months: true,
+                                      years: true,
+                                    },
+                                  }" class="form-control pl-12" />
+                </div>
+                <div class="form-help text-right">Enter the approximate date the item was lost, stolen or damaged.</div>
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Time of Incident</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="time"
+                  type="time"
+                  class="form-control"
+                />
+                <div class="form-help text-right">Enter the approximate time the item was lost, stolen or damaged.</div>
+             
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Date Reported</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <div class="relative w-full mx-auto">
+                  <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                        <CalendarIcon class="w-4 h-4" />
+                  </div>
+                  <Litepicker v-model="date" :options="{
+                                    autoApply: false,
+                                    showWeekNumbers: true,
+                                    dropdowns: {
+                                      minYear: 1990,
+                                      maxYear: null,
+                                      months: true,
+                                      years: true,
+                                    },
+                                  }" class="form-control pl-12" />
+                </div>
+                <div class="form-help text-right">Enter the approximate date the item was lost, stolen or damaged.</div>
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Time Reported</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="time"
+                  type="time"
+                  class="form-control"
+                />
+                <div class="form-help text-right">Enter the approximate time the item was lost, stolen or damaged.</div>
+             
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Police Report </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Police Report "
+                />
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Officer In Charge/​Reporting Officer Name </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Officer In Charge/​Reporting Officer Name "
+                />
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Station Phone </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter Police Report "
+                />
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Police Phone </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter Police Phone"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mt-3">
-          <label>Active Status</label>
-          <div class="form-switch mt-2">
-            <input type="checkbox" class="form-check-input" />
-          </div>
-        </div>
-        <div class="mt-3">
-          <label>Description</label>
-          <div class="mt-2">
-            <ClassicEditor v-model="editorData" :config="editorConfig" />
-          </div>
-        </div>
-        <div class="text-right mt-5">
-          <button type="button" class="btn btn-outline-secondary w-24 mr-1">
-            Cancel
-          </button>
-          <button type="button" class="btn btn-primary w-24">Save</button>
         </div>
       </div>
-      <!-- END: Form Layout -->
+      <!-- END: Product Information -->
+    
+    
+    
+      <div class="flex justify-end flex-col md:flex-row gap-2 mt-5">
+        <button
+          type="button"
+          class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+          class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
+        >
+          Save & Add New Employee
+        </button>
+        <button type="button" class="btn py-3 btn-primary w-full md:w-52">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="intro-y col-span-2 hidden 2xl:block">
+      <div class="pt-10 sticky top-0">
+        <ul
+          class="text-slate-500 relative before:content-[''] before:w-[2px] before:bg-slate-200 before:dark:bg-darkmode-600 before:h-full before:absolute before:left-0 before:z-[-1]"
+        >
+          <li
+            class="mb-4 border-l-2 pl-5 border-primary dark:border-primary text-primary font-medium"
+          >
+            <a href="">Upload Product</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Information</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Detail</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Variant</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Variant (Details)</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Management</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Weight & Shipping</a>
+          </li>
+        </ul>
+        <div
+          class="mt-10 bg-warning/20 dark:bg-darkmode-600 border border-warning dark:border-0 rounded-md relative p-5"
+        >
+          <LightbulbIcon
+            class="w-12 h-12 text-warning/80 absolute top-0 right-0 mt-5 mr-3"
+          />
+          <h2 class="text-lg font-medium">Tips</h2>
+          <div class="mt-5 font-medium">Price</div>
+          <div
+            class="leading-relaxed text-xs mt-2 text-slate-600 dark:text-slate-500"
+          >
+            <div>
+              The image format is .jpg .jpeg .png and a minimum size of 300 x
+              300 pixels (For optimal images use a minimum size of 700 x 700
+              pixels).
+            </div>
+            <div class="mt-2">
+              Select product photos or drag and drop up to 5 photos at once
+              here. Include min. 3 attractive photos to make the product more
+              attractive to buyers.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -114,11 +430,6 @@
 <script setup>
 import { ref } from "vue";
 
-const categories = ref([1, 3]);
-const editorConfig = {
-  toolbar: {
-    items: ["bold", "italic", "link"],
-  },
-};
+const subcategory = ref([]);
 const editorData = ref("<p>Content of the editor.</p>");
 </script>

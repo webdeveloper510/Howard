@@ -13,7 +13,6 @@
         >
           <img
             alt="Midone Tailwind HTML Admin Template"
-            
             src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-"
           />
          

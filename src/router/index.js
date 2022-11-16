@@ -451,7 +451,7 @@ const routes = [
       },
       {
         path: "add-department",
-        name: "side-menu-product-list",
+        name: "side-menu-add-department",
         component: AddDepartment,
       },
       {
@@ -792,7 +792,7 @@ const routes = [
       },
       {
         path: "add-department",
-        name: "side-menu-product-list",
+        name: "side-menu-add-department",
         component: AddDepartment,
       },
       {

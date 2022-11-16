@@ -92,11 +92,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
           },
           {
             icon: "",
-            pageName: "side-menu-add-product",
-            title: "Add Product",
-          },
-          {
-            icon: "",
             pageName: "side-menu-products",
             title: "Products",
             subMenu: [
@@ -314,11 +309,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-update-profile",
             title: "Update profile",
           },
-          {
-            icon: "",
-            pageName: "side-menu-change-password",
-            title: "Change Password",
-          },
         ],
       },
       "devider",
@@ -397,11 +387,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-dropdown",
             title: "Dropdown",
           },
-          {
-            icon: "",
-            pageName: "side-menu-typography",
-            title: "Policies",
-          },
+         
           {
             icon: "",
             pageName: "side-menu-icon",

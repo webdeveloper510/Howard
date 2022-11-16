@@ -432,11 +432,7 @@ export const useSimpleMenuStore = defineStore("simpleMenu", {
             pageName: "simple-menu-dropdown",
             title: "Dropdown",
           },
-          {
-            icon: "",
-            pageName: "simple-menu-typography",
-            title: "Typography",
-          },
+         
           {
             icon: "",
             pageName: "simple-menu-icon",
