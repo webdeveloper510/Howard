@@ -79,7 +79,7 @@ const routes = [
     component: SideMenu,
     children: [
       {
-        path: "/",
+        path: "dashboard-overview-1",
         name: "side-menu-dashboard-overview-1",
         component: DashboardOverview1,
       },
@@ -94,7 +94,7 @@ const routes = [
         component: DashboardOverview3,
       },
       {
-        path: "dashboard-overview-4",
+        path: "/",
         name: "side-menu-dashboard-overview-4",
         component: DashboardOverview4,
       },
@@ -104,7 +104,7 @@ const routes = [
         component: Categories,
       },
       {
-        path: "add-product",
+        path: "add-employee",
         name: "side-menu-add-product",
         component: AddProduct,
       },
@@ -114,7 +114,7 @@ const routes = [
         component: AddDepartment,
       },
       {
-        path: "product-list",
+        path: "employee-list",
         name: "side-menu-product-list",
         component: ProductList,
       },
@@ -139,27 +139,27 @@ const routes = [
         component: SellerList,
       },
       {
-        path: "seller-detail",
+        path: "Training",
         name: "side-menu-seller-detail",
         component: SellerDetail,
       },
       {
-        path: "reviews",
+        path: "Company-Strategy-&-Goals",
         name: "side-menu-reviews",
         component: Reviews,
       },
       {
-        path: "inbox",
+        path: "Announcements_News ",
         name: "side-menu-inbox",
         component: Inbox,
       },
       {
-        path: "file-manager",
+        path: "Task_&_Process_Information ",
         name: "side-menu-file-manager",
         component: FileManager,
       },
       {
-        path: "point-of-sale",
+        path: "Products-&-Services ",
         name: "side-menu-point-of-sale",
         component: PointOfSale,
       },
@@ -184,7 +184,7 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "crud-form",
+        path: "form",
         name: "side-menu-crud-form",
         component: CrudForm,
       },
@@ -194,7 +194,7 @@ const routes = [
         component: UsersLayout1,
       },
       {
-        path: "users-layout-2",
+        path: "Hr-Information",
         name: "side-menu-users-layout-2",
         component: UsersLayout2,
       },
@@ -204,7 +204,7 @@ const routes = [
         component: UsersLayout3,
       },
       {
-        path: "profile-overview-1",
+        path: "profile",
         name: "side-menu-profile-overview-1",
         component: ProfileOverview1,
       },
@@ -224,7 +224,7 @@ const routes = [
         component: WizardLayout1,
       },
       {
-        path: "wizard-layout-2",
+        path: "How_to_use_the_Intranet_Guide ",
         name: "side-menu-wizard-layout-2",
         component: WizardLayout2,
       },
@@ -319,7 +319,7 @@ const routes = [
         component: Notification,
       },
       {
-        path: "tab",
+        path: "Departments ",
         name: "side-menu-tab",
         component: Tab,
       },
@@ -354,7 +354,7 @@ const routes = [
         component: Dropdown,
       },
       {
-        path: "typography",
+        path: "Policies ",
         name: "side-menu-typography",
         component: Typography,
       },

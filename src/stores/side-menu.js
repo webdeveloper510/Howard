@@ -25,19 +25,15 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "Products & Services",
       },
       {
-        icon: "MessageSquareIcon",
-        pageName: "side-menu-chat",
-        title: "Chat",
-      },
-      {
         icon: "FileTextIcon",
         pageName: "side-menu-post",
         title: "Post",
       },
+      
       {
-        icon: "CalendarIcon",
-        pageName: "side-menu-calendar",
-        title: "Calendar",
+        icon: "FilePlusIcon",
+        pageName: "side-menu-wizard-layout-2",
+        title: "How to use the Intranet Guide",
       },
       {
         icon: "FileTextIcon",
@@ -70,12 +66,27 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "Change Password",
       },
       {
-        icon: "UserPlusIcon",
+        icon: "AwardIcon",
+        pageName: "side-menu-reviews",
+        title: "Company Strategy & Goals",
+      },
+      {
+        icon: "WindIcon",
+        pageName: "side-menu-seller-detail",
+        title: "Training",
+      },
+      {
+        icon: "GitlabIcon",
+        pageName: "side-menu-users-layout-2",
+        title: "HR Information",
+      },
+      {
+        icon: "UsersIcon",
         pageName: "side-menu-product-list",
         title: "All Employee",
       },
       {
-        icon: "PlusIcon",
+        icon: "UserPlusIcon",
         pageName: "side-menu-add-product",
         title: "New Hire Onboard",
       },
@@ -90,6 +101,17 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-categories",
             title: "Categories",
           },
+
+      {
+        icon: "MessageSquareIcon",
+        pageName: "side-menu-chat",
+        title: "Chat",
+      },
+      {
+        icon: "CalendarIcon",
+        pageName: "side-menu-calendar",
+        title: "Calendar",
+      }, 
           {
             icon: "",
             pageName: "side-menu-products",
@@ -130,18 +152,10 @@ export const useSideMenuStore = defineStore("sideMenu", {
                 pageName: "side-menu-seller-list",
                 title: "Seller List",
               },
-              {
-                icon: "",
-                pageName: "side-menu-seller-detail",
-                title: "Seller Detail",
-              },
+              
             ],
           },
-          {
-            icon: "",
-            pageName: "side-menu-reviews",
-            title: "Company Strategy & Goals",
-          },
+          
         ],
       },
       {
@@ -171,11 +185,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-users-layout-1",
             title: "Layout 1",
           },
-          {
-            icon: "",
-            pageName: "side-menu-users-layout-2",
-            title: "Layout 2",
-          },
+          
           {
             icon: "",
             pageName: "side-menu-users-layout-3",
@@ -199,11 +209,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
                 pageName: "side-menu-wizard-layout-1",
                 title: "Layout 1",
               },
-              {
-                icon: "",
-                pageName: "side-menu-wizard-layout-2",
-                title: "Layout 2",
-              },
+              
               {
                 icon: "",
                 pageName: "side-menu-wizard-layout-3",

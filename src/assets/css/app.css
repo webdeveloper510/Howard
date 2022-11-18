@@ -148,3 +148,15 @@
 @import "./components/_source-preview.css";
 @import "./components/_full-calendar.css";
 @import "./components/_pristine.css";
+
+
+.tns-outer .tns-controls button[data-controls="next"] {
+  right: 22px;
+}
+.tns-outer .tns-controls button[data-controls="prev"] {
+  left: 22px;
+}
+
+.landing {
+  background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+}
