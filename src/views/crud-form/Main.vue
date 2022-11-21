@@ -4,9 +4,12 @@
     
   </div>
   <div class="mt-2">
-      Modula employees are required to report any damage, loss or theft of company owned and operated equipment as soon as possible. Completed copies of this form must be submitted within 24 hours of an incident. Please note that where an injury occurs as a result of any damage, loss or theft of Modula owned and operated equipment, employees are required to report the incident and notify the Safety Department immediately.
-
-                    </div>
+      Modula employees are required to report any damage, loss or theft of company owned and
+       operated equipment as soon as possible. Completed copies of this form must be submitted 
+       within 24 hours of an incident. Please note that where an injury occurs as a result of any
+        damage, loss or theft of Modula owned and operated equipment, employees are required to 
+        report the incident and notify the Safety Department immediately.
+    </div>
   <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
     <div class="intro-y col-span-11 2xl:col-span-9">
       <!-- BEGIN: Product Information -->
@@ -159,9 +162,27 @@
                 />
               </div>
             </div>
-              <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
+              <div     
+                class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Address</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="password"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Position/​Title"
+                />
+                <div class="form-help text-right">Only complete this box if you are not located in the Lewiston or Franklin offices. If you work remotely from home,
+                   or travel as a sales rep, etc, then complete this address field.</div>
+              </div>
+            </div>
+            <div          class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"            >
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
@@ -204,8 +225,7 @@
                   type="time"
                   class="form-control"
                 />
-                <div class="form-help text-right">Enter the approximate time the item was lost, stolen or damaged.</div>
-             
+                <div class="form-help text-right">Enter the approximate time the item was lost, stolen or damaged.</div>           
               </div>
             </div>
             <div
@@ -351,7 +371,7 @@
           type="button"
           class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
         >
-          Save & Add New Employee
+          Save & Add Report
         </button>
         <button type="button" class="btn py-3 btn-primary w-full md:w-52">
           Save

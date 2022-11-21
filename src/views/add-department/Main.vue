@@ -14,7 +14,7 @@
             class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
           >
             <ChevronDownIcon class="w-4 h-4 mr-2" /> Department Information
-          </div>
+          </div> 
           <div class="mt-5">
            
             <div
@@ -47,6 +47,34 @@
               
               
           </div>
+
+          <div class="mt-5">
+           
+           <div
+             class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+           >
+             <div class="form-label xl:w-64 xl:!mr-10">
+               <div class="text-left">
+                 <div class="flex items-center">
+                   <div class="font-medium">Department Description</div>
+                   
+                 </div>
+               </div>
+             </div>
+             <div class="w-full mt-3 xl:mt-0 flex-1">
+              <textarea
+                      id="update-profile-form-5"
+                      class="form-control"
+                      placeholder="Enter Department Description"
+                      rows="4"></textarea>
+             </div>
+           </div>
+          
+           
+             
+             
+             
+         </div>
         </div>
       </div>
       <!-- END: Product Information -->

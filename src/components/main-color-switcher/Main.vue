@@ -12,7 +12,7 @@
       :class="{
         'border-slate-300 dark:border-darkmode-800/80':
           colorScheme == 'default',
-        'border-white dark:border-darkmode-600': colorScheme != 'default',
+        'border-white dark:border-darkmode-600': colorScheme != 'theme-3',
       }"
     ></a>
     <a
@@ -39,7 +39,7 @@
       :class="{
         'border-slate-300 dark:border-darkmode-800/80':
           colorScheme == 'theme-3',
-        'border-white dark:border-darkmode-600': colorScheme != 'theme-3',
+        'border-white dark:border-darkmode-600': colorScheme != ' default',
       }"
     ></a>
     <a

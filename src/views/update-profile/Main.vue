@@ -176,6 +176,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Adress"
+                      rows="4"
                     >
 10 Anson Road, International Plaza, #10-11, 079903 Singapore, Singapore</textarea
                     >

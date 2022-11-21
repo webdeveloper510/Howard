@@ -1,13 +1,13 @@
 <template>
   <div class="py-2">
     <DarkModeSwitcher />
-    <MainColorSwitcher />
+  
     <MobileMenu />
     <div class="flex mt-[4.7rem] md:mt-0">
       <!-- BEGIN: Side Menu -->
       <nav class="side-nav">
         <router-link
-          :to="{ name: 'side-menu-dashboard-overview-1' }"
+          :to="{ name: 'side-menu-dashboard-overview-4' }"
           tag="a"
           class="intro-x flex items-center pl-5 pt-4"
         >

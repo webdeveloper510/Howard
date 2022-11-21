@@ -160,3 +160,15 @@
 .landing {
   background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
 }
+
+.links svg {
+  height: 97%;
+  padding: 4px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+.landing {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+}
