@@ -12,29 +12,15 @@
           <div
             class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
           >
-            <ChevronDownIcon class="w-4 h-4 mr-2" /> Upload Product
+            <ChevronDownIcon class="w-4 h-4 mr-2" /> Upload Employee
           </div>
           <div class="mt-5">
-            <div class="flex items-center text-slate-500">
-              <span><LightbulbIcon class="w-5 h-5 text-warning" /></span>
-              <div class="ml-2">
-                <span class="mr-1"
-                  >Avoid selling counterfeit products / violating Intellectual
-                  Property Rights, so that your products are not deleted.</span
-                >
-                <a
-                  href="https://themeforest.net/item/midone-jquery-tailwindcss-html-admin-template/26366820"
-                  class="text-primary font-medium"
-                  target="blank"
-                  >Learn More</a
-                >
-              </div>
-            </div>
+            
             <div class="form-inline items-start flex-col xl:flex-row mt-10">
               <div class="form-label w-full xl:w-64 xl:!mr-10">
                 <div class="text-left">
                   <div class="flex items-center">
-                    <div class="font-medium">Product Photos</div>
+                    <div class="font-medium">Employee Photos</div>
                     <div
                       class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
                     >
@@ -47,11 +33,6 @@
                       300 x 300 pixels (For optimal images use a minimum size of
                       700 x 700 pixels).
                     </div>
-                    <div class="mt-2">
-                      Select product photos or drag and drop up to 5 photos at
-                      once here. Include min. 3 attractive photos to make the
-                      product more attractive to buyers.
-                    </div>
                   </div>
                 </div>
               </div>
@@ -60,9 +41,9 @@
               >
                 <div class="grid grid-cols-10 gap-5 pl-4 pr-5">
                   <div
-                    v-for="(faker, fakerKey) in $_.take($f(), 5)"
+                    v-for="(faker, fakerKey) in $_.take($f(), 1)"
                     :key="fakerKey"
-                    class="col-span-5 md:col-span-2 h-28 relative image-fit cursor-pointer zoom-in"
+                    class="col-span-12 md:col-span-12 h-28 relative image-fit cursor-pointer zoom-in"
                   >
                     <img
                       class="rounded-md"

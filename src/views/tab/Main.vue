@@ -73,7 +73,8 @@
             <td class="text-center">{{ faker.stocks[0] }}</td>
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
-                <a class="flex items-center mr-3" href="javascript:;">
+                <a class="flex items-center mr-3" href="javascript:;"
+                @click="editConfirmationModal = true">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
                 <a
@@ -142,6 +143,57 @@
     </div>
     <!-- END: Pagination -->
   </div>
+  <!-- BEGIN: edit Confirmation Modal -->
+  <Modal
+    :show="editConfirmationModal"
+    @hidden="editConfirmationModal = false"
+  >
+    <ModalBody class="p-0">
+      <div class="p-5">
+        <h3 class="text-center text-2xl font-bold mb-3">Edit Department</h3>
+        <div class="grid grid-cols-12 gap-x-5">
+             <div class="col-span-12 2xl:col-span-6">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Department Name</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Input text"
+                    />
+                </div>
+             <div class="col-span-12">
+                  <div class="mt-3">
+                    <label for="update-profile-form-5" class="form-label"
+                      >Department Description</label
+                    >
+                    <textarea
+                      id="update-profile-form-5"
+                      class="form-control"
+                      placeholder="Adress"
+                      rows="4"
+                    ></textarea
+                    >
+                  </div>
+                </div>
+        </div>
+       </div>
+      <div class="px-5 pb-8 text-right">
+        <button
+          type="button"
+          @click="editConfirmationModal = false"
+          class="btn btn-outline-secondary w-24 mr-1"
+        >
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary w-24">Save</button>
+      </div>
+    </ModalBody>
+  </Modal>
+  <!-- END: edit Confirmation Modal -->
+
+
   <!-- BEGIN: Delete Confirmation Modal -->
   <Modal
     :show="deleteConfirmationModal"
@@ -175,4 +227,5 @@
 import { ref } from "vue";
 
 const deleteConfirmationModal = ref(false);
+const editConfirmationModal = ref(false);
 </script>

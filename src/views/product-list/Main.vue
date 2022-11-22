@@ -106,7 +106,8 @@
             </td>
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
-                <a class="flex items-center mr-3" href="javascript:;">
+                <a class="flex items-center mr-3" href="javascript:;"
+                  @click="editConfirmationModal = true">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
                 <a
@@ -175,6 +176,124 @@
     </div>
     <!-- END: Pagination -->
   </div>
+
+<!-- BEGIN: edit Confirmation Modal -->
+<Modal
+    :show="editConfirmationModal"
+    @hidden="editConfirmationModal = false"
+  >
+    <ModalBody class="p-0">
+      <div class="p-5">
+        <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
+        <div class="grid grid-cols-12 gap-x-5">
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                  <div
+                class="w-full mt-3 xl:mt-0 flex-1 border-2 border-dashed dark:border-darkmode-400 rounded-md pt-4"
+              >
+                <div class="grid grid-cols-10 gap-5 pl-4 pr-5">
+                  <div
+                    v-for="(faker, fakerKey) in $_.take($f(), 1)"
+                    :key="fakerKey"
+                    class="col-span-12 md:col-span-12 h-28 relative image-fit cursor-pointer zoom-in"
+                  >
+                    <img
+                      class="rounded-md"
+                      alt="Midone - HTML Admin Template"
+                      :src="faker.photos[0]"
+                    />
+                    <Tippy
+                      content="Remove this image?"
+                      class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-danger right-0 top-0 -mr-2 -mt-2"
+                    >
+                      <XIcon class="w-4 h-4" />
+                    </Tippy>
+                  </div>
+                </div>
+                <div
+                  class="px-4 pb-4 mt-5 flex items-center justify-center cursor-pointer relative"
+                >
+                  <ImageIcon class="w-4 h-4 mr-2" />
+                  <span class="text-primary mr-1">Upload a file</span> or drag
+                  and drop
+                  <input
+                    id="horizontal-form-1"
+                    type="file"
+                    class="w-full h-full top-0 left-0 absolute opacity-0"
+                  />
+                </div>
+              </div>
+                </div>
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Employee Name</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Input text"
+                    />
+                </div>
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Phone No.</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Input text"
+                    />
+                </div>
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Department</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Input text"
+                    />
+                </div>
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter email"
+                    />
+                </div>
+                <div class="col-span-12 2xl:col-span-6 mt-3">
+                    <label for="update-profile-form-1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      id="update-profile-form-1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Input text"
+                    />
+                </div>
+        </div>
+       </div>
+      <div class="px-5 pb-8 text-right">
+        <button
+          type="button"
+          @click="editConfirmationModal = false"
+          class="btn btn-outline-secondary w-24 mr-1"
+        >
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary w-24">Save</button>
+      </div>
+    </ModalBody>
+  </Modal>
+  <!-- END: edit Confirmation Modal -->
+
   <!-- BEGIN: Delete Confirmation Modal -->
   <Modal
     :show="deleteConfirmationModal"
@@ -208,4 +327,5 @@
 import { ref } from "vue";
 
 const deleteConfirmationModal = ref(false);
+const editConfirmationModal = ref(false);
 </script>
