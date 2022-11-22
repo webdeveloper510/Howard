@@ -20,11 +20,11 @@
           <div class="intro-x text-lg mt-3">
             You may have mistyped the address or the page may have moved.
           </div>
-          <button
+          <a href="/"
             class="intro-x btn py-3 px-4 text-white border-white dark:border-darkmode-400 dark:text-slate-200 mt-10"
           >
             Back to Home
-          </button>
+          </a>
         </div>
       </div>
       <!-- END: Error Page -->
@@ -38,6 +38,6 @@ import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("login").addClass("error-page");
+  dom("body").removeClass("main").removeClass("login").removeClass("landing").addClass("error-page");
 });
 </script>

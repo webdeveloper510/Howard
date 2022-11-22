@@ -177,7 +177,7 @@ watch(
 );
 
 onMounted(() => {
-  dom("body").removeClass("error-page").removeClass("login").addClass("main");
+  dom("body").removeClass("error-page").removeClass("login").removeClass("landing").addClass("main");
   formattedMenu.value = $h.toRaw(sideMenu.value);
 });
 </script>
