@@ -187,41 +187,21 @@
         <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
         <div class="grid grid-cols-12 gap-x-5">
                 <div class="col-span-12 2xl:col-span-6 mt-3">
-                  <div
-                class="w-full mt-3 xl:mt-0 flex-1 border-2 border-dashed dark:border-darkmode-400 rounded-md pt-4"
-              >
-                <div class="grid grid-cols-10 gap-5 pl-4 pr-5">
-                  <div
-                    v-for="(faker, fakerKey) in $_.take($f(), 1)"
-                    :key="fakerKey"
-                    class="col-span-12 md:col-span-12 h-28 relative image-fit cursor-pointer zoom-in"
-                  >
-                    <img
-                      class="rounded-md"
-                      alt="Midone - HTML Admin Template"
-                      :src="faker.photos[0]"
-                    />
-                    <Tippy
-                      content="Remove this image?"
-                      class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-danger right-0 top-0 -mr-2 -mt-2"
-                    >
-                      <XIcon class="w-4 h-4" />
-                    </Tippy>
-                  </div>
+                  <Dropzone ref-key="dropzoneSingleRef" :options="{
+                  url: 'https://httpbin.org/post',
+                  thumbnailWidth: 150,
+                  maxFilesize: 0.5,
+                  maxFiles: 1,
+                  headers: { 'My-Awesome-Header': 'header value' },
+                }" class="dropzone">
+                <div class="text-lg font-medium">
+                    Drop files here or click to upload.
                 </div>
-                <div
-                  class="px-4 pb-4 mt-5 flex items-center justify-center cursor-pointer relative"
-                >
-                  <ImageIcon class="w-4 h-4 mr-2" />
-                  <span class="text-primary mr-1">Upload a file</span> or drag
-                  and drop
-                  <input
-                    id="horizontal-form-1"
-                    type="file"
-                    class="w-full h-full top-0 left-0 absolute opacity-0"
-                  />
+                <div class="text-gray-600">
+                    This is just a demo dropzone. Selected files are
+                    <span class="font-medium">not</span> actually uploaded.
                 </div>
-              </div>
+            </Dropzone>
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
