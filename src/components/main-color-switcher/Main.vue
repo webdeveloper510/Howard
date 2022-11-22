@@ -7,11 +7,11 @@
       Color Scheme
     </div>
     <a
-      @click="switchColorScheme('default')"
+      @click="switchColorScheme('theme-3')"
       class="block w-8 h-8 cursor-pointer bg-blue-800 rounded-full border-4 mr-1 hover:border-slate-200"
       :class="{
         'border-slate-300 dark:border-darkmode-800/80':
-          colorScheme == 'default',
+          colorScheme == 'theme-3',
         'border-white dark:border-darkmode-600': colorScheme != 'theme-3',
       }"
     ></a>
@@ -34,11 +34,11 @@
       }"
     ></a>
     <a
-      @click="switchColorScheme('theme-3')"
+      @click="switchColorScheme('default')"
       class="block w-8 h-8 cursor-pointer bg-cyan-900 rounded-full border-4 mr-1 hover:border-slate-200"
       :class="{
         'border-slate-300 dark:border-darkmode-800/80':
-          colorScheme == 'theme-3',
+          colorScheme == 'default',
         'border-white dark:border-darkmode-600': colorScheme != ' default',
       }"
     ></a>

@@ -15,12 +15,12 @@
       <!-- BEGIN: Product Information -->
       <div class="intro-y box p-5 mt-5">
         <div
-          class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5"
+          class=" dark:border-darkmode-400 rounded-md p-5"
         >
           <div
-            class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
+            class="font-medium text-base flex items-center border-slate-200/60 dark:border-darkmode-400 pb-5"
           >
-            <ChevronDownIcon class="w-4 h-4 mr-2" /> Employee Information
+             Employee Information <ChevronDownIcon class="w-4 h-4 ml-2" />
           </div>
           <div class="mt-5">
             <div
@@ -172,12 +172,12 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <input
-                  id="password"
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter Position/​Title"
-                />
+                <textarea
+                      id="update-profile-form-5"
+                      class="form-control"
+                      placeholder="Address"
+                      rows="4"
+                    ></textarea>
                 <div class="form-help text-right">Only complete this box if you are not located in the Lewiston or Franklin offices. If you work remotely from home,
                    or travel as a sales rep, etc, then complete this address field.</div>
               </div>
@@ -186,7 +186,7 @@
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
-                    <div class="font-medium">Address</div>
+                    <div class="font-medium">Date of Incident</div>
                   </div>
                 </div>
               </div>

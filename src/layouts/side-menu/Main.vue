@@ -1,6 +1,7 @@
 <template>
   <div class="py-2">
     <DarkModeSwitcher />
+    <MainColorSwitcher />
     <MobileMenu />
     <div class="flex mt-[4.7rem] md:mt-0">
       <!-- BEGIN: Side Menu -->
