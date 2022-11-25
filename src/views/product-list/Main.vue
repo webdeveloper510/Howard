@@ -211,7 +211,7 @@
                       id="update-profile-form-1"
                       type="text"
                       class="form-control"
-                      placeholder="Input text"
+                      placeholder="Employee Name"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -220,9 +220,9 @@
                     >
                     <input
                       id="update-profile-form-1"
-                      type="text"
+                      type="number"
                       class="form-control"
-                      placeholder="Input text"
+                      placeholder="Phone No."
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -233,7 +233,7 @@
                       id="update-profile-form-1"
                       type="text"
                       class="form-control"
-                      placeholder="Input text"
+                      placeholder="Department name"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -249,14 +249,12 @@
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
-                      >Password</label
-                    >
+                      >Password</label>
                     <input
                       id="update-profile-form-1"
-                      type="text"
+                      type="password"
                       class="form-control"
-                      placeholder="Input text"
-                    />
+                      placeholder="Input text"/>
                 </div>
         </div>
        </div>
