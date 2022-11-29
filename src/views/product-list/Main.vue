@@ -56,53 +56,53 @@
         </thead>
         <tbody>
           <tr
-            v-for="(faker, fakerKey) in $_.take($f(), 9)"
-            :key="fakerKey"
+          v-for="(employee, index) in employee"
+            :key="index"
             class="intro-x"
           >
           <td>
               {{
-                fakerKey+1
+                index+1
               }}
           </td>
             <td class="w-40">
               <div class="flex">
                 <div class="w-10 h-10 image-fit zoom-in">
-                  <Tippy
+                  <!-- <Tippy
                     tag="img"
                     alt="Midone Tailwind HTML Admin Template"
                     class="rounded-full"
                     :src="faker.images[0]"
-                    :content="`Uploaded at ${faker.dates[0]}`"
-                  />
+                    :content="`Uploaded at ${department.first_name}`"
+                  /> -->
                 </div>
               
               </div>
             </td>
             <td>
               <a href="" class="font-medium whitespace-nowrap">{{
-                faker.products[0].name
+                employee.first_name
               }}</a>
-              <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
-                {{ faker.products[0].category }}
-              </div>
+              <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
+                {{  employee.first_name }}
+              </div> -->
             </td>
-            <td class="text-center">{{ faker.stocks[0] }}</td>
-            <td class="text-center">${{ faker.totals[0] }}</td>
+            <td class="text-center">{{  employee.first_name }}</td>
+            <td class="text-center">{{  employee.department.department_name}}</td>
             <td class="w-40">
               <div
                 class="flex items-center justify-center"
                 :class="{
-                  'text-success': faker.trueFalse[0],
-                  'text-danger': !faker.trueFalse[0],
+                  'text-success': employee.email,
+                  'text-danger': !employee.email,
                 }"
               >
                 <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ faker.trueFalse[0] ? "Active" : "Inactive" }}
+                {{ employee.email }}
               </div>
             </td>
             <td>
-             Password
+              {{ employee.password }}
             </td>
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
@@ -204,8 +204,39 @@
   <!-- END: Delete Confirmation Modal -->
 </template>
 
-<script setup>
+<script>
+
 import { ref } from "vue";
+import axios from 'axios'
+import { API_BASE_URL } from '../../config'
+export default {
+   data() {
+        return {
+            isLoading: true,
+            employee : [],
+             deleteModalOpen:false,
+             departmentId:''
+        }
+    },
+    created() {
+             this.getEmployee();
+        },
+
+      methods: {
+           
+        getEmployee() {
+          console.log(API_BASE_URL)
+             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
+               console.log(res.data.employee)
+               this.employee=res?.data?.employee
+             }).catch((err)=>{
+               console.log(err)
+             })
+            
+           },
+    
+       }
+  }
 
 const deleteConfirmationModal = ref(false);
 </script>

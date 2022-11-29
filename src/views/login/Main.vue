@@ -38,65 +38,74 @@
         <!-- BEGIN: Login Form -->
 
         <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
-          <div
-            class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto"
-          >
-            <h2
-              class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left"
-            >
-              Sign In
-            </h2>
-            <div class="intro-x mt-2 text-slate-400 xl:hidden text-center">
-              A few more clicks to sign in to your account. Manage all your accounts in one place
-            </div>
-            <div class="intro-x mt-8">
-              <input
-                type="text"
-                class="intro-x login__input form-control py-3 px-4 block"
-                placeholder="Email"
-              />
-              <input
-                type="password"
-                class="intro-x login__input form-control py-3 px-4 block mt-4"
-                placeholder="Password"
-              />
-            </div>
+          <form @submit.prevent="onSubmit" class="add-form">
             <div
-              class="intro-x flex text-slate-600 dark:text-slate-500 text-xs sm:text-sm mt-4"
+              class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto"
             >
-              <div class="flex items-center mr-auto">
+              <h2
+                class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left"
+              >
+                Sign In
+              </h2>
+              <div class="intro-x mt-2 text-slate-400 xl:hidden text-center">
+                A few more clicks to sign in to your account. Manage all your accounts in one place
+              </div>
+              <div class="intro-x mt-8">
                 <input
-                  id="remember-me"
-                  type="checkbox"
-                  class="form-check-input border mr-2"
+                  type="text"
+                  class="intro-x login__input form-control py-3 px-4 block"
+                  placeholder="Username"
+                  v-model="fields.username"
                 />
-                <label class="cursor-pointer select-none" for="remember-me"
-                  >Remember me</label
+                <div v-if="errors && errors.username" class="text-danger">{{ errors.username[0] }}</div>
+                <input
+                  type="password"
+                  class="intro-x login__input form-control py-3 px-4 block mt-4"
+                  placeholder="Password"
+                  v-model="fields.password"
+                />
+                <div v-if="errors && errors.password" class="text-danger">{{ errors.password[0] }}</div>
+              </div>
+              <div
+                class="intro-x flex text-slate-600 dark:text-slate-500 text-xs sm:text-sm mt-4"
+              >
+                <div class="flex items-center mr-auto">
+                  <input
+                    id="remember-me"
+                    type="checkbox"
+                    class="form-check-input border mr-2"
+                  />
+                  <label class="cursor-pointer select-none" for="remember-me"
+                    >Remember me</label
+                  >
+                </div>
+                <a href="">Forgot Password?</a>
+              </div>
+              <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
+                    <button type="submit"
+                      class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top"
+                      name="submit"
+                    >
+                      Login
+                  </button>              
+              </div>
+              <div v-if="success" class="alert alert-success mt-3">
+                Message sent!
+            </div>
+              <div
+                class="intro-x mt-10 xl:mt-24 text-slate-600 dark:text-slate-500 text-center xl:text-left"
+              >
+                By signin up, you agree to our
+                <a class="text-primary dark:text-slate-200" href=""
+                  >Terms and Conditions</a
+                >
+                &
+                <a class="text-primary dark:text-slate-200" href=""
+                  >Privacy Policy</a
                 >
               </div>
-              <a href="">Forgot Password?</a>
             </div>
-            <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-              <a href="/"
-                class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top"
-              >
-                Login
-            </a>
-             
-            </div>
-            <div
-              class="intro-x mt-10 xl:mt-24 text-slate-600 dark:text-slate-500 text-center xl:text-left"
-            >
-              By signin up, you agree to our
-              <a class="text-primary dark:text-slate-200" href=""
-                >Terms and Conditions</a
-              >
-              &
-              <a class="text-primary dark:text-slate-200" href=""
-                >Privacy Policy</a
-              >
-            </div>
-          </div>
+        </form>
         </div>
         <!-- END: Login Form -->
       </div>
@@ -104,11 +113,45 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { onMounted } from "vue";
+import axios from 'axios'
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
+import { API_BASE_URL } from '../../config'
+export default {
+  name: 'Test',
+  props: {
+    msg: String
+  },
+  data(){
+    return {
 
+      msg: [],
+      fields: {},
+      errors: {},
+      success: false,
+    }
+  },
+  methods : {
+            onSubmit(e){
+                 e.preventDefault();
+                console.log('yess')
+                var optionAxios = {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    "Access-Control-Allow-Origin": "*"
+                }
+        }
+               // console.log(this.fields)
+                axios.post(`${API_BASE_URL}/login`,this.fields,optionAxios).then((res)=>{
+                    console.log(res)
+                })
+            }
+        }
+
+  
+}
 onMounted(() => {
   dom("body").removeClass("main").removeClass("landing").removeClass("error-page").addClass("login");
 });
