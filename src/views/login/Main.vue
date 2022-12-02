@@ -137,14 +137,7 @@ export default {
             onSubmit(e){
                  e.preventDefault();
                 console.log('yess')
-                var optionAxios = {
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    "Access-Control-Allow-Origin": "*"
-                }
-        }
-               // console.log(this.fields)
-                axios.post(`${API_BASE_URL}/login`,this.fields,optionAxios).then((res)=>{
+                axios.post(`${API_BASE_URL}/login`,this.fields).then((res)=>{
                     console.log(res)
                 })
             }
