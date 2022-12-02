@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <button class="btn btn-primary shadow-md mr-2">Add New User</button>
+      <button class="btn btn-primary shadow-md mr-2">Add New Employee</button>
       <Dropdown>
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
