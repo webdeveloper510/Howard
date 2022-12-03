@@ -2,6 +2,7 @@
   <div class="intro-y flex items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">Add Employee</h2>
   </div>
+  <form @submit.prevent="addEmployee" class="add-form">
   <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
     <div class="intro-y col-span-11 2xl:col-span-9">
       <!-- BEGIN: Uplaod Product -->
@@ -80,10 +81,10 @@
       <div class="intro-y box p-5 mt-5">
         <div
           class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5"
-        >
-          <div
-            class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
-          >
+         >
+              <div
+                class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
+              >
             <ChevronDownIcon class="w-4 h-4 mr-2" /> Employee Information
           </div>
           <div class="mt-5">
@@ -93,7 +94,7 @@
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left">
                   <div class="flex items-center">
-                    <div class="font-medium">Employee Name</div>
+                    <div class="font-medium">First Name</div>
                     <div
                       class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
                     >
@@ -108,11 +109,39 @@
                   id="employee-name"
                   type="text"
                   class="form-control"
-                  placeholder="Employee name"
+                  placeholder="First Name"
+                  v-model="fields.first_name"
                 />
                 <div class="form-help text-right">Maximum character 0/70</div>
               </div>
             </div>
+            <div
+            class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+          >
+            <div class="form-label xl:w-64 xl:!mr-10">
+              <div class="text-left">
+                <div class="flex items-center">
+                  <div class="font-medium">Last Name</div>
+                  <div
+                    class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                  >
+                    Required
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            <div class="w-full mt-3 xl:mt-0 flex-1">
+              <input
+                id="employee-name"
+                type="text"
+                class="form-control"
+                placeholder="Employee name"
+                v-model="fields.last_name"
+              />
+              <div class="form-help text-right">Maximum character 0/70</div>
+            </div>
+          </div>
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -129,13 +158,13 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="category" class="form-select">
+                <select id="category"  v-model="fields.department_id" class="form-select">
                   <option
-                    v-for="(faker, fakerKey) in $_.take($f(), 9)"
+                  v-for="(department, index) in departments"
                     :key="fakerKey"
-                    :value="faker.categories[0].name"
+                    :value="department.id"
                   >
-                    {{ faker.categories[0].name }}
+                    {{ department.department_name }}
                   </option>
                 </select>
               </div>
@@ -155,6 +184,7 @@
                   id="phone-no"
                   type="number"
                   class="form-control"
+                  v-model="fields.phone"
                   placeholder="Phone Number"
                 />
               </div>
@@ -174,6 +204,7 @@
                   id="UserName"
                   type="text"
                   class="form-control"
+                  v-model="fields.employee_id"
                   placeholder="UserName"
                 />
               </div>
@@ -193,6 +224,7 @@
                   id="email"
                   type="email"
                   class="form-control"
+                  v-model="fields.email"
                   placeholder="Email"
                 />
               </div>
@@ -212,10 +244,12 @@
                   id="password"
                   type="password"
                   class="form-control"
+                  v-model="fields.password"
                   placeholder="Password"
                 />
               </div>
             </div>
+        
               <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -227,7 +261,7 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <ClassicEditor v-model="editorData" :config="editorConfig" />
+                  <ClassicEditor v-model="fields.department_id" :config="editorConfig" />
               </div>
             </div>
           </div>
@@ -250,7 +284,7 @@
         >
           Save & Add New Employee
         </button>
-        <button type="button" class="btn py-3 btn-primary w-full md:w-52">
+        <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
           Save
         </button>
       </div>
@@ -322,11 +356,48 @@
       </div>
     </div>
   </div>
+  </form>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
-
+import axios from 'axios'
+import { API_BASE_URL } from '../../config'
 const subcategory = ref([]);
 const editorData = ref("<p>Content of the editor.</p>");
+export default {
+data() {
+        return {
+       msg: [],
+      fields: {},
+      errors: {},
+      success: false,
+        }
+    },
+    created() {
+             this.getDepartments();
+        },
+
+   methods: {
+            getDepartments() {
+                  axios.get(`${API_BASE_URL}/get_department`).then((res)=>{
+                    console.log(res.data.Department)
+                    this.departments=res?.data?.Department
+                  }).catch((err)=>{
+                    console.log(err)
+                  })
+                
+                },
+
+                addEmployee(e){
+                 e.preventDefault();
+                console.log('yess')
+                console.log(this.fields)
+                this.fields.created_by=1
+                axios.post(`${API_BASE_URL}/create_employee`,this.fields).then((res)=>{
+                    console.log(res)
+                })
+            }
+          }
+}
 </script>

@@ -107,13 +107,13 @@
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
                 <a class="flex items-center mr-3" href="javascript:;"
-                  @click="editConfirmationModal = true">
+                  @click="editConfirmationModal =true">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
                 <a
                   class="flex items-center text-danger"
                   href="javascript:;"
-                  @click="deleteConfirmationModal = true"
+                  @click="deleteConfirmationModal =true"
                 >
                   <Trash2Icon class="w-4 h-4 mr-1" /> Delete
                 </a>

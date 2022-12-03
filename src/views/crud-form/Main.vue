@@ -520,7 +520,6 @@ export default {
             },
             createReport(e){
                  e.preventDefault();
-                console.log('yess')
                 this.fields.last_known_location='Test'
                 this.fields.description='Hii'
                 this.fields.resolution='Hii'

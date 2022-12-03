@@ -73,11 +73,11 @@
             <td class="text-center"> {{ department.description }}</td>
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
-                <a class="flex items-center mr-3" href="javascript:;"
-                @click="editConfirmationModal = true">
-                  <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
-                </a>
-                <a
+                      <a class="flex items-center mr-3" href="javascript:;"
+                      @click="editConfirmationModal =true">
+                        <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
+                      </a>
+                                      <a
                   class="flex items-center text-danger"
                   href="javascript:;"
                   @click="openModal(true,department.id)"
@@ -268,10 +268,8 @@ export default {
             }
         }
 
-<<<<<<< HEAD
 }
-=======
+
 const deleteConfirmationModal = ref(false);
 const editConfirmationModal = ref(false);
->>>>>>> 74a3897a632c5e9048c405dea435ca0d419bca36
 </script>
