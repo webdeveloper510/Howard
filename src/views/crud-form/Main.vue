@@ -3,7 +3,7 @@
     <h2 class="text-lg font-medium mr-auto">Damaged & Lost Equipment Report</h2>
     
   </div>
-  <div class="mt-2">
+  <div class="mt-2 intro-y">
       Modula employees are required to report any damage, loss or theft of company owned and
        operated equipment as soon as possible. Completed copies of this form must be submitted 
        within 24 hours of an incident. Please note that where an injury occurs as a result of any

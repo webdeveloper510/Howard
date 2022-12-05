@@ -10,13 +10,13 @@ import Categories from "../views/categories/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
 import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
-import ProductList from "../views/product-list/Main.vue";
+import EmployeeList from "../views/Employee-list/Main.vue";
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
 import SellerList from "../views/seller-list/Main.vue";
-import SellerDetail from "../views/seller-detail/Main.vue";
-import Reviews from "../views/reviews/Main.vue";
+import Training from "../views/Training/Main.vue";
+import Goals from "../views/goals/Main.vue";
 import Inbox from "../views/inbox/Main.vue";
 import Task from "../views/task/Main.vue";
 import Products from "../views/Products/Main.vue";
@@ -55,7 +55,7 @@ import Tabulator from "../views/tabulator/Main.vue";
 import Modal from "../views/modal/Main.vue";
 import SlideOver from "../views/slide-over/Main.vue";
 import Notification from "../views/notification/Main.vue";
-import Tab from "../views/tab/Main.vue";
+import DepartmentList from "../views/department-list/Main.vue";
 import Accordion from "../views/accordion/Main.vue";
 import Button from "../views/button/Main.vue";
 import Alert from "../views/alert/Main.vue";
@@ -123,7 +123,7 @@ const routes = [
       {
         path: "employee-list",
         name: "side-menu-product-list",
-        component: ProductList,
+        component: EmployeeList,
       },
       {
         path: "product-grid",
@@ -148,12 +148,12 @@ const routes = [
       {
         path: "Training",
         name: "side-menu-seller-detail",
-        component: SellerDetail,
+        component: Training,
       },
       {
         path: "Company-Strategy-&-Goals",
-        name: "side-menu-reviews",
-        component: Reviews,
+        name: "side-menu-Goals",
+        component: Goals,
       },
       {
         path: "Announcements_News ",
@@ -333,7 +333,7 @@ const routes = [
       {
         path: "Departments ",
         name: "side-menu-tab",
-        component: Tab,
+        component: DepartmentList,
       },
       {
         path: "accordion",
@@ -472,9 +472,9 @@ const routes = [
         component: AddPolicies,
       },
       {
-        path: "product-list",
+        path: "employee-list",
         name: "simple-menu-product-list",
-        component: ProductList,
+        component: EmployeeList,
       },
       {
         path: "product-grid",
@@ -497,14 +497,14 @@ const routes = [
         component: SellerList,
       },
       {
-        path: "seller-detail",
+        path: "Training",
         name: "simple-menu-seller-detail",
-        component: SellerDetail,
+        component: Training,
       },
       {
-        path: "reviews",
-        name: "simple-menu-reviews",
-        component: Reviews,
+        path: "Company-Strategy-&-Goals",
+        name: "simple-menu-Goals",
+        component: Goals,
       },
       {
         path: "inbox",
@@ -677,9 +677,9 @@ const routes = [
         component: Notification,
       },
       {
-        path: "tab",
+        path: "Departments",
         name: "simple-menu-tab",
-        component: Tab,
+        component: DepartmentList,
       },
       {
         path: "accordion",
@@ -818,9 +818,9 @@ const routes = [
         component: AddPolicies,
       },
       {
-        path: "product-list",
+        path: "employee-list",
         name: "top-menu-product-list",
-        component: ProductList,
+        component: EmployeeList,
       },
       {
         path: "product-grid",
@@ -843,14 +843,14 @@ const routes = [
         component: SellerList,
       },
       {
-        path: "seller-detail",
+        path: "Training",
         name: "top-menu-seller-detail",
-        component: SellerDetail,
+        component: Training,
       },
       {
-        path: "reviews",
-        name: "top-menu-reviews",
-        component: Reviews,
+        path: "Company-Strategy-&-Goals",
+        name: "top-menu-Goals",
+        component: Goals,
       },
       {
         path: "inbox",
@@ -1023,9 +1023,9 @@ const routes = [
         component: Notification,
       },
       {
-        path: "tab",
+        path: "Departments",
         name: "top-menu-tab",
-        component: Tab,
+        component: DepartmentList,
       },
       {
         path: "accordion",

@@ -67,7 +67,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
       },
       {
         icon: "AwardIcon",
-        pageName: "side-menu-reviews",
+        pageName: "side-menu-Goals",
         title: "Company Strategy & Goals",
       },
       {
