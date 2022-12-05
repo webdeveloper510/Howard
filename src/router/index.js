@@ -9,6 +9,7 @@ import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
 import AddDepartment from "../views/add-department/Main.vue";
+import AddPolicies from "../views/add-policies/Main.vue";
 import ProductList from "../views/product-list/Main.vue";
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
@@ -17,8 +18,8 @@ import SellerList from "../views/seller-list/Main.vue";
 import SellerDetail from "../views/seller-detail/Main.vue";
 import Reviews from "../views/reviews/Main.vue";
 import Inbox from "../views/inbox/Main.vue";
-import FileManager from "../views/file-manager/Main.vue";
-import PointOfSale from "../views/point-of-sale/Main.vue";
+import Task from "../views/task/Main.vue";
+import Products from "../views/Products/Main.vue";
 import Chat from "../views/chat/Main.vue";
 import Post from "../views/post/Main.vue";
 import Calendar from "../views/calendar/Main.vue";
@@ -34,7 +35,7 @@ import WizardLayout1 from "../views/wizard-layout-1/Main.vue";
 import WizardLayout2 from "../views/wizard-layout-2/Main.vue";
 import WizardLayout3 from "../views/wizard-layout-3/Main.vue";
 import BlogLayout1 from "../views/blog-layout-1/Main.vue";
-import BlogLayout2 from "../views/blog-layout-2/Main.vue";
+import announcements from "../views/announcements/Main.vue";
 import BlogLayout3 from "../views/blog-layout-3/Main.vue";
 import PricingLayout1 from "../views/pricing-layout-1/Main.vue";
 import PricingLayout2 from "../views/pricing-layout-2/Main.vue";
@@ -44,6 +45,7 @@ import FaqLayout1 from "../views/faq-layout-1/Main.vue";
 import FaqLayout2 from "../views/faq-layout-2/Main.vue";
 import FaqLayout3 from "../views/faq-layout-3/Main.vue";
 import Login from "../views/login/Main.vue";
+import PoliciesDetails from "../views/policies/Main.vue";
 import Register from "../views/register/Main.vue";
 import ErrorPage from "../views/error-page/Main.vue";
 import UpdateProfile from "../views/update-profile/Main.vue";
@@ -110,8 +112,13 @@ const routes = [
       },
       {
         path: "add-department",
-        name: "side-menu-product-list1",
+        name: "side-menu-add-department",
         component: AddDepartment,
+      },
+      {
+        path: "add-policies",
+        name: "side-menu-add-policies",
+        component: AddPolicies,
       },
       {
         path: "employee-list",
@@ -156,12 +163,12 @@ const routes = [
       {
         path: "Task_&_Process_Information ",
         name: "side-menu-file-manager",
-        component: FileManager,
+        component: Task,
       },
       {
         path: "Products-&-Services ",
         name: "side-menu-point-of-sale",
-        component: PointOfSale,
+        component: Products,
       },
       {
         path: "chat",
@@ -239,9 +246,14 @@ const routes = [
         component: BlogLayout1,
       },
       {
-        path: "blog-layout-2",
+        path: "PoliciesDetails",
+        name: "side-menu-Policies-details",
+        component: PoliciesDetails,
+      },
+      {
+        path: "Announcements",
         name: "side-menu-blog-layout-2",
-        component: BlogLayout2,
+        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -451,8 +463,13 @@ const routes = [
       },
       {
         path: "add-department",
-        name: "side-menu-add-department",
+        name: "simple-menu-add-department",
         component: AddDepartment,
+      },
+      {
+        path: "add-policies",
+        name: "simple-menu-add-policies",
+        component: AddPolicies,
       },
       {
         path: "product-list",
@@ -495,14 +512,14 @@ const routes = [
         component: Inbox,
       },
       {
-        path: "file-manager",
+        path: "Task_&_Process_Information",
         name: "simple-menu-file-manager",
-        component: FileManager,
+        component: Task,
       },
       {
         path: "point-of-sale",
         name: "simple-menu-point-of-sale",
-        component: PointOfSale,
+        component: Products,
       },
       {
         path: "chat",
@@ -580,9 +597,9 @@ const routes = [
         component: BlogLayout1,
       },
       {
-        path: "blog-layout-2",
+        path: "Announcements",
         name: "simple-menu-blog-layout-2",
-        component: BlogLayout2,
+        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -792,8 +809,13 @@ const routes = [
       },
       {
         path: "add-department",
-        name: "side-menu-add-department",
+        name: "top-menu-add-department",
         component: AddDepartment,
+      },
+      {
+        path: "add-policies",
+        name: "top-menu-add-policies",
+        component: AddPolicies,
       },
       {
         path: "product-list",
@@ -836,14 +858,14 @@ const routes = [
         component: Inbox,
       },
       {
-        path: "file-manager",
+        path: "Task_&_Process_Information",
         name: "top-menu-file-manager",
-        component: FileManager,
+        component: Task,
       },
       {
         path: "point-of-sale",
         name: "top-menu-point-of-sale",
-        component: PointOfSale,
+        component: Products,
       },
       {
         path: "chat",
@@ -921,9 +943,9 @@ const routes = [
         component: BlogLayout1,
       },
       {
-        path: "blog-layout-2",
+        path: "Announcements",
         name: "top-menu-blog-layout-2",
-        component: BlogLayout2,
+        component: announcements,
       },
       {
         path: "blog-layout-3",

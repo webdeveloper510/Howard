@@ -68,18 +68,11 @@
                       placeholder="Enter Department Description"
                       rows="4"></textarea>
              </div>
-           </div>
-          
-           
-             
-             
-             
+           </div>             
          </div>
         </div>
       </div>
       <!-- END: Product Information -->
-    
-    
     
       <div class="flex justify-end flex-col md:flex-row gap-2 mt-5">
         <button

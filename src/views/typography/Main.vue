@@ -6,7 +6,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/add-product">Add Policies</a>
+      <a class="btn btn-primary shadow-md mr-2" href="/add-policies">Add Policies</a>
       
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -54,8 +54,7 @@
                   @click="editConfirmationModal = true">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
-                <a class="flex items-center mr-3" href="javascript:;"
-                  @click="editConfirmationModal = true">
+                <a class="flex items-center mr-3" href="/PoliciesDetails">
                   <EyeIcon class="w-4 h-4 mr-1" /> View
                 </a>
                 <a
@@ -132,77 +131,29 @@
   >
     <ModalBody class="p-0">
       <div class="p-5">
-        <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
+        <h3 class="text-center text-2xl font-bold mb-3">Edit Policies</h3>
         <div class="grid grid-cols-12 gap-x-5">
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                  <Dropzone ref-key="dropzoneSingleRef" :options="{
-                  url: 'https://httpbin.org/post',
-                  thumbnailWidth: 150,
-                  maxFilesize: 0.5,
-                  maxFiles: 1,
-                  headers: { 'My-Awesome-Header': 'header value' },
-                }" class="dropzone">
-                <div class="text-lg font-medium">
-                    Drop files here or click to upload.
-                </div>
-                <div class="text-gray-600">
-                    This is just a demo dropzone. Selected files are
-                    <span class="font-medium">not</span> actually uploaded.
-                </div>
-            </Dropzone>
-                </div>
+              
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
-                      >Employee Name</label
+                      >Policies Name</label
                     >
                     <input
                       id="update-profile-form-1"
                       type="text"
                       class="form-control"
-                      placeholder="Employee Name"
+                      placeholder="Policies Name"
                     />
                 </div>
+                
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
-                      >Phone No.</label
-                    >
-                    <input
-                      id="update-profile-form-1"
-                      type="number"
+                      >Policies Description</label>
+                      <textarea
+                      id="update-profile-form-5"
                       class="form-control"
-                      placeholder="Phone No."
-                    />
-                </div>
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                    <label for="update-profile-form-1" class="form-label"
-                      >Department</label
-                    >
-                    <input
-                      id="update-profile-form-1"
-                      type="text"
-                      class="form-control"
-                      placeholder="Department name"
-                    />
-                </div>
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                    <label for="update-profile-form-1" class="form-label"
-                      >Email</label
-                    >
-                    <input
-                      id="update-profile-form-1"
-                      type="email"
-                      class="form-control"
-                      placeholder="Enter email"
-                    />
-                </div>
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                    <label for="update-profile-form-1" class="form-label"
-                      >Password</label>
-                    <input
-                      id="update-profile-form-1"
-                      type="password"
-                      class="form-control"
-                      placeholder="Input text"/>
+                      placeholder="Enter Policies Description"
+                      rows="4"></textarea>
                 </div>
         </div>
        </div>

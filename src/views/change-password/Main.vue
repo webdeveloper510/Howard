@@ -24,55 +24,12 @@
             </div>
             <div class="text-slate-500">{{ $f()[0].jobs[0] }}</div>
           </div>
-          <Dropdown>
-            <DropdownToggle tag="a" class="w-5 h-5 block" href="javascript:;">
-              <MoreHorizontalIcon class="w-5 h-5 text-slate-500" />
-            </DropdownToggle>
-            <DropdownMenu class="w-56">
-              <DropdownContent>
-                <DropdownHeader> Export Options</DropdownHeader>
-                <DropdownDivider />
-                <DropdownItem>
-                  <ActivityIcon class="w-4 h-4 mr-2" />
-                  English
-                </DropdownItem>
-                <DropdownItem>
-                  <BoxIcon class="w-4 h-4 mr-2" />
-                  Indonesia
-                  <div
-                    class="text-xs text-white px-1 rounded-full bg-danger ml-auto"
-                  >
-                    10
-                  </div>
-                </DropdownItem>
-                <DropdownItem>
-                  <LayoutIcon class="w-4 h-4 mr-2" />
-                  English
-                </DropdownItem>
-                <DropdownItem>
-                  <SidebarIcon class="w-4 h-4 mr-2" />
-                  Indonesia
-                </DropdownItem>
-                <DropdownDivider />
-                <DropdownFooter>
-                  <button type="button" class="btn btn-primary py-1 px-2">
-                    Settings
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary py-1 px-2 ml-auto"
-                  >
-                    View Profile
-                  </button>
-                </DropdownFooter>
-              </DropdownContent>
-            </DropdownMenu>
-          </Dropdown>
+        
         </div>
         <div
-          class="flex items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
+          class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400"
         >
-          <h2 class="font-medium text-base mr-auto">Change Password</h2>
+          
         </div>
         <div class="p-5">
           <div>
