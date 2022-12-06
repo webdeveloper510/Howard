@@ -46,7 +46,7 @@ import FaqLayout2 from "../views/faq-layout-2/Main.vue";
 import FaqLayout3 from "../views/faq-layout-3/Main.vue";
 import Login from "../views/login/Main.vue";
 import PoliciesDetails from "../views/policies/Main.vue";
-import Register from "../views/register/Main.vue";
+import Landing from "../views/landing/Main.vue";
 import ErrorPage from "../views/error-page/Main.vue";
 import UpdateProfile from "../views/update-profile/Main.vue";
 import ChangePassword from "../views/change-password/Main.vue";
@@ -77,7 +77,7 @@ import ImageZoom from "../views/image-zoom/Main.vue";
 
 const routes = [
   {
-    path: "/Howard/",
+    path: "/Howard/ ",
     component: SideMenu,
     children: [
       {
@@ -1126,8 +1126,8 @@ const routes = [
   },
   {
     path: "/Landing",
-    name: "register",
-    component: Register,
+    name: "landing",
+    component: Landing,
   },
   {
     path: "/error-page",

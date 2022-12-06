@@ -1,52 +1,12 @@
 <template>
   <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">Add New Post</h2>
-    <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-      <Dropdown class="mr-2">
-        <DropdownToggle class="btn box flex items-center">
-          English <ChevronDownIcon class="w-4 h-4 ml-2" />
-        </DropdownToggle>
-        <DropdownMenu class="w-40">
-          <DropdownContent>
-            <DropdownItem>
-              <ActivityIcon class="w-4 h-4 mr-2" />
-              <span class="truncate">English</span>
-            </DropdownItem>
-            <DropdownItem>
-              <ActivityIcon class="w-4 h-4 mr-2" />
-              <span class="truncate">Indonesian</span>
-            </DropdownItem>
-          </DropdownContent>
-        </DropdownMenu>
-      </Dropdown>
-      <button
+    <button
         type="button"
-        class="btn box mr-2 flex items-center ml-auto sm:ml-0"
+        class="btn btn-primary mr-2 flex items-center ml-auto sm:ml-0"
       >
-        <EyeIcon class="w-4 h-4 mr-2" /> Preview
+        Save
       </button>
-      <Dropdown>
-        <DropdownToggle class="btn btn-primary shadow-md flex items-center">
-          Save <ChevronDownIcon class="w-4 h-4 ml-2" />
-        </DropdownToggle>
-        <DropdownMenu class="w-40">
-          <DropdownContent>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> As New Post
-            </DropdownItem>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> As Draft
-            </DropdownItem>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> Export to PDF
-            </DropdownItem>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> Export to Word
-            </DropdownItem>
-          </DropdownContent>
-        </DropdownMenu>
-      </Dropdown>
-    </div>
   </div>
   <div class="pos intro-y grid grid-cols-12 gap-5 mt-5">
     <!-- BEGIN: Post Content -->
@@ -103,64 +63,7 @@
                 <ClassicEditor v-model="editorData" />
               </div>
             </div>
-            <div
-              class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5 mt-5"
-            >
-              <div
-                class="font-medium flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
-              >
-                <ChevronDownIcon class="w-4 h-4 mr-2" /> Caption & Images
-              </div>
-              <div class="mt-5">
-                <div>
-                  <label for="post-form-7" class="form-label">Caption</label>
-                  <input
-                    id="post-form-7"
-                    type="text"
-                    class="form-control"
-                    placeholder="Write caption"
-                  />
-                </div>
-                <div class="mt-3">
-                  <label class="form-label">Upload Image</label>
-                  <div
-                    class="border-2 border-dashed dark:border-darkmode-400 rounded-md pt-4"
-                  >
-                    <div class="flex flex-wrap px-4">
-                      <div
-                        v-for="(faker, fakerKey) in $_.take($f(), 4)"
-                        :key="fakerKey"
-                        class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in"
-                      >
-                        <img
-                          class="rounded-md"
-                          alt="Midone Tailwind HTML Admin Template"
-                          :src="faker.images[0]"
-                        />
-                        <Tippy
-                          tag="div"
-                          content="Remove this image?"
-                          class="w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-danger right-0 top-0 -mr-2 -mt-2"
-                        >
-                          <xIcon class="w-4 h-4" />
-                        </Tippy>
-                      </div>
-                    </div>
-                    <div
-                      class="px-4 pb-4 flex items-center cursor-pointer relative"
-                    >
-                      <ImageIcon class="w-4 h-4 mr-2" />
-                      <span class="text-primary mr-1">Upload a file</span> or
-                      drag and drop
-                      <input
-                        type="file"
-                        class="w-full h-full top-0 left-0 absolute opacity-0"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
           </TabPanel>
         </TabPanels>
       </TabGroup>

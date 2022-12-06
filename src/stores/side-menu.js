@@ -8,7 +8,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-dashboard-overview-4",
         title: "Dashboard",
       },
-    
+
       {
         icon: "InboxIcon",
         pageName: "side-menu-blog-layout-2",
@@ -29,7 +29,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-post",
         title: "Post",
       },
-      
+
       {
         icon: "FilePlusIcon",
         pageName: "side-menu-wizard-layout-2",
@@ -95,7 +95,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-chat",
         title: "Chat",
       },
-    
     ],
   }),
 });
