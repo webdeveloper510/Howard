@@ -6,11 +6,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-<<<<<<< HEAD
       <a class="btn btn-primary shadow-md mr-2" href="/add-policies">Add Policies</a>
-=======
-      <a class="btn btn-primary shadow-md mr-2" href="#">Add Policies</a>
->>>>>>> 4a114a9b2d0b3fb277b7685b8a5c04ff0b8c0145
       
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -137,10 +133,6 @@
       <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Policies</h3>
         <div class="grid grid-cols-12 gap-x-5">
-<<<<<<< HEAD
-              
-=======
->>>>>>> 4a114a9b2d0b3fb277b7685b8a5c04ff0b8c0145
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
                       >Policies Name</label
@@ -155,14 +147,6 @@
                 
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
-<<<<<<< HEAD
-                      >Policies Description</label>
-                      <textarea
-                      id="update-profile-form-5"
-                      class="form-control"
-                      placeholder="Enter Policies Description"
-                      rows="4"></textarea>
-=======
                       >Policies Description </label
                     >
                     <textarea
@@ -171,7 +155,6 @@
                             placeholder="Enter Policies Description"
                           
                             rows="4"></textarea>
->>>>>>> 4a114a9b2d0b3fb277b7685b8a5c04ff0b8c0145
                 </div>
                
         </div>

@@ -92,7 +92,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
           <div class="mt-5">
            
            <div
@@ -116,7 +115,7 @@
            </div>             
          </div>
         </div>
-      </div>
+     
       <!-- END: Product Information -->
     
       <div class="flex justify-end flex-col md:flex-row gap-2 mt-5">
@@ -136,11 +135,7 @@
           Save
         </button>
       </div>
-    </div>
-=======
-     
-
->>>>>>> 4a114a9b2d0b3fb277b7685b8a5c04ff0b8c0145
+    
     <div class="intro-y col-span-2 hidden 2xl:block">
       <div class="pt-10 sticky top-0">
         <ul
@@ -207,7 +202,7 @@
         </div>
       </div>
     </div>
-  </div>
+ 
 </form>
 </template>
 <script>
