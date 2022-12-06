@@ -77,7 +77,7 @@ import ImageZoom from "../views/image-zoom/Main.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/Howard/",
     component: SideMenu,
     children: [
       {
