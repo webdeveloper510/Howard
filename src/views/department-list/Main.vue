@@ -55,13 +55,13 @@
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
                       <a class="flex items-center mr-3" href="javascript:;"
-                      @click="editConfirmationModal =true">
+                      @click="openModal(true,department,'edit')">
                         <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                       </a>
-                                      <a
+                <a
                   class="flex items-center text-danger"
                   href="javascript:;"
-                  @click="openModal(true,department.id)"
+                  @click="openModal(true,department,'delete')"
                 >
                   <Trash2Icon class="w-4 h-4 mr-1" /> Delete
                 </a>
@@ -130,46 +130,52 @@
     @hidden="editConfirmationModal = false"
   >
     <ModalBody class="p-0">
-      <div class="p-5">
+      <form @submit.prevent="editDepartment" class="add-form">
+     <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Department</h3>
-        <div class="grid grid-cols-12 gap-x-5">
-             <div class="col-span-12 2xl:col-span-6">
-                    <label for="update-profile-form-1" class="form-label"
-                      >Department Name</label
-                    >
-                    <input
-                      id="update-profile-form-1"
-                      type="text"
-                      class="form-control"
-                      placeholder="Input text"
-                    />
-                </div>
-             <div class="col-span-12">
-                  <div class="mt-3">
-                    <label for="update-profile-form-5" class="form-label"
-                      >Department Description</label
-                    >
-                    <textarea
-                      id="update-profile-form-5"
-                      class="form-control"
-                      placeholder="Adress"
-                      rows="4"
-                    ></textarea
-                    >
-                  </div>
+           <div class="grid grid-cols-12 gap-x-5">
+                    <div class="col-span-12 2xl:col-span-6">
+                        <label for="update-profile-form-1" class="form-label"
+                          >Department Name</label
+                        >
+                        <input
+                          id="update-profile-form-1"
+                          type="text"
+                          class="form-control"
+                          placeholder="Input text"
+                          v-model="form.department_name"
+
+                        />
+                      </div>
+                    <div class="col-span-12">
+                          <div class="mt-3">
+                            <label for="update-profile-form-5" class="form-label"
+                              >Department Description</label
+                            >
+                            <textarea
+                              id="update-profile-form-5"
+                              class="form-control"
+                              placeholder="Adress"
+                              rows="4"
+                              v-model="form.description"
+
+                            ></textarea
+                            >
+                          </div>
+                    </div>
+          </div>
+                <div class="px-5 pb-8 text-right">
+                  <button
+                    type="button"
+                    @click="editConfirmationModal = false"
+                    class="btn btn-outline-secondary w-24 mr-1"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary w-24">Save</button>
                 </div>
         </div>
-       </div>
-      <div class="px-5 pb-8 text-right">
-        <button
-          type="button"
-          @click="editConfirmationModal = false"
-          class="btn btn-outline-secondary w-24 mr-1"
-        >
-          Cancel
-        </button>
-        <button type="button" class="btn btn-primary w-24">Save</button>
-      </div>
+      </form>
     </ModalBody>
   </Modal>
   <!-- END: edit Confirmation Modal -->
@@ -211,14 +217,15 @@ export default {
             isLoading: true,
              departments : [],
              deleteModalOpen:false,
+             editConfirmationModal:false,
+             form:{},
              departmentId:''
         }
     },
     created() {
              this.getDepartments();
         },
-    methods: {
-           
+    methods: {           
             getDepartments() {
               axios.get(`${API_BASE_URL}/get_department`).then((res)=>{
                 console.log(res.data.Department)
@@ -228,10 +235,31 @@ export default {
               })
              
             },
-            openModal(type,id){
-              console.log(type,id)
-              this.departmentId=id
-              this.deleteModalOpen=type  
+            editDepartment(e) {
+              console.log(e)
+              console.log(this.form)
+              let body = {}
+              body.department_name = this.form.department_name
+              body.description = this.form.description
+                axios.put(`${API_BASE_URL}/edit_department/${this.form.id}`,body).then((res)=>{
+                  // console.log(res.data.Department)
+                  // this.departments=res?.data?.Department
+                  this.getDepartments()
+                  this.editConfirmationModal=false
+                }).catch((err)=>{
+                  console.log(err)
+                })
+            },
+            openModal(type,data,flag){
+             this.form=data
+             console.log(this.form)
+              if(flag=='edit'){
+                this.editConfirmationModal=type  
+              }
+              else{
+                this.deleteModalOpen=type  
+              }             
+              
             },
             deleteDeparment(id) {
              
