@@ -390,13 +390,13 @@ data() {
                 },
 
                 addEmployee(e){
-                 e.preventDefault();
-                console.log('yess')
-                console.log(this.fields)
-                this.fields.created_by=1
-                axios.post(`${API_BASE_URL}/create_employee`,this.fields).then((res)=>{
-                    console.log(res)
-                })
+                    e.preventDefault();
+                    console.log('yess')
+                    console.log(this.fields)
+                    this.fields.created_by=1
+                    axios.post(`${API_BASE_URL}/create_employee`,this.fields).then((res)=>{
+                        console.log(res)
+                    })
             }
           }
 }
