@@ -1,8 +1,8 @@
 <template>
   <div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto">Add Policies</h2>
+    <h2 class="text-lg font-medium mr-auto">Add Policy</h2>
   </div>
-  <form @submit.prevent="addDepartment" class="add-form">
+  <form @submit.prevent="addPolicy" class="add-form">
   <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20"> 
           <div class="intro-y col-span-11 2xl:col-span-9">
           
@@ -14,7 +14,7 @@
                 <div
                   class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5"
                 >
-                  <ChevronDownIcon class="w-4 h-4 mr-2" /> Policies Information
+                  <ChevronDownIcon class="w-4 h-4 mr-2" /> Policy Information
                 </div> 
               
                 <div class="mt-5">
@@ -25,7 +25,7 @@
                     <div class="form-label xl:w-64 xl:!mr-10">
                       <div class="text-left">
                         <div class="flex items-center">
-                          <div class="font-medium">Policies</div>
+                          <div class="font-medium">Policy Name</div>
                           <div
                             class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
                           >
@@ -39,8 +39,8 @@
                         id="Department"
                         type="text"
                         class="form-control"
-                        v-model="fields.department_name"
-                        placeholder="Policies Name"
+                        v-model="fields.name"
+                        placeholder="Policy Name"
                       />
                     </div>
                   </div>             
@@ -54,7 +54,7 @@
                   <div class="form-label xl:w-64 xl:!mr-10">
                     <div class="text-left">
                       <div class="flex items-center">
-                        <div class="font-medium">Policies Description</div>
+                        <div class="font-medium">Policy Description</div>
                         
                       </div>
                     </div>
@@ -63,7 +63,7 @@
                     <textarea
                             id="update-profile-form-5"
                             class="form-control"
-                            placeholder="Enter Policies Description"
+                            placeholder="Enter Policy Description"
                             v-model="fields.description"
                             rows="4"></textarea>
                   </div>
@@ -83,7 +83,7 @@
                     type="button"
                     class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
                   >
-                    Save & Add New Policies
+                    Save & Add New Policy
                   </button>
                   <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
                     Save
@@ -185,11 +185,10 @@ export default {
     }
   },
   methods : {
-            addDepartment(e){
+            addPolicy(e){
                  e.preventDefault();
-                console.log('yess')
                 console.log(this.fields)
-                axios.post(`${API_BASE_URL}/create_department`,this.fields).then((res)=>{
+                axios.post(`${API_BASE_URL}/policy_create`,this.fields).then((res)=>{
                     console.log(res)
                 })
             }
