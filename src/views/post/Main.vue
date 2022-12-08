@@ -165,16 +165,115 @@
           <input id="post-form-6" class="form-check-input" type="checkbox" />
         </div>
       </div>
+       <!-- END: Basic Notification -->
+      <!-- BEGIN: Success Notification -->
+      <PreviewComponent class="intro-y box mt-5" v-slot="{ toggle }">
+        <div
+          class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
+        >
+          <h2 class="font-medium text-base mr-auto">Success Notification</h2>
+          <div
+            class="form-check form-switch w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0"
+          >
+            <label class="form-check-label ml-0" for="show-example-2"
+              >Show example code</label
+            >
+            <input
+              @click="toggle"
+              class="form-check-input mr-0 ml-3"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div class="p-5">
+          <Preview>
+            <div class="text-center">
+              <!-- BEGIN: Notification Content -->
+              <Notification refKey="successNotification" class="flex">
+                <CheckCircleIcon class="text-success" />
+                <div class="ml-4 mr-4">
+                  <div class="font-medium">Message Saved!</div>
+                  <div class="text-slate-500 mt-1">
+                    The message will be sent in 5 minutes.
+                  </div>
+                </div>
+              </Notification>
+              <!-- END: Notification Content -->
+              <!-- BEGIN: Notification Toggle -->
+              <button
+                class="btn btn-primary"
+                @click="successNotificationToggle"
+              >
+                Show Notification
+              </button>
+              <!-- END: Notification Toggle -->
+            </div>
+          </Preview>
+          <Source>
+            <Highlight>
+              {{ `
+              <!-- BEGIN: Notification Content -->
+              <Notification refKey="successNotification" class="flex">
+                <CheckCircleIcon class="text-success" />
+                <div class="ml-4 mr-4">
+                  <div class="font-medium">Message Saved!</div>
+                  <div class="text-slate-500 mt-1">
+                    The message will be sent in 5 minutes.
+                  </div>
+                </div>
+              </Notification>
+              <!-- END: Notification Content -->
+              <!-- BEGIN: Notification Toggle -->
+              <button
+                class="btn btn-primary"
+                @click="successNotificationToggle"
+              >
+                Show Notification
+              </button>
+              <!-- END: Notification Toggle -->
+              ` }}
+            </Highlight>
+            <Highlight type="javascript" class="mt-5">
+              {{
+                `
+                // Success notification
+                const successNotification = ref();
+                provide("bind[successNotification]", (el) => {
+                  // Binding
+                  successNotification.value = el;
+                });
+                const successNotificationToggle = () => {
+                  // Show notification
+                  successNotification.value.showToast();
+                };
+                `
+              }}
+            </Highlight>
+          </Source>
+        </div>
+      </PreviewComponent>
+      <!-- END: Success Notification -->
     </div>
     <!-- END: Post Info -->
   </div>
+  
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, provide } from "vue";
 
 const categories = ref(["1", "2"]);
 const tags = ref(["1", "2"]);
 const salesReportFilter = ref("");
 const editorData = ref("<p>Content of the editor.</p>");
+// Success notification
+const successNotification = ref();
+provide("bind[successNotification]", (el) => {
+  // Binding
+  successNotification.value = el;
+});
+const successNotificationToggle = () => {
+  // Show notification
+  successNotification.value.showToast();
+};
 </script>

@@ -95,6 +95,16 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-chat",
         title: "Chat",
       },
+      {
+        icon: "LogInIcon",
+        pageName: "login",
+        title: "Login",
+      },
+      {
+        icon: "LayoutIcon",
+        pageName: "landing",
+        title: "Landing",
+      },
     ],
   }),
 });

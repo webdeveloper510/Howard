@@ -28,7 +28,7 @@
 
         <!-- BEGIN: Login Form -->
 
-        <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
+        <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-10">
           <form @submit.prevent="onSubmit" class="add-form">
             <div
               class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
@@ -108,7 +108,11 @@ export default {
 
 
 }
-onMounted(() => {
-  dom("body").addClass("login").removeClass("main").removeClass("landing").removeClass("error-page");
-});
+
 </script>
+<script setup>
+onMounted(() => {
+  dom("body").removeClass("main").addClass("login").removeClass("landing").removeClass("error-page");
+});
+
+</script> 

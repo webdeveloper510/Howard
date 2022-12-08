@@ -10,6 +10,21 @@
         </router-link>
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+           New Employee Onboarding
+        </router-link>
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+          HR Policies
+        </router-link>
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+          Employee Handbook
+        </router-link>
+        <a href="https://access.paylocity.com" class="-intro-x md:flex ml-auto text-white">
+          Paylocity
+        </a>
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+          Employee Relations
+        </router-link>
         <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto">
           <button class="btn box  mr-2 mb-2">
             <UserIcon class="w-4 h-4 mr-2" /> Login
@@ -46,13 +61,10 @@
       </div>
     </div>
     <div class="my-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">Services Us</h2>
+      <h2 class="text-3xl font-medium leading-none mt-3">Corporate Planning Department</h2>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-7">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
+          <p>Corporate planning is a continuous process in which a company first defines its philosophy, mission and vision in a strategic plan, and then uses that plan to direct, monitor and manage the business. Strategic planning, detailed operational planning and performance monitoring are the three components of corporate planning.
           </p>
         </div>
       </div>
@@ -60,37 +72,44 @@
     <!-- BEGIN: FAQ Menu -->
     <a
       href=""
-      class="intro-y col-span-12 lg:col-span-3 box py-10 hover:border-2 hover:border-primary dark:border-primary"
+      class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary"
     >
       <ShieldIcon class="block w-12 h-12 text-primary mx-auto" />
       <div class="font-medium text-center text-base mt-3">
-        Single Application
+        Significance
       </div>
       <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Lorem Ipsum is simply dummy text of the printing
+        Studies prove that companies who do corporate planning perform significantly better than competitors who do not use corporate planning. An annual survey by management consultants Bain and Company continually confirms that executives get more value out of strategic planning than any other management tool.
       </div>
     </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-3 box py-10 hover:border-2 hover:border-primary dark:border-primary">
+    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
       <SendIcon class="block w-12 h-12 text-primary mx-auto" />
       <div class="font-medium text-center text-base mt-3">
-        Multi Application
+        Time Frame
       </div>
       <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Lorem Ipsum is simply dummy text of the printing
+        Strategic plans define the long-term vision and once created, plans are typically reviewed every five to ten years. Business departments do detailed planning annually, and operations groups monitor the results throughout the year.
       </div>
     </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-3 box py-10 hover:border-2 hover:border-primary dark:border-primary">
+    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
       <TrendingUpIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Custom License</div>
+      <div class="font-medium text-center text-base mt-3">Benefits</div>
       <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Lorem Ipsum is simply dummy text of the printing
+        Corporate planning gives companies consistent guidelines for making decisions. When there is a crisis, opportunity or gradual evolution of business circumstances, planning helps a company maintain its strategy.
       </div>
     </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-3 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
+    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
       <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Custom License</div>
+      <div class="font-medium text-center text-base mt-3">Considerations</div>
       <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Lorem Ipsum is simply dummy text of the printing
+        Many companies rely on consultants to facilitate planning.
+      </div>
+    </a>
+    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
+      <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
+      <div class="font-medium text-center text-base mt-3">Expert Insight</div>
+      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
+        It's difficult to assess whether the value of corporate planning offsets the cost. The best measure is to study the performance of companies in relevant industries that have adopted planning.
       </div>
     </a>
     <!-- END: FAQ Menu -->
@@ -131,27 +150,30 @@
       </div>
     </div>
     <div class="py-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">We Completed 1200+ Project yearly</h2>
+      <h2 class="text-3xl font-medium leading-none mt-3">Key Functions of the Purchasing Departments</h2>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-7">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
+          <p>Our purchasing department functions are aligned with the Modula business objectives.  Here are some of the basic purchasing department functions: 
           </p>
+          <ul>
+            <li>Identify business requirements for goods, materials, and services</li>
+            <li>Find reliable suppliers to meet these requirements</li>
+            <li>Negotiate prices, build quality, and delivery terms</li>
+            <li>Set up the order quantities and making bid requests on supply contracts</li>
+            <li>Coordinate delivery and storage operations</li>
+            <li>Run quality control and product testing</li>
+            <li>Manage budgets based on ROIs and payments</li>
+          </ul>
         </div>
       </div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer  p-5 ">
-         
           <h2 class="text-3xl font-medium leading-none pt-1"> Contact Us</h2>
-
           <div class="">
             <p class=" leading-none pt-5">Chase Hill – <a href="mailto:chase.hill@modula.com"> chase.hill@modula.com </a></p>
             <p class=" leading-none pt-5">Shelby Adkins – <a href="mailto:shelby.adkins@modula.com"> shelby.adkins@modula.com </a></p>
             <p class=" leading-none pt-5">Fernando Nardelli – <a href="mailto:fernando.nardelli@modula.com"> fernando.nardelli@modula.com </a></p>
           </div>
-
         </div>
         <div class="col-span-12 md:col-span-6 lg:col-span-6  box p-5">
           <h2 class="text-3xl font-medium text-center leading-none pt-1"> Contact Form</h2>
@@ -339,7 +361,6 @@
 
 <script setup>
 import { onMounted } from "vue";
-import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 
 onMounted(() => {
