@@ -20,7 +20,7 @@
           <div class="intro-x text-lg mt-3">
             You may have mistyped the address or the page may have moved.
           </div>
-          <a href="Howard/"
+          <a href="/"
             class="intro-x btn py-3 px-4 text-white border-white dark:border-darkmode-400 dark:text-slate-200 mt-10"
           >
             Back to Home
