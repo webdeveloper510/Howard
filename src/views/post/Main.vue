@@ -128,18 +128,20 @@
           />
         </div>
         <div class="mt-3">
-          <label for="post-form-3" class="form-label">Categories</label>
+          <label for="post-form-3" class="form-label">Department</label>
           <TomSelect
             id="post-form-3"
             v-model="categories"
             class="w-full"
             multiple
           >
-            <option value="1">Horror</option>
-            <option value="2">Sci-fi</option>
-            <option value="3">Action</option>
-            <option value="4">Drama</option>
-            <option value="5">Comedy</option>
+          <option
+          v-for="(departments, name) in departments"
+          :key="value"
+          :value="departments.id"
+         >
+          {{ departments.department_name }}
+         </option>
           </TomSelect>
         </div>
         <div class="mt-3">
@@ -225,4 +227,39 @@ const successNotificationToggle = () => {
   // Show notification
   successNotification.value.showToast();
 };
+</script>
+
+<script>
+import { ref } from "vue";
+import axios from 'axios'
+import { API_BASE_URL } from '../../config'
+
+export default {
+   data() {
+        return {
+            isLoading: true,
+            departments : [],
+             deleteModalOpen:false,
+             editConfirmationModal:false,
+             form:{},
+             departmentId:''
+        }
+    },
+    created() {
+      this.getDepartments();
+    },
+    methods: {           
+          getDepartments() {
+              axios.get(`${API_BASE_URL}/get_department`).then((res)=>{
+                console.log(res.data.Department)
+                this.departments=res?.data?.Department
+              }).catch((err)=>{
+                console.log(err)
+              })
+             
+            },    
+         
+        }
+
+}
 </script>

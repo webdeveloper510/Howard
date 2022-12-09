@@ -244,8 +244,15 @@ export default {
                 axios.put(`${API_BASE_URL}/edit_department/${this.form.id}`,body).then((res)=>{
                   // console.log(res.data.Department)
                   // this.departments=res?.data?.Department
-                  this.getDepartments()
-                  this.editConfirmationModal=false
+                  if(res.status==200){
+                      this.$toast.success(`Edit Department Successfully!`);
+                      this.getDepartments()
+                      this.editConfirmationModal=false
+                    }
+                    else{
+                      this.$toast.error(`Some error Occure`);
+                    }
+               
                 }).catch((err)=>{
                   console.log(err)
                 })
@@ -267,10 +274,11 @@ export default {
                    console.log('res',res)
               if(res.status==200){
                 this.getDepartments()
-              this.deleteModalOpen=false;
+                this.$toast.success(`Delete Department Successfully!`);
+                this.deleteModalOpen=false;
               }
               else{
-                this.getDepartments()
+              this.getDepartments()
               this.deleteModalOpen=false;
               }
              })

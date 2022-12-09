@@ -33,7 +33,7 @@
           >
           <td>
               {{
-                policy.id
+                index+1
               }}
           </td>
             <td>
@@ -53,7 +53,7 @@
                 @click="openModal(true,policy,'edit')">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
-                <a class="flex items-center mr-3" href="/PoliciesDetails">
+                <a class="flex items-center mr-3" :href="`/PoliciesDetails/${policy.id}`">
                   <EyeIcon class="w-4 h-4 mr-1" /> View
                 </a>
                 <a
@@ -252,8 +252,14 @@ created() {
               body.description = this.form.description
               console.log(body)
                 axios.put(`${API_BASE_URL}/policy_edit/${this.form.id}`,body).then((res)=>{
-                  this.getPolicy()
-                  this.editConfirmationModal=false
+                  if(res.status==200){
+                      this.$toast.success(`Edit Successfully!`);
+                      this.getPolicy()
+                      this.editConfirmationModal=false
+                    }
+                    else{
+                      this.$toast.error(`Some error Occure`);
+                    }
                 }).catch((err)=>{
                   console.log(err)
                 })
@@ -262,11 +268,13 @@ created() {
              axios.delete(`${API_BASE_URL}/policy_delete/${id}`).then((res)=>{
                    console.log('res',res)
               if(res.status==200){
+                this.$toast.success(`Delete Successfully!`);
                 this.getPolicy()
               this.deleteModalOpen=false;
               }
               else{
-                this.getPolicy()
+              this.getPolicy()
+              this.$toast.error(`Some error Occure`);
               this.deleteModalOpen=false;
               }
              })

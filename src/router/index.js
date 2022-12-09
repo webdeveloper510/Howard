@@ -246,7 +246,7 @@ const routes = [
         component: BlogLayout1,
       },
       {
-        path: "PoliciesDetails",
+        path: "PoliciesDetails/:id",
         name: "side-menu-Policies-details",
         component: PoliciesDetails,
       },

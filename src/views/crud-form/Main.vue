@@ -19,11 +19,7 @@
         <div
           class=" dark:border-darkmode-400 rounded-md p-5"
         >
-            <div
-              class="font-medium text-base flex items-center border-slate-200/60 dark:border-darkmode-400 pb-5"
-            >
-              Employee Information <ChevronDownIcon class="w-4 h-4 ml-2" />
-            </div>
+            
           <div class="mt-5">
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
@@ -74,7 +70,7 @@
                 id="Full-name"
                 type="text"
                 class="form-control"
-                placeholder="First name"
+                placeholder="Last name"
                 v-model="fields.last_name"
               />
              
@@ -100,15 +96,13 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="category" v-model="fields.location" class="form-select">
-                  <option
-                    v-for="(faker, fakerKey) in $_.take($f(), 9)"
-                    :key="fakerKey"
-                    :value="faker.categories[0].name"
-                  >
-                    {{ faker.categories[0].name }}
-                  </option>
-                </select>
+                <input
+                id="Full-name"
+                type="text"
+                class="form-control"
+                placeholder="Location"
+                v-model="fields.last_name"
+              />
               </div>
             </div>
             <div
@@ -526,7 +520,12 @@ export default {
                 this.fields.status=1
                 console.log(this.fields)
                 axios.post(`${API_BASE_URL}/demage_report`,this.fields).then((res)=>{
-                    console.log(res)
+                  if(res.status==200){
+                      this.$toast.success(`Report Created Successfully!`);
+                    }
+                    else{
+                      this.$toast.error(`Some error Occure`);
+                    }
                 })
             }
         }
