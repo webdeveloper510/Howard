@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/add-employee">Add Employee</a>
+      <a class="btn btn-primary shadow-md mr-2" href="/add-employee">Edit Employee</a>
       <Dropdown>
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -87,8 +87,8 @@
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{  employee.first_name }}</td>
-            <td class="text-center">{{  employee.department.department_name}}</td>
+            <td class="text-center">{{ employee.first_name }}</td>
+            <td class="text-center">{{ employee.department.department_name}}</td>
             <td class="w-40">
               <div
                 class="flex items-center justify-center"
@@ -107,14 +107,14 @@
             <td class="table-report__action w-56">
               <div class="flex justify-center items-center">
                 <a class="flex items-center mr-3" href="javascript:;"
-                  @click="editConfirmationModal =true">
+                @click="openModal(true,employee,'edit')">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
                 <a
                   class="flex items-center text-danger"
                   href="javascript:;"
-                  @click="deleteConfirmationModal =true"
-                >
+                  @click="openModal(true,employee,'delete')">
+
                   <Trash2Icon class="w-4 h-4 mr-1" /> Delete
                 </a>
               </div>
@@ -183,6 +183,7 @@
     @hidden="editConfirmationModal = false"
   >
     <ModalBody class="p-0">
+      <form @submit.prevent="editEmployee" class="add-form">
       <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
         <div class="grid grid-cols-12 gap-x-5">
@@ -212,6 +213,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Employee Name"
+                      v-model="form.first_name"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -223,6 +225,7 @@
                       type="number"
                       class="form-control"
                       placeholder="Phone No."
+                      v-model="form.phone"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -234,6 +237,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Department name"
+                      v-model="form.department.department_name"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -245,6 +249,7 @@
                       type="email"
                       class="form-control"
                       placeholder="Enter email"
+                      v-model="form.email"
                     />
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
@@ -254,6 +259,7 @@
                       id="update-profile-form-1"
                       type="password"
                       class="form-control"
+                      v-model="form.password"
                       placeholder="Input text"/>
                 </div>
         </div>
@@ -266,8 +272,9 @@
         >
           Cancel
         </button>
-        <button type="button" class="btn btn-primary w-24">Save</button>
+        <button type="submit" class="btn btn-primary w-24">Save</button>
       </div>
+    </form>
     </ModalBody>
   </Modal>
   <!-- END: edit Confirmation Modal -->
@@ -311,7 +318,9 @@ export default {
         return {
             isLoading: true,
             employee : [],
-             deleteModalOpen:false,
+            form:{},
+             deleteConfirmationModal:false,
+             editConfirmationModal:false,
              departmentId:''
         }
     },
@@ -319,8 +328,7 @@ export default {
              this.getEmployee();
         },
 
-      methods: {
-           
+      methods: {           
         getEmployee() {
           console.log(API_BASE_URL)
              axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
@@ -332,11 +340,44 @@ export default {
             
            },
 
+           openModal(type,data,flag){
+             this.form=data
+             console.log(this.form)
+              if(flag=='edit'){
+                this.editConfirmationModal=type  
+              }
+              else{
+                this.deleteConfirmationModal=type  
+              }             
+              
+            },
+
+            editDepartment(e) {
+              console.log(e)
+              console.log(this.form)
+              let body = {}
+              body.department_name = this.form.department_name
+              body.description = this.form.description
+                axios.put(`${API_BASE_URL}/edit_department/${this.form.id}`,body).then((res)=>{
+                  // console.log(res.data.Department)
+                  // this.departments=res?.data?.Department
+                  if(res.status==200){
+                        this.$toast.success(`Employee Update Successfully!`);
+                        this.getDepartments()
+                        this.editConfirmationModal=false
+                      }
+                      else{
+                        this.$toast.error(`Some error Occure`);
+                      }
+               
+                }).catch((err)=>{
+                  console.log(err)
+                })
+            },
+
            
     
        }
   }
 
-const deleteConfirmationModal = ref(false);
-const editConfirmationModal = ref(false);
 </script>

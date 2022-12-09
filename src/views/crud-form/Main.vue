@@ -526,7 +526,12 @@ export default {
                 this.fields.status=1
                 console.log(this.fields)
                 axios.post(`${API_BASE_URL}/demage_report`,this.fields).then((res)=>{
-                    console.log(res)
+                  if(res.status==200){
+                      this.$toast.success(`Report Created Successfully!`);
+                    }
+                    else{
+                      this.$toast.error(`Some error Occure`);
+                    }
                 })
             }
         }

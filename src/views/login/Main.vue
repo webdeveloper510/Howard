@@ -137,7 +137,12 @@ export default {
       e.preventDefault();
       console.log('yess')
       axios.post(`${API_BASE_URL}/login`, this.fields).then((res) => {
-        console.log(res)
+        if(res.status==200){
+            this.$toast.success(`Login Successfully!`);
+          }
+          else{
+            this.$toast.error(`Some error Occure`);
+          }
       })
     }
   }

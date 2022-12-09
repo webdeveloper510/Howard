@@ -112,12 +112,17 @@
 </template>
 <script>
 import { ref, provide } from "vue";
+const successNotification = ref();
 import axios from 'axios'
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
 const subcategory = ref([]);
 const editorData = ref("<p>Content of the editor.</p>");
+provide("bind[successNotification]", (el) => {
+  // Binding
+  successNotification.value = el;
+});
 export default {
   name: 'Test',
   props: {
@@ -138,7 +143,13 @@ export default {
       console.log('yess')
       console.log(this.fields)
       axios.post(`${API_BASE_URL}/create_department`, this.fields).then((res) => {
-        console.log(res)
+        //console.log(res)
+            if(res.status==200){
+              this.$toast.success(`Department Created Successfully!`);
+            }
+            else{
+              this.$toast.error(`Some error Occure`);
+            }
       })
     }
   }

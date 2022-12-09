@@ -226,7 +226,12 @@ export default {
                  e.preventDefault();
                 console.log(this.fields)
                 axios.post(`${API_BASE_URL}/policy_create`,this.fields).then((res)=>{
-                    console.log(res)
+                  if(res.status==200){
+                      this.$toast.success(`Policy Created Successfully!`);
+                    }
+                    else{
+                      this.$toast.error(`Some error Occure`);
+                    }
                 })
             }
         }
