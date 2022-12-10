@@ -136,7 +136,7 @@
                 id="employee-name"
                 type="text"
                 class="form-control"
-                placeholder="Employee name"
+                placeholder="Last name"
                 v-model="fields.last_name"
               />
               <div class="form-help text-right">Maximum character 0/70</div>
@@ -161,7 +161,7 @@
                 <select id="category"  v-model="fields.department_id" class="form-select">
                   <option
                   v-for="(department, index) in departments"
-                    :key="fakerKey"
+                    :key="index"
                     :value="department.id"
                   >
                     {{ department.department_name }}

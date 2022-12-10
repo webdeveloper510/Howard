@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/add-employee">Edit Employee</a>
+      <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-employee">Edit Employee</a>
       <Dropdown>
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -87,7 +87,7 @@
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.first_name }}</td>
+            <td class="text-center">{{ employee.phone }}</td>
             <td class="text-center">{{ employee.department.department_name}}</td>
             <td class="w-40">
               <div
@@ -187,23 +187,7 @@
       <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
         <div class="grid grid-cols-12 gap-x-5">
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                  <Dropzone ref-key="dropzoneSingleRef" :options="{
-                  url: 'https://httpbin.org/post',
-                  thumbnailWidth: 150,
-                  maxFilesize: 0.5,
-                  maxFiles: 1,
-                  headers: { 'My-Awesome-Header': 'header value' },
-                }" class="dropzone">
-                <div class="text-lg font-medium">
-                    Drop files here or click to upload.
-                </div>
-                <div class="text-gray-600">
-                    This is just a demo dropzone. Selected files are
-                    <span class="font-medium">not</span> actually uploaded.
-                </div>
-            </Dropzone>
-                </div>
+              
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
                       >Employee Name</label
@@ -232,13 +216,15 @@
                     <label for="update-profile-form-1" class="form-label"
                       >Department</label
                     >
-                    <input
-                      id="update-profile-form-1"
-                      type="text"
-                      class="form-control"
-                      placeholder="Department name"
-                      v-model="form.department.department_name"
-                    />
+                    <select id="category"  v-model="form.id" class="form-select">
+                  <option
+                  v-for="(department, index) in departments"
+                    :key="index"
+                    :value="department.id"
+                  >
+                    {{ department.department_name }}
+                  </option>
+                </select>
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
@@ -318,6 +304,7 @@ export default {
         return {
             isLoading: true,
             employee : [],
+            departments : [],
             form:{},
              deleteConfirmationModal:false,
              editConfirmationModal:false,
@@ -326,6 +313,7 @@ export default {
     },
     created() {
              this.getEmployee();
+             this.getDepartments()
         },
 
       methods: {           
@@ -351,19 +339,31 @@ export default {
               }             
               
             },
-
-            editDepartment(e) {
+            getDepartments() {
+                  axios.get(`${API_BASE_URL}/get_department`).then((res)=>{
+                    console.log(res.data.Department)
+                    this.departments=res?.data?.Department
+                  }).catch((err)=>{
+                    console.log(err)
+                  })
+                
+                },
+            editEmployee(e) {
               console.log(e)
-              console.log(this.form)
               let body = {}
-              body.department_name = this.form.department_name
-              body.description = this.form.description
+              body.department_id = this.form.department.department_id
+              body.department_name = this.form.department.department_name
+              body.email = this.form.email
+              body.first_name = this.form.first_name
+              body.password = this.form.password
+              body.phone = this.form.phone
+             
                 axios.put(`${API_BASE_URL}/edit_department/${this.form.id}`,body).then((res)=>{
                   // console.log(res.data.Department)
                   // this.departments=res?.data?.Department
                   if(res.status==200){
                         this.$toast.success(`Employee Update Successfully!`);
-                        this.getDepartments()
+                        this.getEmployee()
                         this.editConfirmationModal=false
                       }
                       else{
