@@ -41,11 +41,10 @@
     </div>
     <!-- BEGIN: Data List -->
     <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
-      <table class="table table-report -mt-2">
+      <table class="table table-report  -mt-2">
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">IMAGES</th>
             <th class="whitespace-nowrap">Employee NAME</th>
             <th class="text-center whitespace-nowrap">Phone No</th>
             <th class="text-center whitespace-nowrap">Department</th>
@@ -65,20 +64,6 @@
                 index+1
               }}
           </td>
-            <td class="w-40">
-              <div class="flex">
-                <div class="w-10 h-10 image-fit zoom-in">
-                  <!-- <Tippy
-                    tag="img"
-                    alt="Midone Tailwind HTML Admin Template"
-                    class="rounded-full"
-                    :src="faker.images[0]"
-                    :content="`Uploaded at ${department.first_name}`"
-                  /> -->
-                </div>
-              
-              </div>
-            </td>
             <td>
               <a href="" class="font-medium whitespace-nowrap">{{
                 employee.first_name
