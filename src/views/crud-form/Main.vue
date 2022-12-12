@@ -492,7 +492,7 @@ export default {
   },
   data(){
     return {
-
+      departments:[],
       msg: [],
       fields: {},
       errors: {},
