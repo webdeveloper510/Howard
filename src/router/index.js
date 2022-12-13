@@ -36,6 +36,7 @@ import WizardLayout2 from "../views/wizard-layout-2/Main.vue";
 import WizardLayout3 from "../views/wizard-layout-3/Main.vue";
 import BlogLayout1 from "../views/blog-layout-1/Main.vue";
 import announcements from "../views/announcements/Main.vue";
+import Purchasing from "../views/Purchasing/Main.vue"
 import BlogLayout3 from "../views/blog-layout-3/Main.vue";
 import PricingLayout1 from "../views/pricing-layout-1/Main.vue";
 import PricingLayout2 from "../views/pricing-layout-2/Main.vue";
@@ -85,11 +86,7 @@ const routes = [
         name: "side-menu-dashboard-overview-1",
         component: DashboardOverview1,
       },
-      {
-        path: "dashboard-overview-2",
-        name: "side-menu-dashboard-overview-2",
-        component: DashboardOverview2,
-      },
+    
       {
         path: "dashboard-overview-3",
         name: "side-menu-dashboard-overview-3",
@@ -1123,6 +1120,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+  },
+  {
+    path: "/Purchasing",
+    name: "Purchasing",
+    component: Purchasing,
   },
   {
     path: "/Landing",
