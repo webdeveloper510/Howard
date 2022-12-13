@@ -57,7 +57,7 @@
           <tr
           v-for="(employee, index) in employee"
             :key="index"
-            class="intro-x"
+            class="intro-x zoom-in"
           >
           <td>
               {{
@@ -272,7 +272,7 @@
         >
           Cancel
         </button>
-        <button type="button" class="btn btn-danger w-24">Delete</button>
+        <button type="button" class="btn btn-danger w-24" @click="deleteEmployee(form.id)">Delete</button>
       </div>
     </ModalBody>
   </Modal>
@@ -359,6 +359,22 @@ export default {
                   console.log(err)
                 })
             },
+            deleteEmployee(id) {             
+             axios.delete(`${API_BASE_URL}/delete_employee/${id}`).then((res)=>{
+                   console.log('res',res)
+              if(res.status==200){
+                this.$toast.success(`Delete Successfully!`);
+                this.getEmployee()
+              this.deleteConfirmationModal=false;
+              }
+              else{
+              this.getPolicy()
+              this.$toast.error(`Some error Occure`);
+              this.deleteConfirmationModal=false;
+              }
+             })
+            }
+                
 
            
     
