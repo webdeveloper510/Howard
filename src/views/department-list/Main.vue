@@ -200,7 +200,7 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn btn-danger w-24" @click="deleteDeparment(this.departmentId)">Delete</button>
+                <button type="button" class="btn btn-danger w-24" @click="deleteDeparment(form.id)">Delete</button>
               </div>
             </ModalBody>
   </Modal>
@@ -269,7 +269,6 @@ export default {
               
             },
             deleteDeparment(id) {
-             
              axios.delete(`${API_BASE_URL}/delete_department/${id}`).then((res)=>{
                    console.log('res',res)
               if(res.status==200){

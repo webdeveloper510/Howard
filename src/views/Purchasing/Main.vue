@@ -10,7 +10,7 @@
         </router-link>
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml text-white">
            New Employee Onboarding
         </router-link>
         <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
@@ -36,9 +36,9 @@
     </div>
     <div class="my-5 intro-y">
       <h2 class="text-3xl font-medium leading-none mt-3 text-center">Purchasing</h2>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
-          <h4>Contacts</h4>
+      <div class="intro-y grid grid-cols-12 gap-6 mt-5 box  p-5">
+        <div class="col-span-12 md:col-span-12">
+          <h4 class="font-medium text-base mr-auto">Contacts</h4>
           <p>Chase Hill – chase.hill@modula.com </p>
           <p>Shelby Adkins – shelby.adkins@modula.com</p>
           <p>Fernando Nardelli – fernando.nardelli@modula.com </p>
@@ -51,6 +51,7 @@
 </p>
 <p>Based on our business needs, Modula sets the purchasing department’s responsibilities and streamlines its procurement plans to guard against demand-supply hurdles. 
 </p>
+
         </div>
       </div>
       <div class="grid grid-cols-12 gap-6 mt-5">

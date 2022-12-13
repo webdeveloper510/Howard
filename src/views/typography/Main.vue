@@ -53,7 +53,7 @@
                 @click="openModal(true,policy,'edit')">
                   <CheckSquareIcon class="w-4 h-4 mr-1" /> Edit
                 </a>
-                <a class="flex items-center mr-3" :href="`/PoliciesDetails/${policy.id}`">
+                <a class="flex items-center mr-3" :href="`/Howard/PoliciesDetails/${policy.id}`">
                   <EyeIcon class="w-4 h-4 mr-1" /> View
                 </a>
                 <a

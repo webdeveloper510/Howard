@@ -7,7 +7,9 @@ import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
 import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
+import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
+import Hardware from "../views/Hardware/Main.vue"
 import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
 import EmployeeList from "../views/Employee-list/Main.vue";
@@ -24,7 +26,9 @@ import Chat from "../views/chat/Main.vue";
 import Post from "../views/post/Main.vue";
 import Calendar from "../views/calendar/Main.vue";
 import CrudDataList from "../views/crud-data-list/Main.vue";
-import CrudForm from "../views/crud-form/Main.vue";
+import CrudForm from "../views/Damaged/Main.vue";
+import employeeAccess from "../views/Employee-Access/Main.vue";
+import employeeCustody from "../views/Equipment-Custody/Main.vue";
 import UsersLayout1 from "../views/users-layout-1/Main.vue";
 import UsersLayout2 from "../views/users-layout-2/Main.vue";
 import UsersLayout3 from "../views/users-layout-3/Main.vue";
@@ -188,9 +192,29 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "form",
-        name: "side-menu-crud-form",
+        path: "Damaged",
+        name: "side-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "side-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "facilitiesMaintenance",
+        name: "side-menu-Facilities-Maintenance",
+        component: facilitiesMaintenance,
+      },
+      {
+        path: "Hardware",
+        name: "side-menu-Hardware",
+        component: Hardware,
+      },
+      {
+        path: "employeeCustody",
+        name: "side-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",
@@ -539,9 +563,19 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "crud-form",
-        name: "simple-menu-crud-form",
+        path: "Damaged",
+        name: "simple-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "simple-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "employeeCustody",
+        name: "simple-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",
@@ -885,9 +919,19 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "crud-form",
-        name: "top-menu-crud-form",
+        path: "Damaged",
+        name: "top-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "top-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "employeeCustody",
+        name: "top-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",

@@ -363,12 +363,12 @@ export default {
              axios.delete(`${API_BASE_URL}/delete_employee/${id}`).then((res)=>{
                    console.log('res',res)
               if(res.status==200){
-                this.$toast.success(`Delete Successfully!`);
+                this.$toast.success(`Delete Employee Successfully!`);
                 this.getEmployee()
               this.deleteConfirmationModal=false;
               }
               else{
-              this.getPolicy()
+              this.getEmployee()
               this.$toast.error(`Some error Occure`);
               this.deleteConfirmationModal=false;
               }

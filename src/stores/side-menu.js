@@ -20,11 +20,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "Task & Process Information",
       },
       {
-        icon: "CreditCardIcon",
-        pageName: "side-menu-point-of-sale",
-        title: "Products & Services",
-      },
-      {
         icon: "FileTextIcon",
         pageName: "side-menu-post",
         title: "Post",
@@ -37,8 +32,23 @@ export const useSideMenuStore = defineStore("sideMenu", {
       },
       {
         icon: "FileTextIcon",
-        pageName: "side-menu-crud-form",
-        title: "Forms",
+        pageName: "side-menu-Employee-Access",
+        title: "Employee-Access",
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "side-menu-Facilities-Maintenance",
+        title: "Facilities-Maintenance",
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "side-menu-Employee-Custody",
+        title: "Employee-Custody",
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "side-menu-Damaged",
+        title: "Damaged & Lost Equipment",
       },
       {
         icon: "FilePlusIcon",
@@ -89,6 +99,11 @@ export const useSideMenuStore = defineStore("sideMenu", {
         icon: "UserPlusIcon",
         pageName: "side-menu-add-product",
         title: "New Hire Onboard",
+      },
+      {
+        icon: "UserPlusIcon",
+        pageName: "side-menu-Hardware",
+        title: "Hardware & Software Request Form",
       },
       {
         icon: "MessageSquareIcon",
