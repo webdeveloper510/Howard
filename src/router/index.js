@@ -7,12 +7,15 @@ import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
 import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
+import modulaTerminationNotice from "../views/Modula-Termination-Notice/Main.vue"
 import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
 import Hardware from "../views/Hardware/Main.vue"
 import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
 import EmployeeList from "../views/Employee-list/Main.vue";
+import ITMove from "../views/IT-Move/Main.vue";
+import NewHireITEquipment from "../views/New-Hire-IT-Equipment/main.vue"
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
@@ -127,9 +130,24 @@ const routes = [
         component: EmployeeList,
       },
       {
+        path: "ITMove",
+        name: "side-menu-IT-Move",
+        component: ITMove,
+      },
+      {
         path: "product-grid",
         name: "side-menu-product-grid",
         component: ProductGrid,
+      },
+      {
+        path: "NewHireITEquipment",
+        name: "side-menu-NewHireITEquipment",
+        component: NewHireITEquipment,
+      },
+      {
+        path: "Modula-Termination-Notice",
+        name: "side-menu-Modula-Termination-Notice",
+        component: modulaTerminationNotice,
       },
       {
         path: "transaction-list",

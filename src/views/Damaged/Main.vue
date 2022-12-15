@@ -407,72 +407,7 @@
       </div>
     </div>
 
-    <div class="intro-y col-span-2 hidden 2xl:block">
-      <div class="pt-10 sticky top-0">
-        <ul
-          class="text-slate-500 relative before:content-[''] before:w-[2px] before:bg-slate-200 before:dark:bg-darkmode-600 before:h-full before:absolute before:left-0 before:z-[-1]"
-        >
-          <li
-            class="mb-4 border-l-2 pl-5 border-primary dark:border-primary text-primary font-medium"
-          >
-            <a href="">Upload Product</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Information</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Detail</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Variant</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Variant (Details)</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Management</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Weight & Shipping</a>
-          </li>
-        </ul>
-        <div
-          class="mt-10 bg-warning/20 dark:bg-darkmode-600 border border-warning dark:border-0 rounded-md relative p-5"
-        >
-          <LightbulbIcon
-            class="w-12 h-12 text-warning/80 absolute top-0 right-0 mt-5 mr-3"
-          />
-          <h2 class="text-lg font-medium">Tips</h2>
-          <div class="mt-5 font-medium">Price</div>
-          <div
-            class="leading-relaxed text-xs mt-2 text-slate-600 dark:text-slate-500"
-          >
-            <div>
-              The image format is .jpg .jpeg .png and a minimum size of 300 x
-              300 pixels (For optimal images use a minimum size of 700 x 700
-              pixels).
-            </div>
-            <div class="mt-2">
-              Select product photos or drag and drop up to 5 photos at once
-              here. Include min. 3 attractive photos to make the product more
-              attractive to buyers.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </form>
 </template>

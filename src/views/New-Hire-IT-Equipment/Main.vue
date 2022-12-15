@@ -1,10 +1,10 @@
 <template>
   <div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto">Employee Access Badge Form</h2>
+    <h2 class="text-lg font-medium mr-auto">Modula New Hire IT Equipment Request</h2>
     
   </div>
   <div class="mt-2 intro-y">
-    This form is for employees who require an access badge to one of our facilities.
+    Please use this form to request IT equipment, phones, and specialty software for NEW HIRES ONLY! If the new employee will be working on the Production Floor and does not require any hardware, please do not use this form!
     </div>
     <form @submit.prevent="createReport" class="add-form">
   <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
@@ -23,7 +23,7 @@
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left">
                   <div class="flex items-center">
-                    <div class="font-medium">Employee Name</div>
+                    <div class="font-medium">Managers Name</div>
                     <div
                       class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
                     >
@@ -35,13 +35,149 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
-                  id="Employee-Name"
+                  id="Full-name"
                   type="text"
                   class="form-control"
-                  placeholder="Employee Name"
-                  v-model="fields.employee_name"
+                  placeholder="Managers Name"
+                  v-model="fields.first_name"
                 />
                
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">Manager or Requester Email</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="Full-name"
+                  type="email"
+                  class="form-control"
+                  placeholder="Manager or Requester Email"
+                  v-model="fields.first_name"
+                />
+               
+              </div>
+            </div>
+            
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">New Hire Name</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="Full-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="New Hire Name"
+                  v-model="fields.first_name"
+                />
+               
+              </div>
+            </div>
+             
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Equipment Type</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <TomSelect
+              v-model="selectEquipment"
+              :options="{
+                placeholder: 'Select your Equipment Type',
+                plugins: {
+                  dropdown_header: {
+                    title: 'Equipment Type',
+                  },
+                },
+              }"
+              class="w-full"
+              multiple
+            >
+              <option value="Android">Android Phone</option>
+              <option value="Desktop">Desktop PC</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Touchscreen">Laptop (Touchscreen)</option>
+              <option value="iPhone">iPhone *(Limited to Managers Only)</option>
+              <option value="Printer">Printer</option>
+              <option value="Signature-Pad">Signature Pad</option>
+              <option value="Tablet">Tablet</option>
+            </TomSelect>
+               
+              <div class="form-help text-right">What type of equipment are you requesting?</div>
+              <div class="form-help text-right">iPhones are issued to Managers or Supervisors only.  For special requests, 
+                justification must be submitted for approval to the IT Manager or CEO.</div>
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">New Employee Position/​Job Title</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="email"
+                  type="text"
+                  class="form-control"
+                  v-model="fields.email"
+                  placeholder="New Employee Position"
+                />
+              </div>
+            </div>
+
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">New Hire Start Date</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="email"
+                  type="date"
+                  class="form-control"
+                  v-model="fields.email"
+                  placeholder="New Hire Start Date"
+                />
               </div>
             </div>
 
@@ -61,14 +197,14 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="Location" v-model="fields.location"  class="form-select">
+                <select id="Location"  class="form-select">
                   <option
-                 value="Franklin"
+                 value="Franklin, OH"
                   >
                   Franklin, OH
                   </option>
                   <option
-                 value="Lewiston"
+                 value="Lewiston, ME"
                   >
                   Lewiston, ME
                   </option>
@@ -80,30 +216,7 @@
                 </select>
               </div>
             </div>
-            <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
-              <div class="form-label xl:w-64 xl:!mr-10">
-                <div class="text-left mt-2">
-                  <div class="flex items-center">
-                    <div class="font-medium">Employee Type</div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="Location" v-model="fields.emp_type"  class="form-select">
-                  <option value="Full Time">
-                  Full Time
-                  </option>
-                  <option value="Part Time">
-                  Part Time
-                  </option>
-                  <option value="Temp">
-                  Temp
-                  </option>
-                </select>
-              </div>
-            </div>
+            
             
               <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
@@ -111,17 +224,17 @@
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
-                    <div class="font-medium">Job Title</div>
+                    <div class="font-medium">User to copy access</div>
                   </div>
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
-                  id="title"
+                  id="email"
                   type="text"
                   class="form-control"
-                  v-model="fields.title"
-                  placeholder="Job Title"
+                  v-model="fields.email"
+                  placeholder="Please provide network access required for new user"
                 />
               </div>
             </div>
@@ -141,79 +254,48 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="category" v-model="fields.department_id" class="form-select">
-                  <option
-                  v-for="(department, index) in departments"
-                    :key="index"
-                    :value="department.id"
-                  >
-                    {{department.department_name}}
-                  </option>
-                </select>
-
-                <div class="form-help text-right">Enter Assigned Department here.  Example: Operations, Production, HR, IT, Marketing, Sales, Etc.</div>
-
+                
+                <TomSelect
+                  v-model="categories"
+                  class="w-full"
+                  :options="{
+                    placeholder: 'Select your favorite actors',
+                     plugins: {
+                        dropdown_header: {
+                          title: 'Department',
+                        },
+                      },
+                     }"
+                  multiple
+                >
+                <option
+                v-for="(department, value) in departments"
+                :key="value"
+                :value="department.id"
+              >
+                {{ department.department_name }}
+              </option>
+                </TomSelect>
               </div>
             </div>
-              <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
-              <div class="form-label xl:w-64 xl:!mr-10">
-                <div class="text-left mt-2">
-                  <div class="flex items-center">
-                    <div class="font-medium">Visiting Employee?</div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full mt-3 xl:mt-0 flex-1">
-                <div class="flex flex-col sm:flex-row mt-2">
-                <div class="form-check mr-2">
-                  <input
-                    id="checkbox-switch-4"
-                    class="form-check-input"
-                    type="radio"
-                    v-model="fields.visit"
-                    value="Yes"
-                    name="visit"
-                  />
-                  <label class="form-check-label" for="checkbox-switch-4"
-                    >Yes</label
-                  >
-                </div>
-                <div class="form-check mr-2 mt-2 sm:mt-0">
-                  <input
-                    name="visit"
-                    id="checkbox-switch-5"
-                    class="form-check-input"
-                    type="radio"
-                    v-model="fields.visit"
-                    value="No"
-                  />
-                  <label class="form-check-label" for="checkbox-switch-5"
-                    >No</label
-                  >
-                </div>
-              </div>
-              <div class="form-help text-right">Select whether an employee is visiting from a different office other than their normal office.</div>
-              </div>
-            </div>
+             
               <div     
                 class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"            >
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
-                    <div class="font-medium">Lost or Missing Badge?</div>
+                    <div class="font-medium">Software Required</div>
                   </div>
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <div class="flex flex-col sm:flex-row mt-2">
                   <div class="form-check mr-2">
-                      <input id="radio-switch-4"  v-model="fields.lost" class="form-check-input" type="radio" name="lost" value="Yes">
+                      <input id="radio-switch-4" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-chris-evans">
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                   </div>
                   <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5"  v-model="fields.lost" class="form-check-input" type="radio" name="lost" value="No">
+                      <input id="radio-switch-5" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-liam-neeson">
                       <label class="form-check-label" for="radio-switch-5">No</label>
                   </div>
               </div>
@@ -231,7 +313,7 @@
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
                   id="time"
-                  v-model="fields.exist_badge"
+                  v-model="fields.time_of_incident"
                   type="text"
                   class="form-control"
                 />
@@ -249,17 +331,17 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="Location" v-model="fields.shift_hour"  class="form-select">
-                  <option value=" Mon-Fri 1st Shift">
+                <select id="Location"  class="form-select">
+                  <option value="Full Time">
                     Mon-Fri 1st Shift
                   </option>
-                  <option value="Mon-Fri 2nd Shift">
+                  <option value="Part Time">
                     Mon-Fri 2nd Shift
                   </option>
-                  <option value="Office/​Administrative Staff">
+                  <option value="Temp">
                     Office/​Administrative Staff
                   </option>
-                  <option value="Saturday/​Weekend Shift">
+                  <option value="Temp">
                     Saturday/​Weekend Shift
                   </option>
                 </select>
@@ -279,7 +361,7 @@
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
                   id="time"
-                  v-model="fields.requested_by"
+                  v-model="fields.time_of_incident"
                   type="text"
                   class="form-control"
                 />
@@ -298,10 +380,10 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <textarea
-                      id="notes"
+                      id="update-profile-form-5"
                       class="form-control"
                       placeholder="Notes"
-                      v-model="fields.notes" 
+                      v-model="fields.address" 
                       rows="4"
                     ></textarea>
                 <div class="form-help text-right">Please enter any additional information that may be required or requires special attention.</div>
@@ -320,8 +402,8 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
-                  id="assigned_badge"
-                  v-model="fields.assigned_badge"
+                  id="password"
+                  v-model="fields.police_report"
                   type="text"
                   class="form-control"
                   placeholder="Enter Assigned Badge"
@@ -345,14 +427,84 @@
         >
           Cancel
         </button>
-
+        <button
+          type="button"
+          class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
+        >
+          Save & Add Employee Access Badge
+        </button>
         <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
           Save
         </button>
       </div>
     </div>
 
-   
+    <div class="intro-y col-span-2 hidden 2xl:block">
+      <div class="pt-10 sticky top-0">
+        <ul
+          class="text-slate-500 relative before:content-[''] before:w-[2px] before:bg-slate-200 before:dark:bg-darkmode-600 before:h-full before:absolute before:left-0 before:z-[-1]"
+        >
+          <li
+            class="mb-4 border-l-2 pl-5 border-primary dark:border-primary text-primary font-medium"
+          >
+            <a href="">Upload Product</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Information</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Detail</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Variant</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Variant (Details)</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Product Management</a>
+          </li>
+          <li
+            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
+          >
+            <a href="">Weight & Shipping</a>
+          </li>
+        </ul>
+        <div
+          class="mt-10 bg-warning/20 dark:bg-darkmode-600 border border-warning dark:border-0 rounded-md relative p-5"
+        >
+          <LightbulbIcon
+            class="w-12 h-12 text-warning/80 absolute top-0 right-0 mt-5 mr-3"
+          />
+          <h2 class="text-lg font-medium">Tips</h2>
+          <div class="mt-5 font-medium">Price</div>
+          <div
+            class="leading-relaxed text-xs mt-2 text-slate-600 dark:text-slate-500"
+          >
+            <div>
+              The image format is .jpg .jpeg .png and a minimum size of 300 x
+              300 pixels (For optimal images use a minimum size of 700 x 700
+              pixels).
+            </div>
+            <div class="mt-2">
+              Select product photos or drag and drop up to 5 photos at once
+              here. Include min. 3 attractive photos to make the product more
+              attractive to buyers.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </form>
 </template>
@@ -394,9 +546,12 @@ export default {
             },
             createReport(e){
                  e.preventDefault();
-               
+                this.fields.last_known_location='Test'
+                this.fields.description='Hii'
+                this.fields.resolution='Hii'
+                this.fields.status=1
                 console.log(this.fields)
-                axios.post(`${API_BASE_URL}/create_badge_request`,this.fields).then((res)=>{
+                axios.post(`${API_BASE_URL}/demage_report`,this.fields).then((res)=>{
                   if(res.status==200){
                       this.$toast.success(`Report Created Successfully!`);
                     }
@@ -409,4 +564,8 @@ export default {
 
   
 }
+</script>
+<script setup>
+const categories = ref([]);
+const selectEquipment = ref([]);
 </script>

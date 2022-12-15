@@ -41,6 +41,8 @@
     </div>
     <!-- BEGIN: Data List -->
     <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+                                      
+    <div class="overflow-x-auto">
       <table class="table table-report  -mt-2">
         <thead>
           <tr>
@@ -64,16 +66,15 @@
                 index+1
               }}
           </td>
-            <td>
-              <a href="" class="font-medium whitespace-nowrap">{{
+            <td class="font-medium whitespace-nowrap">{{
                 employee.first_name
-              }}</a>
+              }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
             <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department.department_name}}</td>
+            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
             <td class="w-40">
               <div
                 class="flex items-center justify-center"
@@ -107,6 +108,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
     <!-- END: Data List -->
     <!-- BEGIN: Pagination -->
@@ -203,11 +205,11 @@
                     >
                     <select id="category"  v-model="form.id" class="form-select">
                   <option
-                  v-for="(department, index) in departments"
-                    :key="index"
-                    :value="department.id"
-                  >
-                    {{ department.department_name }}
+                    v-for="(department, index) in departments"
+                      :key="index"
+                      :value="department.id"
+                    >
+                      {{ department.department_name }}
                   </option>
                 </select>
                 </div>
@@ -334,7 +336,7 @@ export default {
                 
                 },
             editEmployee(e) {
-              console.log(e)
+              console.log(department_name)
               let body = {}
               body.department_id = this.form.department.id
               body.department_name = this.form.department.department_name
@@ -374,10 +376,6 @@ export default {
               }
              })
             }
-                
-
-           
-    
        }
   }
 

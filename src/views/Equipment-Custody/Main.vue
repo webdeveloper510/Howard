@@ -602,12 +602,9 @@ export default {
     },
     createReport(e) {
       e.preventDefault();
-      this.fields.last_known_location = 'Test'
-      this.fields.description = 'Hii'
-      this.fields.resolution = 'Hii'
       this.fields.status = 1
       console.log(this.fields)
-      axios.post(`${API_BASE_URL}/demage_report`, this.fields).then((res) => {
+      axios.post(`${API_BASE_URL}/create_custody_request`, this.fields).then((res) => {
         if (res.status == 200) {
           this.$toast.success(`Report Created Successfully!`);
         }

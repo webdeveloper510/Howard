@@ -96,6 +96,21 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "All Employee",
       },
       {
+        icon: "UsersIcon",
+        pageName: "side-menu-NewHireITEquipment",
+        title: "New Hire IT Equipment",
+      },
+      {
+        icon: "UsersIcon",
+        pageName: "side-menu-Modula-Termination-Notice",
+        title: "Modula-Termination-Notice",
+      },
+      {
+        icon: "UsersIcon",
+        pageName: "side-menu-IT-Move",
+        title: "IT Move Request Form",
+      },
+      {
         icon: "UserPlusIcon",
         pageName: "side-menu-add-product",
         title: "New Hire Onboard",
