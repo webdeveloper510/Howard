@@ -10,27 +10,21 @@
         </router-link>
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml text-white">
-           New Employee Onboarding
-        </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
-          HR Policies
-        </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
-          Employee Handbook
-        </router-link>
-        <a href="https://access.paylocity.com" class="-intro-x md:flex ml-auto text-white">
+        <div class="ml-auto flex">
+          <a href="https://access.paylocity.com" target="_blank" class="-intro-x md:flex mt-2 text-white">
           Paylocity
         </a>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex mt-2 ml-5 text-white">
           Employee Relations
         </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto">
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-5">
           <button class="btn box  mr-2 mb-2">
             <UserIcon class="w-4 h-4 mr-2" /> Login
           </button>
 
         </router-link>
+        </div>
+        
         <!-- END: Account Menu -->
       </div>
     </div>
@@ -44,13 +38,13 @@
           <p>Fernando Nardelli – fernando.nardelli@modula.com </p>
 
           <p>Purchasing is the process of buying or acquiring goods and services to make supply chain management more efficient. Goods, materials, and equipment procured in this process play a key role in improving the quality of products/services produced by the organization. Ultimately, the purchasing process impacts the product quality and helps in optimizing costs in the value chain.
-</p>
-<p>The purchasing department is responsible for procuring the goods, raw materials & services required to operate the company effectively. 
-</p>
-<p>Modula has specific needs when it comes to the sourcing and procurement of equipment, raw materials, and services. These needs define the purchasing process and how our Purchasing department functions. 
-</p>
-<p>Based on our business needs, Modula sets the purchasing department’s responsibilities and streamlines its procurement plans to guard against demand-supply hurdles. 
-</p>
+          </p>
+          <p>The purchasing department is responsible for procuring the goods, raw materials & services required to operate the company effectively. 
+          </p>
+          <p>Modula has specific needs when it comes to the sourcing and procurement of equipment, raw materials, and services. These needs define the purchasing process and how our Purchasing department functions. 
+          </p>
+          <p>Based on our business needs, Modula sets the purchasing department’s responsibilities and streamlines its procurement plans to guard against demand-supply hurdles. 
+          </p>
 
         </div>
       </div>
@@ -102,53 +96,21 @@
   
   </div>
     </div>
-    <div class="py-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">We Completed 1200+ Project yearly</h2>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
-          </p>
-        </div>
-      </div>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1"> Services Us</h2>
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none  pt-1">Services Us</h2>
-
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1">Services Us</h2>
-
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1">Services Us</h2>
-
-        </div>
-      </div>
-    </div>
+   
     <div class="py-5 intro-y">
       <h2 class="text-3xl font-medium leading-none mt-3">Key Functions of the Purchasing Departments</h2>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
+        <div class="col-span-12 md:col-span-12">
           <p>Our purchasing department functions are aligned with the Modula business objectives.  Here are some of the basic purchasing department functions: 
           </p>
           <ul>
-            <li>Identify business requirements for goods, materials, and services</li>
-            <li>Find reliable suppliers to meet these requirements</li>
-            <li>Negotiate prices, build quality, and delivery terms</li>
-            <li>Set up the order quantities and making bid requests on supply contracts</li>
-            <li>Coordinate delivery and storage operations</li>
-            <li>Run quality control and product testing</li>
-            <li>Manage budgets based on ROIs and payments</li>
+            <li>1) Identify business requirements for goods, materials, and services</li>
+            <li>2) Find reliable suppliers to meet these requirements</li>
+            <li>3) Negotiate prices, build quality, and delivery terms</li>
+            <li>4) Set up the order quantities and making bid requests on supply contracts</li>
+            <li>5) Coordinate delivery and storage operations</li>
+            <li>6) Run quality control and product testing</li>
+            <li>7) Manage budgets based on ROIs and payments</li>
           </ul>
         </div>
       </div>

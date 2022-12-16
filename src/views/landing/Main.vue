@@ -10,7 +10,7 @@
         </router-link>
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+        <router-link :to="{ name: 'side-menu-add-product' }" tag="a" class="-intro-x md:flex ml-auto text-white">
            New Employee Onboarding
         </router-link>
         <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
@@ -61,109 +61,120 @@
       </div>
     </div>
     <div class="my-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">Corporate Planning Department</h2>
+      <h2 class="text-3xl text-center font-bold leading-none mt-3">WELCOME TO MIST</h2>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
-          <p>Corporate planning is a continuous process in which a company first defines its philosophy, mission and vision in a strategic plan, and then uses that plan to direct, monitor and manage the business. Strategic planning, detailed operational planning and performance monitoring are the three components of corporate planning.
-          </p>
+        <div class="col-span-12 md:col-span-12 text-center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam,
+             culpa, soluta hic <br/> aperiam porro ipsum nisi optio necessitatibus commodi dolorum ente voluptatem officiis similique maiores!</p>
         </div>
       </div>
       <div class="grid grid-cols-12 gap-6 mt-5">
     <!-- BEGIN: FAQ Menu -->
-    <a
-      href=""
-      class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary"
-    >
-      <ShieldIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">
-        Significance
-      </div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Studies prove that companies who do corporate planning perform significantly better than competitors who do not use corporate planning. An annual survey by management consultants Bain and Company continually confirms that executives get more value out of strategic planning than any other management tool.
-      </div>
+    <a href="" class="intro-y col-span-12 lg:col-span-6 box ">
+      <img src="http://thinkvertical.tklapp.com/wp-content/uploads/2022/10/business-bg1-1-570x570.jpg"  class="w-full h-full">
     </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
-      <SendIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">
-        Time Frame
+    <div class="intro-y col-span-12 lg:col-span-6 box py-10 ">
+      <div class="font-medium text-left w-3/4 text-3xl mx-auto mt-3">TELL YOUR DREAMS<br/>
+        WE MAKE IT REAL</div>
+      <div class="text-slate-500 mt-2 w-3/4 text-left mx-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. porttitor consecteturadipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor consectetur adipiscing elit.
       </div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Strategic plans define the long-term vision and once created, plans are typically reviewed every five to ten years. Business departments do detailed planning annually, and operations groups monitor the results throughout the year.
+      <div class="text-slate-500 mt-2 w-3/4 text-left mx-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
-      <TrendingUpIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Benefits</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Corporate planning gives companies consistent guidelines for making decisions. When there is a crisis, opportunity or gradual evolution of business circumstances, planning helps a company maintain its strategy.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
-      <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Considerations</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Many companies rely on consultants to facilitate planning.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
-      <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Expert Insight</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        It's difficult to assess whether the value of corporate planning offsets the cost. The best measure is to study the performance of companies in relevant industries that have adopted planning.
-      </div>
-    </a>
+     
+    </div>
+   
     <!-- END: FAQ Menu -->
-  
+   
   </div>
-    </div>
-    <div class="py-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">We Completed 1200+ Project yearly</h2>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make
-          </p>
+  <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="col-span-12 lg:col-span-4 md:col-span-4 box py-4">
+          <div class="flex justify-center">
+            <RefreshCcwIcon class="block w-6 h-6 text-primary " />
+          <div class="font-medium text-center text-base ml-3">Updates</div>
+          </div>
+          
+          <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
+            Lorem ipsum dolor sit amet elit. consectetur Vest
+          </div>
         </div>
-      </div>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1"> Services Us</h2>
+        <div class="col-span-12 lg:col-span-4 md:col-span-4 box py-4">
+          <div class="flex justify-center">
+          <SettingsIcon class="block w-6 h-6 text-primary" />
+          <div class="font-medium text-center text-base ml-3">Flexible</div>
+          </div>
+          <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
+            Lorem ipsum dolor sit amet elit. consectetur Vest
+          </div>
         </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none  pt-1">Services Us</h2>
+        <div class="col-span-12 lg:col-span-4 md:col-span-4 box py-4">
+          <div class="flex justify-center">
+          <Edit2Icon class="block w-6 h-6 text-primary" />
+          <div class="font-medium text-center text-base ml-2">Creative</div>
+          </div>
+          <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
+            Lorem ipsum dolor sit amet elit. consectetur Vest
+          </div>
+        </div>
 
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1">Services Us</h2>
-
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-3 cursor-pointer zoom-in box p-5 flex justify-center">
-          <AlertCircleIcon class="w-6 h-6 mr-2" />
-          <h2 class="text-lg font-medium leading-none pt-1">Services Us</h2>
-
-        </div>
       </div>
     </div>
     <div class="py-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">Key Functions of the Purchasing Departments</h2>
+     
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-7">
-          <p>Our purchasing department functions are aligned with the Modula business objectives.  Here are some of the basic purchasing department functions: 
+        <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer zoom-in box p-5 justify-center">
+          <h2 class="text-3xl font-medium leading-none mt-3">OUR PRODUCTS AND <br/> SERVICES</h2>
+          <br/>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor
+             consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.
           </p>
-          <ul>
-            <li>Identify business requirements for goods, materials, and services</li>
-            <li>Find reliable suppliers to meet these requirements</li>
-            <li>Negotiate prices, build quality, and delivery terms</li>
-            <li>Set up the order quantities and making bid requests on supply contracts</li>
-            <li>Coordinate delivery and storage operations</li>
-            <li>Run quality control and product testing</li>
-            <li>Manage budgets based on ROIs and payments</li>
-          </ul>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer zoom-in box p-5 justify-center">
+         
+          <h2>DEVELOPMENT</h2>   
+          <div class="progress my-3">
+            <div class="progress-bar w-1/2" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <h2>DESIGNING</h2>
+          <div class="progress my-3">
+            <div class="progress-bar w-2/3 bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <h2>MARKETING</h2>
+          <div class="progress my-3">
+            <div class="progress-bar w-3/4 bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <h2>CREATIVITY</h2>
+          <div class="progress my-3">
+            <div class="progress-bar w-3/4 bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 intro-y">
+      <h2 class="text-3xl font-medium leading-none mt-3 ">AWESOME FEATURES</h2>
+      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
+        <div class="col-span-12 md:col-span-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam,<br/> culpa, soluta hic aperiam porro ipsum nisi optio necessitatibus commodi dolorum ente voluptatem officiis similique maiores!
+          </p>
+          <div class="intro-y grid grid-cols-12 gap-6 mt-5">
+            <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
+               <h1 class="font-bold text-2xl">BUSINESS SOLUTIONS</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
+                 ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
+            </div>
+            <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
+              <h1 class=" font-bold text-2xl">INNOVATIVE TECHNOLOGIES</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
+                 ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
+            </div>
+            <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
+              <h1 class=" font-bold text-2xl">REDEFINING THE WEB</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
+                 ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
@@ -213,13 +224,10 @@
 
       </div>
     </div>
-    <div class="-mx-3 md:-mx-5 lg:-mx-5 py-5 bg-blue-800 text-white">
+    <div class="-mx-3 md:-mx-5 lg:-mx-5 pt-5 text-white">
         <div class="text-center">
-           <h1 class="text-3xl mb-3 font-bold">Footer Tittle</h1>
-           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-           <br/>Lorem Ipsum has been the industry's standard dummy text ever since <br/> 
-               the 1500s, when an unknown printer took a galley of <br/>
-              type and scrambled it to make a type specimen book.</p>
+
+           
         <div className="flex justify-center mt-3 mb-6 links">
           <a
             href="#!"

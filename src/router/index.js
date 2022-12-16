@@ -15,7 +15,7 @@ import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
 import EmployeeList from "../views/Employee-list/Main.vue";
 import ITMove from "../views/IT-Move/Main.vue";
-import NewHireITEquipment from "../views/New-Hire-IT-Equipment/main.vue"
+import NewHireITEquipment from "../views/New-Hire-IT-Equipment/Main.vue"
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";

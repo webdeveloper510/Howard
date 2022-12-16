@@ -279,6 +279,37 @@
     </ModalBody>
   </Modal>
   <!-- END: Delete Confirmation Modal -->
+
+   <!-- BEGIN: Success Notification Content -->
+          <div id="success-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <CheckCircleIcon class="text-success" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Employee Update Successfully!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check your Employee
+                </div>
+              </div>
+            </div>
+            <!-- END: Success Notification Content -->
+            <!-- BEGIN: Failed Notification Content -->
+            <div
+              id="failed-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <XCircleIcon class="text-danger" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Employee Update failed!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check the fileld form.
+                </div>
+              </div>
+            </div>
+            <!-- END: Failed Notification Content -->
+
+
+
 </template>
 
 <script>
@@ -346,12 +377,32 @@ export default {
                            
                 axios.put(`${API_BASE_URL}/edit_employee/${this.form.id}`,body).then((res)=>{
                   if(res.status==200){
-                        this.$toast.success(`Employee Update Successfully!`);
+                        Toastify({
+                      node: dom("#success-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
                         this.getEmployee()
                         this.editConfirmationModal=false
                       }
                       else{
-                        this.$toast.error(`Some error Occure`);
+                        Toastify({
+                      node: dom("#failed-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
                       }
                
                 }).catch((err)=>{
