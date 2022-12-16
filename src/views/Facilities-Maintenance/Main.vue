@@ -284,7 +284,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" v-on:change="fields.file" type="file" class="form-control"  />
+                  <input id="phone-no" v-on:change="file" type="file" class="form-control" />
                 </div>
               </div>
             </div>
@@ -317,7 +317,7 @@ import axios from 'axios';
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
-const system = ref([]);
+const system = ref(["1"]);
 const editorData = ref("<p>Content of the editor.</p>");
 export default {
   name: 'Test',

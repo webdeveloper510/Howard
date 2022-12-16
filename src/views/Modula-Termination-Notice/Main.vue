@@ -39,7 +39,34 @@
                   type="text"
                   class="form-control"
                   placeholder="Manager/​Requestor Name"
-                  v-model="fields.first_name"
+                  v-model="termination.manager_name"
+                />
+               
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left">
+                  <div class="flex items-center">
+                    <div class="font-medium">Manager Last Name</div>
+                    <div
+                      class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
+                    >
+                      Required
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="Full-name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Manager/​Requestor Name"
+                  v-model="termination.last_name"
                 />
                
               </div>
@@ -66,7 +93,7 @@
                   type="email"
                   class="form-control"
                   placeholder="Manager/​Requestor Email "
-                  v-model="fields.first_name"
+                  v-model="termination.manager_email"
                 />
                
               </div>
@@ -94,7 +121,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Requestor Job Title"
-                  v-model="fields.first_name"
+                  v-model="termination.title"
                 />
                
               </div>
@@ -116,10 +143,39 @@
                   type="date"
                   class="form-control"
                   placeholder="Effective Date"
-                  v-model="fields.first_name"
+                  v-model="termination.effective_date"
                 />
               </div>
             </div>
+
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Priority</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <select id="Location"  class="form-select" @change="onChangePriority($event)">
+                  <option
+                 value="Normal"
+                  >
+                  Normal
+                  </option>
+                  <option
+                 value="Immediate"
+                  >
+                  Immediate
+                  </option>
+                </select>
+              </div>
+            </div>
+        
+        
+        
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -141,7 +197,7 @@
               </div>
             </div>
 
-            <div
+            <!-- <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
               <div class="form-label xl:w-64 xl:!mr-10">
@@ -165,7 +221,7 @@
                   </option>
                 </select>
               </div>
-            </div>
+            </div> -->
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -181,11 +237,33 @@
                   id="email"
                   type="text"
                   class="form-control"
-                  v-model="fields.email"
+                  v-model="termination.employee_name"
                   placeholder="Employee Name"
                 />
               </div>
             </div>
+
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Employee Last Name</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <input
+                  id="email"
+                  type="text"
+                  class="form-control"
+                  v-model="termination.emp_last_name"
+                  placeholder="Employee Last Name"
+                />
+              </div>
+            </div>
+           
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -201,7 +279,7 @@
                   id="email"
                   type="text"
                   class="form-control"
-                  v-model="fields.email"
+                  v-model="termination.emp_job_title"
                   placeholder="Employee Job Title"
                 />
               </div>
@@ -221,11 +299,12 @@
                   id="email"
                   type="text"
                   class="form-control"
-                  v-model="fields.email"
+                  v-model="termination.badge"
                   placeholder=" Badge"
                 />
               </div>
             </div>
+
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -237,7 +316,7 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="Location"  class="form-select">
+                <select id="Location"  class="form-select" @change="changeBadge($event)">
                   <option
                  value="yes"
                   >
@@ -252,6 +331,7 @@
                 </select>
               </div>
             </div>
+
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -268,7 +348,7 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <select id="Location"  class="form-select">
+                <select id="Location"  class="form-select"  @change="changeLocation($event)">
                   <option
                  value="Franklin, OH"
                   >
@@ -309,9 +389,9 @@
                 
                 <input
                   id="email"
-                  type="text"
+                  type="number"
                   class="form-control"
-                  v-model="fields.email"
+                  v-model="termination.code"
                   placeholder="Employee Job Title"
                 />
               </div>
@@ -328,7 +408,7 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <TomSelect
-              v-model="selectEquipment"
+              v-model="termination.equipment_collected"
               :options="{
                 placeholder: 'Select your Equipment Type',
                 plugins: {
@@ -358,7 +438,7 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <TomSelect
-              v-model="selectSoftware"
+              v-model="termination.soft_removal"
               :options="{
                 placeholder: 'Select Software Removal',
                 plugins: {
@@ -396,7 +476,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Special Instructions"
-                      v-model="fields.address" 
+                      v-model="termination.instruction" 
                       rows="4"
                     ></textarea>
              
@@ -424,7 +504,7 @@
         </button>
       </div>
     </div>
-
+<!-- 
     <div class="intro-y col-span-2 hidden 2xl:block">
       <div class="pt-10 sticky top-0">
         <ul
@@ -490,7 +570,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </form>
 </template>
@@ -515,6 +595,10 @@ export default {
       fields: {},
       errors: {},
       success: false,
+      termination:{},
+      priority:'Normal',
+      location:'Franklin, OH',
+      collected:'yes'
     }
   },
   created() {
@@ -530,14 +614,22 @@ export default {
               })
              
             },
+            onChangePriority(event){
+              this.priority=event.target.value
+            },
+            changeBadge(event){
+              this.collected=event.target.value
+            },
+            changeLocation(event){
+              this.location=event.target.value
+            },
             createReport(e){
                  e.preventDefault();
-                this.fields.last_known_location='Test'
-                this.fields.description='Hii'
-                this.fields.resolution='Hii'
-                this.fields.status=1
-                console.log(this.fields)
-                axios.post(`${API_BASE_URL}/demage_report`,this.fields).then((res)=>{
+                 this.termination.priority=this.priority
+                 this.termination.location=this.location
+                 this.termination.collected=this.badge
+                console.log(this.termination)
+                axios.post(`${API_BASE_URL}/add_terminate_office`,this.termination).then((res)=>{
                   if(res.status==200){
                       this.$toast.success(`Report Created Successfully!`);
                     }

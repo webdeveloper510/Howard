@@ -30,7 +30,26 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="Requestor Name"
-                    v-model="fields.first_name" />
+                    v-model="itMove.requestor_name" />
+
+                </div>
+              </div>
+              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                <div class="form-label xl:w-64 xl:!mr-10">
+                  <div class="text-left">
+                    <div class="flex items-center">
+                      <div class="font-medium">Requestor Last Name</div>
+                      <div
+                        class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                        Required
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="w-full mt-3 xl:mt-0 flex-1">
+                  <input id="Full-name" type="text" class="form-control" placeholder="Requestor Name"
+                    v-model="itMove.last_name" />
 
                 </div>
               </div>
@@ -50,7 +69,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="Requestor Email"
-                    v-model="fields.last_name" />
+                    v-model="itMove.requestor_email" />
 
                 </div>
               </div>
@@ -70,7 +89,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
+                <div class="w-full mt-3 xl:mt-0 flex-1" @change="locationChange($event)">
                   <select id="Location" class="form-select">
                     <option value="Franklin, OH">
                       Franklin, OH
@@ -94,28 +113,8 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <TomSelect
-                  v-model="selectDepartment"
-                  class="w-full"
-                  :options="{
-                    placeholder: 'Select your favorite actors',
-                     plugins: {
-                        dropdown_header: {
-                          title: 'Department',
-                        },
-                      },
-                     }"
-                  multiple
-                >
-                <option
-                v-for="(department, value) in departments"
-                :key="value"
-                :value="department.id"
-              >
-                {{ department.department_name }}
-              </option>
-                </TomSelect>
-
+                  <input id="phone-no" type="text" class="form-control" v-model="itMove.department"
+                    placeholder="Department" />
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -127,7 +126,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="text" class="form-control" v-model="fields.phone"
+                  <input id="phone-no" type="text" class="form-control" v-model="itMove.move_from"
                     placeholder="Move From Location (Office #/​Dept)" />
                 </div>
               </div>
@@ -144,7 +143,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="text" class="form-control" v-model="fields.phone"
+                  <input id="phone-no" type="text" class="form-control" v-model="itMove.move_to"
                     placeholder="Move To Location" />
                 </div>
               </div>
@@ -161,7 +160,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Additional Details"
-                      v-model="fields.address" 
+                      v-model="itMove.additional_detail" 
                       rows="4"
                     ></textarea>
                 </div>
@@ -179,7 +178,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Manager Approval"
-                      v-model="fields.address" 
+                      v-model="itMove.manager_approval" 
                       rows="4"
                     ></textarea>
                 </div>
@@ -197,7 +196,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Resolution"
-                      v-model="fields.address" 
+                      v-model="itMove.resolution" 
                       rows="4"
                     ></textarea>
                 </div>
@@ -211,14 +210,14 @@
 
 
         <div class="flex justify-end flex-col md:flex-row gap-2 mt-5">
-          <button type="button"
+          <!-- <button type="button"
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Cancel
           </button>
           <button type="button"
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Save & Add Equipment Custody
-          </button>
+          </button> -->
           <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
             Save
           </button>
@@ -297,6 +296,8 @@ export default {
       fields: {},
       errors: {},
       success: false,
+      itMove:{},
+      location:'Franklin, OH'
     }
   },
   created() {
@@ -312,16 +313,15 @@ export default {
       })
 
     },
+    locationChange(event){
+        this.location=event.target.value
+    },
     createReport(e) {
       e.preventDefault();
-      this.fields.last_known_location = 'Test'
-      this.fields.description = 'Hii'
-      this.fields.resolution = 'Hii'
-      this.fields.status = 1
-      console.log(this.fields)
-      axios.post(`${API_BASE_URL}/demage_report`, this.fields).then((res) => {
+      this.itMove.location=this.location
+      axios.post(`${API_BASE_URL}/add_it_move`, this.itMove).then((res) => {
         if (res.status == 200) {
-          this.$toast.success(`Report Created Successfully!`);
+          this.$toast.success(`IT Move Created Successfully!`);
         }
         else {
           this.$toast.error(`Some error Occure`);

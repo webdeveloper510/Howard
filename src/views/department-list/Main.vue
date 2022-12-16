@@ -236,7 +236,6 @@ export default {
              
             },
             editDepartment(e) {
-              console.log(e)
               console.log(this.form)
               let body = {}
               body.department_name = this.form.department_name

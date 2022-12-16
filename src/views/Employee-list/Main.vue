@@ -203,7 +203,7 @@
                     <label for="update-profile-form-1" class="form-label"
                       >Department</label
                     >
-                    <select id="category"  v-model="form.id" class="form-select">
+                    <select id="category"  v-model="form.department_id" class="form-select">
                   <option
                     v-for="(department, index) in departments"
                       :key="index"
@@ -245,7 +245,7 @@
         >
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary w-24">Save</button>
+        <button type="submit"  class="btn btn-primary w-24">Save</button>
       </div>
     </form>
     </ModalBody>
@@ -336,18 +336,15 @@ export default {
                 
                 },
             editEmployee(e) {
-              console.log(department_name)
               let body = {}
-              body.department_id = this.form.department.id
+              body.department_id = this.form.department_id
               body.department_name = this.form.department.department_name
               body.email = this.form.email
               body.first_name = this.form.first_name
               body.password = this.form.password
               body.phone = this.form.phone
-             
+                           
                 axios.put(`${API_BASE_URL}/edit_employee/${this.form.id}`,body).then((res)=>{
-                  // console.log(res.data.Department)
-                  // this.departments=res?.data?.Department
                   if(res.status==200){
                         this.$toast.success(`Employee Update Successfully!`);
                         this.getEmployee()
