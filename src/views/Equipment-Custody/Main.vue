@@ -274,7 +274,7 @@
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
-                      <div class="font-medium">Officer In Charge/​Reporting Officer Name </div>
+                      <div class="font-medium">Phone Model </div>
                     </div>
                   </div>
                 </div>

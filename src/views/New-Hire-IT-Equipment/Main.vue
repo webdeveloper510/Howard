@@ -273,24 +273,58 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <div class="flex flex-col sm:flex-row mt-2">
-                  <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input"  @change="onChange($event)" type="radio"  v-model="radioButtonValue" name="horizontal_radio_button" value="yes">
-                      <label class="form-check-label" for="radio-switch-4">Yes</label>
-                  </div>
-                  <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" @change="onChange($event)"  v-model="radioButtonValue" name="horizontal_radio_button" value="no">
-                      <label class="form-check-label" for="radio-switch-5">No</label>
-                  </div>
-              </div>
-              <div class="form-help text-right">Select "YES" if this is to report a lost or missing badge.Otherwise, leave at the default of "NO".</div>
-              </div>
+                <TomSelect
+                      v-model="Software"
+                      :options="{
+                        placeholder: 'Select Software',
+                        plugins: {
+                          dropdown_header: {
+                            title: 'Software',
+                          },
+                        },
+                      }"
+                      class="w-full"
+                      multiple
+                    >
+                    <option value="Adobe Reader Pro">
+                    Adobe Reader Pro
+                  </option>
+                  <option value="Modula App">
+                    Modula App
+                  </option>
+                  <option value="Adobe Standard DC">
+                    Adobe Standard DC
+                  </option>
+                  <option value="CRM">
+                    CRM
+                  </option>
+                  <option value="MPS">
+                    MPS
+                  </option>
+                  <option value="SAP">
+                    SAP
+                  </option>
+                  <option value="Email">
+                    Email
+                  </option>
+                  <option value="Windchill">
+                    Windchill
+                  </option>
+                  <option value="WMS">
+                    WMS
+                  </option>
+                  <option value="Modula Academy">
+                    Modula Academy
+                  </option>
+                </TomSelect>
+               
+             </div>
             </div>
             <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"            >
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
-                    <div class="font-medium">Existing Badge #</div>
+                    <div class="font-medium">Additional Software</div>
                   </div>
                 </div>
               </div>
@@ -301,7 +335,8 @@
                   type="text"
                   class="form-control"
                 />
-                <div class="form-help text-right">If an employee has a badge from another office, please enter the 5-digit badge # found on the back of their current badge. Leave blank if no badge has been assigned previously.</div>
+                <div class="form-help text-right">List any additional software that will be required.
+                </div>
               </div>
             </div>
             <div
@@ -310,92 +345,69 @@
               <div class="form-label xl:w-64 xl:!mr-10">
                 <div class="text-left mt-2">
                   <div class="flex items-center">
-                    <div class="font-medium">Shift Hours - Types of Access Required</div>
+                    <div class="font-medium">Door Badge</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <TomSelect
+                      v-model="Door"
+                      :options="{
+                        placeholder: 'Select Door Badge',
+                        plugins: {
+                          dropdown_header: {
+                            title: 'Door Badge',
+                          },
+                        },
+                      }"
+                      class="w-full"
+                      multiple
+                    >
+                    <option value="Executive Access">
+                       Executive Access
+                      </option>
+                      <option value="Supervisor Access">
+                        Supervisor Access
+                      </option>
+                      <option value="Night Shift 1400 - 0300">
+                        Night Shift 1400 - 0300
+                      </option>
+                      <option value="Day Shift 0545 - 1900">
+                        Day Shift 0545 - 1900
+                      </option>
+                      <option value="Weekend Access">
+                        Weekend Access
+                      </option>
+                      <option value="Restricted or Limited Access">
+                        Restricted or Limited Access
+                      </option>
+                </TomSelect>
+               
+                <div class="form-help text-right">Select the type of access the new employee will need to the facility.</div>           
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Special Needs /​ Disability Considerations</div>
                   </div>
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <select id="Location"  class="form-select" @change="shiftValue($event)" v-model="shiftType">
-                  <option value="Mon-Fri 1st Shift">
-                    Mon-Fri 1st Shift
+                  <option value="yes">
+                    Yes
                   </option>
-                  <option value="Mon-Fri 2nd Shift">
-                    Mon-Fri 2nd Shift
-                  </option>
-                  <option value="Office/​Administrative Staff">
-                    Office/​Administrative Staff
-                  </option>
-                  <option value="Saturday/​Weekend Shift">
-                    Saturday/​Weekend Shift
+                  <option value="no">
+                    No
                   </option>
                 </select>
-                <div class="form-help text-right">Please select shift employee will work.</div>           
               </div>
             </div>
-            <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
-              <div class="form-label xl:w-64 xl:!mr-10">
-                <div class="text-left mt-2">
-                  <div class="flex items-center">
-                    <div class="font-medium">Requested By</div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full mt-3 xl:mt-0 flex-1">
-                <input
-                  id="time"
-                  v-model="newHireDetail.requested_by"
-                  type="text"
-                  class="form-control"
-                />
-                <div class="form-help text-right">Manager or Supervisor must request.  Any other requestor will be rejected.</div>
-              </div>
-            </div>
-            <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
-              <div class="form-label xl:w-64 xl:!mr-10">
-                <div class="text-left mt-2">
-                  <div class="flex items-center">
-                    <div class="font-medium">Notes</div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full mt-3 xl:mt-0 flex-1">
-                <textarea
-                      id="update-profile-form-5"
-                      class="form-control"
-                      placeholder="Notes"
-                      v-model="newHireDetail.notes" 
-                      rows="4"
-                    ></textarea>
-                <div class="form-help text-right">Please enter any additional information that may be required or requires special attention.</div>
-             
-              </div>
-            </div>
-            <div
-              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-            >
-              <div class="form-label xl:w-64 xl:!mr-10">
-                <div class="text-left mt-2">
-                  <div class="flex items-center">
-                    <div class="font-medium">Assigned Badge # </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full mt-3 xl:mt-0 flex-1">
-                <input
-                  id="password"
-                  v-model="newHireDetail.badge"
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter Assigned Badge"
-                />
-                <div class="form-help text-right">For IT Department Use Only</div>
-             
-              </div>
-            </div>
+           
             
           </div>
         </div>
@@ -410,12 +422,6 @@
           class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
         >
           Cancel
-        </button>
-        <button
-          type="button"
-          class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
-        >
-          Save & Add Employee Access Badge
         </button>
         <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
           Save
@@ -495,10 +501,11 @@
 
 <script>
 import { ref } from "vue";
-import axios from 'axios'
+import axios from 'axios';
 import { API_BASE_URL } from '../../config'
 import Multiselect from 'vue-multiselect'
-
+const Door = ref(["1"]);
+const Software = ref(["1"]);
 const selectEquipment = ref([]);
 export default {
   name: 'Test',

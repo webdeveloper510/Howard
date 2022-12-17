@@ -14,10 +14,18 @@ import Hardware from "../views/Hardware/Main.vue"
 import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
 import EmployeeList from "../views/Employee-list/Main.vue";
+import EquipmentRequestList from "../views/Equipment-Request-list/Main.vue";
+import TerminationNotice from "../views/Termination-Notice/Main.vue";
 import ITMove from "../views/IT-Move/Main.vue";
+import ITMoveList from "../views/IT-Move-list/Main.vue";
+import HardwareRequest from "../views/Hardware-Request-list/Main.vue";
 import NewHireITEquipment from "../views/New-Hire-IT-Equipment/Main.vue"
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
+import CustodyList from "../views/Custody/Main.vue";
+import DamagedList from "../views/Damaged-list/Main.vue";
+import Accesslist from "../views/Access-list/Main.vue";
+import FacilitiesList from "../views/Facilities-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
 import SellerList from "../views/seller-list/Main.vue";
 import Training from "../views/Training/Main.vue";
@@ -154,11 +162,59 @@ const routes = [
         name: "side-menu-transaction-list",
         component: TransactionList,
       },
+
+
+
+      {
+        path: "Access-list",
+        name: "side-menu-Access-list",
+        component: Accesslist,
+      },
+      {
+        path: "Facilities-list",
+        name: "side-menu-Facilities-list",
+        component: FacilitiesList,
+      },
+      {
+        path: "Custody-list",
+        name: "side-menu-Custody-list",
+        component: CustodyList,
+      },
+      {
+        path: "Damaged-list",
+        name: "side-menu-Damaged-list",
+        component: DamagedList,
+      },
+      {
+        path: "Equipment-Request-list",
+        name: "side-menu-Equipment-Request-list",
+        component: EquipmentRequestList,
+      },
+      {
+        path: "Termination-list",
+        name: "side-menu-Termination-list",
+        component: TerminationNotice,
+      },
+      {
+        path: "Hardware-Request-list",
+        name: "side-menu-Hardware-Request-list",
+        component: HardwareRequest,
+      },
+      {
+        path: "IT-Move-list",
+        name: "side-menu-IT-Move-list",
+        component: ITMoveList,
+      },
+
+
       {
         path: "transaction-detail",
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
       },
+
+
+
       {
         path: "seller-list",
         name: "side-menu-seller-list",

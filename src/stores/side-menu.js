@@ -52,6 +52,11 @@ export const useSideMenuStore = defineStore("sideMenu", {
           },
           {
             icon: "",
+            pageName: "side-menu-Hardware",
+            title: "Hardware & Software Request Form",
+          },
+          {
+            icon: "",
             pageName: "side-menu-Damaged",
             title: "Damaged & Lost Equipment",
           },
@@ -70,6 +75,56 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-IT-Move",
             title: "IT Move Request Form",
           }
+        ]
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "side-menu-list",
+        title: "Lists",
+        subMenu: [
+
+          {
+            icon: "",
+            title: "Access-list",
+            pageName: "side-menu-Access-list",
+            
+          },
+          {
+            title: "Facilities-list",
+            pageName: "side-menu-Facilities-list",
+            icon: "",
+          },
+          {
+            title: "Custody-list",
+            pageName: "side-menu-Custody-list",
+            icon: "",
+          },
+          {
+            title: "Damaged-list",
+            pageName: "side-menu-Damaged-list",
+            icon: "",
+          },
+          {
+            title: "Equipment-Request-list",
+            pageName: "side-menu-Equipment-Request-list",
+            icon: "",
+          },
+          {
+            title: "Termination-list",
+            pageName: "side-menu-Termination-list",
+            icon: "",
+          },
+          {
+            title: "Hardware-Request-list",
+            pageName: "side-menu-Hardware-Request-list",
+            icon: "",
+          },
+          {
+            title: "IT-Move-list",
+            pageName: "side-menu-IT-Move-list",
+            icon: "",
+          },
+         
         ]
       },
       {
@@ -123,11 +178,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-add-product",
         title: "New Hire Onboard",
       },
-      {
-        icon: "UserPlusIcon",
-        pageName: "side-menu-Hardware",
-        title: "Hardware & Software Request Form",
-      },
+      
       {
         icon: "MessageSquareIcon",
         pageName: "side-menu-chat",

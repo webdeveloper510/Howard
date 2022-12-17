@@ -412,149 +412,21 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="password" type="text" v-model="fields.station_phone" class="form-control"
-                    placeholder="Enter Additonal Users first Name " />
-                    <input id="password" type="text" v-model="fields.station_phone" class="form-control"
-                    placeholder="Enter Additonal Users last Name " />
+                    placeholder="Enter Additonal Users Name " />
+                   
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
-                      <div class="font-medium">Laptop Bag Issued </div>
+                      <div class="font-medium">Authorized By Signature </div>
                     </div>
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <div class="flex flex-col sm:flex-row mt-2">
-                    <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-4">Yes</label>
-                    </div>
-                    <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-5">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Bag Type </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
-                    <option value="Google">
-                      Wheeled Roller Bag
-                    </option>
-                    <option value="iPhone">
-                      Briefcase
-                    </option>
-                    <option value="Android">
-                      Backpack
-                    </option>
-                    <option value="Android">
-                      Executive Bag
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Monitors Issued?</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <div class="flex flex-col sm:flex-row mt-2">
-                    <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-4">Yes</label>
-                    </div>
-                    <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-5">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Docking Station Issued?  </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <div class="flex flex-col sm:flex-row mt-2">
-                    <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-4">Yes</label>
-                    </div>
-                    <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
-                      <label class="form-check-label" for="radio-switch-5">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Monitor Brand </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
-                    <option value="Google">
-                      Spectre
-                    </option>
-                    <option value="iPhone">
-                      Samsung
-                    </option>
-                    <option value="Android">
-                      Viewsonic
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Monitor Model # </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="text" v-model="fields.reported_time" type="text" class="form-control" />
-                </div>
-              </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
-                <div class="form-label xl:w-64 xl:!mr-10">
-                  <div class="text-left mt-2">
-                    <div class="flex items-center">
-                      <div class="font-medium">Monitor Serial #</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <textarea
-                      id="update-profile-form-5"
-                      class="form-control"
-                      placeholder="Monitor Serial"
-                      v-model="fields.address" 
-                      rows="4"
-                    ></textarea>
+                  <input id="password" type="text" v-model="fields.station_phone" class="form-control"
+                    placeholder="Authorized By Signature " />
                 </div>
               </div>
             </div>
