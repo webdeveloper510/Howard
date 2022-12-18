@@ -97,7 +97,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="email" class="form-control" v-model="fields.phone"
+                  <input  type="email" class="form-control" v-model="fields.phone"
                     placeholder="email" />
                 </div>
               </div>
@@ -111,7 +111,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="number " class="form-control" v-model="fields.phone"
+                  <input id="phone-no" type="number" class="form-control" v-model="fields.phone"
                     placeholder="Phone" />
 
                 </div>
@@ -145,8 +145,8 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="date " class="form-control" v-model="fields.phone"
-                    placeholder="Phone" />
+                  <input type="date" class="form-control" v-model="fields.phone"
+                    placeholder="date" />
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -158,68 +158,66 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <div class="flex flex-col sm:flex-row mt-2 flex-wrap">
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Desktop</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Laptop</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Laptop (Touchscreen)</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">iPad/​Tablet</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">iPhone</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Android Phone</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Monitor</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Printer</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Scan Gun - Datalogic</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Thermal Printer - Zebra</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">USB Keyboard</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">USB Mouse</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Wireless Keyboard</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Wireless Mouse</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Wall Mount Display Monitor & PC</label>
-                    </div>
-                  </div>
+                  <TomSelect
+                      v-model="Hardware"
+                      :options="{
+                        placeholder: 'Select Type of Hardware',
+                        plugins: {
+                          dropdown_header: {
+                            title: 'Hardware',
+                          },
+                        },
+                      }"
+                      class="w-full"
+                      multiple
+                    >
+                    <option value="Desktop">
+                      Desktop
+                  </option>
+                  <option value="Laptop">
+                    Laptop
+                  </option>
+                  <option value="Laptop (Touchscreen)">
+                    Laptop (Touchscreen)
+                  </option>
+                  <option value="iPad/​Tablet">
+                    iPad/​Tablet
+                  </option>
+                  <option value="iPhone">
+                    iPhone
+                  </option>
+                  <option value="Android Phone">
+                    Android Phone
+                  </option>
+                  <option value="Monitor">
+                    Monitor
+                  </option>
+                  <option value="Printer">
+                    Printer
+                  </option>
+                  <option value="Scan Gun - Datalogic">
+                    Scan Gun - Datalogic
+                  </option>
+                  <option value="Thermal Printer - Zebra">
+                    Thermal Printer - Zebra
+                  </option>
+                  <option value="USB Keyboard">
+                    USB Keyboard
+                  </option>
+                  <option value="USB Mouse">
+                    USB Mouse
+                  </option>
+                  <option value="Wireless Keyboard">
+                    Wireless Keyboard
+                  </option>
+                  <option value="Wireless Mouse">
+                    Wireless Mouse
+                  </option>
+                  <option value="Wall Mount Display Monitor & PC">
+                    Wall Mount Display Monitor & PC
+                  </option>
+                </TomSelect>
+                  
                   <div class="form-help text-right">This section describes the type of hardware being requested.</div>
                 </div>
               </div>
@@ -232,68 +230,66 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <div class="flex flex-col sm:flex-row mt-2 flex-wrap">
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Adobe Acrobat Pro</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Adobe Standard DC</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">AutoDesk/​AutoCAD</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Microsoft Office 365</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Microsoft Publisher</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Microsoft Visio</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Microsoft Teams</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">MPS</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">SAP</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">TeamViewer Pro</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">VNC - (Requires Justification)</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">WMS</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Zoom</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">Gotomeeting</label>
-                    </div>
-                    <div class="form-check mt-2 mr-3">
-                      <input id="checkbox-switch-3" class="form-check-input" type="checkbox" value="" />
-                      <label class="form-check-label" for="checkbox-switch-3">CRM</label>
-                    </div>
-                  </div>
+                  <TomSelect
+                      v-model="Software"
+                      :options="{
+                        placeholder: 'Select Software',
+                        plugins: {
+                          dropdown_header: {
+                            title: 'Software',
+                          },
+                        },
+                      }"
+                      class="w-full"
+                      multiple
+                    >
+                    <option value="Adobe Acrobat Pro">
+                      Adobe Acrobat Pro
+                  </option>
+                  <option value="Adobe Standard DC">
+                    Adobe Standard DC
+                  </option>
+                  <option value="AutoDesk/​AutoCAD">
+                    AutoDesk/​AutoCAD
+                  </option>
+                  <option value="CRM">
+                    CRM
+                  </option>
+                  <option value="MPS">
+                    MPS
+                  </option>
+                  <option value="SAP">
+                    SAP
+                  </option>
+                  <option value="Microsoft Office 365">
+                    Microsoft Office 365
+                  </option>
+                  <option value="Microsoft Publisher">
+                    Microsoft Publisher
+                  </option>
+                  <option value="WMS">
+                    WMS
+                  </option>
+                  <option value="Microsoft Visio">
+                    Microsoft Visio
+                  </option>
+                  <option value="Microsoft Teams">
+                    Microsoft Teams
+                  </option>
+                  <option value="TeamViewer Pro">
+                    TeamViewer Pro
+                  </option>
+                  <option value="VNC - (Requires Justification)">
+                    VNC - (Requires Justification)
+                  </option>
+                  <option value="Zoom">
+                    Zoom
+                  </option>
+                  <option value="Gotomeeting">
+                    Gotomeeting
+                  </option>
+                </TomSelect>
+                 
                   <div class="form-help text-right">This section describes the type of software being requested.</div>
                 </div>
               </div>
@@ -441,62 +437,13 @@
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Cancel
           </button>
-          <button type="button"
-            class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
-            Save & Add Equipment Custody
-          </button>
           <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
             Save
           </button>
         </div>
       </div>
 
-      <div class="intro-y col-span-2 hidden 2xl:block">
-        <div class="pt-10 sticky top-0">
-          <ul
-            class="text-slate-500 relative before:content-[''] before:w-[2px] before:bg-slate-200 before:dark:bg-darkmode-600 before:h-full before:absolute before:left-0 before:z-[-1]">
-            <li class="mb-4 border-l-2 pl-5 border-primary dark:border-primary text-primary font-medium">
-              <a href="">Upload Product</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Product Information</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Product Detail</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Product Variant</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Product Variant (Details)</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Product Management</a>
-            </li>
-            <li class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent">
-              <a href="">Weight & Shipping</a>
-            </li>
-          </ul>
-          <div
-            class="mt-10 bg-warning/20 dark:bg-darkmode-600 border border-warning dark:border-0 rounded-md relative p-5">
-            <LightbulbIcon class="w-12 h-12 text-warning/80 absolute top-0 right-0 mt-5 mr-3" />
-            <h2 class="text-lg font-medium">Tips</h2>
-            <div class="mt-5 font-medium">Price</div>
-            <div class="leading-relaxed text-xs mt-2 text-slate-600 dark:text-slate-500">
-              <div>
-                The image format is .jpg .jpeg .png and a minimum size of 300 x
-                300 pixels (For optimal images use a minimum size of 700 x 700
-                pixels).
-              </div>
-              <div class="mt-2">
-                Select product photos or drag and drop up to 5 photos at once
-                here. Include min. 3 attractive photos to make the product more
-                attractive to buyers.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   </form>
 </template>
@@ -507,7 +454,7 @@ import axios from 'axios'
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
-const subcategory = ref([]);
+
 const editorData = ref("<p>Content of the editor.</p>");
 export default {
   name: 'Test',
@@ -556,4 +503,9 @@ export default {
 
 
 }
+</script>
+<script setup>
+const Hardware = ref(['1']);
+const Software = ref(['1']);
+
 </script>

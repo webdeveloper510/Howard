@@ -15,11 +15,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "Announcements/News",
       },
       {
-        icon: "HardDriveIcon",
-        pageName: "side-menu-file-manager",
-        title: "Task & Process Information",
-      },
-      {
         icon: "FileTextIcon",
         pageName: "side-menu-post",
         title: "Post",
