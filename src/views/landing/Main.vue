@@ -1,7 +1,7 @@
 <template>
   <div>
    
-    <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 pt-3 bg-blue-800 mb-1">
+    <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 box pt-3 mb-1">
       <div class="top-bar-boxed flex items-center my-4">
         <!-- BEGIN: Logo -->
         <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex">
@@ -10,72 +10,50 @@
         </router-link>
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
-        <router-link :to="{ name: 'side-menu-add-product' }" tag="a" class="-intro-x md:flex ml-auto text-white">
+        <div class="ml-auto flex">
+          <router-link :to="{ name: 'side-menu-add-product' }" tag="a" class="font-medium -intro-x md:flex ml-5 mt-2 ">
            New Employee Onboarding
         </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
-          HR Policies
+        <router-link :to="{ name: 'Purchasing' }" tag="a" class="font-medium -intro-x md:flex ml-5 mt-2 ">
+          Purchasing
         </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
-          Employee Handbook
+        <router-link :to="{ name: 'Corporate' }" tag="a" class=" font-medium -intro-x md:flex ml-5 mt-2 ">
+          Corporate Planning Department
         </router-link>
-        <a href="https://access.paylocity.com" class="-intro-x md:flex ml-auto text-white">
+        <a href="https://access.paylocity.com" target="_blank" class=" font-medium -intro-x md:flex ml-5 mt-2 ">
           Paylocity
         </a>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto text-white">
-          Employee Relations
-        </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-auto">
-          <button class="btn box  mr-2 mb-2">
+
+        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-3">
+          <button class="btn btn-elevated-rounded-dark  mr-2 mb-2">
             <UserIcon class="w-4 h-4 mr-2" /> Login
           </button>
 
         </router-link>
+        </div>
+      
         <!-- END: Account Menu -->
       </div>
     </div>
-    <div class="-mx-3 md:-mx-5 lg:-mx-5">
-      <div class=" pb-8">
-        <TinySlider :options="{
-          mode: 'gallery',
-          controls: true,
-          nav: true,
-          speed: 500,
-        }">
-          <div class="h-[500px] px-2">
-            <div class="h-full image-fit rounded-md overflow-hidden">
-              <img alt="Midone Tailwind HTML Admin Template" :src="$f()[0].images[0]" />
-            </div>
-          </div>
-          <div class=" h-[500px] px-2">
-            <div class="h-full image-fit rounded-md overflow-hidden">
-              <img alt="Midone Tailwind HTML Admin Template" :src="$f()[1].images[1]" />
-            </div>
-          </div>
-          <div class=" h-[500px] px-2">
-            <div class="h-full image-fit rounded-md overflow-hidden">
-              <img alt="Midone Tailwind HTML Admin Template" :src="$f()[2].images[2]" />
-            </div>
-          </div>
-        </TinySlider>
-      </div>
-    </div>
+   
     <div class="my-5 intro-y">
-      <h2 class="text-3xl text-center font-bold leading-none mt-3">WELCOME TO MIST</h2>
+      <h2 class="text-3xl text-center font-bold leading-none large-tittle space mt-3">WELCOME TO MIST</h2>
+      <div class="saprater"></div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-12 text-center">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam,
+          <p class="text-lg mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam,
              culpa, soluta hic <br/> aperiam porro ipsum nisi optio necessitatibus commodi dolorum ente voluptatem officiis similique maiores!</p>
         </div>
       </div>
       <div class="grid grid-cols-12 gap-6 mt-5">
     <!-- BEGIN: FAQ Menu -->
     <a href="" class="intro-y col-span-12 lg:col-span-6 box ">
-      <img src="http://thinkvertical.tklapp.com/wp-content/uploads/2022/10/business-bg1-1-570x570.jpg"  class="w-full h-full">
+      <img src="http://thinkvertical.tklapp.com/wp-content/uploads/2022/10/business-bg1-1-570x570.jpg"  class="w-full h-full rounded">
     </a>
     <div class="intro-y col-span-12 lg:col-span-6 box py-10 ">
-      <div class="font-medium text-left w-3/4 text-3xl mx-auto mt-3">TELL YOUR DREAMS<br/>
+      <div class="font-medium text-center w-3/4 text-3xl mx-auto mt-3">TELL YOUR DREAMS<br/>
         WE MAKE IT REAL</div>
+        <div class="saprater"></div>
       <div class="text-slate-500 mt-2 w-3/4 text-left mx-auto">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. porttitor consecteturadipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor consectetur adipiscing elit.
       </div>
@@ -125,7 +103,9 @@
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer zoom-in box p-5 justify-center">
           <h2 class="text-3xl font-medium leading-none mt-3">OUR PRODUCTS AND <br/> SERVICES</h2>
+
           <br/>
+          <div class="saprater-left"></div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor
              consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.
@@ -154,6 +134,7 @@
     </div>
     <div class="py-5 intro-y">
       <h2 class="text-3xl font-medium leading-none mt-3 ">AWESOME FEATURES</h2>
+      <div class="saprater-left"></div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-12">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam,<br/> culpa, soluta hic aperiam porro ipsum nisi optio necessitatibus commodi dolorum ente voluptatem officiis similique maiores!
@@ -161,16 +142,19 @@
           <div class="intro-y grid grid-cols-12 gap-6 mt-5">
             <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
                <h1 class="font-bold text-2xl">BUSINESS SOLUTIONS</h1>
+               <div class="saprater-left"></div>
                <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
                  ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
             </div>
             <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
               <h1 class=" font-bold text-2xl">INNOVATIVE TECHNOLOGIES</h1>
+              <div class="saprater-left"></div>
                <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
                  ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
             </div>
             <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 box ">
               <h1 class=" font-bold text-2xl">REDEFINING THE WEB</h1>
+              <div class="saprater-left"></div>
                <p>Lorem ipsum dolor sit amet, consectetur werts erty rtyer adipisicing elit, sed do eiusmod tempor incass incididunt
                  ut labore et dolore magna aliqua. Ut enim ad minimrtyut veniam.</p>
             </div>
@@ -178,28 +162,24 @@
         </div>
       </div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer  p-5 ">
-          <h2 class="text-3xl font-medium leading-none pt-1"> Contact Us</h2>
-          <div class="">
-            <p class=" leading-none pt-5">Chase Hill – <a href="mailto:chase.hill@modula.com"> chase.hill@modula.com </a></p>
-            <p class=" leading-none pt-5">Shelby Adkins – <a href="mailto:shelby.adkins@modula.com"> shelby.adkins@modula.com </a></p>
-            <p class=" leading-none pt-5">Fernando Nardelli – <a href="mailto:fernando.nardelli@modula.com"> fernando.nardelli@modula.com </a></p>
-          </div>
+        <div class="col-span-12 md:col-span-12 lg:col-span-12 cursor-pointer  p-5 ">
+          <h2 class="text-3xl font-medium leading-none text-center pt-1"> Contact Us</h2>
+          <div class="saprater"></div>
         </div>
+        <div class="col-span-12 md:col-span-3 lg:col-span-3 cursor-pointer  p-5 "></div>
         <div class="col-span-12 md:col-span-6 lg:col-span-6  box p-5">
-          <h2 class="text-3xl font-medium text-center leading-none pt-1"> Contact Form</h2>
           <div class="grid grid-cols-12 gap-4 gap-y-5 mt-5">
             <div class="intro-y col-span-12 sm:col-span-6">
               <label for="input-wizard-1" class="form-label">First Name</label>
-              <input id="input-wizard-1" type="text" class="form-control" placeholder="example@gmail.com" />
+              <input id="input-wizard-1" type="text" class="form-control" placeholder="Enter First Name" />
             </div>
             <div class="intro-y col-span-12 sm:col-span-6">
               <label for="input-wizard-4" class="form-label">Last Name</label>
-              <input id="input-wizard-4" type="text" class="form-control" placeholder="Job, Work, Documentation" />
+              <input id="input-wizard-4" type="text" class="form-control" placeholder="Enter Last Name" />
             </div>
             <div class="intro-y col-span-12 sm:col-span-6">
               <label for="input-wizard-1" class="form-label">Phone No.</label>
-              <input id="input-wizard-1" type="text" class="form-control" placeholder="example@gmail.com" />
+              <input id="input-wizard-1" type="text" class="form-control" placeholder="Enter Phone number" />
             </div>
 
             <div class="intro-y col-span-12 sm:col-span-6">
@@ -207,21 +187,21 @@
               <input id="input-wizard-2" type="text" class="form-control" placeholder="example@gmail.com" />
             </div>
             <div class="intro-y col-span-12 ">
-              <label for="input-wizard-4" class="form-label">Last Name</label>
-              <input id="input-wizard-4" type="text" class="form-control" placeholder="Job, Work, Documentation" />
+              <label for="input-wizard-4" class="form-label">Work</label>
+              <input id="input-wizard-4" type="text" class="form-control" placeholder="Enter Work " />
             </div>
             <div class="intro-y col-span-12 ">
               <label for="input-wizard-3" class="form-label">Subject</label>
               <input id="input-wizard-3" type="text" class="form-control" placeholder="Important Meeting" />
             </div>
 
-            <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
+            <div class="intro-y col-span-12 flex items-center justify-center sm:justify-center mt-5">
               <button class="btn btn-primary w-24 ml-2">Submit</button>
             </div>
           </div>
 
         </div>
-
+        <div class="col-span-12 md:col-span-3 lg:col-span-3 cursor-pointer  p-5 "></div>
       </div>
     </div>
     <div class="-mx-3 md:-mx-5 lg:-mx-5 pt-5 text-white">

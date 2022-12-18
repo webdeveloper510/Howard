@@ -504,8 +504,7 @@ import { ref } from "vue";
 import axios from 'axios';
 import { API_BASE_URL } from '../../config'
 import Multiselect from 'vue-multiselect'
-const Door = ref(["1"]);
-const Software = ref(["1"]);
+
 const selectEquipment = ref([]);
 export default {
   name: 'Test',
@@ -568,7 +567,7 @@ export default {
                  this.newHireDetail.location=this.location
                  this.newHireDetail.equipmentTypes=this.equipmentValue
                 console.log(this.newHireDetail)
-                return false
+                 
                 axios.post(`${API_BASE_URL}/demage_report`,this.newHireDetail).then((res)=>{
                   if(res.status==200){
                       this.$toast.success(`Report Created Successfully!`);
@@ -584,6 +583,10 @@ export default {
 }
 </script>
 
+<script setup>
+const Door = ref(["1"]);
+const Software = ref(["1"]);
+</script>
 
 
 <style>

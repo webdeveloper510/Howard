@@ -7,6 +7,7 @@ import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
 import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
+import Corporate from "../views/Corporate/Main.vue";
 import modulaTerminationNotice from "../views/Modula-Termination-Notice/Main.vue"
 import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
@@ -1248,6 +1249,11 @@ const routes = [
     path: "/Landing",
     name: "landing",
     component: Landing,
+  },
+  {
+    path: "/Corporate-Planning-Department",
+    name: "Corporate",
+    component: Corporate,
   },
   {
     path: "/error-page",

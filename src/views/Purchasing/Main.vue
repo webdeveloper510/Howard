@@ -1,7 +1,7 @@
 <template>
   <div>
    
-    <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 pt-3 bg-blue-800 mb-1">
+    <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 box sm:px-8 pt-3 mb-1">
       <div class="top-bar-boxed flex items-center my-4">
         <!-- BEGIN: Logo -->
         <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex">
@@ -11,14 +11,20 @@
         <!-- END: Logo -->
         <!-- BEGIN: Account Menu -->
         <div class="ml-auto flex">
-          <a href="https://access.paylocity.com" target="_blank" class="-intro-x md:flex mt-2 text-white">
+          <router-link :to="{ name: 'landing' }" tag="a" class="font-medium -intro-x md:flex ml-3 mt-2">
+          Home
+        </router-link>
+          <a href="https://access.paylocity.com" target="_blank" class="font-medium -intro-x md:flex mt-2 ml-5">
           Paylocity
         </a>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex mt-2 ml-5 text-white">
+        <router-link :to="{ name: 'Corporate' }" tag="a" class=" font-medium -intro-x md:flex ml-5 mt-2 ">
+          Corporate Planning Department
+        </router-link>
+        <router-link :to="{ name: 'login' }" tag="a" class="font-medium -intro-x md:flex mt-2 ml-5 ">
           Employee Relations
         </router-link>
         <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-5">
-          <button class="btn box  mr-2 mb-2">
+          <button class="btn btn-elevated-rounded-dark mr-2 mb-2">
             <UserIcon class="w-4 h-4 mr-2" /> Login
           </button>
 
@@ -29,145 +35,135 @@
       </div>
     </div>
     <div class="my-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3 text-center">Purchasing</h2>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5 box  p-5">
-        <div class="col-span-12 md:col-span-12">
-          <h4 class="font-medium text-base mr-auto">Contacts</h4>
-          <p>Chase Hill – chase.hill@modula.com </p>
-          <p>Shelby Adkins – shelby.adkins@modula.com</p>
-          <p>Fernando Nardelli – fernando.nardelli@modula.com </p>
-
-          <p>Purchasing is the process of buying or acquiring goods and services to make supply chain management more efficient. Goods, materials, and equipment procured in this process play a key role in improving the quality of products/services produced by the organization. Ultimately, the purchasing process impacts the product quality and helps in optimizing costs in the value chain.
-          </p>
-          <p>The purchasing department is responsible for procuring the goods, raw materials & services required to operate the company effectively. 
-          </p>
-          <p>Modula has specific needs when it comes to the sourcing and procurement of equipment, raw materials, and services. These needs define the purchasing process and how our Purchasing department functions. 
-          </p>
-          <p>Based on our business needs, Modula sets the purchasing department’s responsibilities and streamlines its procurement plans to guard against demand-supply hurdles. 
-          </p>
-
+      <h2 class="text-3xl font-medium space large-tittle  leading-none mt-3 text-center">Purchasing</h2>
+      <div class="saprater"></div>
+      <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 lg:col-span-8 md:col-span-8">
+        
+              
+            <p class="text-base ">Purchasing is the process of buying or acquiring goods and services to make supply chain management more efficient. Goods, materials, and equipment procured in this process play a key role
+              in improving the quality of products/services produced by the organization. Ultimately, the purchasing process impacts the product quality and helps in optimizing costs in the value chain.</p><br/>
+            <p class="text-base  ">The purchasing department is responsible for procuring the goods, raw materials & services required to operate the company effectively. <br/><br/>
+                Modula has specific needs when it comes to the sourcing and procurement of equipment, raw materials, and services. These needs define the purchasing process and how our Purchasing department functions. <br/>
+                Based on our business needs, Modula sets the purchasing department’s responsibilities and streamlines its procurement plans to guard against demand-supply hurdles. </p>
+            
+          </div>
+          <div class="intro-y col-span-12 lg:col-span-4 md:col-span-4">
+            <img src="https://img.freepik.com/free-photo/closeup-people-using-digital-tablet_53876-16081.jpg?w=2000"/>
+          </div>
         </div>
-      </div>
+      <h2 class="text-3xl font-medium space leading-none mt-5 text-center">Purchasing Department Duties and Responsibilities</h2>
+      <div class="saprater"></div>
+     
+      <p class="text-lg text-center mt-3">After establishing an effective purchase policy, the organization can implement 
+        various purchasing department responsibilities and duties. These responsibilities are further categorized into competitive duties and non-competitive duties. </p>
+       
+        
+        <div class="grid grid-cols-12 gap-6 mt-5">
+          <div class="intro-y col-span-12 lg:col-span-8 md:col-span-8">
+            <p class="text-lg font-bold">The competitive duties and responsibilities of the purchasing department include:</p>
+            <p class="text-base"> 1. Following the state, local, and federal procurement laws <br/>
+            2. Working with government agencies for subsidies and other benefits<br/>
+            3. Acquiring goods at competitive rates<br/>
+            4. Maintaining long-term exclusive partnerships with top vendors<br/>
+            5. Placing best bids and acquiring orders before business competitors<br/>
+            6. Sending lucrative proposals to acquire vendors in advance</p>
+            <p class="text-lg my-3 font-bold"> The purchase department's responsibilities in a non-competitive aspect include:  </p>
+            <p class="text-base"> 
+                1. Researching goods and products carefully based on quality, prices, and delivery terms <br/>
+                2. Evaluating vendors based on their business history and supplying capabilities <br/>
+                3. Assessing the quality of goods at every level of the procurement process <br/>
+                4. Creating transparency in delivery and order processes <br/>
+                5. Building conclusive financial reports to calculate ROIs <br/>
+                6. Exploring new fulfillment capabilities through industry conferences 
+            </p>
+          </div>
+        
+          <div class="intro-y col-span-12 lg:col-span-4 md:col-span-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT21pbK_4VXf_vC-KHmjXiqeRPdAPJR2nwrrg&usqp=CAU"/>
+          
+          </div>
+          
+        </div>
+        <p class="text-base my-3">All purchasing department duties and responsibilities must be performed effectively to ensure the success of a business organization. </p>
       <div class="grid grid-cols-12 gap-6 mt-5">
     <!-- BEGIN: FAQ Menu -->
-    <a
-      href=""
-      class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary"
-    >
-      <ShieldIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">
-        Significance
-      </div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Studies prove that companies who do corporate planning perform significantly better than competitors who do not use corporate planning. An annual survey by management consultants Bain and Company continually confirms that executives get more value out of strategic planning than any other management tool.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
-      <SendIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">
-        Time Frame
-      </div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Strategic plans define the long-term vision and once created, plans are typically reviewed every five to ten years. Business departments do detailed planning annually, and operations groups monitor the results throughout the year.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-4 box py-10 hover:border-2 hover:border-primary dark:border-primary">
-      <TrendingUpIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Benefits</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Corporate planning gives companies consistent guidelines for making decisions. When there is a crisis, opportunity or gradual evolution of business circumstances, planning helps a company maintain its strategy.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
-      <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Considerations</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        Many companies rely on consultants to facilitate planning.
-      </div>
-    </a>
-    <a href="" class="intro-y col-span-12 lg:col-span-6 box py-10 hover:border-2 hover:border-primary dark:border-primary ">
-      <BookOpenIcon class="block w-12 h-12 text-primary mx-auto" />
-      <div class="font-medium text-center text-base mt-3">Expert Insight</div>
-      <div class="text-slate-500 mt-2 w-3/4 text-center mx-auto">
-        It's difficult to assess whether the value of corporate planning offsets the cost. The best measure is to study the performance of companies in relevant industries that have adopted planning.
-      </div>
-    </a>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center ">
+           <h1 class="text-xl font-medium mb-3">Acquiring Goods at the Best Possible Price</h1>
+           <p>The Purchasing departments must continuously evaluate materials based on quality and pricing. To maximize profitability, our Buyers need to procure goods efficiently. For example, buying small quantities from a large vendor is not economically practical. The procurement team must achieve
+             bulk discounts on these orders and negotiate with alternate vendors for better pricing. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+           <h1 class="text-xl font-medium mb-3">Procuring Raw Materials for Sustaining Operations</h1>
+           <p>While procuring goods at the best price, the purchasing department must also maintain the purchases necessary for sustaining daily operations. From raw materials such as iron and plastic to machinery, production tools, 
+            and even office supplies - they all need to be procured to keep the business running smoothly. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+           <h1 class="text-xl font-medium mb-3">Compliance with Industry Protocols</h1>
+           <p>In addition to sustaining operations, all goods and services procured by the purchasing department must also be compliant with industry standards and company policies. Vendors should ensure that the raw materials are good in quality before delivering large orders. The procurement department should also establish
+             a specific purchasing policy that checks quality compliance at every level of the purchase.</p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+            <h1 class="text-xl font-medium mb-3">Spending Limits</h1>
+            <p>The primary procurement policy of our Buyers is to purchase goods at the best prices. The purchasing department strictly defines & follows spending limits for every item in the order.
+               This way, the purchasing department does not overspend or cut costs unnecessarily. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+            <h1 class="text-xl font-medium mb-3">Authorized Vendors</h1>
+            <p>After determining the spending limits, the procurement procedure will also enlist all available authorized vendors. This list is maintained and updated regularly for ensuring access to the best vendors in the market. From large vendors to small-scale suppliers,
+               all external parties involved in the procurement process are listed in the policy. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+             <h1 class="text-xl font-medium mb-3">List of Supplies</h1>
+             <p>In addition to the list of vendors, the procurement policy also makes lists of the purchased items. Office supplies and other daily necessary items are listed together. Similarly, industrial goods and other items required in bulk orders are listed separately.
+               These lists are appropriately categorized for making precise orders for every purchase unit. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+             <h1 class="text-xl font-medium mb-3">Prioritization</h1>
+             <p>While making these lists, the purchasing department should follow a prioritization policy set by the purchasing managers and key business stakeholders. This policy highlights the purchases that go first in the budget. Based on this, the list of supplies can be customized before allocating purchase orders 
+              - learn more about the difference between purchase requisition vs purchase order.  </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+            <h1 class="text-xl font-medium mb-3">Contract Negotiations Policies</h1>
+            <p>Once the purchase orders are ready, the organization should follow strict rules on pricing negotiations. Under these policies, the purchasing department should not focus on lower prices at the cost of quality. Instead,
+               the quality of goods should be optimized with a pricing comparison among vendors. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+            <h1 class="text-xl font-medium mb-3">Vendor Management</h1>
+            <p>During these negotiations, vendors and suppliers should be managed properly. The procurement policy should emphasize the importance of efficient vendor management. Ensuring accurate order placements, issuing detailed purchase orders, and sending advance intimations for urgent purchases are some policies that the organization must follow. These will help in building and sustaining a reliable,
+               profitable, and long-term business partnership with vendors while preventing vendor fraud. </p>
+        </div>
+        <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
+            <h1 class="text-xl font-medium mb-3">Legal Liabilities</h1>
+            <p>Throughout this procedure, the purchasing policy must also adhere to state and federal purchasing laws. Under these strict guidelines, the staff should work coherently with government agencies.
+               These policies also help in preventing conflicts between an organization and its suppliers.</p>
+        </div>
+  
     <!-- END: FAQ Menu -->
   
   </div>
     </div>
    
     <div class="py-5 intro-y">
-      <h2 class="text-3xl font-medium leading-none mt-3">Key Functions of the Purchasing Departments</h2>
+      <h2 class="text-3xl font-medium space leading-none mt-3">Key Functions of the Purchasing Departments</h2>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-12">
-          <p>Our purchasing department functions are aligned with the Modula business objectives.  Here are some of the basic purchasing department functions: 
+          <p class="space text-base my-3">Our purchasing department functions are aligned with the Modula business objectives.  Here are some of the basic purchasing department functions: 
           </p>
           <ul>
-            <li>1) Identify business requirements for goods, materials, and services</li>
-            <li>2) Find reliable suppliers to meet these requirements</li>
-            <li>3) Negotiate prices, build quality, and delivery terms</li>
-            <li>4) Set up the order quantities and making bid requests on supply contracts</li>
-            <li>5) Coordinate delivery and storage operations</li>
-            <li>6) Run quality control and product testing</li>
-            <li>7) Manage budgets based on ROIs and payments</li>
+            <li class="space text-base" >1) Identify business requirements for goods, materials, and services</li>
+            <li class="space text-base" >2) Find reliable suppliers to meet these requirements</li>
+            <li class="space text-base">3) Negotiate prices, build quality, and delivery terms</li>
+            <li class="space text-base">4) Set up the order quantities and making bid requests on supply contracts</li>
+            <li class="space text-base">5) Coordinate delivery and storage operations</li>
+            <li class="space text-base">6) Run quality control and product testing</li>
+            <li class="space text-base">7) Manage budgets based on ROIs and payments</li>
           </ul>
         </div>
       </div>
-      <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer  p-5 ">
-          <h2 class="text-3xl font-medium leading-none pt-1"> Contact Us</h2>
-          <div class="">
-            <p class=" leading-none pt-5">Chase Hill – <a href="mailto:chase.hill@modula.com"> chase.hill@modula.com </a></p>
-            <p class=" leading-none pt-5">Shelby Adkins – <a href="mailto:shelby.adkins@modula.com"> shelby.adkins@modula.com </a></p>
-            <p class=" leading-none pt-5">Fernando Nardelli – <a href="mailto:fernando.nardelli@modula.com"> fernando.nardelli@modula.com </a></p>
-          </div>
-        </div>
-        <div class="col-span-12 md:col-span-6 lg:col-span-6  box p-5">
-          <h2 class="text-3xl font-medium text-center leading-none pt-1"> Contact Form</h2>
-          <div class="grid grid-cols-12 gap-4 gap-y-5 mt-5">
-            <div class="intro-y col-span-12 sm:col-span-6">
-              <label for="input-wizard-1" class="form-label">First Name</label>
-              <input id="input-wizard-1" type="text" class="form-control" placeholder="example@gmail.com" />
-            </div>
-            <div class="intro-y col-span-12 sm:col-span-6">
-              <label for="input-wizard-4" class="form-label">Last Name</label>
-              <input id="input-wizard-4" type="text" class="form-control" placeholder="Job, Work, Documentation" />
-            </div>
-            <div class="intro-y col-span-12 sm:col-span-6">
-              <label for="input-wizard-1" class="form-label">Phone No.</label>
-              <input id="input-wizard-1" type="text" class="form-control" placeholder="example@gmail.com" />
-            </div>
-
-            <div class="intro-y col-span-12 sm:col-span-6">
-              <label for="input-wizard-2" class="form-label">Email</label>
-              <input id="input-wizard-2" type="text" class="form-control" placeholder="example@gmail.com" />
-            </div>
-            <div class="intro-y col-span-12 ">
-              <label for="input-wizard-4" class="form-label">Last Name</label>
-              <input id="input-wizard-4" type="text" class="form-control" placeholder="Job, Work, Documentation" />
-            </div>
-            <div class="intro-y col-span-12 ">
-              <label for="input-wizard-3" class="form-label">Subject</label>
-              <input id="input-wizard-3" type="text" class="form-control" placeholder="Important Meeting" />
-            </div>
-
-            <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
-              <button class="btn btn-primary w-24 ml-2">Submit</button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
     </div>
-    <div class="-mx-3 md:-mx-5 lg:-mx-5 py-5 bg-blue-800 text-white">
+    <div class="-mx-3 md:-mx-5 lg:-mx-5 py-5 text-white">
         <div class="text-center">
-           <h1 class="text-3xl mb-3 font-bold">Footer Tittle</h1>
-           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-           <br/>Lorem Ipsum has been the industry's standard dummy text ever since <br/> 
-               the 1500s, when an unknown printer took a galley of <br/>
-              type and scrambled it to make a type specimen book.</p>
         <div className="flex justify-center mt-3 mb-6 links">
           <a
             href="#!"
