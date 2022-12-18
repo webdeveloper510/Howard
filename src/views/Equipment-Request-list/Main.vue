@@ -28,16 +28,21 @@
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">Employee NAME</th>
-            <th class="text-center whitespace-nowrap">Location</th>
-            <th class="text-center whitespace-nowrap">Employee Type</th>
-            <th class="text-center whitespace-nowrap">Shift Hours</th>
+            <th class="whitespace-nowrap">Manager NAME</th>
+            <th class="whitespace-nowrap">Manager Email</th>
+            <th class="whitespace-nowrap">Hired Name</th>
+            <th class="whitespace-nowrap">Hired Date</th>
+            <th class="whitespace-nowrap">Employee Position</th>
+            <th class="whitespace-nowrap">Location</th>
+            <th class="whitespace-nowrap">Software</th>
+            <th class="whitespace-nowrap">Disablity</th>
+            <th class="text-center whitespace-nowrap">Equipment Type</th>
             <th class="text-center whitespace-nowrap">Department</th>
           </tr>
         </thead>
         <tbody>
           <tr
-          v-for="(employee, index) in employee"
+          v-for="(form, index) in formsData"
             :key="index"
             class="intro-x zoom-in"
           >
@@ -47,31 +52,35 @@
               }}
           </td>
             <td class="font-medium whitespace-nowrap">{{
-                employee.first_name
+                form.manager_name
               }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
-            <td class="w-40">
-              <div
-                class="flex items-center justify-center"
-                :class="{
-                  'text-success': employee.email,
-                  'text-danger': !employee.email,
-                }"
-              >
-                <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ employee.email }}
-              </div>
-            </td>
+            <td class="text-center">{{ form.manager_email }}</td>
+            <td class="text-center">{{ form.hired_name ? form.hired_name : '' }}</td>
+         
             <td>
-              {{ employee.password }}
+              {{ form.hired_date }}
             </td>
             <td class="table-report__action w-56">
-             
+              {{ form.employee_pos }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.location }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.software_required }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.disablity }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.equipment_type }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.department }}
             </td>
           </tr>
         </tbody>
@@ -170,7 +179,7 @@ export default {
    data() {
         return {
             isLoading: true,
-            employee : [],
+            formsData : [],
             departments : [],
             form:{},
              deleteConfirmationModal:false,
@@ -179,21 +188,22 @@ export default {
         }
     },
     created() {
-             this.getEmployee();
+             this.getFormsData();
              this.getDepartments()
         },
 
       methods: {           
-        getEmployee() {
+        getFormsData() {
           console.log(API_BASE_URL)
-             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
-               console.log(res.data.employee)
-               this.employee=res?.data?.employee
+             axios.get(`${API_BASE_URL}/get_form/new_equipment`).then((res)=>{
+               console.log(res.data)
+               this.formsData=res?.data?.forms
              }).catch((err)=>{
                console.log(err)
              })
             
            },
+
 
            openModal(type,data,flag){
              this.form=data
