@@ -28,16 +28,21 @@
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">Employee NAME</th>
+            <th class="whitespace-nowrap">Manager Name</th>
+            <th class="whitespace-nowrap">Manager Email</th>
+            <th class="whitespace-nowrap">Title</th>
+            <th class="whitespace-nowrap">Effective Date</th>
+            <th class="whitespace-nowrap">Priority</th>
+            <th class="whitespace-nowrap">Employee Job</th>
+            <th class="text-center whitespace-nowrap">Badge</th>
+            <th class="text-center whitespace-nowrap">Collected</th>
             <th class="text-center whitespace-nowrap">Location</th>
-            <th class="text-center whitespace-nowrap">Employee Type</th>
-            <th class="text-center whitespace-nowrap">Shift Hours</th>
-            <th class="text-center whitespace-nowrap">Department</th>
+            <th class="text-center whitespace-nowrap">Instruction</th>
           </tr>
         </thead>
         <tbody>
           <tr
-          v-for="(employee, index) in employee"
+          v-for="(forms, index) in formsData"
             :key="index"
             class="intro-x zoom-in"
           >
@@ -47,31 +52,34 @@
               }}
           </td>
             <td class="font-medium whitespace-nowrap">{{
-                employee.first_name
+                forms.manager_name
               }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
-            <td class="w-40">
-              <div
-                class="flex items-center justify-center"
-                :class="{
-                  'text-success': employee.email,
-                  'text-danger': !employee.email,
-                }"
-              >
-                <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ employee.email }}
-              </div>
-            </td>
+            <td class="text-center">{{ forms.manager_email }}</td>
+            <td class="text-center">{{ forms.title ? forms.title : '' }}</td>
             <td>
-              {{ employee.password }}
+              {{ forms.effective_date }}
             </td>
             <td class="table-report__action w-56">
-             
+              {{ forms.priority }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ forms.emp_job_title }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ forms.badge }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ forms.collected }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ forms.location }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ forms.instruction }}
             </td>
           </tr>
         </tbody>
@@ -170,7 +178,7 @@ export default {
    data() {
         return {
             isLoading: true,
-            employee : [],
+            formsData : [],
             departments : [],
             form:{},
              deleteConfirmationModal:false,
@@ -179,16 +187,16 @@ export default {
         }
     },
     created() {
-             this.getEmployee();
+             this.getFormsData();
              this.getDepartments()
         },
 
       methods: {           
-        getEmployee() {
+        getFormsData() {
           console.log(API_BASE_URL)
-             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
-               console.log(res.data.employee)
-               this.employee=res?.data?.employee
+             axios.get(`${API_BASE_URL}/get_form/terminate_office`).then((res)=>{
+               console.log(res.data)
+               this.formsData=res?.data?.forms
              }).catch((err)=>{
                console.log(err)
              })

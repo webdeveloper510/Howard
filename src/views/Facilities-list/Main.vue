@@ -38,7 +38,7 @@
         </thead>
         <tbody>
           <tr
-          v-for="(employee, index) in employee"
+          v-for="(form, index) in formsData"
             :key="index"
             class="intro-x zoom-in"
           >
@@ -48,31 +48,22 @@
               }}
           </td>
             <td class="font-medium whitespace-nowrap">{{
-                employee.first_name
+                form.name
               }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
-            <td class="w-40">
-              <div
-                class="flex items-center justify-center"
-                :class="{
-                  'text-success': employee.email,
-                  'text-danger': !employee.email,
-                }"
-              >
-                <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ employee.email }}
-              </div>
-            </td>
+            <td class="text-center">{{ form.facility_location }}</td>
+            <td class="text-center">{{ form.phone ? form.phone : '' }}</td>
             <td>
-              {{ employee.password }}
+              {{ form.priority  }}
             </td>
             <td class="table-report__action w-56">
-              
+              {{ form.facility_request  }}
+            </td>
+            <td class="table-report__action w-56">
+              {{ form.department_id  }}
             </td>
           </tr>
         </tbody>
@@ -176,7 +167,7 @@ export default {
    data() {
         return {
             isLoading: true,
-            employee : [],
+            formsData : [],
             departments : [],
             form:{},
              deleteConfirmationModal:false,
@@ -185,16 +176,16 @@ export default {
         }
     },
     created() {
-             this.getEmployee();
+             this.getFormsData();
              this.getDepartments()
         },
 
       methods: {           
-        getEmployee() {
+        getFormsData() {
           console.log(API_BASE_URL)
-             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
-               console.log(res.data.employee)
-               this.employee=res?.data?.employee
+             axios.get(`${API_BASE_URL}/get_form/facility_request`).then((res)=>{
+               console.log(res.data)
+               this.formsData=res?.data?.forms
              }).catch((err)=>{
                console.log(err)
              })

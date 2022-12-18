@@ -28,16 +28,24 @@
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">Employee NAME</th>
-            <th class="text-center whitespace-nowrap">Location</th>
-            <th class="text-center whitespace-nowrap">Employee Type</th>
-            <th class="text-center whitespace-nowrap">Shift Hours</th>
-            <th class="text-center whitespace-nowrap">Department</th>
+            <th class="whitespace-nowrap">Requester NAME</th>
+            <th class="whitespace-nowrap">Requester Email</th>
+            <th class="whitespace-nowrap">Equipment NAME</th>
+            <th class="whitespace-nowrap">Location</th>
+            <th class="whitespace-nowrap">Contact</th>
+            <th class="whitespace-nowrap">Department</th>
+            <th class="whitespace-nowrap">Requested Date</th>
+            <th class="whitespace-nowrap">Hardware Requested</th>
+            <th class="whitespace-nowrap">Software Requested</th>
+            <th class="whitespace-nowrap">Additional Equipment</th>
+            <th class="whitespace-nowrap">Reason</th>
+            <th class="text-center whitespace-nowrap">Office location</th>
+            <th class="text-center whitespace-nowrap">Signature</th>
           </tr>
         </thead>
         <tbody>
           <tr
-          v-for="(employee, index) in employee"
+          v-for="(form, index) in formsData"
             :key="index"
             class="intro-x zoom-in"
           >
@@ -47,32 +55,25 @@
               }}
           </td>
             <td class="font-medium whitespace-nowrap">{{
-                employee.first_name
+                form.requestor_name
               }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
-            <td class="w-40">
-              <div
-                class="flex items-center justify-center"
-                :class="{
-                  'text-success': employee.email,
-                  'text-danger': !employee.email,
-                }"
-              >
-                <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ employee.email }}
-              </div>
-            </td>
-            <td>
-              {{ employee.password }}
-            </td>
-            <td class="table-report__action w-56">
-             
-            </td>
+            <td class="text-center">{{  form.requestor_email }}</td>
+            <td class="text-center">{{  form.equipment_name }}</td>
+            <td class="text-center">{{  form.location }}</td>
+            <td class="text-center">{{  form.contact_phone }}</td>
+            <td class="text-center">{{  form.department_id }}</td>
+            <td class="text-center">{{  form.requested_by_date }}</td>
+            <td class="text-center">{{  form.type_hardware_requested }}</td>
+            <td class="text-center">{{  form.software_requested }}</td>
+            <td class="text-center">{{  form.additional_equipment }}</td>
+            <td class="text-center">{{  form.reason }}</td>
+            <td class="text-center">{{  form.office_location }}</td>
+            <td class="text-center">{{  form.signature }}</td>
+           
           </tr>
         </tbody>
       </table>
@@ -170,7 +171,7 @@ export default {
    data() {
         return {
             isLoading: true,
-            employee : [],
+            formsData : [],
             departments : [],
             form:{},
              deleteConfirmationModal:false,
@@ -179,21 +180,22 @@ export default {
         }
     },
     created() {
-             this.getEmployee();
+             this.getFormsData();
              this.getDepartments()
         },
 
       methods: {           
-        getEmployee() {
+        getFormsData() {
           console.log(API_BASE_URL)
-             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
-               console.log(res.data.employee)
-               this.employee=res?.data?.employee
+             axios.get(`${API_BASE_URL}/get_form/equipment_request_form`).then((res)=>{
+               console.log(res.data)
+               this.formsData=res?.data?.forms
              }).catch((err)=>{
                console.log(err)
              })
             
            },
+
 
            openModal(type,data,flag){
              this.form=data

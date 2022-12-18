@@ -76,10 +76,6 @@
              
             </div>
           </div>
-
-
-            
-            
             <div
               class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
             >
@@ -101,7 +97,7 @@
                 type="text"
                 class="form-control"
                 placeholder="Location"
-                v-model="fields.last_name"
+                v-model="fields.location"
               />
               </div>
             </div>
@@ -381,6 +377,95 @@
                 />
               </div>
             </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Item Lost/​Stolen/​Damaged</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <select id="Location"  v-model="fields.status" class="form-select">
+                    
+                    <option value="Lost/Stolen">
+                      Lost/Stolen
+                    </option>
+                    <option value="Damaged">
+                      Damaged
+                    </option>
+                  </select>
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Last Known Location</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <select id="Location"  v-model="fields.last_known_location" class="form-select">
+                    <option value="Airport/Airplane">
+                      Airport/Airplane
+                    </option>
+                    <option value="Personal Vehicle">
+                      Personal Vehicle
+                    </option>
+                    <option value="Rental Vehicle">
+                      Rental Vehicle
+                    </option>
+                    <option value="Bus/Train/Public Transportation">
+                      Bus/Train/Public Transportation
+                    </option>
+                    <option value="Hotel">
+                      Hotel
+                    </option>
+                    <option value="Restaurant">
+                      Restaurant
+                    </option>
+                    <option value="Unknown">
+                      Unknown
+                    </option>
+                  </select>
+               
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Detailed Description</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <textarea id="update-profile-form-5" class="form-control" placeholder="Enter Department Description"
+                    v-model="fields.description" rows="4"></textarea>
+              </div>
+            </div>
+            <div
+              class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
+            >
+              <div class="form-label xl:w-64 xl:!mr-10">
+                <div class="text-left mt-2">
+                  <div class="flex items-center">
+                    <div class="font-medium">Resolution</div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full mt-3 xl:mt-0 flex-1">
+                <textarea id="update-profile-form-5" class="form-control" placeholder="Enter Department Description"
+                    v-model="fields.resolution" rows="4"></textarea>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -394,12 +479,6 @@
           class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
         >
           Cancel
-        </button>
-        <button
-          type="button"
-          class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52"
-        >
-          Save & Add Report
         </button>
         <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
           Save
@@ -449,10 +528,6 @@ export default {
             },
             createReport(e){
                  e.preventDefault();
-                this.fields.last_known_location='Test'
-                this.fields.description='Hii'
-                this.fields.resolution='Hii'
-                this.fields.status=1
                 console.log(this.fields)
                 axios.post(`${API_BASE_URL}/demage_report`,this.fields).then((res)=>{
                   if(res.status==200){

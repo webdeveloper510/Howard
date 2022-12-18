@@ -28,16 +28,19 @@
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">Employee NAME</th>
-            <th class="text-center whitespace-nowrap">Location</th>
-            <th class="text-center whitespace-nowrap">Employee Type</th>
-            <th class="text-center whitespace-nowrap">Shift Hours</th>
+            <th class="whitespace-nowrap">Requester NAME</th>
+            <th class="whitespace-nowrap">Requester Email</th>
             <th class="text-center whitespace-nowrap">Department</th>
+            <th class="text-center whitespace-nowrap">Move From</th>
+            <th class="text-center whitespace-nowrap">Move To</th>
+            <th class="text-center whitespace-nowrap">Resolution</th>
+            <th class="text-center whitespace-nowrap">Location</th>
+            <th class="text-center whitespace-nowrap">Additional Detail</th>
           </tr>
         </thead>
         <tbody>
           <tr
-          v-for="(employee, index) in employee"
+          v-for="(forms, index) in formsData"
             :key="index"
             class="intro-x zoom-in"
           >
@@ -47,32 +50,19 @@
               }}
           </td>
             <td class="font-medium whitespace-nowrap">{{
-                employee.first_name
+                forms.requestor_name
               }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.phone }}</td>
-            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
-            <td class="w-40">
-              <div
-                class="flex items-center justify-center"
-                :class="{
-                  'text-success': employee.email,
-                  'text-danger': !employee.email,
-                }"
-              >
-                <CheckSquareIcon class="w-4 h-4 mr-2" />
-                {{ employee.email }}
-              </div>
-            </td>
-            <td>
-              {{ employee.password }}
-            </td>
-            <td class="table-report__action w-56">
-             
-            </td>
+            <td class="text-center">{{ forms.requestor_email }}</td>
+            <td class="text-center">{{ forms.department }}</td>
+            <td class="text-center">{{ forms.move_from }}</td>
+            <td class="text-center">{{ forms.move_to }}</td>
+            <td class="text-center">{{ forms.resolution }}</td>
+            <td class="text-center">{{ forms.location }}</td>
+            <td class="text-center">{{ forms.additional_detail }}</td>
           </tr>
         </tbody>
       </table>
@@ -170,7 +160,7 @@ export default {
    data() {
         return {
             isLoading: true,
-            employee : [],
+            formsData : [],
             departments : [],
             form:{},
              deleteConfirmationModal:false,
@@ -179,16 +169,16 @@ export default {
         }
     },
     created() {
-             this.getEmployee();
+             this.getFormsData();
              this.getDepartments()
         },
 
       methods: {           
-        getEmployee() {
+        getFormsData() {
           console.log(API_BASE_URL)
-             axios.get(`${API_BASE_URL}/get_employee`).then((res)=>{
-               console.log(res.data.employee)
-               this.employee=res?.data?.employee
+             axios.get(`${API_BASE_URL}/get_form/it_move`).then((res)=>{
+               console.log(res.data)
+               this.formsData=res?.data?.forms
              }).catch((err)=>{
                console.log(err)
              })

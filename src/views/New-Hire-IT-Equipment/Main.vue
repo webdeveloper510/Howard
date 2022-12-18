@@ -112,8 +112,8 @@
                 </div>
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
-                <!-- <TomSelect
-              v-model="selectEquipment"
+                <TomSelect
+              v-model="newHireDetail.equipment_type"
               :options="{
                 placeholder: 'Select your Equipment Type',
                 plugins: {
@@ -133,8 +133,8 @@
               <option value="Printer">Printer</option>
               <option value="Signature-Pad">Signature Pad</option>
               <option value="Tablet">Tablet</option>
-            </TomSelect> -->
-            <multiselect v-model="equipmentValue" :options="equipmentTypes" :multiple="true" placeholder="Pick some" required></multiselect>
+            </TomSelect>
+            <!-- <multiselect v-model="equipmentValue" :options="equipmentTypes" :multiple="true" placeholder="Pick some" required></multiselect> -->
                
               <div class="form-help text-right">What type of equipment are you requesting?</div>
               <div class="form-help text-right">iPhones are issued to Managers or Supervisors only.  For special requests, 
@@ -258,7 +258,7 @@
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <!-- <multiselect v-model="categories" :options="departments" :multiple="true" placeholder="Pick some" required></multiselect> -->
                 <select id="deparment"  class="form-select" @change="departmentValue($event)">
-                  <option v-for="department in departments" :value="department.id">{{ department.department_name }}</option>
+                  <option v-for="department in departments" :value="department.department_name">{{ department.department_name }}</option>
                 </select>
               </div>
             </div>
@@ -274,7 +274,7 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <TomSelect
-                      v-model="Software"
+                      v-model="newHireDetail.software_required"
                       :options="{
                         placeholder: 'Select Software',
                         plugins: {
@@ -331,7 +331,7 @@
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <input
                   id="time"
-                  v-model="newHireDetail.badge"
+                  v-model="newHireDetail.add_soft"
                   type="text"
                   class="form-control"
                 />
@@ -351,7 +351,7 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <TomSelect
-                      v-model="Door"
+                      v-model="newHireDetail.door_badge"
                       :options="{
                         placeholder: 'Select Door Badge',
                         plugins: {
@@ -398,10 +398,10 @@
               </div>
               <div class="w-full mt-3 xl:mt-0 flex-1">
                 <select id="Location"  class="form-select" @change="shiftValue($event)" v-model="shiftType">
-                  <option value="yes">
+                  <option value="1">
                     Yes
                   </option>
-                  <option value="no">
+                  <option value="0">
                     No
                   </option>
                 </select>
@@ -563,14 +563,14 @@ export default {
                  e.preventDefault();
                  this.newHireDetail.software_requested=this.radioButtonValue
                  this.newHireDetail.shiftType=this.shiftType
-                 this.newHireDetail.department_id=this.deparmentId
+                 this.newHireDetail.department=this.deparmentId
                  this.newHireDetail.location=this.location
                  this.newHireDetail.equipmentTypes=this.equipmentValue
-                console.log(this.newHireDetail)
-                 
-                axios.post(`${API_BASE_URL}/demage_report`,this.newHireDetail).then((res)=>{
+                // console.log(this.newHireDetail)
+                // return false
+                axios.post(`${API_BASE_URL}/add_new_equipment`,this.newHireDetail).then((res)=>{
                   if(res.status==200){
-                      this.$toast.success(`Report Created Successfully!`);
+                      this.$toast.success(`Form Created Successfully!`);
                     }
                     else{
                       this.$toast.error(`Some error Occure`);

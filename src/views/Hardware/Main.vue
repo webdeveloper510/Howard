@@ -33,7 +33,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="Requestor Name"
-                    v-model="fields.first_name" />
+                    v-model="fields.requestor_name" />
                   <div class="form-help text-right">Manager or Supervisor name.</div>
                 </div>
               </div>
@@ -53,15 +53,11 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="Equipment for name"
-                    v-model="fields.last_name" />
+                    v-model="fields.equipment_name" />
                   <div class="form-help text-right">Enter the name of the employee who this request is for. If this request 
                     is for multiple users, please note their names at the bottom of this form.</div>
                 </div>
               </div>
-
-
-
-
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left">
@@ -75,7 +71,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select v-model="fields.location" id="Location" class="form-select">
                     <option value="Franklin, OH">
                       Franklin, OH
                     </option>
@@ -97,7 +93,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input  type="email" class="form-control" v-model="fields.phone"
+                  <input  type="email" class="form-control" v-model="fields.requestor_email"
                     placeholder="email" />
                 </div>
               </div>
@@ -111,7 +107,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="number" class="form-control" v-model="fields.phone"
+                  <input id="phone-no" type="number" class="form-control" v-model="fields.contact_phone"
                     placeholder="Phone" />
 
                 </div>
@@ -129,7 +125,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="category" v-model="fields.department" class="form-select">
+                  <select id="category" v-model="fields.department_id" class="form-select">
                     <option v-for="(department, index) in departments" :key="index" :value="department.id">
                       {{ department.department_name }}
                     </option>
@@ -145,7 +141,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input type="date" class="form-control" v-model="fields.phone"
+                  <input type="date" class="form-control" v-model="fields.requested_by_date"
                     placeholder="date" />
                 </div>
               </div>
@@ -159,7 +155,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <TomSelect
-                      v-model="Hardware"
+                      v-model="fields.type_hardware_requested"
                       :options="{
                         placeholder: 'Select Type of Hardware',
                         plugins: {
@@ -231,7 +227,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <TomSelect
-                      v-model="Software"
+                      v-model="fields.software_requested"
                       :options="{
                         placeholder: 'Select Software',
                         plugins: {
@@ -306,7 +302,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Additional Software or Hardware (Describe in detail)"
-                      v-model="fields.address" 
+                      v-model="fields.additional_equipment" 
                       rows="4"
                     ></textarea>
                     <div class="form-help text-right">Use this section to describes any type of specialty hardware or software that is not listed in the options above.  Be as detailed as possible.</div>
@@ -325,7 +321,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Reason for Request/​Justification (Please be specific)"
-                      v-model="fields.address" 
+                      v-model="fields.reason" 
                       rows="4"
                     ></textarea>
                 </div>
@@ -339,7 +335,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="date" v-model="fields.reported_time" type="text" class="form-control" />
+                  <input id="date" v-model="fields.ship_address" type="text" class="form-control" />
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -351,7 +347,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="date" v-model="fields.reported_time" type="text" class="form-control" /> 
+                  <input id="date" v-model="fields.ship_city" type="text" class="form-control" /> 
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -363,7 +359,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="State" v-model="fields.reported_time" type="text" class="form-control" /> 
+                  <input id="State" v-model="fields.ship_state" type="text" class="form-control" /> 
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -375,7 +371,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="date" v-model="fields.reported_time" type="number" class="form-control" /> 
+                  <input id="date" v-model="fields.ship_zipcode" type="number" class="form-control" /> 
                   <div class="form-help text-right">Please complete this box if the item is being shipped to a Remote User. </div>
                 </div>
               </div>
@@ -392,7 +388,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Office Location"
-                      v-model="fields.address" 
+                      v-model="fields.office_location" 
                       rows="4"
                     ></textarea>
                     <div class="form-help text-right">Enter the location where the employee will be sitting. Be as descriptive as possible.</div>
@@ -407,7 +403,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="password" type="text" v-model="fields.station_phone" class="form-control"
+                  <input id="password" type="text" v-model="fields.additonal_users_fname" class="form-control"
                     placeholder="Enter Additonal Users Name " />
                    
                 </div>
@@ -421,7 +417,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="password" type="text" v-model="fields.station_phone" class="form-control"
+                  <input id="password" type="text" v-model="fields.signature" class="form-control"
                     placeholder="Authorized By Signature " />
                 </div>
               </div>
@@ -485,14 +481,12 @@ export default {
     },
     createReport(e) {
       e.preventDefault();
-      this.fields.last_known_location = 'Test'
-      this.fields.description = 'Hii'
-      this.fields.resolution = 'Hii'
-      this.fields.status = 1
+      this.fields.additonal_users_lname = 'Test'
+      this.fields.last_name = 'Test'
       console.log(this.fields)
-      axios.post(`${API_BASE_URL}/demage_report`, this.fields).then((res) => {
+      axios.post(`${API_BASE_URL}/add_equipment_request`, this.fields).then((res) => {
         if (res.status == 200) {
-          this.$toast.success(`Report Created Successfully!`);
+          this.$toast.success(`Form Saved Successfully!`);
         }
         else {
           this.$toast.error(`Some error Occure`);
