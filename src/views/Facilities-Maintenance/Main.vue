@@ -184,7 +184,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="category"  v-model="fields.department" class="form-select">
+                  <select id="category"  v-model="fields.department_id" class="form-select">
                   <option
                     v-for="(department, index) in departments"
                       :key="index"
