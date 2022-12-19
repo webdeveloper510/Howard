@@ -48,7 +48,7 @@
       <div class="grid grid-cols-12 gap-6 mt-5">
     <!-- BEGIN: FAQ Menu -->
     <a href="" class="intro-y col-span-12 lg:col-span-6 box ">
-      <img src="http://thinkvertical.tklapp.com/wp-content/uploads/2022/10/business-bg1-1-570x570.jpg"  class="w-full h-full rounded">
+      <img src="../../assets/images/business.jpg"  class="w-full h-full rounded">
     </a>
     <div class="intro-y col-span-12 lg:col-span-6 box py-10 ">
       <div class="font-medium text-center w-3/4 text-3xl mx-auto mt-3">TELL YOUR DREAMS<br/>

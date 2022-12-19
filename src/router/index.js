@@ -109,7 +109,7 @@ const routes = [
         component: DashboardOverview3,
       },
       {
-        path: "/",
+        path: "Dashboard",
         name: "side-menu-dashboard-overview-4",
         component: DashboardOverview4,
       },
@@ -163,9 +163,6 @@ const routes = [
         name: "side-menu-transaction-list",
         component: TransactionList,
       },
-
-
-
       {
         path: "Access-list",
         name: "side-menu-Access-list",
@@ -213,9 +210,6 @@ const routes = [
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
       },
-
-
-
       {
         path: "seller-list",
         name: "side-menu-seller-list",
@@ -1236,22 +1230,22 @@ const routes = [
     ],
   },
   {
-    path: "/login",
+    path: "/Howard/login",
     name: "login",
     component: Login,
   },
   {
-    path: "/Purchasing",
+    path: "/Howard/Purchasing",
     name: "Purchasing",
     component: Purchasing,
   },
   {
-    path: "/Landing",
+    path: "/Howard/",
     name: "landing",
     component: Landing,
   },
   {
-    path: "/Corporate-Planning-Department",
+    path: "/Howard/Corporate-Planning-Department",
     name: "Corporate",
     component: Corporate,
   },
@@ -1261,7 +1255,7 @@ const routes = [
     component: ErrorPage,
   },
   {
-    path: "/:pathMatch(.*)*",
+    path: "/Howard/:pathMatch(.*)*",
     component: ErrorPage,
   },
 ];
