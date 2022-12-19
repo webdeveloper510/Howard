@@ -51,16 +51,15 @@
               <div class="overflow-x-auto scrollbar-hidden">
                 <div class="flex mt-5">
                   <a
-                    v-for="(faker, fakerKey) in $_.take($f(), 10)"
-                    :key="fakerKey"
+                  v-for="(user, index) in users"
+                    :key="index"
                     href=""
                     class="w-10 mr-4 cursor-pointer"
                   >
                     <div class="w-10 h-10 flex-none image-fit rounded-full">
                       <img
-                        alt="Midone Tailwind HTML Admin Template"
+                       
                         class="rounded-full"
-                        :src="faker.photos[0]"
                       />
                       <div
                         class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"
@@ -69,7 +68,7 @@
                     <div
                       class="text-xs text-slate-500 truncate text-center mt-2"
                     >
-                      {{ faker.users[0].name }}
+                      {{user.name }}
                     </div>
                   </a>
                 </div>
@@ -80,17 +79,15 @@
             class="chat__chat-list overflow-y-auto scrollbar-hidden pr-1 pt-1 mt-4"
           >
             <div
-              v-for="(faker, fakerKey) in $_.take($f(), 10)"
-              :key="fakerKey"
+            v-for="(user, index) in users"
+              :key="index"
               class="intro-x cursor-pointer box relative flex items-center p-5"
-              :class="{ 'mt-5': fakerKey }"
+              :class="{ 'mt-5': index }"
               @click="showChatBox"
             >
               <div class="w-12 h-12 flex-none image-fit mr-1">
                 <img
-                  alt="Midone Tailwind HTML Admin Template"
                   class="rounded-full"
-                  :src="faker.photos[0]"
                 />
                 <div
                   class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"
@@ -99,22 +96,23 @@
               <div class="ml-2 overflow-hidden">
                 <div class="flex items-center">
                   <a href="javascript:;" class="font-medium">{{
-                    faker.users[0].name
+                    user.name
                   }}</a>
                   <div class="text-xs text-slate-400 ml-auto">
-                    {{ faker.times[0] }}
+                    {{ '07:00 PM'}}
                   </div>
                 </div>
                 <div class="w-full truncate text-slate-500 mt-0.5">
-                  {{ faker.news[0].shortContent }}
+                  {{ user.name }}
                 </div>
               </div>
               <div
-                v-if="faker.trueFalse[0]"
+               
                 class="w-5 h-5 flex items-center justify-center absolute top-0 right-0 text-xs text-white rounded-full bg-primary font-medium -mt-1 -mr-1"
               >
-                {{ faker.notificationCount }}
+               1
               </div>
+            
             </div>
           </div>
         </TabPanel>
@@ -479,7 +477,7 @@
                 <img
                   alt="Midone Tailwind HTML Admin Template"
                   class="rounded-full"
-                  :src="$f()[0].photos[0]"
+                  :src="messages.image"
                 />
               </div>
               <div
@@ -702,6 +700,8 @@
               class="chat__box__input form-control dark:bg-darkmode-600 h-16 resize-none border-transparent px-5 py-3 shadow-none focus:border-transparent focus:ring-0"
               rows="1"
               placeholder="Type your message..."
+              v-model="form.message"
+              v-on:keyup.enter="sendMessage"
             ></textarea>
             <div
               class="flex absolute sm:static left-0 bottom-0 ml-5 sm:ml-0 mb-5 sm:mb-0"
@@ -7489,6 +7489,74 @@ import { ref } from "vue";
 
 const chatBox = ref(false);
 const showChatBox = () => {
+  console.log('yes')
   chatBox.value = !chatBox.value;
 };
+</script>
+
+<script>
+import { ref, provide } from "vue";
+import axios from 'axios'
+import { API_BASE_URL } from '../../config'
+const subcategory = ref([]);
+const editorData = ref("<p>Content of the editor.</p>");
+export default {
+data() {
+        return {
+      messages: [],
+      users: [],
+      form: {},
+      errors: {},
+      success: false,
+        }
+    },
+    created() {
+             this.getMessages();
+             this.fetchUser();
+        },
+
+   methods: {
+          getMessages() {
+                  axios.get(`${API_BASE_URL}/messages`).then((res)=>{
+                    console.log(res.data)
+                   // this.messages=res?.data?.Department
+                  }).catch((err)=>{
+                    console.log(err)
+                  })
+                
+                },
+
+                fetchUser() {
+                  axios.get(`${API_BASE_URL}/get_users`).then((res)=>{
+                    console.log(res.data)
+                    this.users=res?.data?.users
+                  }).catch((err)=>{
+                    console.log(err)
+                  })
+                
+                },
+
+     sendMessage(e) {
+            e.preventDefault();
+            this.messages.push({
+              "image":"	http://localhost:3000/src/assets/images/profile-11.jpg",
+              "message":this.form.message,
+              "user_id":1
+            })
+           console.log('yess')
+           this.form.user_id=1
+           axios.post(`${API_BASE_URL}/send_message`,this.form).then((res)=>{
+                      if(res.status==200){
+                        console.log(res.data)
+                        //this.$toast.success(`Employee Created Successfully!`);
+                      }
+                      else{
+                        this.$toast.error(`Some error Occure`);
+                      }
+                    })
+          }
+          },
+
+       
+}
 </script>
