@@ -7,12 +7,26 @@ import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
 import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
+import Corporate from "../views/Corporate/Main.vue";
+import modulaTerminationNotice from "../views/Modula-Termination-Notice/Main.vue"
+import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
 import AddProduct from "../views/add-product/Main.vue";
+import Hardware from "../views/Hardware/Main.vue"
 import AddDepartment from "../views/add-department/Main.vue";
 import AddPolicies from "../views/add-policies/Main.vue";
 import EmployeeList from "../views/Employee-list/Main.vue";
+import EquipmentRequestList from "../views/Equipment-Request-list/Main.vue";
+import TerminationNotice from "../views/Termination-Notice/Main.vue";
+import ITMove from "../views/IT-Move/Main.vue";
+import ITMoveList from "../views/IT-Move-list/Main.vue";
+import HardwareRequest from "../views/Hardware-Request-list/Main.vue";
+import NewHireITEquipment from "../views/New-Hire-IT-Equipment/Main.vue"
 import ProductGrid from "../views/product-grid/Main.vue";
 import TransactionList from "../views/transaction-list/Main.vue";
+import CustodyList from "../views/Custody/Main.vue";
+import DamagedList from "../views/Damaged-list/Main.vue";
+import Accesslist from "../views/Access-list/Main.vue";
+import FacilitiesList from "../views/Facilities-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
 import SellerList from "../views/seller-list/Main.vue";
 import Training from "../views/Training/Main.vue";
@@ -24,7 +38,9 @@ import Chat from "../views/chat/Main.vue";
 import Post from "../views/post/Main.vue";
 import Calendar from "../views/calendar/Main.vue";
 import CrudDataList from "../views/crud-data-list/Main.vue";
-import CrudForm from "../views/crud-form/Main.vue";
+import CrudForm from "../views/Damaged/Main.vue";
+import employeeAccess from "../views/Employee-Access/Main.vue";
+import employeeCustody from "../views/Equipment-Custody/Main.vue";
 import UsersLayout1 from "../views/users-layout-1/Main.vue";
 import UsersLayout2 from "../views/users-layout-2/Main.vue";
 import UsersLayout3 from "../views/users-layout-3/Main.vue";
@@ -36,6 +52,7 @@ import WizardLayout2 from "../views/wizard-layout-2/Main.vue";
 import WizardLayout3 from "../views/wizard-layout-3/Main.vue";
 import BlogLayout1 from "../views/blog-layout-1/Main.vue";
 import announcements from "../views/announcements/Main.vue";
+import Purchasing from "../views/Purchasing/Main.vue"
 import BlogLayout3 from "../views/blog-layout-3/Main.vue";
 import PricingLayout1 from "../views/pricing-layout-1/Main.vue";
 import PricingLayout2 from "../views/pricing-layout-2/Main.vue";
@@ -77,7 +94,7 @@ import ImageZoom from "../views/image-zoom/Main.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/Howard",
     component: SideMenu,
     children: [
       {
@@ -85,11 +102,7 @@ const routes = [
         name: "side-menu-dashboard-overview-1",
         component: DashboardOverview1,
       },
-      {
-        path: "dashboard-overview-2",
-        name: "side-menu-dashboard-overview-2",
-        component: DashboardOverview2,
-      },
+    
       {
         path: "dashboard-overview-3",
         name: "side-menu-dashboard-overview-3",
@@ -126,20 +139,83 @@ const routes = [
         component: EmployeeList,
       },
       {
+        path: "ITMove",
+        name: "side-menu-IT-Move",
+        component: ITMove,
+      },
+      {
         path: "product-grid",
         name: "side-menu-product-grid",
         component: ProductGrid,
+      },
+      {
+        path: "NewHireITEquipment",
+        name: "side-menu-NewHireITEquipment",
+        component: NewHireITEquipment,
+      },
+      {
+        path: "Modula-Termination-Notice",
+        name: "side-menu-Modula-Termination-Notice",
+        component: modulaTerminationNotice,
       },
       {
         path: "transaction-list",
         name: "side-menu-transaction-list",
         component: TransactionList,
       },
+
+
+
+      {
+        path: "Access-list",
+        name: "side-menu-Access-list",
+        component: Accesslist,
+      },
+      {
+        path: "Facilities-list",
+        name: "side-menu-Facilities-list",
+        component: FacilitiesList,
+      },
+      {
+        path: "Custody-list",
+        name: "side-menu-Custody-list",
+        component: CustodyList,
+      },
+      {
+        path: "Damaged-list",
+        name: "side-menu-Damaged-list",
+        component: DamagedList,
+      },
+      {
+        path: "Equipment-Request-list",
+        name: "side-menu-Equipment-Request-list",
+        component: EquipmentRequestList,
+      },
+      {
+        path: "Termination-list",
+        name: "side-menu-Termination-list",
+        component: TerminationNotice,
+      },
+      {
+        path: "Hardware-Request-list",
+        name: "side-menu-Hardware-Request-list",
+        component: HardwareRequest,
+      },
+      {
+        path: "IT-Move-list",
+        name: "side-menu-IT-Move-list",
+        component: ITMoveList,
+      },
+
+
       {
         path: "transaction-detail",
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
       },
+
+
+
       {
         path: "seller-list",
         name: "side-menu-seller-list",
@@ -191,9 +267,29 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "form",
-        name: "side-menu-crud-form",
+        path: "Damaged",
+        name: "side-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "side-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "facilitiesMaintenance",
+        name: "side-menu-Facilities-Maintenance",
+        component: facilitiesMaintenance,
+      },
+      {
+        path: "Hardware",
+        name: "side-menu-Hardware",
+        component: Hardware,
+      },
+      {
+        path: "employeeCustody",
+        name: "side-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",
@@ -542,9 +638,19 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "crud-form",
-        name: "simple-menu-crud-form",
+        path: "Damaged",
+        name: "simple-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "simple-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "employeeCustody",
+        name: "simple-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",
@@ -888,9 +994,19 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "crud-form",
-        name: "top-menu-crud-form",
+        path: "Damaged",
+        name: "top-menu-Damaged",
         component: CrudForm,
+      },
+      {
+        path: "employeeAccess",
+        name: "top-menu-Employee-Access",
+        component: employeeAccess,
+      },
+      {
+        path: "employeeCustody",
+        name: "top-menu-Employee-Custody",
+        component: employeeCustody,
       },
       {
         path: "users-layout-1",
@@ -1125,9 +1241,19 @@ const routes = [
     component: Login,
   },
   {
+    path: "/Purchasing",
+    name: "Purchasing",
+    component: Purchasing,
+  },
+  {
     path: "/Landing",
     name: "landing",
     component: Landing,
+  },
+  {
+    path: "/Corporate-Planning-Department",
+    name: "Corporate",
+    component: Corporate,
   },
   {
     path: "/error-page",

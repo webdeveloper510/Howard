@@ -466,7 +466,7 @@
               250 Official stores in 21 countries, click the marker to see
               location details.
             </div>
-            <ReportMap class="report-maps mt-5 bg-slate-200 rounded-md" />
+           
           </div>
         </div>
         <!-- END: Official Store -->

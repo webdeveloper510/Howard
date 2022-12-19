@@ -18,17 +18,12 @@
                 </div> 
               
                 <div class="mt-5">
-                
-                  <div
-                    class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-                  >
+                  <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                     <div class="form-label xl:w-64 xl:!mr-10">
                       <div class="text-left">
                         <div class="flex items-center">
                           <div class="font-medium">Policy Name</div>
-                          <div
-                            class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md"
-                          >
+                          <div class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
                             Required
                           </div>
                         </div>
@@ -38,6 +33,7 @@
                       <input
                         id="Department"
                         type="text"
+                        required
                         class="form-control"
                         v-model="fields.name"
                         placeholder="Policy Name"
@@ -47,15 +43,11 @@
                 </div>
 
                 <div class="mt-5">
-                
-                <div
-                  class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0"
-                >
+                <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                   <div class="form-label xl:w-64 xl:!mr-10">
                     <div class="text-left">
                       <div class="flex items-center">
                         <div class="font-medium">Policy Description</div>
-                        
                       </div>
                     </div>
                   </div>
@@ -63,11 +55,32 @@
                     <textarea
                             id="update-profile-form-5"
                             class="form-control"
+                            required
                             placeholder="Enter Policy Description"
                             v-model="fields.description"
                             rows="4"></textarea>
                   </div>
                 </div>                   
+              </div>
+              <div class="mt-5">
+                <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                  <div class="form-label xl:w-64 xl:!mr-10">
+                    <div class="text-left">
+                      <div class="flex items-center">
+                        <div class="font-medium"> Policy Document </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full mt-3 xl:mt-0 flex-1">
+                    <input
+                      id="Policy"
+                      type="file"
+                      required
+                      class="form-control"
+                      placeholder="Policy File"
+                    />
+                  </div>
+                </div>             
               </div>
               </div>
             </div>
@@ -91,118 +104,43 @@
             </div>
           </div>
 
-     
-
-    <div class="intro-y col-span-2 hidden 2xl:block">
-      <div class="pt-10 sticky top-0">
-        <ul
-          class="text-slate-500 relative before:content-[''] before:w-[2px] before:bg-slate-200 before:dark:bg-darkmode-600 before:h-full before:absolute before:left-0 before:z-[-1]"
-        >
-          <li
-            class="mb-4 border-l-2 pl-5 border-primary dark:border-primary text-primary font-medium"
-          >
-            <a href="">Upload Product</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Information</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Detail</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Variant</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Variant (Details)</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Product Management</a>
-          </li>
-          <li
-            class="mb-4 border-l-2 pl-5 border-transparent dark:border-transparent"
-          >
-            <a href="">Weight & Shipping</a>
-          </li>
-        </ul>
-        <div
-          class="mt-10 bg-warning/20 dark:bg-darkmode-600 border border-warning dark:border-0 rounded-md relative p-5"
-        >
-          <LightbulbIcon
-            class="w-12 h-12 text-warning/80 absolute top-0 right-0 mt-5 mr-3"
-          />
-          <h2 class="text-lg font-medium">Tips</h2>
-          <div class="mt-5 font-medium">Price</div>
-          <div
-            class="leading-relaxed text-xs mt-2 text-slate-600 dark:text-slate-500"
-          >
-            <div>
-              The image format is .jpg .jpeg .png and a minimum size of 300 x
-              300 pixels (For optimal images use a minimum size of 700 x 700
-              pixels).
+           <!-- BEGIN: Success Notification Content -->
+           <div
+              id="success-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <CheckCircleIcon class="text-success" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Policy Added success!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check your Policies
+                </div>
+              </div>
             </div>
-            <div class="mt-2">
-              Select product photos or drag and drop up to 5 photos at once
-              here. Include min. 3 attractive photos to make the product more
-              attractive to buyers.
+            <!-- END: Success Notification Content -->
+            <!-- BEGIN: Failed Notification Content -->
+            <div
+              id="failed-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <XCircleIcon class="text-danger" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Policy failed!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check the fileld form.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <!-- END: Failed Notification Content -->
   </div>
 </form>
 
- <!-- BEGIN: Success Notification -->
- <PreviewComponent class="intro-y box mt-5" v-slot="{ toggle }">
-        <div
-          class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
-        >
-          <h2 class="font-medium text-base mr-auto">Success Notification</h2>
-          
-        </div>
-        <div class="p-5">
-          <Preview>
-            <div class="text-center">
-              <!-- BEGIN: Notification Content -->
-              <Notification refKey="successNotification" class="flex">
-                <CheckCircleIcon class="text-success" />
-                <div class="ml-4 mr-4">
-                  <div class="font-medium">Message Saved!</div>
-                  <div class="text-slate-500 mt-1">
-                    The message will be sent in 5 minutes.
-                  </div>
-                </div>
-              </Notification>
-              <!-- END: Notification Content -->
-              <!-- BEGIN: Notification Toggle -->
-              <button
-                class="btn btn-primary"
-                @click="successNotificationToggle"
-              >
-                Show Notification
-              </button>
-              <!-- END: Notification Toggle -->
-            </div>
-          </Preview>
-          
-        </div>
-      </PreviewComponent>
-      <!-- END: Success Notification -->
+
 </template>
 <script>
 import { ref, provide } from "vue";
 import axios from 'axios'
-import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
+import Toastify from "toastify-js";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
 const subcategory = ref([]);
@@ -227,10 +165,30 @@ export default {
                 console.log(this.fields)
                 axios.post(`${API_BASE_URL}/policy_create`,this.fields).then((res)=>{
                   if(res.status==200){
-                      this.$toast.success(`Policy Created Successfully!`);
+                    Toastify({
+                      node: dom("#success-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
                     }
                     else{
-                      this.$toast.error(`Some error Occure`);
+                      Toastify({
+                      node: dom("#failed-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
                     }
                 })
             }
@@ -240,16 +198,4 @@ export default {
 }
 </script>
 
-<script setup>
-// Success notification
-const successNotification = ref();
-provide("bind[successNotification]", (el) => {
-  // Binding
-  successNotification.value = el;
-});
-const successNotificationToggle = () => {
-  // Show notification
-  successNotification.value.showToast();
-};
 
-</script>

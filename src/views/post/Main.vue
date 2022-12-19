@@ -136,7 +136,7 @@
             multiple
           >
           <option
-          v-for="(departments, name) in departments"
+          v-for="(departments, value) in departments"
           :key="value"
           :value="departments.id"
          >

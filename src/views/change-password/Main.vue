@@ -4,7 +4,6 @@
   </div>
   <div class="grid grid-cols-12 gap-6">
     <!-- BEGIN: Profile Menu -->
-   
     <!-- END: Profile Menu -->
     <div class="col-span-12 lg:col-span-12 2xl:col-span-12">
       
@@ -73,4 +72,72 @@
       <!-- END: Change Password -->
     </div>
   </div>
+   <!-- BEGIN: Success Notification -->
+ <PreviewComponent class="intro-y box mt-5" v-slot="{ toggle }">
+        <div
+          class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
+        >
+          <h2 class="font-medium text-base mr-auto">Success Notification</h2>
+          
+        </div>
+        <div class="p-5">
+          <Preview>
+            <div class="text-center">
+              <!-- BEGIN: Notification Content -->
+              <Notification refKey="successNotification" class="flex">
+                <CheckCircleIcon class="text-success" />
+                <div class="ml-4 mr-4">
+                  <div class="font-medium">Message Saved!</div>
+                  <div class="text-slate-500 mt-1">
+                    The message will be sent in 5 minutes.
+                  </div>
+                </div>
+                  <!-- BEGIN: Failed Notification Content -->
+                <div
+                  id="failed-notification-content"
+                  class="toastify-content hidden flex"
+                >
+                  <XCircleIcon class="text-danger" />
+                  <div class="ml-4 mr-4">
+                    <div class="font-medium">Registration failed!</div>
+                    <div class="text-slate-500 mt-1">
+                      Please check the fileld form.
+                    </div>
+                  </div>
+                </div>
+            <!-- END: Failed Notification Content -->
+              </Notification>
+              <!-- END: Notification Content -->
+              <!-- BEGIN: Notification Toggle -->
+              <button
+                class="btn btn-primary"
+                @click="successNotificationToggle"
+              >
+                Show Notification
+              </button>
+              <!-- END: Notification Toggle -->
+            </div>
+          </Preview>
+          
+        </div>
+      </PreviewComponent>
+      <!-- END: Success Notification -->
 </template>
+<script setup>
+import { ref, provide } from "vue";
+
+
+
+
+// Success notification
+const successNotification = ref();
+provide("bind[successNotification]", (el) => {
+  // Binding
+  successNotification.value = el;
+});
+const successNotificationToggle = () => {
+  // Show notification
+  successNotification.value.showToast();
+};
+
+</script>

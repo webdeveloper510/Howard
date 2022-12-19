@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a href="/add-department" class="btn btn-primary shadow-md mr-2">Add Department</a>
+      <a href="/Howard/add-department" class="btn btn-primary shadow-md mr-2">Add Department</a>
      
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -200,7 +200,7 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn btn-danger w-24" @click="deleteDeparment(this.departmentId)">Delete</button>
+                <button type="button" class="btn btn-danger w-24" @click="deleteDeparment(form.id)">Delete</button>
               </div>
             </ModalBody>
   </Modal>
@@ -236,7 +236,6 @@ export default {
              
             },
             editDepartment(e) {
-              console.log(e)
               console.log(this.form)
               let body = {}
               body.department_name = this.form.department_name
@@ -269,7 +268,6 @@ export default {
               
             },
             deleteDeparment(id) {
-             
              axios.delete(`${API_BASE_URL}/delete_department/${id}`).then((res)=>{
                    console.log('res',res)
               if(res.status==200){

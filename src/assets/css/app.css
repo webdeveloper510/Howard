@@ -164,11 +164,28 @@
 .links svg {
   height: 97%;
   padding: 4px;
+  color: black !important;
   margin: 0 auto;
 }
 .shadow-md.fixed.bottom-0.right-0.box.border.rounded-full.h-12.px-5.flex.items-center.justify-center.z-50.mb-10.mr-52 {
   display: none !important;
 }
+
+.saprater {
+  width: 130px;
+  height: 2px;
+  background: red;
+  margin: 10px auto;
+}
+.space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.large-tittle {
+  font-size: 48px;
+    font-weight: bold;
+    color: rgb(30 41 59);
+}
+
 @media only screen and (max-width: 768px) {
 .landing {
   padding-top: 0 !important;

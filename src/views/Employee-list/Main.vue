@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/add-employee">Edit Employee</a>
+      <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-employee">Edit Employee</a>
       <Dropdown>
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -41,11 +41,12 @@
     </div>
     <!-- BEGIN: Data List -->
     <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
-      <table class="table table-report -mt-2">
+                                      
+    <div class="overflow-x-auto">
+      <table class="table table-report  -mt-2">
         <thead>
           <tr>
             <th class="whitespace-nowrap">S.No.</th>
-            <th class="whitespace-nowrap">IMAGES</th>
             <th class="whitespace-nowrap">Employee NAME</th>
             <th class="text-center whitespace-nowrap">Phone No</th>
             <th class="text-center whitespace-nowrap">Department</th>
@@ -58,37 +59,22 @@
           <tr
           v-for="(employee, index) in employee"
             :key="index"
-            class="intro-x"
+            class="intro-x zoom-in"
           >
           <td>
               {{
                 index+1
               }}
           </td>
-            <td class="w-40">
-              <div class="flex">
-                <div class="w-10 h-10 image-fit zoom-in">
-                  <!-- <Tippy
-                    tag="img"
-                    alt="Midone Tailwind HTML Admin Template"
-                    class="rounded-full"
-                    :src="faker.images[0]"
-                    :content="`Uploaded at ${department.first_name}`"
-                  /> -->
-                </div>
-              
-              </div>
-            </td>
-            <td>
-              <a href="" class="font-medium whitespace-nowrap">{{
+            <td class="font-medium whitespace-nowrap">{{
                 employee.first_name
-              }}</a>
+              }}
               <!-- <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 {{  employee.first_name }}
               </div> -->
             </td>
-            <td class="text-center">{{ employee.first_name }}</td>
-            <td class="text-center">{{ employee.department.department_name}}</td>
+            <td class="text-center">{{ employee.phone }}</td>
+            <td class="text-center">{{ employee.department ? employee.department.department_name : '' }}</td>
             <td class="w-40">
               <div
                 class="flex items-center justify-center"
@@ -122,6 +108,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
     <!-- END: Data List -->
     <!-- BEGIN: Pagination -->
@@ -187,23 +174,7 @@
       <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Employee</h3>
         <div class="grid grid-cols-12 gap-x-5">
-                <div class="col-span-12 2xl:col-span-6 mt-3">
-                  <Dropzone ref-key="dropzoneSingleRef" :options="{
-                  url: 'https://httpbin.org/post',
-                  thumbnailWidth: 150,
-                  maxFilesize: 0.5,
-                  maxFiles: 1,
-                  headers: { 'My-Awesome-Header': 'header value' },
-                }" class="dropzone">
-                <div class="text-lg font-medium">
-                    Drop files here or click to upload.
-                </div>
-                <div class="text-gray-600">
-                    This is just a demo dropzone. Selected files are
-                    <span class="font-medium">not</span> actually uploaded.
-                </div>
-            </Dropzone>
-                </div>
+              
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
                       >Employee Name</label
@@ -232,13 +203,15 @@
                     <label for="update-profile-form-1" class="form-label"
                       >Department</label
                     >
-                    <input
-                      id="update-profile-form-1"
-                      type="text"
-                      class="form-control"
-                      placeholder="Department name"
-                      v-model="form.department.department_name"
-                    />
+                    <select id="category"  v-model="form.department_id" class="form-select">
+                  <option
+                    v-for="(department, index) in departments"
+                      :key="index"
+                      :value="department.id"
+                    >
+                      {{ department.department_name }}
+                  </option>
+                </select>
                 </div>
                 <div class="col-span-12 2xl:col-span-6 mt-3">
                     <label for="update-profile-form-1" class="form-label"
@@ -272,7 +245,7 @@
         >
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary w-24">Save</button>
+        <button type="submit"  class="btn btn-primary w-24">Save</button>
       </div>
     </form>
     </ModalBody>
@@ -301,11 +274,42 @@
         >
           Cancel
         </button>
-        <button type="button" class="btn btn-danger w-24">Delete</button>
+        <button type="button" class="btn btn-danger w-24" @click="deleteEmployee(form.id)">Delete</button>
       </div>
     </ModalBody>
   </Modal>
   <!-- END: Delete Confirmation Modal -->
+
+   <!-- BEGIN: Success Notification Content -->
+          <div id="success-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <CheckCircleIcon class="text-success" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Employee Update Successfully!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check your Employee
+                </div>
+              </div>
+            </div>
+            <!-- END: Success Notification Content -->
+            <!-- BEGIN: Failed Notification Content -->
+            <div
+              id="failed-notification-content"
+              class="toastify-content hidden flex"
+            >
+              <XCircleIcon class="text-danger" />
+              <div class="ml-4 mr-4">
+                <div class="font-medium">Employee Update failed!</div>
+                <div class="text-slate-500 mt-1">
+                  Please check the fileld form.
+                </div>
+              </div>
+            </div>
+            <!-- END: Failed Notification Content -->
+
+
+
 </template>
 
 <script>
@@ -318,6 +322,7 @@ export default {
         return {
             isLoading: true,
             employee : [],
+            departments : [],
             form:{},
              deleteConfirmationModal:false,
              editConfirmationModal:false,
@@ -326,6 +331,7 @@ export default {
     },
     created() {
              this.getEmployee();
+             this.getDepartments()
         },
 
       methods: {           
@@ -351,32 +357,73 @@ export default {
               }             
               
             },
-
-            editDepartment(e) {
-              console.log(e)
-              console.log(this.form)
+            getDepartments() {
+                  axios.get(`${API_BASE_URL}/get_department`).then((res)=>{
+                    console.log(res.data.Department)
+                    this.departments=res?.data?.Department
+                  }).catch((err)=>{
+                    console.log(err)
+                  })
+                
+                },
+            editEmployee(e) {
               let body = {}
-              body.department_name = this.form.department_name
-              body.description = this.form.description
-                axios.put(`${API_BASE_URL}/edit_department/${this.form.id}`,body).then((res)=>{
-                  // console.log(res.data.Department)
-                  // this.departments=res?.data?.Department
+              body.department_id = this.form.department_id
+              body.department_name = this.form.department.department_name
+              body.email = this.form.email
+              body.first_name = this.form.first_name
+              body.password = this.form.password
+              body.phone = this.form.phone
+                           
+                axios.put(`${API_BASE_URL}/edit_employee/${this.form.id}`,body).then((res)=>{
                   if(res.status==200){
-                        this.$toast.success(`Employee Update Successfully!`);
-                        this.getDepartments()
+                        Toastify({
+                      node: dom("#success-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
+                        this.getEmployee()
                         this.editConfirmationModal=false
                       }
                       else{
-                        this.$toast.error(`Some error Occure`);
+                        Toastify({
+                      node: dom("#failed-notification-content")
+                        .clone()
+                        .removeClass("hidden")[0],
+                      duration: 3000,
+                      newWindow: true,
+                      close: true,
+                      gravity: "top",
+                      position: "right",
+                      stopOnFocus: true,
+                    }).showToast();
                       }
                
                 }).catch((err)=>{
                   console.log(err)
                 })
             },
-
-           
-    
+            deleteEmployee(id) {             
+             axios.delete(`${API_BASE_URL}/delete_employee/${id}`).then((res)=>{
+                   console.log('res',res)
+              if(res.status==200){
+                this.$toast.success(`Delete Employee Successfully!`);
+                this.getEmployee()
+              this.deleteConfirmationModal=false;
+              }
+              else{
+              this.getEmployee()
+              this.$toast.error(`Some error Occure`);
+              this.deleteConfirmationModal=false;
+              }
+             })
+            }
        }
   }
 
