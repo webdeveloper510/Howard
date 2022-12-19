@@ -363,12 +363,12 @@ export default {
                         'content-type': 'multipart/form-data'
                     }
                 }
-      formData.append('file', this.file)
-      _.each(this.fields, (value, key) => {
-        console.log(value)
-          formData.append(key, value)
-        })
-      axios.post(`${API_BASE_URL}/create_facility_request`,formData,config).then((res) => {
+      // formData.append('file', this.file)
+      // _.each(this.fields, (value, key) => {
+      //   console.log(value)
+      //     formData.append(key, value)
+      //   })
+      axios.post(`${API_BASE_URL}/create_facility_request`,this.fields,config).then((res) => {
         if (res.status == 200) {
           this.$toast.success(`Report Created Successfully!`);
         }
