@@ -8,7 +8,7 @@
     specific person and they are responsible for the care and safekeeping of those items, while the items are in their
     possession.
   </div>
-  <form @submit.prevent="createReport" class="add-form">
+  <form @submit.prevent="createReport" enctype="multipart/form-data" class="add-form">
     <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
 
       <div class="intro-y col-span-11 2xl:col-span-9">
@@ -275,7 +275,7 @@
                      rows="4"></textarea>
                 </div>
               </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+              <!-- <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
@@ -283,10 +283,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" v-on:change="file" type="file" class="form-control" />
-                </div>
-              </div>
+                 <div class="w-full mt-3 xl:mt-0 flex-1">
+                  <input id="phone-no" v-on:change="handleFileObject" type="file" class="form-control" />
+                </div> >
+              </div> -->
             </div>
           </div>
         </div>
@@ -314,6 +314,7 @@
 <script>
 import { ref } from "vue";
 import axios from 'axios';
+import _ from 'lodash'
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
@@ -329,6 +330,7 @@ export default {
       departments: [],
       msg: [],
       fields: {},
+      file:null,
       errors: {},
       success: false,
     }
@@ -346,12 +348,26 @@ export default {
       })
 
     },
+    handleFileObject(event) {
+      console.log(event)
+        this.file = event.target.files[0];
+        console.log(this.file)
+        //this.avatarName = this.avatar.name
+      },
     createReport(e) {
       e.preventDefault();
-
       this.fields.status = 1
       console.log(this.fields)
-      axios.post(`${API_BASE_URL}/create_facility_request`, this.fields).then((res) => {
+      let formData = new FormData()
+      const config = {
+                    headers: { 'content-type': 'multipart/form-data;charset=utf-8; boundary=" + Math.random().toString().substr(2)' }
+                }
+      // formData.append('file', this.file)
+      // _.each(this.fields, (value, key) => {
+      //   console.log(value)
+      //     formData.append(key, value)
+      //   })
+      axios.post(`${API_BASE_URL}/create_facility_request`,this.fields).then((res) => {
         if (res.status == 200) {
           this.$toast.success(`Report Created Successfully!`);
         }
