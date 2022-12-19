@@ -32,7 +32,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="First name"
-                    v-model="fields.first_name" />
+                    v-model="fields.employee_name" />
 
                 </div>
               </div>
@@ -57,7 +57,24 @@
                 </div>
               </div>
 
+              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                <div class="form-label xl:w-64 xl:!mr-10">
+                  <div class="text-left">
+                    <div class="flex items-center">
+                      <div class="font-medium">Equipment Type</div>
+                      <div
+                        class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                        Required
+                      </div>
+                    </div>
 
+                  </div>
+                </div>
+                <div class="w-full mt-3 xl:mt-0 flex-1">
+                  <input id="Full-name" type="text" class="form-control" placeholder="Equipment Type"
+                    v-model="fields.emp_type" />
+                </div>
+              </div>
 
 
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -73,7 +90,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.location">
                     <option value="Franklin, OH">
                       Franklin, OH
                     </option>
@@ -95,7 +112,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="phone-no" type="text" class="form-control" v-model="fields.phone"
+                  <input id="phone-no" type="text" class="form-control" v-model="fields.title"
                     placeholder="Job Title" />
                 </div>
               </div>
@@ -132,26 +149,26 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+              <!-- <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
-                      <div class="font-medium">Computer Type</div>
+                      <div class="font-medium">Manufacturer</div>
                     </div>
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.manufatured_by">
                     <option value="Desktop">
                       Desktop PC
                     </option>
@@ -163,7 +180,7 @@
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
@@ -173,7 +190,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.manufatured_by">
                     <option value="Dell">
                       Dell
                     </option>
@@ -198,7 +215,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="Model" type="text" class="form-control" v-model="fields.phone" placeholder="Model" />
+                  <input id="Model" type="text" class="form-control" v-model="fields.model_number" placeholder="Model" />
                   <div class="form-help text-right">Enter the model of your device</div>
                 </div>
               </div>
@@ -211,7 +228,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="serial" type="text" class="form-control" v-model="fields.phone" placeholder="Serial" />
+                  <input id="serial" type="text" class="form-control" v-model="fields.phone_serial" placeholder="Serial" />
                   <div class="form-help text-right">Enter serial number here</div>
                 </div>
               </div>
@@ -226,11 +243,11 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -245,7 +262,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="date" v-model="fields.reported_time" type="date" class="form-control" />
+                  <input id="date" v-model="fields.phone_issue_date" type="date" class="form-control" />
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -257,7 +274,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.phone_brand">
                     <option value="Google">
                       Google
                     </option>
@@ -279,7 +296,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.phone_model">
                     <option value="Google">
                       Google Pixel 6
                     </option>
@@ -349,7 +366,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="password" type="text" v-model="fields.station_phone" class="form-control"
+                  <input id="password" type="text" v-model="fields.phone_serial" class="form-control"
                     placeholder="Enter Police Report " />
                 </div>
               </div>
@@ -364,11 +381,11 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -383,7 +400,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.bag_type">
                     <option value="Google">
                       Wheeled Roller Bag
                     </option>
@@ -410,11 +427,11 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" v-model="fields.monitor_issue"/>
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -424,18 +441,18 @@
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
-                      <div class="font-medium">Docking Station Issued?  </div>
+                      <div class="font-medium">Docking Station Issued?</div>
                     </div>
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -450,7 +467,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="Location" class="form-select">
+                  <select id="Location" class="form-select" v-model="fields.monitor_brand">
                     <option value="Google">
                       Spectre
                     </option>
@@ -472,7 +489,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="text" v-model="fields.reported_time" type="text" class="form-control" />
+                  <input id="text" v-model="fields.monitor_model" type="text" class="form-control" />
                 </div>
               </div>
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
@@ -488,7 +505,7 @@
                       id="update-profile-form-5"
                       class="form-control"
                       placeholder="Monitor Serial"
-                      v-model="fields.address" 
+                      v-model="fields.monitor_serial" 
                       rows="4"
                     ></textarea>
                 </div>
