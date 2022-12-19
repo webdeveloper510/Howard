@@ -381,11 +381,11 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
+                      <input id="radio-switch-4" v-model="fields.laptop_issue" class="form-check-input" type="radio" value="yes" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
+                      <input id="radio-switch-5"  v-model="fields.laptop_issue" class="form-check-input" type="radio" value="No" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -427,11 +427,11 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" v-model="fields.monitor_issue"/>
+                      <input id="radio-switch-4" class="form-check-input" type="radio" value="Yes" v-model="fields.monitor_issue"/>
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
+                      <input id="radio-switch-5" class="form-check-input" type="radio" value="No" v-model="fields.monitor_issue" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -448,12 +448,20 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
+<<<<<<< HEAD
                       <input id="radio-switch-4" class="form-check-input" v-model="fields.docking_issue"
                        type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
                       <input id="radio-switch-5" class="form-check-input" v-model="fields.docking_issue" type="radio" value="0" />
+=======
+                      <input id="radio-switch-4" v-model="fields.docking_issue" class="form-check-input" type="radio" value="Yes" />
+                      <label class="form-check-label" for="radio-switch-4">Yes</label>
+                    </div>
+                    <div class="form-check mr-2 mt-2 sm:mt-0">
+                      <input id="radio-switch-5" v-model="fields.docking_issue" class="form-check-input" type="radio" value="No" />
+>>>>>>> origin
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
@@ -522,10 +530,6 @@
           <button type="button"
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Cancel
-          </button>
-          <button type="button"
-            class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
-            Save & Add Equipment Custody
           </button>
           <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
             Save

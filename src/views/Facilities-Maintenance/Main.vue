@@ -188,7 +188,7 @@
                   <option
                     v-for="(department, index) in departments"
                       :key="index"
-                      :value="department.id"
+                      :value="department.department_name"
                     >
                       {{ department.department_name }}
                   </option>
@@ -275,7 +275,7 @@
                      rows="4"></textarea>
                 </div>
               </div>
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+              <!-- <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
@@ -285,8 +285,8 @@
                 </div>
                  <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="phone-no" v-on:change="handleFileObject" type="file" class="form-control" />
-                </div> >
-              </div>
+                </div> 
+              </div> -->
             </div>
           </div>
         </div>
@@ -357,19 +357,18 @@ export default {
     createReport(e) {
       e.preventDefault();
       this.fields.status = 1
-      console.log(this.fields)
       let formData = new FormData()
       const config = {
                     headers: {
                         'content-type': 'multipart/form-da  ta'
                     }
                 }
-      formData.append('file', this.file)
-      _.each(this.fields, (value, key) => {
-        console.log(value)
-          formData.append(key, value)
-        })
-      axios.post(`${API_BASE_URL}/create_facility_request`,formData,config).then((res) => {
+      // formData.append('file', this.file)
+      // _.each(this.fields, (value, key) => {
+      //   console.log(value)
+      //     formData.append(key, value)
+      //   })
+      axios.post(`${API_BASE_URL}/create_facility_request`,this.fields,config).then((res) => {
         if (res.status == 200) {
           this.$toast.success(`Report Created Successfully!`);
         }

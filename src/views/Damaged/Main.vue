@@ -162,7 +162,7 @@
                   <option
                   v-for="(department, index) in departments"
                     :key="index"
-                    :value="department.id"
+                    :value="department.department_name"
                   >
                     {{department.department_name}}
                   </option>
