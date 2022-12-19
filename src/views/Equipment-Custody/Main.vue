@@ -127,7 +127,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <select id="category" v-model="fields.department" class="form-select">
-                    <option v-for="(department, index) in departments" :key="index" :value="department.id">
+                    <option v-for="(department, index) in departments" :key="index" :value="department.department_name">
                       {{ department.department_name }}
                     </option>
                   </select>
@@ -521,10 +521,6 @@
           <button type="button"
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Cancel
-          </button>
-          <button type="button"
-            class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
-            Save & Add Equipment Custody
           </button>
           <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
             Save
