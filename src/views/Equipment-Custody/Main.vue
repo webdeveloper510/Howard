@@ -72,7 +72,7 @@
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <input id="Full-name" type="text" class="form-control" placeholder="Equipment Type"
-                    v-model="fields.emp_type" />
+                    v-model="fields.equipment_type" />
                 </div>
               </div>
 
@@ -126,8 +126,8 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <select id="category" v-model="fields.department" class="form-select">
-                    <option v-for="(department, index) in departments" :key="index" :value="department.id">
+                  <select id="category" v-model="fields.department_id" class="form-select">
+                    <option v-for="(department, index) in departments" :key="index" :value="department.department_name">
                       {{ department.department_name }}
                     </option>
                   </select>
@@ -149,17 +149,17 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
+                      <input id="radio-switch-4" class="form-check-input" v-model="fields.laptop_issue"  type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
+                      <input id="radio-switch-5" class="form-check-input" v-model="fields.laptop_issue" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
@@ -180,8 +180,8 @@
                     </option>
                   </select>
                 </div>
-              </div> -->
-              <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+              </div>
+              <!-- <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
                     <div class="flex items-center">
@@ -205,7 +205,7 @@
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
                 <div class="form-label xl:w-64 xl:!mr-10">
                   <div class="text-left mt-2">
@@ -228,7 +228,7 @@
                   </div>
                 </div>
                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                  <input id="serial" type="text" class="form-control" v-model="fields.phone_serial" placeholder="Serial" />
+                  <input id="serial" type="text" class="form-control" v-model="fields.serial_number" placeholder="Serial" />
                   <div class="form-help text-right">Enter serial number here</div>
                 </div>
               </div>
@@ -448,11 +448,12 @@
                 <div class="w-full mt-3 xl:mt-0 flex-1">
                   <div class="flex flex-col sm:flex-row mt-2">
                     <div class="form-check mr-2">
-                      <input id="radio-switch-4" class="form-check-input" type="radio" value="1" />
+                      <input id="radio-switch-4" class="form-check-input" v-model="fields.docking_issue"
+                       type="radio" value="1" />
                       <label class="form-check-label" for="radio-switch-4">Yes</label>
                     </div>
                     <div class="form-check mr-2 mt-2 sm:mt-0">
-                      <input id="radio-switch-5" class="form-check-input" type="radio" value="0" />
+                      <input id="radio-switch-5" class="form-check-input" v-model="fields.docking_issue" type="radio" value="0" />
                       <label class="form-check-label" for="radio-switch-5">No</label>
                     </div>
                   </div>

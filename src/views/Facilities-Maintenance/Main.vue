@@ -361,7 +361,7 @@ export default {
       let formData = new FormData()
       const config = {
                     headers: {
-                        'content-type': 'multipart/form-data'
+                        'content-type': 'multipart/form-da  ta'
                     }
                 }
       formData.append('file', this.file)
