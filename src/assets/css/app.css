@@ -192,3 +192,17 @@
   padding-bottom: 0 !important;
 }
 }
+
+.landing-side {
+  height: 50px;
+  position: relative;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 1.25rem;
+}
+
+.landing-dropdown {
+  width: 264px !important;
+}
