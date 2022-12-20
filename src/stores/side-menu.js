@@ -50,11 +50,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-Hardware",
             title: "Hardware & Software Request Form",
           },
-          {
-            icon: "",
-            pageName: "side-menu-Damaged",
-            title: "Damaged & Lost Equipment",
-          },
+          
           {
             icon: "",
             pageName: "side-menu-NewHireITEquipment",

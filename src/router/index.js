@@ -109,7 +109,7 @@ const routes = [
         component: DashboardOverview3,
       },
       {
-        path: "Dashboard",
+        path: "/",
         name: "side-menu-dashboard-overview-4",
         component: DashboardOverview4,
       },
@@ -203,8 +203,6 @@ const routes = [
         name: "side-menu-IT-Move-list",
         component: ITMoveList,
       },
-
-
       {
         path: "transaction-detail",
         name: "side-menu-transaction-detail",
@@ -259,26 +257,6 @@ const routes = [
         path: "crud-data-list",
         name: "side-menu-crud-data-list",
         component: CrudDataList,
-      },
-      {
-        path: "Damaged",
-        name: "side-menu-Damaged",
-        component: CrudForm,
-      },
-      {
-        path: "employeeAccess",
-        name: "side-menu-Employee-Access",
-        component: employeeAccess,
-      },
-      {
-        path: "facilitiesMaintenance",
-        name: "side-menu-Facilities-Maintenance",
-        component: facilitiesMaintenance,
-      },
-      {
-        path: "Hardware",
-        name: "side-menu-Hardware",
-        component: Hardware,
       },
       {
         path: "employeeCustody",
@@ -632,11 +610,6 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "Damaged",
-        name: "simple-menu-Damaged",
-        component: CrudForm,
-      },
-      {
         path: "employeeAccess",
         name: "simple-menu-Employee-Access",
         component: employeeAccess,
@@ -988,11 +961,6 @@ const routes = [
         component: CrudDataList,
       },
       {
-        path: "Damaged",
-        name: "top-menu-Damaged",
-        component: CrudForm,
-      },
-      {
         path: "employeeAccess",
         name: "top-menu-Employee-Access",
         component: employeeAccess,
@@ -1230,22 +1198,42 @@ const routes = [
     ],
   },
   {
-    path: "/Howard/login",
+    path: "/login",
     name: "login",
     component: Login,
   },
   {
-    path: "/Howard/Purchasing",
+    path: "/facilitiesMaintenance",
+    name: "Facilities-Maintenance",
+    component: facilitiesMaintenance,
+  },
+  {
+    path: "/Hardware",
+    name: "Hardware",
+    component: Hardware,
+  },
+  {
+    path: "/employeeAccess",
+    name: "Employee-Access",
+    component: employeeAccess,
+  },
+  {
+    path: "/Purchasing",
     name: "Purchasing",
     component: Purchasing,
   },
   {
-    path: "/Howard/",
+    path: "/landing",
     name: "landing",
     component: Landing,
   },
   {
-    path: "/Howard/Corporate-Planning-Department",
+    path: "/Damaged",
+    name: "Damaged",
+    component: CrudForm,
+  },
+  {
+    path: "/Corporate-Planning-Department",
     name: "Corporate",
     component: Corporate,
   },
@@ -1255,7 +1243,7 @@ const routes = [
     component: ErrorPage,
   },
   {
-    path: "/Howard/:pathMatch(.*)*",
+    path: "/:pathMatch(.*)*",
     component: ErrorPage,
   },
 ];
