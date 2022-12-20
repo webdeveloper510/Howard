@@ -477,21 +477,13 @@ export default {
     createReport(e) {
       e.preventDefault();
       this.fields.status = 1
-      var formData = new FormData();
-      const config = {
-        headers: {
-          'content-type': 'multipart/form-data'
-        }
-      }
-      // _.each(this.fields, (value, key) => {
-      //   console.log(value)
-      //     formData.append(key, value)
-      //   })
-  
-     formData.append('file', this.file)
-     console.log(formData);
-     // this.fields.file=this.file
-      axios.post(`${API_BASE_URL}/create_facility_request`, JSON.stringify(formData), config).then((res) => {
+      var formData = new FormData();    
+      _.each(this.fields, (value, key) => {
+        console.log(value)
+          formData.append(key, value)
+        })  
+     formData.append('file',this.file)
+      axios.post(`${API_BASE_URL}/create_facility_request`, formData).then((res) => {
         console.log(res);
         if (res.status == 200) {
           this.$toast.success(`Report Created Successfully!`);
