@@ -39,28 +39,44 @@
                   <div class="dropdown-menu w-40  landing-dropdown">
                     <ul class="dropdown-content">
                       <li>
-                        <a href="/employeeAccess" class="dropdown-item ">Employee-Access</a>
+                        <router-link :to="{ name: 'Employee-Access' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Employee-Access
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/facilitiesMaintenance" class="dropdown-item">Facilities-Maintenance</a>
+                        <router-link :to="{ name: 'Facilities-Maintenance' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Facilities-Maintenance
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/employeeCustody" class="dropdown-item">Employee-Custody</a>
+                        <router-link :to="{ name: 'Employee-Custody' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Employee-Custody
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/Hardware" class="dropdown-item">Hardware & Software Request Form </a>
+                        <router-link :to="{ name: 'Hardware' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Hardware & Software Request Form
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/NewHireITEquipment" class="dropdown-item">New Hire IT Equipment </a>
+                        <router-link :to="{ name: 'NewHireITEquipment' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            New Hire IT Equipment
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/Modula-Termination-Notice" class="dropdown-item">Modula-Termination-Notice </a>
+                        <router-link :to="{ name: 'Modula-Termination-Notice' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Modula-Termination-Notice
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/ITMove" class="dropdown-item">IT Move Request Form </a>
+                        <router-link :to="{ name: 'IT-Move' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            IT Move Request Form
+                          </router-link>
                       </li>
                       <li>
-                        <a href="/Damaged" class="dropdown-item">Damaged & Lost Equipment</a>
+                        <router-link :to="{ name: 'Damaged' }" tag="a" class="-intro-x md:flex dropdown-item">
+                            Damaged & Lost Equipment
+                          </router-link>
                       </li>
                     </ul>
                   </div>
