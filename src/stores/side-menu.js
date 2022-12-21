@@ -27,49 +27,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
       },
       {
         icon: "FileTextIcon",
-        pageName: "side-menu-Employee-Access",
-        title: "Employee-Form",
-        subMenu: [
-          {
-            icon: "",
-            pageName: "side-menu-Employee-Access",
-            title: "Employee-Access",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-Facilities-Maintenance",
-            title: "Facilities-Maintenance",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-Employee-Custody",
-            title: "Employee-Custody",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-Hardware",
-            title: "Hardware & Software Request Form",
-          },
-          
-          {
-            icon: "",
-            pageName: "side-menu-NewHireITEquipment",
-            title: "New Hire IT Equipment",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-Modula-Termination-Notice",
-            title: "Modula-Termination-Notice",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-IT-Move",
-            title: "IT Move Request Form",
-          }
-        ]
-      },
-      {
-        icon: "FileTextIcon",
         pageName: "side-menu-list",
         title: "Lists",
         subMenu: [
@@ -163,13 +120,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-product-list",
         title: "All Employee",
       },
-      
-      {
-        icon: "UserPlusIcon",
-        pageName: "side-menu-add-product",
-        title: "New Hire Onboard",
-      },
-      
       {
         icon: "MessageSquareIcon",
         pageName: "side-menu-chat",

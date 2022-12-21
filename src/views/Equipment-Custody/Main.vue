@@ -8,7 +8,7 @@
 
       <div class="intro-y col-span-11 2xl:col-span-9">
         <!-- BEGIN: Product Information -->
-        <div class="intro-y box md:w-4/5 p-5 mt-5 mx-auto">
+        <div class="intro-y box md:w-3/5 p-5 mt-5 mx-auto">
           <div class=" dark:border-darkmode-400 rounded-md p-5">
             <div class="intro-y text-center mt-8">
               <h2 class="text-lg font-medium mr-auto">Equipment Custody Record</h2>
@@ -607,7 +607,7 @@ export default {
 import { onMounted } from "vue";
 import Header from "../../global-components/Header/Main.vue";
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("error-page").removeClass("login").addClass("landing");
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
 });
 
 </script>

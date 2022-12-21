@@ -267,6 +267,6 @@ import { onMounted } from "vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import Header from "../../global-components/Header/Main.vue";
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("error-page").removeClass("login").addClass("landing");
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("forms").addClass("landing");
 });
 </script>

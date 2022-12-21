@@ -5,7 +5,7 @@
     <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
       <div class="intro-y col-span-11 2xl:col-span-9">
         <!-- BEGIN: Product Information -->
-        <div class="intro-y box p-5 mt-5 mx-auto md:w-4/5">
+        <div class="intro-y box p-5 mt-5 mx-auto md:w-3/5">
           <div class=" dark:border-darkmode-400 rounded-md p-5">
             <div class="intro-y text-center mt-3">
               <h2 class="text-lg font-medium mr-auto">Modula New Hire IT Equipment Request</h2>
@@ -897,7 +897,7 @@ fieldset[disabled] .multiselect {
 import { onMounted } from "vue";
 import Header from "../../global-components/Header/Main.vue";
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("error-page").removeClass("login").addClass("landing");
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
 });
 
 </script>

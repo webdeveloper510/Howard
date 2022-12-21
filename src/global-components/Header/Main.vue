@@ -81,19 +81,19 @@
                     </ul>
                   </div>
                 </div>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side ">
                   News & Announcements
                 </router-link>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side ">
                   Company Strategy & Goals
                 </router-link>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Policies
                 </router-link>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   New Employee Onboarding
                 </router-link>
@@ -109,17 +109,22 @@
                   class=" font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Paylocity
                 </a>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Departments
                 </router-link>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Training
                 </router-link>
-                <router-link :to="{ name: 'side-menu-add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Safety
+                </router-link>
+                <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-5">
+                    <button class="btn btn-elevated-rounded-dark mr-2 mb-2">
+                        <UserIcon class="w-4 h-4 mr-2" /> Login
+                    </button>
                 </router-link>
               </div>
             </div>

@@ -110,7 +110,7 @@ const routes = [
         component: DashboardOverview3,
       },
       {
-        path: "/",
+        path: "/Dashboard",
         name: "side-menu-dashboard-overview-4",
         component: DashboardOverview4,
       },
@@ -118,11 +118,6 @@ const routes = [
         path: "categories",
         name: "side-menu-categories",
         component: Categories,
-      },
-      {
-        path: "add-employee",
-        name: "side-menu-add-product",
-        component: AddProduct,
       },
       {
         path: "add-department",
@@ -507,11 +502,6 @@ const routes = [
         component: Categories,
       },
       {
-        path: "add-product",
-        name: "simple-menu-add-product",
-        component: AddProduct,
-      },
-      {
         path: "add-department",
         name: "simple-menu-add-department",
         component: AddDepartment,
@@ -856,11 +846,6 @@ const routes = [
         path: "categories",
         name: "top-menu-categories",
         component: Categories,
-      },
-      {
-        path: "add-product",
-        name: "top-menu-add-product",
-        component: AddProduct,
       },
       {
         path: "add-department",
@@ -1230,9 +1215,14 @@ const routes = [
     component: Purchasing,
   },
   {
-    path: "/landing",
+    path: "/",
     name: "landing",
     component: Landing,
+  },
+  {
+    path: "/add-employee",
+    name: "add-product",
+    component: AddProduct,
   },
   {
     path: "/Damaged",

@@ -160,6 +160,12 @@
 .landing {
   background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
 }
+.forms {
+  background-image: url('../images/banner.jpg');
+  background-position: -92px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .links svg {
   height: 97%;
@@ -188,6 +194,10 @@
 
 @media only screen and (max-width: 768px) {
 .landing {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.forms {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
