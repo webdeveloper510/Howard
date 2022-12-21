@@ -95,7 +95,7 @@ import ImageZoom from "../views/image-zoom/Main.vue";
 
 const routes = [
   {
-    path: "/Howard",
+    path: "/",
     component: SideMenu,
     children: [
       {
@@ -1165,77 +1165,77 @@ const routes = [
     ],
   },
   {
-    path: "/login",
+    path: "/Howard/login",
     name: "login",
     component: Login,
   },
   {
-    path: "/Company",
+    path: "/Howard/Company",
     name: "company",
     component: Company,
   },
   {
-    path: "/ITMove",
+    path: "/Howard/ITMove",
     name: "IT-Move",
     component: ITMove,
   },
   {
-    path: "/Modula-Termination-Notice",
+    path: "/Howard/Modula-Termination-Notice",
     name: "Modula-Termination-Notice",
     component: modulaTerminationNotice,
   },
   {
-    path: "/NewHireITEquipment",
+    path: "/Howard/NewHireITEquipment",
     name: "NewHireITEquipment",
     component: NewHireITEquipment,
   },
   {
-    path: "/employeeCustody",
+    path: "/Howard/employeeCustody",
     name: "Employee-Custody",
     component: employeeCustody,
   },
   {
-    path: "/facilitiesMaintenance",
+    path: "/Howard/facilitiesMaintenance",
     name: "Facilities-Maintenance",
     component: facilitiesMaintenance,
   },
   {
-    path: "/Hardware",
+    path: "/Howard/Hardware",
     name: "Hardware",
     component: Hardware,
   },
   {
-    path: "/employeeAccess",
+    path: "/Howard/employeeAccess",
     name: "Employee-Access",
     component: employeeAccess,
   },
   {
-    path: "/Purchasing",
+    path: "/Howard/Purchasing",
     name: "Purchasing",
     component: Purchasing,
   },
   {
-    path: "/",
+    path: "/Howard/",
     name: "landing",
     component: Landing,
   },
   {
-    path: "/add-employee",
+    path: "/Howard/add-employee",
     name: "add-product",
     component: AddProduct,
   },
   {
-    path: "/Damaged",
+    path: "/Howard/Damaged",
     name: "Damaged",
     component: CrudForm,
   },
   {
-    path: "/Corporate-Planning-Department",
+    path: "/Howard/Corporate-Planning-Department",
     name: "Corporate",
     component: Corporate,
   },
   {
-    path: "/error-page",
+    path: "/Howard/error-page",
     name: "error-page",
     component: ErrorPage,
   },
