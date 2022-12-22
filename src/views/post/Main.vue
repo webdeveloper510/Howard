@@ -1,22 +1,18 @@
 <template>
-  <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+  <Header></Header>
+  <div class="box1 p-5 mt-3 md:w-3/4 mx-auto">
+    <div class="intro-y sm:flex-row text-center mt-3">
     <h2 class="text-lg font-medium mr-auto">Add New Post</h2>
-    <button
-        type="button"
-        class="btn btn-primary mr-2 flex items-center ml-auto sm:ml-0"
-      >
-        Save
-      </button>
   </div>
   <div class="pos intro-y grid grid-cols-12 gap-5 mt-5">
     <!-- BEGIN: Post Content -->
     <div class="intro-y col-span-12 lg:col-span-8">
       <input
         type="text"
-        class="intro-y form-control py-3 px-4 box pr-10"
+        class="intro-y form-control py-3 px-4  pr-10"
         placeholder="Title"
       />
-      <TabGroup class="post intro-y overflow-hidden box mt-5">
+      <TabGroup class="post intro-y overflow-hidden  mt-5">
         <TabList
           class="post__tabs nav-tabs flex-col sm:flex-row bg-slate-200 dark:bg-darkmode-800"
         >
@@ -71,7 +67,7 @@
     <!-- END: Post Content -->
     <!-- BEGIN: Post Info -->
     <div class="col-span-12 lg:col-span-4">
-      <div class="intro-y box p-5">
+      <div class="intro-y  p-5">
         <div>
           <label class="form-label">Written By</label>
           <Dropdown>
@@ -168,51 +164,25 @@
         </div>
       </div>
        <!-- END: Basic Notification -->
-      <!-- BEGIN: Success Notification -->
-      <PreviewComponent class="intro-y box mt-5" v-slot="{ toggle }">
-        <div
-          class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
-        >
-          <h2 class="font-medium text-base mr-auto">Success Notification</h2>
-          
-        </div>
-        <div class="p-5">
-          <Preview>
-            <div class="text-center">
-              <!-- BEGIN: Notification Content -->
-              <Notification refKey="successNotification" class="flex">
-                <CheckCircleIcon class="text-success" />
-                <div class="ml-4 mr-4">
-                  <div class="font-medium">Message Saved!</div>
-                  <div class="text-slate-500 mt-1">
-                    The message will be sent in 5 minutes.
-                  </div>
-                </div>
-              </Notification>
-              <!-- END: Notification Content -->
-              <!-- BEGIN: Notification Toggle -->
-              <button
-                class="btn btn-primary"
-                @click="successNotificationToggle"
-              >
-                Show Notification
-              </button>
-              <!-- END: Notification Toggle -->
-            </div>
-          </Preview>
-          
-        </div>
-      </PreviewComponent>
-      <!-- END: Success Notification -->
     </div>
     <!-- END: Post Info -->
   </div>
+  <button
+        type="button"
+        class="btn btn-primary mr-2 flex items-center ml-0 md:ml-auto"
+      >
+        Save
+      </button>
+  </div>
+
   
 </template>
 
 <script setup>
 import { ref, provide } from "vue";
-
+import { onMounted } from "vue";
+import dom from "@left4code/tw-starter/dist/js/dom";
+import Header from "../../global-components/Header/Main.vue";
 const categories = ref(["1", "2"]);
 const tags = ref(["1", "2"]);
 const salesReportFilter = ref("");
@@ -227,6 +197,10 @@ const successNotificationToggle = () => {
   // Show notification
   successNotification.value.showToast();
 };
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
 </script>
 
 <script>
@@ -263,3 +237,4 @@ export default {
 
 }
 </script>
+

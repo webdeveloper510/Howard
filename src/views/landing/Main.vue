@@ -3,7 +3,7 @@
 
     <Header></Header>
 
-    <div class="my-5 intro-y">
+    <div class="my-5 md:mx-6 intro-y">
       <h2 class="text-3xl text-center font-bold leading-none large-tittle space mt-3">WELCOME TO MIST</h2>
       <div class="saprater"></div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
@@ -74,7 +74,7 @@
 
       </div>
     </div>
-    <div class="py-5 intro-y">
+    <div class="py-5 md:mx-6 intro-y">
 
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-6 lg:col-span-6 cursor-pointer zoom-in box p-5 justify-center">
@@ -115,7 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="py-5 intro-y">
+    <div class="py-5 md:mx-6 intro-y">
       <h2 class="text-3xl font-medium leading-none mt-3 ">AWESOME FEATURES</h2>
       <div class="saprater-left"></div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">

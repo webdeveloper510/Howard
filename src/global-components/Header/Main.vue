@@ -1,14 +1,14 @@
 <template>
- <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 box pt-3 mb-1">
+ <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-10 box pt-3 mb-1">
     <div class="top-bar-boxed flex items-center my-4">
       <!-- BEGIN: Logo -->
-      <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex">
+      <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex mx-auto">
         <img class="h-16" alt="Midone Tailwind HTML Admin Template"
           src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-" />
       </router-link>
       <!-- END: Logo -->
       <!-- BEGIN: Account Menu -->
-      <div class="ml-auto flex">
+      <div class="">
 
         <!-- BEGIN: Slide Over Toggle -->
 
@@ -85,11 +85,11 @@
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side ">
                   News & Announcements
                 </router-link>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'company' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side ">
                   Company Strategy & Goals
                 </router-link>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-policies' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Policies
                 </router-link>
@@ -109,7 +109,7 @@
                   class=" font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Paylocity
                 </a>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'add-department' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex ml-5 mt-2 landing-side">
                   Departments
                 </router-link>

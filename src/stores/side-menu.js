@@ -8,18 +8,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         pageName: "side-menu-dashboard-overview-4",
         title: "Dashboard",
       },
-
-      {
-        icon: "InboxIcon",
-        pageName: "side-menu-blog-layout-2",
-        title: "Announcements/News",
-      },
-      {
-        icon: "FileTextIcon",
-        pageName: "side-menu-post",
-        title: "Post",
-      },
-
       {
         icon: "FilePlusIcon",
         pageName: "side-menu-wizard-layout-2",
@@ -75,11 +63,7 @@ export const useSideMenuStore = defineStore("sideMenu", {
          
         ]
       },
-      {
-        icon: "FilePlusIcon",
-        pageName: "side-menu-typography",
-        title: "Policies",
-      },
+
       {
         icon: "GitPullRequestIcon",
         pageName: "side-menu-tab",
@@ -129,6 +113,21 @@ export const useSideMenuStore = defineStore("sideMenu", {
         icon: "LogInIcon",
         pageName: "login",
         title: "Login",
+      },
+      {
+        icon: "FilePlusIcon",
+        pageName: "typography",
+        title: "Policies",
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "post",
+        title: "Post",
+      },
+      {
+        icon: "FileTextIcon",
+        pageName: "company",
+        title: "company",
       },
       {
         icon: "LayoutIcon",

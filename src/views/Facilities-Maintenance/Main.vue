@@ -7,7 +7,7 @@
 
       <div class="intro-y col-span-11 2xl:col-span-9">
         <!-- BEGIN: Product Information -->
-        <div class="intro-y box md:w-3/5 p-5 mt-5 mx-auto">
+        <div class="intro-y box1 md:w-3/5 p-5 mt-5 mx-auto">
           <div class=" dark:border-darkmode-400 rounded-md p-5">
             <div class="intro-y text-center mt-3">
               <h2 class="text-lg font-medium mr-auto">Facilities Maintenance Request</h2>

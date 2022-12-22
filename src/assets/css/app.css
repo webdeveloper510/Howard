@@ -162,7 +162,7 @@
 }
 .forms {
   background-image: url('../images/banner.jpg');
-  background-position: -92px 0;
+  background-position: 0 50px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -215,4 +215,20 @@
 
 .landing-dropdown {
   width: 264px !important;
+}
+
+.box1 {
+  box-shadow: 0px 3px 20px #0000000b;
+  position: relative;
+  border-radius: 0.375rem;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: #f1ba2282;
+}
+
+.saprater-left {
+    width: 130px;
+    height: 2px;
+    background: red;
+    margin: 10px 0px;
 }

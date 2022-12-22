@@ -1,11 +1,15 @@
 <template>
-  <div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto">Policies</h2>
-  </div>
-  <div class="grid grid-cols-12 gap-6 mt-5">
+  <Header></Header>
+
+
+  <div class="grid grid-cols-12 gap-6 mt-5 box1 px-10 pb-10">
+    <div class="col-span-12 intro-y text-center mt-8">
+        <h2 class="text-lg font-medium mr-auto">Policies</h2>
+      </div>
     <div
-      class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
+      class="intro-y col-span-12 flex  flex-wrap sm:flex-nowrap items-center mt-2"
     >
+      
       <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-policies">Add Policies</a>
       
       <div class="hidden md:block mx-auto text-slate-500">
@@ -281,4 +285,14 @@ created() {
             }
                 }
   }
+</script>
+
+<script setup>
+import { onMounted } from "vue";
+import Header from "../../global-components/Header/Main.vue";
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
+
 </script>

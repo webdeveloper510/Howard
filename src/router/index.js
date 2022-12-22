@@ -110,7 +110,7 @@ const routes = [
         component: DashboardOverview3,
       },
       {
-        path: "/Dashboard",
+        path: "Dashboard",
         name: "side-menu-dashboard-overview-4",
         component: DashboardOverview4,
       },
@@ -119,16 +119,7 @@ const routes = [
         name: "side-menu-categories",
         component: Categories,
       },
-      {
-        path: "add-department",
-        name: "side-menu-add-department",
-        component: AddDepartment,
-      },
-      {
-        path: "add-policies",
-        name: "side-menu-add-policies",
-        component: AddPolicies,
-      },
+    
       {
         path: "employee-list",
         name: "side-menu-product-list",
@@ -205,11 +196,6 @@ const routes = [
         component: Goals,
       },
       {
-        path: "Announcements_News ",
-        name: "side-menu-inbox",
-        component: Inbox,
-      },
-      {
         path: "Task_&_Process_Information ",
         name: "side-menu-file-manager",
         component: Task,
@@ -223,11 +209,6 @@ const routes = [
         path: "chat",
         name: "side-menu-chat",
         component: Chat,
-      },
-      {
-        path: "post",
-        name: "side-menu-post",
-        component: Post,
       },
       {
         path: "calendar",
@@ -294,11 +275,6 @@ const routes = [
         path: "PoliciesDetails/:id",
         name: "side-menu-Policies-details",
         component: PoliciesDetails,
-      },
-      {
-        path: "Announcements",
-        name: "side-menu-blog-layout-2",
-        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -409,11 +385,6 @@ const routes = [
         path: "dropdown",
         name: "side-menu-dropdown",
         component: Dropdown,
-      },
-      {
-        path: "Policies ",
-        name: "side-menu-typography",
-        component: Typography,
       },
       {
         path: "icon",
@@ -640,11 +611,6 @@ const routes = [
         path: "blog-layout-1",
         name: "simple-menu-blog-layout-1",
         component: BlogLayout1,
-      },
-      {
-        path: "Announcements",
-        name: "simple-menu-blog-layout-2",
-        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -988,11 +954,6 @@ const routes = [
         component: BlogLayout1,
       },
       {
-        path: "Announcements",
-        name: "top-menu-blog-layout-2",
-        component: announcements,
-      },
-      {
         path: "blog-layout-3",
         name: "top-menu-blog-layout-3",
         component: BlogLayout3,
@@ -1175,6 +1136,11 @@ const routes = [
     component: Company,
   },
   {
+    path: "/Howard/Announcements",
+    name: "blog-layout-2",
+    component:Inbox,
+  },
+  {
     path: "/Howard/ITMove",
     name: "IT-Move",
     component: ITMove,
@@ -1205,6 +1171,11 @@ const routes = [
     component: Hardware,
   },
   {
+    path: "/post",
+    name: "post",
+    component: Post,
+  },
+  {
     path: "/Howard/employeeAccess",
     name: "Employee-Access",
     component: employeeAccess,
@@ -1225,9 +1196,24 @@ const routes = [
     component: AddProduct,
   },
   {
+    path: "/Howard/add-department",
+    name: "add-department",
+    component: AddDepartment,
+  },
+  {
+    path: "/Howard/add-policies",
+    name: "add-policies",
+    component: AddPolicies,
+  },
+  {
     path: "/Howard/Damaged",
     name: "Damaged",
     component: CrudForm,
+  },
+  {
+    path: "/Howard/Policies ",
+    name: "typography",
+    component: Typography,
   },
   {
     path: "/Howard/Corporate-Planning-Department",
