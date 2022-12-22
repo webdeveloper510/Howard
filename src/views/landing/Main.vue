@@ -2,7 +2,10 @@
   <div>
 
     <Header></Header>
-
+  <div class=" my-5 intro-y landing_banner">
+    <h1>TAKE YOUR MATERIAL HANDLING</h1>
+    <h2>TO THE NEXT LEVEL</h2>
+  </div>
     <div class="my-5 md:mx-6 intro-y">
       <h2 class="text-3xl text-center font-bold leading-none large-tittle space mt-3">WELCOME TO MIST</h2>
       <div class="saprater"></div>

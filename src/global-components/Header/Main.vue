@@ -4,7 +4,7 @@
       <!-- BEGIN: Logo -->
       <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex mx-auto">
         <img class="h-16" alt="Midone Tailwind HTML Admin Template"
-          src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-" />
+          src="../../assets/images/Website_logo.svg" />
       </router-link>
       <!-- END: Logo -->
       <!-- BEGIN: Account Menu -->
@@ -25,8 +25,8 @@
             <div class="modal-content">
               <div class="modal-header block py-5">
                 <img
-                  src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-"
-                  class="img-fluid" />
+                  src="../../assets/images/Website_logo.svg"
+                  class="img-fluid mx-auto my-3" />
                 <h2 class="font-medium text-base text-center">User Name</h2>
               </div>
               <div class="modal-body p-0">
