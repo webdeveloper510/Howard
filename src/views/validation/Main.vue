@@ -200,7 +200,7 @@
                   </div>
                 </template>
               </div>
-              <button type="submit" class="btn btn-primary mt-5">
+              <button type="submit" class="btn btn-dark mt-5">
                 Register
               </button>
             </form>

@@ -2,7 +2,7 @@
   <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">Products & Services </h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-      <a href="javascript:;" @click="newOrderModal = true" class="btn btn-primary shadow-md mr-2">New Order</a>
+      <a href="javascript:;" @click="newOrderModal = true" class="btn btn-dark shadow-md mr-2">New Order</a>
       <Dropdown class="pos-dropdown ml-auto sm:ml-0">
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -120,7 +120,7 @@
           <div class="box flex p-5 mt-5">
             <input type="text" class="form-control py-3 px-4 w-full bg-slate-100 border-slate-200/60 pr-10"
               placeholder="Use coupon code..." />
-            <button class="btn btn-primary ml-2">Apply</button>
+            <button class="btn btn-dark ml-2">Apply</button>
           </div>
           <div class="box p-5 mt-5">
             <div class="flex">
@@ -144,7 +144,7 @@
             <button class="btn w-32 border-slate-300 dark:border-darkmode-400 text-slate-500">
               Clear Items
             </button>
-            <button class="btn btn-primary w-32 shadow-md ml-auto">
+            <button class="btn btn-dark w-32 shadow-md ml-auto">
               Charge
             </button>
           </div>
@@ -208,7 +208,7 @@
       <button type="button" @click="newOrderModal = false" class="btn btn-outline-secondary w-32 mr-1">
         Cancel
       </button>
-      <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+      <button type="button" class="btn btn-dark w-32">Create Ticket</button>
     </ModalFooter>
   </Modal>
   <!-- END: New Order Modal -->
@@ -244,7 +244,7 @@
       <button type="button" @click="addItemModal = false" class="btn btn-outline-secondary w-24 mr-1">
         Cancel
       </button>
-      <button type="button" class="btn btn-primary w-24">Add Item</button>
+      <button type="button" class="btn btn-dark w-24">Add Item</button>
     </ModalFooter>
   </Modal>
   <!-- END: Add Item Modal -->

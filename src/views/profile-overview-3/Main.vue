@@ -51,7 +51,7 @@
                 </DropdownItem>
                 <DropdownDivider />
                 <DropdownFooter>
-                  <button type="button" class="btn btn-primary py-1 px-2">
+                  <button type="button" class="btn btn-dark py-1 px-2">
                     Settings
                   </button>
                   <button
@@ -96,7 +96,7 @@
         <div
           class="p-5 border-t border-slate-200/60 dark:border-darkmode-400 flex"
         >
-          <button type="button" class="btn btn-primary py-1 px-2">
+          <button type="button" class="btn btn-dark py-1 px-2">
             New Group
           </button>
           <button

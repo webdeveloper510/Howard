@@ -229,7 +229,7 @@
               <a
                 href="javascript:;"
                 @click="datepickerModalPreview = true"
-                class="btn btn-primary"
+                class="btn btn-dark"
                 >Show Modal</a
               >
             </div>
@@ -315,7 +315,7 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn btn-primary w-20">
+                <button type="button" class="btn btn-dark w-20">
                   Submit
                 </button>
               </ModalFooter>
@@ -331,7 +331,7 @@
                 <a
                   href="javascript:;"
                   @click="datepickerModalPreview = true"
-                  class="btn btn-primary"
+                  class="btn btn-dark"
                   >Show Modal</a
                 >
               </div>
@@ -419,7 +419,7 @@
                   >
                     Cancel
                   </button>
-                  <button type="button" class="btn btn-primary w-20">
+                  <button type="button" class="btn btn-dark w-20">
                     Submit
                   </button>
                 </ModalFooter>

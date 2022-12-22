@@ -71,7 +71,7 @@
               class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
               Cancel
             </button>
-            <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
+            <button type="submit" class="btn py-3 btn-dark w-full md:w-52">
               Save
             </button>
           </div>

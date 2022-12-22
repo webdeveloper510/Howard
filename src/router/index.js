@@ -119,71 +119,15 @@ const routes = [
         name: "side-menu-categories",
         component: Categories,
       },
-    
-      {
-        path: "employee-list",
-        name: "side-menu-product-list",
-        component: EmployeeList,
-      },
       {
         path: "product-grid",
         name: "side-menu-product-grid",
         component: ProductGrid,
       },
       {
-        path: "transaction-list",
-        name: "side-menu-transaction-list",
-        component: TransactionList,
-      },
-      {
-        path: "Access-list",
-        name: "side-menu-Access-list",
-        component: Accesslist,
-      },
-      {
-        path: "Facilities-list",
-        name: "side-menu-Facilities-list",
-        component: FacilitiesList,
-      },
-      {
-        path: "Custody-list",
-        name: "side-menu-Custody-list",
-        component: CustodyList,
-      },
-      {
-        path: "Damaged-list",
-        name: "side-menu-Damaged-list",
-        component: DamagedList,
-      },
-      {
-        path: "Equipment-Request-list",
-        name: "side-menu-Equipment-Request-list",
-        component: EquipmentRequestList,
-      },
-      {
-        path: "Termination-list",
-        name: "side-menu-Termination-list",
-        component: TerminationNotice,
-      },
-      {
-        path: "Hardware-Request-list",
-        name: "side-menu-Hardware-Request-list",
-        component: HardwareRequest,
-      },
-      {
-        path: "IT-Move-list",
-        name: "side-menu-IT-Move-list",
-        component: ITMoveList,
-      },
-      {
         path: "transaction-detail",
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
-      },
-      {
-        path: "seller-list",
-        name: "side-menu-seller-list",
-        component: SellerList,
       },
       {
         path: "Training",
@@ -1144,6 +1088,62 @@ const routes = [
     path: "/Howard/ITMove",
     name: "IT-Move",
     component: ITMove,
+  },
+  {
+    path: "/Howard/employee-list",
+    name: "product-list",
+    component: EmployeeList,
+  },
+
+  {
+    path: "/Howard/transaction-list",
+    name: "transaction-list",
+    component: TransactionList,
+  },
+  {
+    path: "/Howard/Access-list",
+    name: "Access-list",
+    component: Accesslist,
+  },
+  {
+    path: "/Howard/Facilities-list",
+    name: "Facilities-list",
+    component: FacilitiesList,
+  },
+  {
+    path: "/Howard/Custody-list",
+    name: "Custody-list",
+    component: CustodyList,
+  },
+  {
+    path: "/Howard/Damaged-list",
+    name: "Damaged-list",
+    component: DamagedList,
+  },
+  {
+    path: "/Howard/Equipment-Request-list",
+    name: "Equipment-Request-list",
+    component: EquipmentRequestList,
+  },
+  {
+    path: "/Howard/Termination-list",
+    name: "Termination-list",
+    component: TerminationNotice,
+  },
+  {
+    path: "/Howard/Hardware-Request-list",
+    name: "Hardware-Request-list",
+    component: HardwareRequest,
+  },
+  {
+    path: "/Howard/IT-Move-list",
+    name: "IT-Move-list",
+    component: ITMoveList,
+  },
+  {
+    path: "/Howard/seller-list",
+    name: "seller-list",
+    component: SellerList,
   },
   {
     path: "/Howard/Modula-Termination-Notice",

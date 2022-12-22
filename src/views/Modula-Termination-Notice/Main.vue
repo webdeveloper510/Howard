@@ -372,7 +372,7 @@
               Cancel
             </button>
 
-            <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
+            <button type="submit" class="btn py-3 btn-dark w-full md:w-52">
               Save
             </button>
           </div>

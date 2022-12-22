@@ -2,7 +2,7 @@
   <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">Training</h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-      <button class="btn btn-primary shadow-md mr-2">Print</button>
+      <button class="btn btn-dark shadow-md mr-2">Print</button>
       <Dropdown class="ml-auto sm:ml-0">
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">

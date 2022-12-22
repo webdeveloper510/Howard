@@ -10,7 +10,7 @@
       class="intro-y col-span-12 flex  flex-wrap sm:flex-nowrap items-center mt-2"
     >
       
-      <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-policies">Add Policies</a>
+      <a class="btn btn-dark shadow-md mr-2" href="/Howard/add-policies">Add Policies</a>
       
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -172,7 +172,7 @@
         >
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary w-24">Save</button>
+        <button type="submit" class="btn btn-dark w-24">Save</button>
       </div>
     </form>
     </ModalBody>

@@ -225,6 +225,14 @@
   --tw-bg-opacity: 1;
   background-color: #f1ba2282;
 }
+.landing_banner {
+  background-image: url(https://www.modula.eu/wp-content/uploads/2022/06/CCC_0059-1200x800-1-768x512-c-center.webp);
+  padding: 120px 20px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .saprater-left {
     width: 130px;

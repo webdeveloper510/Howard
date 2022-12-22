@@ -2,7 +2,7 @@
   <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">Tabulator</h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-      <button class="btn btn-primary shadow-md mr-2">Add New Product</button>
+      <button class="btn btn-dark shadow-md mr-2">Add New Product</button>
       <Dropdown class="ml-auto sm:ml-0">
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -74,7 +74,7 @@
           <button
             id="tabulator-html-filter-go"
             type="button"
-            class="btn btn-primary w-full sm:w-16"
+            class="btn btn-dark w-full sm:w-16"
             @click="onFilter"
           >
             Go

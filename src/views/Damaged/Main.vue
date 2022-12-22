@@ -393,7 +393,7 @@
             class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">
             Cancel
           </button>
-          <button type="submit" class="btn py-3 btn-primary w-full md:w-52">
+          <button type="submit" class="btn py-3 btn-dark w-full md:w-52">
             Save
           </button>
           </div>
@@ -459,8 +459,9 @@ export default {
 <script setup>
 import { onMounted } from "vue";
 import Header from "../../global-components/Header/Main.vue";
+
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("error-page").removeClass("login").addClass("landing");
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
 });
 
 </script>

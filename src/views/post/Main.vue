@@ -169,7 +169,7 @@
   </div>
   <button
         type="button"
-        class="btn btn-primary mr-2 flex items-center ml-0 md:ml-auto"
+        class="btn btn-dark mr-2 flex items-center ml-0 md:ml-auto"
       >
         Save
       </button>

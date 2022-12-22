@@ -54,7 +54,7 @@
                 <a href="">Forgot Password?</a>
               </div>
               <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                <button  @click="successNotificationToggle" type="submit" class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top" name="submit">
+                <button  @click="successNotificationToggle" type="submit" class="btn btn-dark py-3 px-4 w-full xl:w-32 xl:mr-3 align-top" name="submit">
                   Login
                 </button>
               </div>
@@ -95,7 +95,7 @@
               <!-- END: Notification Content -->
               <!-- BEGIN: Notification Toggle -->
               <button
-                class="btn btn-primary"
+                class="btn btn-dark"
                 @click="successNotificationToggle"
               >
                 Show Notification

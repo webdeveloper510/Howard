@@ -5,7 +5,7 @@
   <!-- BEGIN: Wizard Layout -->
   <div class="intro-y box py-10 sm:py-20 mt-5">
     <div class="flex justify-center">
-      <button class="intro-y w-10 h-10 rounded-full btn btn-primary mx-2">
+      <button class="intro-y w-10 h-10 rounded-full btn btn-dark mx-2">
         1
       </button>
       <button
@@ -88,7 +88,7 @@
           class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5"
         >
           <button class="btn btn-secondary w-24">Previous</button>
-          <button class="btn btn-primary w-24 ml-2">Next</button>
+          <button class="btn btn-dark w-24 ml-2">Next</button>
         </div>
       </div>
     </div>

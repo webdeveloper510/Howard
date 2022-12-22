@@ -14,57 +14,6 @@ export const useSideMenuStore = defineStore("sideMenu", {
         title: "How to use the Intranet Guide",
       },
       {
-        icon: "FileTextIcon",
-        pageName: "side-menu-list",
-        title: "Lists",
-        subMenu: [
-
-          {
-            icon: "",
-            title: "Access-list",
-            pageName: "side-menu-Access-list",
-            
-          },
-          {
-            title: "Facilities-list",
-            pageName: "side-menu-Facilities-list",
-            icon: "",
-          },
-          {
-            title: "Custody-list",
-            pageName: "side-menu-Custody-list",
-            icon: "",
-          },
-          {
-            title: "Damaged-list",
-            pageName: "side-menu-Damaged-list",
-            icon: "",
-          },
-          {
-            title: "Equipment-Request-list",
-            pageName: "side-menu-Equipment-Request-list",
-            icon: "",
-          },
-          {
-            title: "Termination-list",
-            pageName: "side-menu-Termination-list",
-            icon: "",
-          },
-          {
-            title: "Hardware-Request-list",
-            pageName: "side-menu-Hardware-Request-list",
-            icon: "",
-          },
-          {
-            title: "IT-Move-list",
-            pageName: "side-menu-IT-Move-list",
-            icon: "",
-          },
-         
-        ]
-      },
-
-      {
         icon: "GitPullRequestIcon",
         pageName: "side-menu-tab",
         title: "Departments",
