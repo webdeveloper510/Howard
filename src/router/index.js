@@ -8,6 +8,7 @@ import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
 import Company from "../views/Company/Main.vue";
+import PhoneNo from "../views/Phoneno/Main.vue";
 import Corporate from "../views/Corporate/Main.vue";
 import modulaTerminationNotice from "../views/Modula-Termination-Notice/Main.vue"
 import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
@@ -1081,8 +1082,8 @@ const routes = [
   },
   {
     path: "/Howard/Announcements",
-    name: "blog-layout-2",
-    component:Inbox,
+    name: "announcements",
+    component:announcements,
   },
   {
     path: "/Howard/ITMove",
@@ -1209,6 +1210,11 @@ const routes = [
     path: "/Howard/Damaged",
     name: "Damaged",
     component: CrudForm,
+  },
+  {
+    path: "/Howard/PhoneNo",
+    name: "PhoneNo",
+    component: PhoneNo,
   },
   {
     path: "/Howard/Policies ",

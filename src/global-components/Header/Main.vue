@@ -133,7 +133,7 @@
                     </ul>
                   </div>
                 </div>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'announcements' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side ">
                   <RssIcon class="block mr-3"/>
                    <div class="font-bold"> News & Announcements </div>
@@ -163,6 +163,13 @@
                   <ShoppingCartIcon class="block mr-3"/>
                    <div class="font-bold">
                      Purchasing
+                   </div> 
+                </router-link>
+                <router-link :to="{ name: 'PhoneNo' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side">
+                  <PhoneIcon class="block mr-3"/>
+                   <div class="font-bold">
+                     Phone Number
                    </div> 
                 </router-link>
                 <router-link :to="{ name: 'Corporate' }" tag="a" data-tw-dismiss="modal"
