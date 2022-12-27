@@ -2,7 +2,7 @@
  <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-10 box pt-3 mb-1">
     <div class="top-bar-boxed flex items-center my-4">
       <!-- BEGIN: Logo -->
-      <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex mx-auto">
+      <router-link :to="{ name: 'landing' }" tag="a" class="-intro-x md:flex mx-auto">
         <img class="h-16" alt="Logo"
           src="../../assets/images/Website_logo.svg" />
       </router-link>
@@ -191,7 +191,7 @@
                   <GitPullRequestIcon class="block mr-3"/>
                    <div class="font-bold"> Departments </div>
                 </router-link>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'Training' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex  mt-2 landing-side">
                   <WindIcon class="block mr-3"/>
                    <div class="font-bold"> Training </div>

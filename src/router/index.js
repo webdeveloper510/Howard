@@ -130,11 +130,7 @@ const routes = [
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
       },
-      {
-        path: "Training",
-        name: "side-menu-seller-detail",
-        component: Training,
-      },
+    
       {
         path: "Company-Strategy-&-Goals",
         name: "side-menu-Goals",
@@ -1165,6 +1161,11 @@ const routes = [
     path: "/Howard/facilitiesMaintenance",
     name: "Facilities-Maintenance",
     component: facilitiesMaintenance,
+  },
+  {
+    path: "/Howard/Training",
+    name: "Training",
+    component: Training,
   },
   {
     path: "/Howard/Hardware",

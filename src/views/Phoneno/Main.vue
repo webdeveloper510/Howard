@@ -29,7 +29,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(faker, fakerKey) in $_.take($f(), 40)" :key="fakerKey" class="intro-x zoom-in">
+                        <tr v-for="(faker, fakerKey) in $_.take($f(), 10)" :key="fakerKey" class="intro-x zoom-in">
                             <td class="">
                                 <div class="flex items-center">
                                     <div class="">
@@ -155,7 +155,6 @@ export default {
         filteredProducts() {
             return this.phones.filter(p => {
                 // return true if the product should be visible
-
                 // in this example we just check if the search string
                 // is a substring of the product name (case insensitive)
                 return p.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
