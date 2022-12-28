@@ -2,8 +2,8 @@
   <Header></Header>
 
 
-  <div class="grid grid-cols-12 gap-6 mt-5 box1 px-10 pb-10">
-    <div class="col-span-12 intro-y text-center mt-8">
+  <div class="grid grid-cols-12 gap-6 mt-5 md:w-3/4 mx-auto box1 px-10 pb-10">
+    <div class="col-span-12 intro-y text-center mt-3">
         <h2 class="text-lg font-medium mr-auto">Policies</h2>
       </div>
     <div
@@ -18,7 +18,7 @@
       
     </div>
     <!-- BEGIN: Data List -->
-    <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+    <div class="intro-y col-span-12 overflow-auto">
       <table class="table table-report -mt-2">
         <thead>
           <tr>

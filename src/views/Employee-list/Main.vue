@@ -1,6 +1,6 @@
 <template>
         <Header></Header>
-  <div class="box1 p-4 md:w-3/5 my-5 mx-auto">
+  <div class="box1 p-4 md:w-3/4 my-5 mx-auto">
   <h2 class="intro-y text-lg font-medium mt-10">Employee List</h2>
   <div class="grid grid-cols-12 gap-6 mt-5">
     <div

@@ -1,7 +1,7 @@
 <template>
   <Header></Header>
 
-  <div class="box1 p-5 md:w-3/5 mx-auto my-5">
+  <div class="box1 p-5 md:w-3/4 mx-auto my-5">
     <h2 class="intro-y text-lg font-medium mt-10">Damaged & Lost Equipment Report List</h2>
   <div class="grid grid-cols-12 gap-6 mt-5">
     <div

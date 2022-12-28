@@ -7,7 +7,7 @@
 
       <div class="intro-y col-span-11 2xl:col-span-9">
         <!-- BEGIN: Product Information -->
-        <div class="intro-y box1 p-5 mt-5 md:w-3/5 mx-auto">
+        <div class="intro-y box1 p-5 mt-5 md:w-3/4 mx-auto">
           <div class="intro-y text-center mt-8">
             <h2 class="text-lg font-medium">Damaged & Lost Equipment Report</h2>
           </div>

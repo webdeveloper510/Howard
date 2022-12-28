@@ -424,11 +424,6 @@ const routes = [
         component: AddPolicies,
       },
       {
-        path: "employee-list",
-        name: "simple-menu-product-list",
-        component: EmployeeList,
-      },
-      {
         path: "product-grid",
         name: "simple-menu-product-grid",
         component: ProductGrid,
@@ -1151,6 +1146,11 @@ const routes = [
     path: "/Howard/NewHireITEquipment",
     name: "NewHireITEquipment",
     component: NewHireITEquipment,
+  },
+  {
+    path: "/Howard/employee-list",
+    name: "product-list",
+    component: EmployeeList,
   },
   {
     path: "/Howard/employeeCustody",

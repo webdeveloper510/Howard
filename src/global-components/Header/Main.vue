@@ -145,14 +145,14 @@
                      Company Strategy & Goals
                    </div>
                 </router-link>
-                <router-link :to="{ name: 'add-policies' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'typography' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side">
                   <MapIcon class="block mr-3"/>
                    <div class="font-bold">
                     Policies
                     </div>
                 </router-link>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'product-list' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side">
                   <UserPlusIcon class="block mr-3"/>
                    <div class="font-bold">New Employee Onboarding

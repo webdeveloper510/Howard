@@ -1,39 +1,6 @@
 <template>
+  <Header></Header>
   <div>
-   
-    <div class="border-b border-white/[0.08]  md:-mt-5 -mx-3 sm:-mx-8 px-3 box sm:px-8 pt-3 mb-1">
-      <div class="top-bar-boxed flex items-center my-4">
-        <!-- BEGIN: Logo -->
-        <router-link :to="{ name: 'side-menu-dashboard-overview-4' }" tag="a" class="-intro-x md:flex">
-          <img class="h-16" alt="Midone Tailwind HTML Admin Template"
-            src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-" />
-        </router-link>
-        <!-- END: Logo -->
-        <!-- BEGIN: Account Menu -->
-        <div class="ml-auto flex">
-          <router-link :to="{ name: 'landing' }" tag="a" class="font-medium -intro-x md:flex ml-3 mt-2">
-          Home
-        </router-link>
-          <a href="https://access.paylocity.com" target="_blank" class="font-medium -intro-x md:flex mt-2 ml-5">
-          Paylocity
-        </a>
-        <router-link :to="{ name: 'Corporate' }" tag="a" class=" font-medium -intro-x md:flex ml-5 mt-2 ">
-          Corporate Planning Department
-        </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="font-medium -intro-x md:flex mt-2 ml-5 ">
-          Employee Relations
-        </router-link>
-        <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-5">
-          <button class="btn btn-elevated-rounded-dark mr-2 mb-2">
-            <UserIcon class="w-4 h-4 mr-2" /> Login
-          </button>
-
-        </router-link>
-        </div>
-        
-        <!-- END: Account Menu -->
-      </div>
-    </div>
     <div class="my-5 intro-y">
       <h2 class="text-3xl font-medium space large-tittle  leading-none mt-3 text-center">Purchasing</h2>
       <div class="saprater"></div>
@@ -167,9 +134,10 @@
 
 <script setup>
 import { onMounted } from "vue";
-import dom from "@left4code/tw-starter/dist/js/dom";
+import Header from "../../global-components/Header/Main.vue";
 
 onMounted(() => {
-  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("forms").addClass("landing");
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
 });
+
 </script>
