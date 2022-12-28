@@ -2,9 +2,9 @@
   <Header></Header>
   <div class="intro-y grid grid-cols-12 gap-6 p-5 mt-5">
     <div class="col-span-12 md:col-span-6 lg:col-span-6 p-5 box ">
-      <h1 class="font-bold text-center text-2xl">VISION</h1>
+      <h1 class="font-bold text-center space text-2xl">VISION</h1>
       <div class="saprater"></div>
-      <p class="text-center">To become <b> the benchmark </b> manufacturing company for automated storage and retrieval
+      <p class="text-center space">To become <b> the benchmark </b> manufacturing company for automated storage and retrieval
         <b> solutions </b> by providing <b> world-class </b> products and services, <b> exceeding expectations </b> of
         associates, partners and end-users.</p>
     </div>
@@ -15,20 +15,20 @@
       <img src="../../assets/images/Mission.png" class="h-40 mx-auto" />
     </div>
     <div class="col-span-12 md:col-span-6 lg:col-span-6 p-5 box ">
-      <h1 class=" font-bold text-center text-2xl">MISSION</h1>
+      <h1 class=" font-bold space text-center text-2xl">MISSION</h1>
       <div class="saprater"></div>
-      <p class="text-center">Our mission is to optimize the intralogistics of all businesses, regardless of their size
+      <p class="text-center space">Our mission is to optimize the intralogistics of all businesses, regardless of their size
         or industry, by delivering the best automated storage solutions. Our high-tech manufacturing standards reflect
         our commitment to innovation, allowing us to deliver value to our customers worldwide.</p>
     </div>
   </div>
 
   <div class="intro-y">
-    <h1 class="font-bold text-center text-2xl mt-8">Company Values</h1>
+    <h1 class="font-bold text-center text-2xl space mt-8">Company Values</h1>
     <div class="saprater"></div>
     <div class="intro-y box grid grid-cols-12 gap-6 p-5 mt-5">
-      <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 ">
-        <h1 class="font-bold text-left text-2xl">Passion (Appeal)</h1>
+      <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
+        <h1 class="font-bold text-left space text-2xl">Passion (Appeal)</h1>
         <div class="saprater-left"></div>
         <p class="text-left">⦁ Proud of our work and proud of Modula</p>
         <p class="text-left">⦁ Love what you do</p>
@@ -36,7 +36,7 @@
         <p class="text-left">⦁ Go the extra mile</p>
         <p class="text-left">⦁ Welcoming, engaging environment</p>
       </div>
-      <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 ">
+      <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
         <h1 class="font-bold text-left text-2xl">Pursuit of Excellence </h1>
         <div class="saprater-left"></div>
         <p class="text-left">⦁ Continuous Improvement – interest and willingness to improve</p>
@@ -45,7 +45,7 @@
         <p class="text-left">⦁ Care about your work</p>
         <p class="text-left">⦁ Always try your best to achieve goal</p>
       </div>
-      <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 ">
+      <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
         <h1 class="font-bold text-left text-2xl">Agility </h1>
         <div class="saprater-left"></div>
         <p class="text-left">⦁ Nimble, Flexible & adaptable</p>
@@ -55,7 +55,7 @@
         <p class="text-left">⦁ Sense of Urgency</p>
       </div>
       <div class="col-span-12 md:col-span-2 lg:col-span-2 p-5 "></div>
-      <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 ">
+      <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
         <h1 class="font-bold text-left text-2xl">Accountability </h1>
         <div class="saprater-left"></div>
         <p class="text-left">⦁ Trustworthy: Honest, Ethical, integrity</p>
@@ -64,7 +64,7 @@
         <p class="text-left">⦁ Lead by example</p>
         <p class="text-left">⦁ No excuses; no blaming</p>
       </div>
-      <div class="col-span-12 md:col-span-4 lg:col-span-4 p-5 ">
+      <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
         <h1 class="font-bold text-left text-2xl">Teamwork</h1>
         <div class="saprater-left"></div>
         <p class="text-left">⦁ Proactive and effective communication</p>
@@ -78,19 +78,19 @@
     </div>
   </div>
 
-  <div class="intro-y">
-    <h1 class="font-bold text-center text-2xl mt-8">Leadership Team</h1>
+  <div class="intro-y space">
+    <h1 class="font-bold text-center text-2xl space mt-8">Leadership Team</h1>
     <div class="saprater"></div>
-    <p class="text-center mt-5">This will be a photo album page. It will list key personnel, their titles and include a
+    <p class="text-center space mt-5">This will be a photo album page. It will list key personnel, their titles and include a
           biography that they will submit for publishing.</p>
-        <p class="text-center mb-3">Here are the names of our key personnel:</p>
+        <p class="text-center space mb-3">Here are the names of our key personnel:</p>
     <div class="intro-y box grid grid-cols-12 gap-6 p-5 mt-5">
       <div class="col-span-12 md:col-span-12 lg:col-span-12 p-5 ">
      
 
 
 
-        <div class="mx-6">
+        <div class="mx-6 space">
           <TinySlider :options="{
             autoplay: false,
             controls: true,

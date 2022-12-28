@@ -186,7 +186,7 @@
                     Paylocity
                     </div>
                 </a>
-                <router-link :to="{ name: 'add-department' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'tab' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex  mt-2 landing-side">
                   <GitPullRequestIcon class="block mr-3"/>
                    <div class="font-bold"> Departments </div>

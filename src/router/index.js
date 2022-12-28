@@ -292,11 +292,7 @@ const routes = [
         name: "side-menu-notification",
         component: Notification,
       },
-      {
-        path: "Departments ",
-        name: "side-menu-tab",
-        component: DepartmentList,
-      },
+
       {
         path: "accordion",
         name: "side-menu-accordion",
@@ -1126,6 +1122,11 @@ const routes = [
     path: "/Howard/Hardware-Request-list",
     name: "Hardware-Request-list",
     component: HardwareRequest,
+  },
+  {
+    path: "/Howard/Departments ",
+    name: "tab",
+    component: DepartmentList,
   },
   {
     path: "/Howard/IT-Move-list",
