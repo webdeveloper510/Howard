@@ -426,11 +426,17 @@
           <p class="text-base ml-3">⦁	Verify that the core elements of the program have been fully implemented.</p>
           <p class="text-base ml-3">⦁	Involve employees in some aspects of program evaluation, including reviewing information (such as incident reports and exposure monitoring results), establishing and tracking performance indicators, and identifying opportunities to improve the program.            </p>
           <p class="text-base ml-3">⦁	Consistently improve the safety program to minimize incidents, therefore ensuring our employees’ long-term safety and wellness.</p>
-          <p class="text-base ml-3">⦁	Have zero incidents and celebrate a great safety record.</p>
-          <p class="text-base mt-3">The person responsible for implementing and monitoring the Safety Program for our facilities is David Gifford.</p>
-          <p class="text-base">A copy of this Safety Program is located here: modfrn shared drive</p>
-          <p class="text-base mt-5"><b>CEO/President/Safety Director: ____________ </b></p>
-          <p class="text-base mt-3"><b>Date: ______</b></p>
+          <p class="text-base ml-3">⦁	Ensure that the following key processes are in place and operating as intended:</p>
+          <p class="text-base ml-5">⦁	Reporting injuries, illnesses, incidents, hazards, and concerns.</p>
+          <p class="text-base ml-5">⦁	Conducting workplace inspections and incident investigations.</p>
+          <p class="text-base ml-5">⦁	Tracking progress in controlling identified hazards and ensuring that hazard control measures remain effective and is completed promptly.</p>
+          <p class="text-base ml-5">⦁	Collecting and reporting any data needed to monitor progress and performance.</p>
+          <p class="text-base ml-3">⦁	Review the results of any compliance audits to confirm that any program shortcomings are being identified and that actions are being taken that will prevent recurrence. </p>
+          <p class="text-base ml-3">⦁	Review and update plans/processes based on the company’s loss history.</p>
+          <p class="text-base mt-5 font-bold">The person tasked with the overall responsibility to evaluate the Company’s safety program and processes is:  </p>
+          <p class="text-base mt-5"><b>Name: ________________</b></p>
+          <p class="text-base mt-3"><b>Contact Information: __________</b></p>
+          <p class="text-base mt-3 box p-2 text-danger"><b> Important tip: </b> The <a href="https://www.osha.gov/safety-management" class="underline" target="_blank">OSHA self-audit tool </a> is an effective template to evaluate the safety program and create action plans for any needed improvements. </p>
       </div>
       </div>
 
