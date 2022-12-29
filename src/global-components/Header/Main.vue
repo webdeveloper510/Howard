@@ -196,7 +196,7 @@
                   <WindIcon class="block mr-3"/>
                    <div class="font-bold"> Training </div>
                 </router-link>
-                <router-link :to="{ name: 'add-product' }" tag="a" data-tw-dismiss="modal"
+                <router-link :to="{ name: 'safety' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side">
                   <ShieldIcon class="block mr-3"/>
                    <div class="font-bold"> Safety </div>

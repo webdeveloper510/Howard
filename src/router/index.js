@@ -30,7 +30,7 @@ import DamagedList from "../views/Damaged-list/Main.vue";
 import Accesslist from "../views/Access-list/Main.vue";
 import FacilitiesList from "../views/Facilities-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
-import SellerList from "../views/seller-list/Main.vue";
+import safety from "../views/Safety/Main.vue";
 import Training from "../views/Training/Main.vue";
 import Goals from "../views/goals/Main.vue";
 import Inbox from "../views/inbox/Main.vue";
@@ -435,11 +435,6 @@ const routes = [
         component: TransactionDetail,
       },
       {
-        path: "seller-list",
-        name: "simple-menu-seller-list",
-        component: SellerList,
-      },
-      {
         path: "Training",
         name: "simple-menu-seller-detail",
         component: Training,
@@ -774,11 +769,6 @@ const routes = [
         path: "transaction-detail",
         name: "top-menu-transaction-detail",
         component: TransactionDetail,
-      },
-      {
-        path: "seller-list",
-        name: "top-menu-seller-list",
-        component: SellerList,
       },
       {
         path: "Training",
@@ -1134,9 +1124,9 @@ const routes = [
     component: ITMoveList,
   },
   {
-    path: "/Howard/seller-list",
-    name: "seller-list",
-    component: SellerList,
+    path: "/Howard/safety",
+    name: "safety",
+    component: safety,
   },
   {
     path: "/Howard/Modula-Termination-Notice",
