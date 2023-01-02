@@ -143,25 +143,4 @@ onMounted(() => {
 const deleteConfirmationModal = ref(false);
 </script>
 
-<script>
-export default {
-    data() {
-        return {
-            phones: [],
-            search: ""
-        };
-    },
-    computed: {
-        filteredProducts() {
-            return this.phones.filter(p => {
-                // return true if the product should be visible
-                // in this example we just check if the search string
-                // is a substring of the product name (case insensitive)
-                return p.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
-            });
-        }
-    }
-};
-
-</script>
   

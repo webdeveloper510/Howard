@@ -73,7 +73,7 @@ import RegularTable from "../views/regular-table/Main.vue";
 import Tabulator from "../views/tabulator/Main.vue";
 import Modal from "../views/modal/Main.vue";
 import SlideOver from "../views/slide-over/Main.vue";
-import Notification from "../views/notification/Main.vue";
+import HrInput from "../views/Hr-input/Main.vue";
 import DepartmentList from "../views/department-list/Main.vue";
 import Accordion from "../views/accordion/Main.vue";
 import Button from "../views/button/Main.vue";
@@ -287,12 +287,6 @@ const routes = [
         name: "side-menu-slide-over",
         component: SlideOver,
       },
-      {
-        path: "notification",
-        name: "side-menu-notification",
-        component: Notification,
-      },
-
       {
         path: "accordion",
         name: "side-menu-accordion",
@@ -608,11 +602,6 @@ const routes = [
         path: "slide-over",
         name: "simple-menu-slide-over",
         component: SlideOver,
-      },
-      {
-        path: "notification",
-        name: "simple-menu-notification",
-        component: Notification,
       },
       {
         path: "Departments",
@@ -946,11 +935,6 @@ const routes = [
         component: SlideOver,
       },
       {
-        path: "notification",
-        name: "top-menu-notification",
-        component: Notification,
-      },
-      {
         path: "Departments",
         name: "top-menu-tab",
         component: DepartmentList,
@@ -1164,7 +1148,7 @@ const routes = [
     component: Hardware,
   },
   {
-    path: "/post",
+    path: "/Howard/post",
     name: "post",
     component: Post,
   },
@@ -1182,6 +1166,11 @@ const routes = [
     path: "/Howard/",
     name: "landing",
     component: Landing,
+  },
+  {
+    path: "/Howard/HrInput",
+    name: "HrInput",
+    component: HrInput,
   },
   {
     path: "/Howard/add-employee",

@@ -451,8 +451,6 @@
 <script setup>
 import { onMounted } from "vue";
 import Header from "../../global-components/Header/Main.vue";
-
-
 onMounted(() => {
   dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
 });

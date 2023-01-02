@@ -54,8 +54,8 @@
     "zoom-vanilla.js": "^2.0.6"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.1",   
-     "@vitejs/plugin-vue": "^2.0.0",
+    "@tailwindcss/forms": "^0.5.1",
+    "@vitejs/plugin-vue": "^2.0.0",
     "autoprefixer": "10.4.6",
     "deepmerge": "^4.2.2",
     "lodash": "^4.17.21",

@@ -13,9 +13,9 @@
         <!-- BEGIN: Slide Over Toggle -->
 
         <!-- BEGIN: Small Slide Over Toggle -->
-        <a href="javascript:;" data-tw-toggle="modal" data-tw-target="#small-slide-over-size-preview" class="btn ">
+        <button data-tw-toggle="modal" data-tw-target="#small-slide-over-size-preview" class="btn ">
           <AlignJustifyIcon class="block mx-auto" />
-        </a>
+        </button>
         <!-- END: Small Slide Over Toggle -->
 
         <!-- END: Slide Over Toggle -->
@@ -143,6 +143,13 @@
                   <TargetIcon class="block mr-3"/>
                    <div class="font-bold">
                      Company Strategy & Goals
+                   </div>
+                </router-link>
+                <router-link :to="{ name: 'HrInput' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side ">
+                  <TargetIcon class="block mr-3"/>
+                   <div class="font-bold">
+                    HR Department Input
                    </div>
                 </router-link>
                 <router-link :to="{ name: 'typography' }" tag="a" data-tw-dismiss="modal"
