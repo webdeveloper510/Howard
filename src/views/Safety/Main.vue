@@ -2,7 +2,7 @@
   <Header></Header>
   <h2 class="intro-y text-3xl font-medium leading-none my-3 text-center space">Safety</h2>
     <div class="saprater"></div>
-  <div class="intro-y box1 md:w-3/4 p-3 my-4 mx-auto">
+  <div class="intro-y space box1 md:w-3/4 p-3 my-4 mx-auto">
     <ul class="nav nav-link-tabs" role="tablist">
       <li id="Section" class="nav-item flex-1" role="presentation">
         <button class="nav-link w-full text-base py-2 active" data-tw-toggle="pill" data-tw-target="#Section" type="button"
