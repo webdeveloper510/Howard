@@ -45,7 +45,7 @@
       <h1 class="text-xl font-medium text-center space"> Diversity & inclusion </h1> 
       <div class="saprater"></div>
       <p class="text-base space px-3">
-        HR will continue to create and empower a diverse and inclusive workplace culture by monitoring diversity data and trends (in both the current workforce and hiring practices) and <a href="https://www.indeed.com/hire/c/info/developing-a-successful-diversity-program-initiative?hl=en" target="_blank" class="undeline">Developing diversity program initiatives</a> that encourage workers to respect and embrace differences in the workplace.
+        HR will continue to create and empower a diverse and inclusive workplace culture by monitoring diversity data and trends (in both the current workforce and hiring practices) and <a href="https://www.indeed.com/hire/c/info/developing-a-successful-diversity-program-initiative?hl=en" target="_blank" class="underline">Developing diversity program initiatives</a> that encourage workers to respect and embrace differences in the workplace.
        </p>
     </div>
 
@@ -90,7 +90,7 @@
       <h1 class="text-xl font-medium text-center space"> Company policies </h1> 
       <div class="saprater"></div>
       <p class="text-base space px-3">
-       <a href="https://www.indeed.com/hire/c/info/company-policies?co=US" class="underline" target="_blank"> HR policies </a>  are about ensuring that all employees are respected and that proper benefits are available. HR will update and change company policies and the <a href="https://www.indeed.com/hire/c/info/employee-handbook-guide?hl=en" target="_blank" class="undeline"> Employee Handbook </a> as needed, and ensure employees are made aware of all company policies.
+       <a href="https://www.indeed.com/hire/c/info/company-policies?co=US" class="underline" target="_blank"> HR policies </a>  are about ensuring that all employees are respected and that proper benefits are available. HR will update and change company policies and the <a href="https://www.indeed.com/hire/c/info/employee-handbook-guide?hl=en" target="_blank" class="underline"> Employee Handbook </a> as needed, and ensure employees are made aware of all company policies.
       </p>
     </div>
     <div class="intro-y col-span-12 md:col-span-12 lg:col-span-12 box py-3 ">

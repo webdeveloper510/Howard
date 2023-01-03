@@ -54,7 +54,7 @@
                 <a href="">Forgot Password?</a>
               </div>
               <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                <button  @click="successNotificationToggle" type="submit" class="btn btn-dark py-3 px-4 w-full xl:w-32 xl:mr-3 align-top" name="submit">
+                <button type="submit" class="btn btn-dark py-3 px-4 w-full xl:w-32 xl:mr-3 align-top" name="submit">
                   Login
                 </button>
               </div>
@@ -71,42 +71,25 @@
           </form>
         </div>
         <!-- END: Login Form -->
-        <!-- BEGIN: Success Notification -->
- <PreviewComponent class="intro-y box mt-5" v-slot="{ toggle }">
-        <div
-          class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400"
-        >
-          <h2 class="font-medium text-base mr-auto">Success Notification</h2>
-          
+       <!-- BEGIN: Success Notification Content -->
+       <div id="success-notification-content" class="toastify-content hidden flex">
+        <CheckCircleIcon class="text-success" />
+        <div class="ml-4 mr-4">
+          <div class="font-medium">Login success!</div>
         </div>
-        <div class="p-5">
-          <Preview>
-            <div class="text-center">
-              <!-- BEGIN: Notification Content -->
-              <Notification refKey="successNotification" class="flex">
-                <CheckCircleIcon class="text-success" />
-                <div class="ml-4 mr-4">
-                  <div class="font-medium">Message Saved!</div>
-                  <div class="text-slate-500 mt-1">
-                    The message will be sent in 5 minutes.
-                  </div>
-                </div>
-              </Notification>
-              <!-- END: Notification Content -->
-              <!-- BEGIN: Notification Toggle -->
-              <button
-                class="btn btn-dark"
-                @click="successNotificationToggle"
-              >
-                Show Notification
-              </button>
-              <!-- END: Notification Toggle -->
-            </div>
-          </Preview>
-          
+      </div>
+      <!-- END: Success Notification Content -->
+      <!-- BEGIN: Failed Notification Content -->
+      <div id="failed-notification-content" class="toastify-content hidden flex">
+        <XCircleIcon class="text-danger" />
+        <div class="ml-4 mr-4">
+          <div class="font-medium">Login failed!</div>
+          <div class="text-slate-500 mt-1">
+            Please check the fileld form.
+          </div>
         </div>
-      </PreviewComponent>
-      <!-- END: Success Notification -->
+      </div>
+      <!-- END: Failed Notification Content -->
       </div>
     </div>
   </div>
@@ -114,7 +97,8 @@
 
 <script>
 import { onMounted } from "vue";
-import axios from 'axios'
+import axios from 'axios';
+import Toastify from "toastify-js";
 import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import { API_BASE_URL } from '../../config'
@@ -136,12 +120,33 @@ export default {
     onSubmit(e) {
       e.preventDefault();
       console.log('yess')
+      console.log(this.fields);
       axios.post(`${API_BASE_URL}/login`, this.fields).then((res) => {
         if(res.status==200){
-            this.$toast.success(`Login Successfully!`);
+          Toastify({
+            node: dom("#success-notification-content")
+              .clone()
+              .removeClass("hidden")[0],
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+          }).showToast();
           }
           else{
-            this.$toast.error(`Some error Occure`);
+            Toastify({
+            node: dom("#failed-notification-content")
+              .clone()
+              .removeClass("hidden")[0],
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+          }).showToast();
           }
       })
     }
