@@ -98,7 +98,10 @@
       </div>
      
     </div>
+
     <div class="py-5 md:mx-6 intro-y">
+      <h1 class="font-medium text-center space text-3xl mx-auto mt-3">Calendar</h1>
+         <div class="saprater"></div>
       <div class="grid grid-cols-12 gap-5 mt-5">
     <!-- BEGIN: Calendar Side Menu -->
     <div class="col-span-12 xl:col-span-4 2xl:col-span-3">
@@ -283,6 +286,18 @@
     </div>
     <!-- END: Calendar Content -->
   </div>
+
+  <div class="py-5 md:mx-6 intro-y">
+      <h1 class="font-medium text-center space text-3xl mx-auto mt-3">Map</h1>
+         <div class="saprater"></div>
+         <div class="my-3">
+          <img src="../../assets/images/map1.jpg" class=""/>
+         </div>
+         <div class="my-3">
+          <img src="../../assets/images/map.jpg" class=""/>
+         </div>
+         
+     </div>
       <h2 class="text-3xl font-medium leading-none mt-3 space">AWESOME FEATURES</h2>
       <div class="saprater-left"></div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
@@ -358,7 +373,7 @@
         <div class="col-span-12 md:col-span-3 lg:col-span-3 cursor-pointer  p-5 "></div>
       </div>
     </div>
-   
+    
   </div>
 </template>
 
