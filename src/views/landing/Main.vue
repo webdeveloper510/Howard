@@ -61,7 +61,7 @@
     </div> -->
     <div class="my-5 md:mx-6 intro-y">
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-6 md:col-span-6 space text-left">
+        <div class="col-span-12 md:col-span-6 space text-left">
          <h1 class="font-medium text-left space text-3xl mx-auto mt-3">Benefits of Modula automated vertical warehouses:</h1>
          <div class="saprater-left"></div>
          <p class="text-lg mb-3">Save up to 90% of occupied floor space</p>
@@ -71,7 +71,7 @@
          <p class="text-lg mb-3">Draw up an inventory with just one click without impeding operations</p>
          <p class="text-lg mb-3">Increase picking accuracy, with a lower error rate</p>
         </div>
-        <div class="col-span-6 md:col-span-6 text-center">
+        <div class="col-span-12 md:col-span-6 text-center">
           <img src="https://www.modula.eu/wp-content/uploads/2022/06/CCC_0059-1200x800-1-768x512-c-center.webp" class="p-5"/>
         </div>
       </div>
@@ -80,10 +80,10 @@
     <div class="my-5 md:mx-6 intro-y">
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
       
-        <div class="col-span-6 md:col-span-6 text-center">
+        <div class="col-span-12 md:col-span-6 text-center">
           <img src="https://www.modula.eu/wp-content/uploads/2022/06/magazzini_module_f-800x534-1-768x513-c-center.webp" class="p-5"/>
         </div>
-        <div class="col-span-6 md:col-span-6 space text-left">
+        <div class="col-span-12 md:col-span-6 space text-left">
          <h1 class="font-medium text-left space text-3xl mx-auto mt-3">Modula vertical and horizontal warehouses offer:</h1>
          <div class="saprater-left"></div>
          <p class="text-lg mb-3">Ad hoc solutions for all types of warehouse</p>
@@ -307,11 +307,11 @@
   <div class="py-5 md:mx-6 intro-y">
       <h1 class="font-medium text-center space text-3xl mx-auto mt-3">Map</h1>
          <div class="saprater"></div>
-         <div class="my-3">
-          <img src="../../assets/images/map1.jpg" class=""/>
+         <div class="my-3 ">
+          <img src="../../assets/images/map1.jpg" class="w-full rounded-md" data-action="zoom"/>
          </div>
-         <div class="my-3">
-          <img src="../../assets/images/map.jpg" class=""/>
+         <div class="my-3 ">
+          <img src="../../assets/images/map.jpg" class="w-full rounded-md" data-action="zoom"/>
          </div>
          
      </div>
@@ -352,7 +352,7 @@
           <h2 class="text-3xl font-medium leading-none text-center space pt-1"> Contact Us</h2>
           <div class="saprater"></div>
         </div>
-        <div class="col-span-12 md:col-span-3 lg:col-span-3 cursor-pointer  p-5 "></div>
+        <div class="col-span-12 md:col-span-3 lg:col-span-3"></div>
         <div class="col-span-12 md:col-span-6 lg:col-span-6  box p-5">
           <div class="grid grid-cols-12 gap-4 gap-y-5 mt-5">
             <div class="intro-y col-span-12 sm:col-span-6">
@@ -387,7 +387,7 @@
           </div>
 
         </div>
-        <div class="col-span-12 md:col-span-3 lg:col-span-3 cursor-pointer  p-5 "></div>
+        <div class="col-span-12 md:col-span-3 lg:col-span-3"></div>
       </div>
     </div>
     
