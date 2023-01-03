@@ -151,10 +151,10 @@
 
 
 .tns-outer .tns-controls button[data-controls="next"] {
-  right: 22px;
+  margin-right: 0px !important;
 }
 .tns-outer .tns-controls button[data-controls="prev"] {
-  left: 22px;
+  margin-left: 0px !important;
 }
 
 .landing {

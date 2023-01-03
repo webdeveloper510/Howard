@@ -3,7 +3,7 @@
 
     <Header></Header>
     
-    <div class="-mx-5 intro-y space">
+    <div class="md:-mx-5 intro-y space">
       <TinySlider
                 :options="{
                   mode: 'gallery',
@@ -11,7 +11,7 @@
                   speed: 500,
                 }"
               >
-                <div class="px-2">
+                <div class="">
                   <div class="image-fit rounded-md overflow-hidden" style="height: 500px;">
                     <img
                       alt="Midone Tailwind HTML Admin Template"
@@ -23,7 +23,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="px-2">
+                <div class="">
                   <div class="image-fit rounded-md overflow-hidden" style="height: 500px;">
                     <img
                       alt="Midone Tailwind HTML Admin Template"
@@ -35,7 +35,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="px-2">
+                <div class="">
                   <div class="image-fit rounded-md overflow-hidden" style="height: 500px;">
                     <img
                       alt="Midone Tailwind HTML Admin Template"
