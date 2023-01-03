@@ -174,6 +174,106 @@
               <EditIcon class="w-4 h-4 text-slate-500" />
             </a>
           </div>
+          <div class="relative">
+            <div
+              class="event p-3 -mx-3 cursor-pointer transition duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-darkmode-400 rounded-md flex items-center"
+            >
+              <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
+              <div class="pr-10">
+                <div class="event__title truncate">Sports Day</div>
+                <div class="text-slate-500 text-xs mt-0.5">
+                  <span class="event__days">4</span> Days
+                  <span class="mx-1">•</span> 11:00 AM
+                </div>
+              </div>
+            </div>
+            <a
+              class="flex items-center absolute top-0 bottom-0 my-auto right-0"
+              href=""
+            >
+              <EditIcon class="w-4 h-4 text-slate-500" />
+            </a>
+          </div>
+          <div class="relative">
+            <div
+              class="event p-3 -mx-3 cursor-pointer transition duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-darkmode-400 rounded-md flex items-center"
+            >
+              <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
+              <div class="pr-10">
+                <div class="event__title truncate">Office Party 2023</div>
+                <div class="text-slate-500 text-xs mt-0.5">
+                  <span class="event__days">4</span> Days
+                  <span class="mx-1">•</span> 11:00 AM
+                </div>
+              </div>
+            </div>
+            <a
+              class="flex items-center absolute top-0 bottom-0 my-auto right-0"
+              href=""
+            >
+              <EditIcon class="w-4 h-4 text-slate-500" />
+            </a>
+          </div>
+          <div class="relative">
+            <div
+              class="event p-3 -mx-3 cursor-pointer transition duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-darkmode-400 rounded-md flex items-center"
+            >
+              <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
+              <div class="pr-10">
+                <div class="event__title truncate">Lunch</div>
+                <div class="text-slate-500 text-xs mt-0.5">
+                  <span class="event__days">1</span> Days
+                  <span class="mx-1">•</span> 11:00 AM
+                </div>
+              </div>
+            </div>
+            <a
+              class="flex items-center absolute top-0 bottom-0 my-auto right-0"
+              href=""
+            >
+              <EditIcon class="w-4 h-4 text-slate-500" />
+            </a>
+          </div>
+          <div class="relative">
+            <div
+              class="event p-3 -mx-3 cursor-pointer transition duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-darkmode-400 rounded-md flex items-center"
+            >
+              <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
+              <div class="pr-10">
+                <div class="event__title truncate">Birthday</div>
+                <div class="text-slate-500 text-xs mt-0.5">
+                  <span class="event__days">4</span> Days
+                  <span class="mx-1">•</span> 11:00 AM
+                </div>
+              </div>
+            </div>
+            <a
+              class="flex items-center absolute top-0 bottom-0 my-auto right-0"
+              href=""
+            >
+              <EditIcon class="w-4 h-4 text-slate-500" />
+            </a>
+          </div>
+          <div class="relative">
+            <div
+              class="event p-3 -mx-3 cursor-pointer transition duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-darkmode-400 rounded-md flex items-center"
+            >
+              <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
+              <div class="pr-10">
+                <div class="event__title truncate">Party</div>
+                <div class="text-slate-500 text-xs mt-0.5">
+                  <span class="event__days">4</span> Days
+                  <span class="mx-1">•</span> 11:00 AM
+                </div>
+              </div>
+            </div>
+            <a
+              class="flex items-center absolute top-0 bottom-0 my-auto right-0"
+              href=""
+            >
+              <EditIcon class="w-4 h-4 text-slate-500" />
+            </a>
+          </div>
           <div
             class="text-slate-500 p-3 text-center hidden"
             id="calendar-no-events"
@@ -192,90 +292,7 @@
           />
         </div>
       </div>
-      <div class="box p-5 intro-y mt-5">
-        <div class="flex">
-          <ChevronLeftIcon class="w-5 h-5 text-slate-500" />
-          <div class="font-medium text-base mx-auto">April</div>
-          <ChevronRightIcon class="w-5 h-5 text-slate-500" />
-        </div>
-        <div class="grid grid-cols-7 gap-4 mt-5 text-center">
-          <div class="font-medium">Su</div>
-          <div class="font-medium">Mo</div>
-          <div class="font-medium">Tu</div>
-          <div class="font-medium">We</div>
-          <div class="font-medium">Th</div>
-          <div class="font-medium">Fr</div>
-          <div class="font-medium">Sa</div>
-          <div class="py-0.5 rounded relative text-slate-500">29</div>
-          <div class="py-0.5 rounded relative text-slate-500">30</div>
-          <div class="py-0.5 rounded relative text-slate-500">31</div>
-          <div class="py-0.5 rounded relative">1</div>
-          <div class="py-0.5 rounded relative">2</div>
-          <div class="py-0.5 rounded relative">3</div>
-          <div class="py-0.5 rounded relative">4</div>
-          <div class="py-0.5 rounded relative">5</div>
-          <div class="py-0.5 bg-success/20 dark:bg-success/30 rounded relative">
-            6
-          </div>
-          <div class="py-0.5 rounded relative">7</div>
-          <div class="py-0.5 bg-primary text-white rounded relative">8</div>
-          <div class="py-0.5 rounded relative">9</div>
-          <div class="py-0.5 rounded relative">10</div>
-          <div class="py-0.5 rounded relative">11</div>
-          <div class="py-0.5 rounded relative">12</div>
-          <div class="py-0.5 rounded relative">13</div>
-          <div class="py-0.5 rounded relative">14</div>
-          <div class="py-0.5 rounded relative">15</div>
-          <div class="py-0.5 rounded relative">16</div>
-          <div class="py-0.5 rounded relative">17</div>
-          <div class="py-0.5 rounded relative">18</div>
-          <div class="py-0.5 rounded relative">19</div>
-          <div class="py-0.5 rounded relative">20</div>
-          <div class="py-0.5 rounded relative">21</div>
-          <div class="py-0.5 rounded relative">22</div>
-          <div class="py-0.5 bg-pending/20 dark:bg-pending/30 rounded relative">
-            23
-          </div>
-          <div class="py-0.5 rounded relative">24</div>
-          <div class="py-0.5 rounded relative">25</div>
-          <div class="py-0.5 rounded relative">26</div>
-          <div class="py-0.5 bg-primary/10 dark:bg-primary/50 rounded relative">
-            27
-          </div>
-          <div class="py-0.5 rounded relative">28</div>
-          <div class="py-0.5 rounded relative">29</div>
-          <div class="py-0.5 rounded relative">30</div>
-          <div class="py-0.5 rounded relative text-slate-500">1</div>
-          <div class="py-0.5 rounded relative text-slate-500">2</div>
-          <div class="py-0.5 rounded relative text-slate-500">3</div>
-          <div class="py-0.5 rounded relative text-slate-500">4</div>
-          <div class="py-0.5 rounded relative text-slate-500">5</div>
-          <div class="py-0.5 rounded relative text-slate-500">6</div>
-          <div class="py-0.5 rounded relative text-slate-500">7</div>
-          <div class="py-0.5 rounded relative text-slate-500">8</div>
-          <div class="py-0.5 rounded relative text-slate-500">9</div>
-        </div>
-        <div
-          class="border-t border-slate-200/60 dark:border-darkmode-400 pt-5 mt-5"
-        >
-          <div class="flex items-center">
-            <div class="w-2 h-2 bg-pending rounded-full mr-3"></div>
-            <span class="truncate">Independence Day</span>
-            <div
-              class="h-px flex-1 border border-r border-dashed border-slate-200 mx-3 xl:hidden"
-            ></div>
-            <span class="font-medium xl:ml-auto">23th</span>
-          </div>
-          <div class="flex items-center mt-4">
-            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
-            <span class="truncate">Memorial Day</span>
-            <div
-              class="h-px flex-1 border border-r border-dashed border-slate-200 mx-3 xl:hidden"
-            ></div>
-            <span class="font-medium xl:ml-auto">10th</span>
-          </div>
-        </div>
-      </div>
+     
     </div>
     <!-- END: Calendar Side Menu -->
     <!-- BEGIN: Calendar Content -->
