@@ -31,12 +31,12 @@
               </div>
               <div class="modal-body p-0">
                 <router-link :to="{ name: 'landing' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium landing-side -intro-x md:flex  mt-2 ">
+                  class="font-medium landing-side -intro-x flex  mt-2 ">
                   <HomeIcon class="block mr-3"  />
                  <div class="font-bold"> Home </div> 
                 </router-link>
                 <div class="dropdown inline-block landing-side" data-tw-placement="top" >
-                  <a class="dropdown-toggle font-medium  -intro-x md:flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
+                  <a class="dropdown-toggle font-medium  -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
                     <LayoutIcon class="block mr-3"/>
                    <div class="font-bold"> Forms </div></a>
                   <div class="dropdown-menu w-40  landing-dropdown">
@@ -85,7 +85,7 @@
                   </div>
                 </div>
                 <div class="dropdown inline-block landing-side" data-tw-placement="top" >
-                  <a class="dropdown-toggle font-medium  -intro-x md:flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
+                  <a class="dropdown-toggle font-medium  -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
                     <LayoutIcon class="block mr-3"/>
                    <div class="font-bold"> Lists </div></a>
                   <div class="dropdown-menu w-40  landing-dropdown">
