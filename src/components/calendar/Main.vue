@@ -1,5 +1,12 @@
 <template>
-  <FullCalendar :options="options" />
+ <full-calendar class="mt-2"
+            ref="cc"
+            @eventClick="eventClicked"
+            @eventRender="eventRender"
+            :selectable="true"
+            default-view="dayGridMonth" 
+            :plugins="calendar_plugins"
+            :options="options" />
 </template>
 
 <script setup>
@@ -9,7 +16,6 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import dom from "@left4code/tw-starter/dist/js/dom";
-
 const options = {
   plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
   droppable: true,
@@ -19,10 +25,12 @@ const options = {
     right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
   },
  // defaultDate: '2018-06-01',
-  initialDate: "2023-01-04",
+  initialDate: new Date(),
   navLinks: true,
+
   editable: true,
   dayMaxEvents: true,
+  selectable:true,
   events: [
     {
       title: "Vue Vixens Day",
@@ -59,5 +67,11 @@ const options = {
       }
     }
   },
+  methods: {
+
+getSelectedMonth() {
+  console.log(this.$refs.cc.getDate());
+},
+}
 };
 </script>
