@@ -1,12 +1,6 @@
 <template>
- <full-calendar class="mt-2"
-            ref="cc"
-            @eventClick="eventClicked"
-            @eventRender="eventRender"
-            :selectable="true"
-            default-view="dayGridMonth" 
-            :plugins="calendar_plugins"
-            :options="options" />
+  <full-calendar class="mt-2" ref="cc" @eventClick="eventClicked" @eventRender="eventRender" :selectable="true"
+    default-view="dayGridMonth" :plugins="calendar_plugins" :options="options" />
 </template>
 
 <script setup>
@@ -24,13 +18,13 @@ const options = {
     center: "title",
     right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
   },
- // defaultDate: '2018-06-01',
+  // defaultDate: '2018-06-01',
   initialDate: new Date(),
   navLinks: true,
 
   editable: true,
   dayMaxEvents: true,
-  selectable:true,
+  selectable: true,
   events: [
     {
       title: "Vue Vixens Day",
@@ -69,9 +63,9 @@ const options = {
   },
   methods: {
 
-getSelectedMonth() {
-  console.log(this.$refs.cc.getDate());
-},
-}
+    getSelectedMonth() {
+      console.log(this.$refs.cc.getDate());
+    },
+  }
 };
 </script>
