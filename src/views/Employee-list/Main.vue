@@ -1,30 +1,12 @@
 <template>
-  <h2 class="intro-y text-lg font-medium mt-10">Employee List</h2>
+        <Header></Header>
+  <div class="box1 p-4 md:w-3/4 my-5 mx-auto">
+  <h2 class="intro-y text-lg font-medium text-center mt-10">Employee List</h2>
   <div class="grid grid-cols-12 gap-6 mt-5">
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-employee">Edit Employee</a>
-      <Dropdown>
-        <DropdownToggle class="btn px-2 box">
-          <span class="w-5 h-5 flex items-center justify-center">
-            <PlusIcon class="w-4 h-4" />
-          </span>
-        </DropdownToggle>
-        <DropdownMenu class="w-40">
-          <DropdownContent>
-            <DropdownItem>
-              <PrinterIcon class="w-4 h-4 mr-2" /> Print
-            </DropdownItem>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> Export to Excel
-            </DropdownItem>
-            <DropdownItem>
-              <FileTextIcon class="w-4 h-4 mr-2" /> Export to PDF
-            </DropdownItem>
-          </DropdownContent>
-        </DropdownMenu>
-      </Dropdown>
+      <a class="btn btn-dark shadow-md mr-2" href="/Howard/add-employee">Edit Employee</a>
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
       </div>
@@ -245,7 +227,7 @@
         >
           Cancel
         </button>
-        <button type="submit"  class="btn btn-primary w-24">Save</button>
+        <button type="submit"  class="btn btn-dark w-24">Save</button>
       </div>
     </form>
     </ModalBody>
@@ -308,7 +290,7 @@
             </div>
             <!-- END: Failed Notification Content -->
 
-
+          </div>
 
 </template>
 
@@ -426,5 +408,16 @@ export default {
             }
        }
   }
+
+</script>
+
+
+<script setup>
+import { onMounted } from "vue";
+import Header from "../../global-components/Header/Main.vue";
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
 
 </script>

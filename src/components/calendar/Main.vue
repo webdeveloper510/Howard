@@ -1,5 +1,6 @@
 <template>
-  <FullCalendar :options="options" />
+  <full-calendar class="mt-2" ref="cc" @eventClick="eventClicked" @eventRender="eventRender" :selectable="true"
+    default-view="dayGridMonth" :plugins="calendar_plugins" :options="options" />
 </template>
 
 <script setup>
@@ -9,7 +10,6 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import dom from "@left4code/tw-starter/dist/js/dom";
-
 const options = {
   plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
   droppable: true,
@@ -18,35 +18,38 @@ const options = {
     center: "title",
     right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
   },
-  initialDate: "2021-01-12",
+  // defaultDate: '2018-06-01',
+  initialDate: new Date(),
   navLinks: true,
+
   editable: true,
   dayMaxEvents: true,
+  selectable: true,
   events: [
     {
       title: "Vue Vixens Day",
-      start: "2021-01-05",
-      end: "2021-01-08",
+      start: "2023-01-05",
+      end: "2023-01-08",
     },
     {
       title: "VueConfUS",
-      start: "2021-01-11",
-      end: "2021-01-15",
+      start: "2023-01-11",
+      end: "2023-01-15",
     },
     {
       title: "VueJS Amsterdam",
-      start: "2021-01-17",
-      end: "2021-01-21",
+      start: "2023-01-17",
+      end: "2023-01-21",
     },
     {
       title: "Vue Fes Japan 2019",
-      start: "2021-01-21",
-      end: "2021-01-24",
+      start: "2023-01-21",
+      end: "2023-01-24",
     },
     {
       title: "Laracon 2021",
-      start: "2021-01-24",
-      end: "2021-01-27",
+      start: "2023-01-24",
+      end: "2023-01-27",
     },
   ],
   drop: function (info) {
@@ -58,5 +61,11 @@ const options = {
       }
     }
   },
+  methods: {
+
+    getSelectedMonth() {
+      console.log(this.$refs.cc.getDate());
+    },
+  }
 };
 </script>

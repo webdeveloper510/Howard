@@ -140,7 +140,7 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary w-20 mt-3">
+              <button type="button" class="btn btn-dark w-20 mt-3">
                 Save
               </button>
             </div>
@@ -165,7 +165,7 @@
                   </Tippy>
                 </div>
                 <div class="mx-auto cursor-pointer relative mt-5">
-                  <button type="button" class="btn btn-primary w-full">
+                  <button type="button" class="btn btn-dark w-full">
                     Change Photo
                   </button>
                   <input
@@ -291,7 +291,7 @@
             </div>
           </div>
           <div class="flex justify-end mt-4">
-            <button type="button" class="btn btn-primary w-20 mr-auto">
+            <button type="button" class="btn btn-dark w-20 mr-auto">
               Save
             </button>
             <a href="" class="text-danger flex items-center">

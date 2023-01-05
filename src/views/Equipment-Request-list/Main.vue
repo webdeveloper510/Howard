@@ -1,10 +1,12 @@
 <template>
-  <h2 class="intro-y text-lg font-medium mt-10">Modula New Hire IT Equipment Request List</h2>
+  <Header></Header>
+  <div class="box1 p-4 md:w-3/4 my-5 mx-auto">
+  <h2 class="intro-y text-lg text-center font-medium mt-4">Modula New Hire IT Equipment Request List</h2>
   <div class="grid grid-cols-12 gap-6 mt-5">
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/Howard/NewHireITEquipment">Add Equipment Request </a>
+      <a class="btn btn-dark shadow-md mr-2" href="/Howard/NewHireITEquipment">Add Equipment Request </a>
 
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -168,6 +170,7 @@
               </div>
             </div>
             <!-- END: Failed Notification Content -->
+            </div>
     </template>
 
 <script>
@@ -288,5 +291,15 @@ export default {
             }
        }
   }
+
+</script>
+
+<script setup>
+import { onMounted } from "vue";
+import Header from "../../global-components/Header/Main.vue";
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
 
 </script>

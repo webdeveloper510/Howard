@@ -26,10 +26,10 @@
         Showing 1 to 10 of 150 entries
       </div>
       <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
-        <button class="btn btn-primary shadow-md mr-2">
+        <button class="btn btn-dark shadow-md mr-2">
           <FileTextIcon class="w-4 h-4 mr-2" /> Export to Excel
         </button>
-        <button class="btn btn-primary shadow-md mr-2">
+        <button class="btn btn-dark shadow-md mr-2">
           <FileTextIcon class="w-4 h-4 mr-2" /> Export to PDF
         </button>
         <Dropdown>

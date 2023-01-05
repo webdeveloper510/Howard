@@ -129,7 +129,7 @@
                     <button class="btn btn-secondary w-32 ml-auto">
                       Create Filter
                     </button>
-                    <button class="btn btn-primary w-32 ml-2">Search</button>
+                    <button class="btn btn-dark w-32 ml-2">Search</button>
                   </div>
                 </div>
               </DropdownContent>
@@ -137,7 +137,7 @@
           </Dropdown>
         </div>
         <div class="w-full sm:w-auto flex">
-          <button class="btn btn-primary shadow-md mr-2">
+          <button class="btn btn-dark shadow-md mr-2">
             Upload New Files
           </button>
           <Dropdown>

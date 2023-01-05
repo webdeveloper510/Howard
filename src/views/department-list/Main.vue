@@ -1,10 +1,12 @@
 <template>
-  <h2 class="intro-y text-lg font-medium mt-10">Department List</h2>
-  <div class="grid grid-cols-12 gap-6 mt-5">
-    <div
+  <Header></Header>
+  <div class="box1 p-4 md:w-3/4 my-5 mx-auto">
+    <h2 class="intro-y text-lg text-center font-medium mt-10">Department List</h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+      <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
-    >
-      <a href="/Howard/add-department" class="btn btn-primary shadow-md mr-2">Add Department</a>
+      >
+      <a href="/Howard/add-department" class="btn btn-dark shadow-md mr-2">Add Department</a>
      
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -15,40 +17,40 @@
             type="text"
             class="form-control w-56 box pr-10"
             placeholder="Search..."
-          />
-          <SearchIcon class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" />
+            />
+            <SearchIcon class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" />
+          </div>
         </div>
       </div>
-    </div>
-    <!-- BEGIN: Data List -->
-    <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
-      <table class="table table-report -mt-2">
-        <thead>
-          <tr>
-            <th class="whitespace-nowrap"> S.No.</th>
-            <th class="whitespace-nowrap">Department NAME</th>
-            <th class="text-center whitespace-nowrap">Department Description</th>
-            <th class="text-center whitespace-nowrap">ACTIONS</th>
-          </tr>
-        </thead>
-        <tbody>
+      <!-- BEGIN: Data List -->
+      <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+        <table class="table table-report -mt-2">
+          <thead>
+            <tr>
+              <th class="whitespace-nowrap"> S.No.</th>
+              <th class="whitespace-nowrap">Department NAME</th>
+              <th class="text-center whitespace-nowrap">Department Description</th>
+              <th class="text-center whitespace-nowrap">ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr
           v-for="(department, index) in departments"
             :key="index"
             class="intro-x"
           >
           <td>
-              {{
-                index+1
-              }}
+            {{
+              index+1
+            }}
           </td>
           
-            <td>
-              <a href="" class="font-medium whitespace-nowrap">{{
-                department.department_name
-              }}</a>
+          <td>
+            <a href="" class="font-medium whitespace-nowrap">{{
+              department.department_name
+            }}</a>
               <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
-               
+                
               </div>
             </td>
             <td class="text-center"> {{ department.description }}</td>
@@ -74,7 +76,7 @@
     <!-- END: Data List -->
     <!-- BEGIN: Pagination -->
     <div
-      class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-nowrap items-center"
+    class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-nowrap items-center"
     >
       <nav class="w-full sm:w-auto sm:mr-auto">
         <ul class="pagination">
@@ -126,85 +128,86 @@
   </div>
   <!-- BEGIN: edit Confirmation Modal -->
   <Modal
-    :show="editConfirmationModal"
-    @hidden="editConfirmationModal = false"
+  :show="editConfirmationModal"
+  @hidden="editConfirmationModal = false"
   >
-    <ModalBody class="p-0">
-      <form @submit.prevent="editDepartment" class="add-form">
-     <div class="p-5">
+  <ModalBody class="p-0">
+    <form @submit.prevent="editDepartment" class="add-form">
+      <div class="p-5">
         <h3 class="text-center text-2xl font-bold mb-3">Edit Department</h3>
-           <div class="grid grid-cols-12 gap-x-5">
-                    <div class="col-span-12 2xl:col-span-6">
-                        <label for="update-profile-form-1" class="form-label"
-                          >Department Name</label
-                        >
-                        <input
-                          id="update-profile-form-1"
-                          type="text"
-                          class="form-control"
-                          placeholder="Input text"
-                          v-model="form.department_name"
-
-                        />
-                      </div>
-                    <div class="col-span-12">
-                          <div class="mt-3">
-                            <label for="update-profile-form-5" class="form-label"
-                              >Department Description</label
-                            >
-                            <textarea
-                              id="update-profile-form-5"
-                              class="form-control"
-                              placeholder="Adress"
-                              rows="4"
-                              v-model="form.description"
-
-                            ></textarea
-                            >
-                          </div>
-                    </div>
+        <div class="grid grid-cols-12 gap-x-5">
+          <div class="col-span-12 2xl:col-span-6">
+            <label for="update-profile-form-1" class="form-label"
+            >Department Name</label
+            >
+            <input
+            id="update-profile-form-1"
+            type="text"
+            class="form-control"
+            placeholder="Input text"
+            v-model="form.department_name"
+            
+            />
           </div>
+          <div class="col-span-12">
+            <div class="mt-3">
+              <label for="update-profile-form-5" class="form-label"
+              >Department Description</label
+              >
+              <textarea
+              id="update-profile-form-5"
+              class="form-control"
+              placeholder="Adress"
+              rows="4"
+              v-model="form.description"
+              
+              ></textarea
+              >
+            </div>
+          </div>
+        </div>
                 <div class="px-5 pb-8 text-right">
                   <button
                     type="button"
                     @click="editConfirmationModal = false"
                     class="btn btn-outline-secondary w-24 mr-1"
-                  >
+                    >
                     Cancel
                   </button>
-                  <button type="submit" class="btn btn-primary w-24">Save</button>
+                  <button type="submit" class="btn btn-dark w-24">Save</button>
                 </div>
         </div>
       </form>
     </ModalBody>
   </Modal>
   <!-- END: edit Confirmation Modal -->
-
-
+  
+  
   <!-- BEGIN: Delete Confirmation Modal -->
   <Modal :show="deleteModalOpen"  @hidden="deleteModalOpen = false" >
-            <ModalBody class="p-0">
-              <div class="p-5 text-center">
-                <XCircleIcon class="w-16 h-16 text-danger mx-auto mt-3" />
-                <div class="text-3xl mt-5">Are you sure?</div>
-                <div class="text-slate-500 mt-2">
-                  Do you really want to delete these records? <br />This process cannot
-                  be undone.
-                </div>
-              </div>
-              <div class="px-5 pb-8 text-center">
-                <button
+    <ModalBody class="p-0">
+      <div class="p-5 text-center">
+        <XCircleIcon class="w-16 h-16 text-danger mx-auto mt-3" />
+        <div class="text-3xl mt-5">Are you sure?</div>
+        <div class="text-slate-500 mt-2">
+          Do you really want to delete these records? <br />This process cannot
+          be undone.
+        </div>
+      </div>
+      <div class="px-5 pb-8 text-center">
+        <button
                   type="button"
                   @click="deleteModalOpen = false"
                   class="btn btn-outline-secondary w-24 mr-1"
-                >
+                  >
                   Cancel
                 </button>
                 <button type="button" class="btn btn-danger w-24" @click="deleteDeparment(form.id)">Delete</button>
               </div>
             </ModalBody>
-  </Modal>
+          </Modal>
   <!-- END: Delete Confirmation Modal -->
+</div>
 </template>
 
 <script>
@@ -287,4 +290,14 @@ export default {
 
 const deleteConfirmationModal = ref(false);
 const editConfirmationModal = ref(false);
+</script>
+
+<script setup>
+import { onMounted } from "vue";
+import Header from "../../global-components/Header/Main.vue";
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
+
 </script>

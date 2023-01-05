@@ -1,6 +1,5 @@
 <template>
   <div>
-    <DarkModeSwitcher />
     <div class="container">
       <!-- BEGIN: Error Page -->
       <div
@@ -34,7 +33,6 @@
 
 <script setup>
 import { onMounted } from "vue";
-import DarkModeSwitcher from "@/components/dark-mode-switcher/Main.vue";
 import dom from "@left4code/tw-starter/dist/js/dom";
 
 onMounted(() => {

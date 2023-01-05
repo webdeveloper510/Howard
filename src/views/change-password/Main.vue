@@ -64,7 +64,7 @@
               placeholder="Input text"
             />
           </div>
-          <button type="button" class="btn btn-primary mt-4">
+          <button type="button" class="btn btn-dark mt-4">
             Change Password
           </button>
         </div>
@@ -110,7 +110,7 @@
               <!-- END: Notification Content -->
               <!-- BEGIN: Notification Toggle -->
               <button
-                class="btn btn-primary"
+                class="btn btn-dark"
                 @click="successNotificationToggle"
               >
                 Show Notification

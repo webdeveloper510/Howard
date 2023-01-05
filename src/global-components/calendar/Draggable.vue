@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+
 import { ref, onMounted } from "vue";
 import { Draggable } from "@fullcalendar/interaction";
 

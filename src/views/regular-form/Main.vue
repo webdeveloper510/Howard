@@ -551,7 +551,7 @@
                 >Remember me</label
               >
             </div>
-            <button class="btn btn-primary mt-5">Login</button>
+            <button class="btn btn-dark mt-5">Login</button>
           </Preview>
           <Source>
             <Highlight>
@@ -585,7 +585,7 @@
                   >Remember me</label
                 >
               </div>
-              <button class="btn btn-primary mt-5">Login</button>
+              <button class="btn btn-dark mt-5">Login</button>
               ` }}
             </Highlight>
           </Source>
@@ -647,7 +647,7 @@
               >
             </div>
             <div class="sm:ml-20 sm:pl-5 mt-5">
-              <button class="btn btn-primary">Login</button>
+              <button class="btn btn-dark">Login</button>
             </div>
           </Preview>
           <Source>
@@ -687,7 +687,7 @@
                 >
               </div>
               <div class="sm:ml-20 sm:pl-5 mt-5">
-                <button class="btn btn-primary">Login</button>
+                <button class="btn btn-dark">Login</button>
               </div>
               ` }}
             </Highlight>

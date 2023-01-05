@@ -151,14 +151,20 @@
 
 
 .tns-outer .tns-controls button[data-controls="next"] {
-  right: 22px;
+  margin-right: 0px !important;
 }
 .tns-outer .tns-controls button[data-controls="prev"] {
-  left: 22px;
+  margin-left: 0px !important;
 }
 
 .landing {
   background-color: rgb(var(--color-slate-100) / var(--tw-bg-opacity));
+}
+.forms {
+  background-image: url('../images/banner.jpg');
+  background-position: 0 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .links svg {
@@ -183,7 +189,6 @@
 .large-tittle {
   font-size: 48px;
     font-weight: bold;
-    color: rgb(30 41 59);
 }
 
 @media only screen and (max-width: 768px) {
@@ -191,4 +196,53 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+.forms {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+}
+
+.landing-side {
+  height: 50px;
+  position: relative;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 1.25rem;
+}
+
+.landing-dropdown {
+  width: 264px !important;
+}
+
+.box1 {
+  box-shadow: 0px 3px 20px #0000000b;
+  position: relative;
+  border-radius: 0.375rem;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: #f1ba2282;
+}
+.landing_banner {
+  background-image: url(https://www.modula.eu/wp-content/uploads/2022/06/CCC_0059-1200x800-1-768x512-c-center.webp);
+  padding: 120px 20px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.saprater-left {
+    width: 130px;
+    height: 2px;
+    background: red;
+    margin: 10px 0px;
+}
+
+.slider-content {
+  position: absolute;
+  left: 6%;
+  top: 24%;
+  color: white !important;
 }

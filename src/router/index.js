@@ -7,6 +7,8 @@ import DashboardOverview2 from "../views/dashboard-overview-2/Main.vue";
 import DashboardOverview3 from "../views/dashboard-overview-3/Main.vue";
 import DashboardOverview4 from "../views/dashboard-overview-4/Main.vue";
 import Categories from "../views/categories/Main.vue";
+import Company from "../views/Company/Main.vue";
+import PhoneNo from "../views/Phoneno/Main.vue";
 import Corporate from "../views/Corporate/Main.vue";
 import modulaTerminationNotice from "../views/Modula-Termination-Notice/Main.vue"
 import facilitiesMaintenance from "../views/Facilities-Maintenance/Main.vue";
@@ -28,7 +30,7 @@ import DamagedList from "../views/Damaged-list/Main.vue";
 import Accesslist from "../views/Access-list/Main.vue";
 import FacilitiesList from "../views/Facilities-list/Main.vue";
 import TransactionDetail from "../views/transaction-detail/Main.vue";
-import SellerList from "../views/seller-list/Main.vue";
+import safety from "../views/Safety/Main.vue";
 import Training from "../views/Training/Main.vue";
 import Goals from "../views/goals/Main.vue";
 import Inbox from "../views/inbox/Main.vue";
@@ -71,7 +73,7 @@ import RegularTable from "../views/regular-table/Main.vue";
 import Tabulator from "../views/tabulator/Main.vue";
 import Modal from "../views/modal/Main.vue";
 import SlideOver from "../views/slide-over/Main.vue";
-import Notification from "../views/notification/Main.vue";
+import HrInput from "../views/Hr-input/Main.vue";
 import DepartmentList from "../views/department-list/Main.vue";
 import Accordion from "../views/accordion/Main.vue";
 import Button from "../views/button/Main.vue";
@@ -94,7 +96,7 @@ import ImageZoom from "../views/image-zoom/Main.vue";
 
 const routes = [
   {
-    path: "/Howard",
+    path: "/",
     component: SideMenu,
     children: [
       {
@@ -119,116 +121,20 @@ const routes = [
         component: Categories,
       },
       {
-        path: "add-employee",
-        name: "side-menu-add-product",
-        component: AddProduct,
-      },
-      {
-        path: "add-department",
-        name: "side-menu-add-department",
-        component: AddDepartment,
-      },
-      {
-        path: "add-policies",
-        name: "side-menu-add-policies",
-        component: AddPolicies,
-      },
-      {
-        path: "employee-list",
-        name: "side-menu-product-list",
-        component: EmployeeList,
-      },
-      {
-        path: "ITMove",
-        name: "side-menu-IT-Move",
-        component: ITMove,
-      },
-      {
         path: "product-grid",
         name: "side-menu-product-grid",
         component: ProductGrid,
       },
       {
-        path: "NewHireITEquipment",
-        name: "side-menu-NewHireITEquipment",
-        component: NewHireITEquipment,
-      },
-      {
-        path: "Modula-Termination-Notice",
-        name: "side-menu-Modula-Termination-Notice",
-        component: modulaTerminationNotice,
-      },
-      {
-        path: "transaction-list",
-        name: "side-menu-transaction-list",
-        component: TransactionList,
-      },
-      {
-        path: "Access-list",
-        name: "side-menu-Access-list",
-        component: Accesslist,
-      },
-      {
-        path: "Facilities-list",
-        name: "side-menu-Facilities-list",
-        component: FacilitiesList,
-      },
-      {
-        path: "Custody-list",
-        name: "side-menu-Custody-list",
-        component: CustodyList,
-      },
-      {
-        path: "Damaged-list",
-        name: "side-menu-Damaged-list",
-        component: DamagedList,
-      },
-      {
-        path: "Equipment-Request-list",
-        name: "side-menu-Equipment-Request-list",
-        component: EquipmentRequestList,
-      },
-      {
-        path: "Termination-list",
-        name: "side-menu-Termination-list",
-        component: TerminationNotice,
-      },
-      {
-        path: "Hardware-Request-list",
-        name: "side-menu-Hardware-Request-list",
-        component: HardwareRequest,
-      },
-      {
-        path: "IT-Move-list",
-        name: "side-menu-IT-Move-list",
-        component: ITMoveList,
-      },
-
-
-      {
         path: "transaction-detail",
         name: "side-menu-transaction-detail",
         component: TransactionDetail,
       },
-      {
-        path: "seller-list",
-        name: "side-menu-seller-list",
-        component: SellerList,
-      },
-      {
-        path: "Training",
-        name: "side-menu-seller-detail",
-        component: Training,
-      },
+    
       {
         path: "Company-Strategy-&-Goals",
         name: "side-menu-Goals",
         component: Goals,
-      },
-      {
-        path: "Announcements_News ",
-        name: "side-menu-inbox",
-        component: Inbox,
       },
       {
         path: "Task_&_Process_Information ",
@@ -246,11 +152,6 @@ const routes = [
         component: Chat,
       },
       {
-        path: "post",
-        name: "side-menu-post",
-        component: Post,
-      },
-      {
         path: "calendar",
         name: "side-menu-calendar",
         component: Calendar,
@@ -260,31 +161,7 @@ const routes = [
         name: "side-menu-crud-data-list",
         component: CrudDataList,
       },
-      {
-        path: "Damaged",
-        name: "side-menu-Damaged",
-        component: CrudForm,
-      },
-      {
-        path: "employeeAccess",
-        name: "side-menu-Employee-Access",
-        component: employeeAccess,
-      },
-      {
-        path: "facilitiesMaintenance",
-        name: "side-menu-Facilities-Maintenance",
-        component: facilitiesMaintenance,
-      },
-      {
-        path: "Hardware",
-        name: "side-menu-Hardware",
-        component: Hardware,
-      },
-      {
-        path: "employeeCustody",
-        name: "side-menu-Employee-Custody",
-        component: employeeCustody,
-      },
+
       {
         path: "users-layout-1",
         name: "side-menu-users-layout-1",
@@ -339,11 +216,6 @@ const routes = [
         path: "PoliciesDetails/:id",
         name: "side-menu-Policies-details",
         component: PoliciesDetails,
-      },
-      {
-        path: "Announcements",
-        name: "side-menu-blog-layout-2",
-        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -416,16 +288,6 @@ const routes = [
         component: SlideOver,
       },
       {
-        path: "notification",
-        name: "side-menu-notification",
-        component: Notification,
-      },
-      {
-        path: "Departments ",
-        name: "side-menu-tab",
-        component: DepartmentList,
-      },
-      {
         path: "accordion",
         name: "side-menu-accordion",
         component: Accordion,
@@ -454,11 +316,6 @@ const routes = [
         path: "dropdown",
         name: "side-menu-dropdown",
         component: Dropdown,
-      },
-      {
-        path: "Policies ",
-        name: "side-menu-typography",
-        component: Typography,
       },
       {
         path: "icon",
@@ -547,11 +404,6 @@ const routes = [
         component: Categories,
       },
       {
-        path: "add-product",
-        name: "simple-menu-add-product",
-        component: AddProduct,
-      },
-      {
         path: "add-department",
         name: "simple-menu-add-department",
         component: AddDepartment,
@@ -560,11 +412,6 @@ const routes = [
         path: "add-policies",
         name: "simple-menu-add-policies",
         component: AddPolicies,
-      },
-      {
-        path: "employee-list",
-        name: "simple-menu-product-list",
-        component: EmployeeList,
       },
       {
         path: "product-grid",
@@ -580,11 +427,6 @@ const routes = [
         path: "transaction-detail",
         name: "simple-menu-transaction-detail",
         component: TransactionDetail,
-      },
-      {
-        path: "seller-list",
-        name: "simple-menu-seller-list",
-        component: SellerList,
       },
       {
         path: "Training",
@@ -630,11 +472,6 @@ const routes = [
         path: "crud-data-list",
         name: "simple-menu-crud-data-list",
         component: CrudDataList,
-      },
-      {
-        path: "Damaged",
-        name: "simple-menu-Damaged",
-        component: CrudForm,
       },
       {
         path: "employeeAccess",
@@ -695,11 +532,6 @@ const routes = [
         path: "blog-layout-1",
         name: "simple-menu-blog-layout-1",
         component: BlogLayout1,
-      },
-      {
-        path: "Announcements",
-        name: "simple-menu-blog-layout-2",
-        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -770,11 +602,6 @@ const routes = [
         path: "slide-over",
         name: "simple-menu-slide-over",
         component: SlideOver,
-      },
-      {
-        path: "notification",
-        name: "simple-menu-notification",
-        component: Notification,
       },
       {
         path: "Departments",
@@ -903,11 +730,6 @@ const routes = [
         component: Categories,
       },
       {
-        path: "add-product",
-        name: "top-menu-add-product",
-        component: AddProduct,
-      },
-      {
         path: "add-department",
         name: "top-menu-add-department",
         component: AddDepartment,
@@ -936,11 +758,6 @@ const routes = [
         path: "transaction-detail",
         name: "top-menu-transaction-detail",
         component: TransactionDetail,
-      },
-      {
-        path: "seller-list",
-        name: "top-menu-seller-list",
-        component: SellerList,
       },
       {
         path: "Training",
@@ -986,11 +803,6 @@ const routes = [
         path: "crud-data-list",
         name: "top-menu-crud-data-list",
         component: CrudDataList,
-      },
-      {
-        path: "Damaged",
-        name: "top-menu-Damaged",
-        component: CrudForm,
       },
       {
         path: "employeeAccess",
@@ -1051,11 +863,6 @@ const routes = [
         path: "blog-layout-1",
         name: "top-menu-blog-layout-1",
         component: BlogLayout1,
-      },
-      {
-        path: "Announcements",
-        name: "top-menu-blog-layout-2",
-        component: announcements,
       },
       {
         path: "blog-layout-3",
@@ -1126,11 +933,6 @@ const routes = [
         path: "slide-over",
         name: "top-menu-slide-over",
         component: SlideOver,
-      },
-      {
-        path: "notification",
-        name: "top-menu-notification",
-        component: Notification,
       },
       {
         path: "Departments",
@@ -1235,6 +1037,127 @@ const routes = [
     component: Login,
   },
   {
+    path: "/Howard/Company",
+    name: "company",
+    component: Company,
+  },
+  {
+    path: "/Howard/Announcements",
+    name: "announcements",
+    component:announcements,
+  },
+  {
+    path: "/Howard/ITMove",
+    name: "IT-Move",
+    component: ITMove,
+  },
+  {
+    path: "/Howard/employee-list",
+    name: "product-list",
+    component: EmployeeList,
+  },
+
+  {
+    path: "/Howard/transaction-list",
+    name: "transaction-list",
+    component: TransactionList,
+  },
+  {
+    path: "/Howard/Access-list",
+    name: "Access-list",
+    component: Accesslist,
+  },
+  {
+    path: "/Howard/Facilities-list",
+    name: "Facilities-list",
+    component: FacilitiesList,
+  },
+  {
+    path: "/Howard/Custody-list",
+    name: "Custody-list",
+    component: CustodyList,
+  },
+  {
+    path: "/Howard/Damaged-list",
+    name: "Damaged-list",
+    component: DamagedList,
+  },
+  {
+    path: "/Howard/Equipment-Request-list",
+    name: "Equipment-Request-list",
+    component: EquipmentRequestList,
+  },
+  {
+    path: "/Howard/Termination-list",
+    name: "Termination-list",
+    component: TerminationNotice,
+  },
+  {
+    path: "/Howard/Hardware-Request-list",
+    name: "Hardware-Request-list",
+    component: HardwareRequest,
+  },
+  {
+    path: "/Howard/Departments ",
+    name: "tab",
+    component: DepartmentList,
+  },
+  {
+    path: "/Howard/IT-Move-list",
+    name: "IT-Move-list",
+    component: ITMoveList,
+  },
+  {
+    path: "/Howard/safety",
+    name: "safety",
+    component: safety,
+  },
+  {
+    path: "/Howard/Modula-Termination-Notice",
+    name: "Modula-Termination-Notice",
+    component: modulaTerminationNotice,
+  },
+  {
+    path: "/Howard/NewHireITEquipment",
+    name: "NewHireITEquipment",
+    component: NewHireITEquipment,
+  },
+  {
+    path: "/Howard/employee-list",
+    name: "product-list",
+    component: EmployeeList,
+  },
+  {
+    path: "/Howard/employeeCustody",
+    name: "Employee-Custody",
+    component: employeeCustody,
+  },
+  {
+    path: "/Howard/facilitiesMaintenance",
+    name: "Facilities-Maintenance",
+    component: facilitiesMaintenance,
+  },
+  {
+    path: "/Howard/Training",
+    name: "Training",
+    component: Training,
+  },
+  {
+    path: "/Howard/Hardware",
+    name: "Hardware",
+    component: Hardware,
+  },
+  {
+    path: "/Howard/post",
+    name: "post",
+    component: Post,
+  },
+  {
+    path: "/Howard/employeeAccess",
+    name: "Employee-Access",
+    component: employeeAccess,
+  },
+  {
     path: "/Howard/Purchasing",
     name: "Purchasing",
     component: Purchasing,
@@ -1245,17 +1168,52 @@ const routes = [
     component: Landing,
   },
   {
+    path: "/Howard/HrInput",
+    name: "HrInput",
+    component: HrInput,
+  },
+  {
+    path: "/Howard/add-employee",
+    name: "add-product",
+    component: AddProduct,
+  },
+  {
+    path: "/Howard/add-department",
+    name: "add-department",
+    component: AddDepartment,
+  },
+  {
+    path: "/Howard/add-policies",
+    name: "add-policies",
+    component: AddPolicies,
+  },
+  {
+    path: "/Howard/Damaged",
+    name: "Damaged",
+    component: CrudForm,
+  },
+  {
+    path: "/Howard/PhoneNo",
+    name: "PhoneNo",
+    component: PhoneNo,
+  },
+  {
+    path: "/Howard/Policies ",
+    name: "typography",
+    component: Typography,
+  },
+  {
     path: "/Howard/Corporate-Planning-Department",
     name: "Corporate",
     component: Corporate,
   },
   {
-    path: "/error-page",
+    path: "/Howard/error-page",
     name: "error-page",
     component: ErrorPage,
   },
   {
-    path: "/Howard/:pathMatch(.*)*",
+    path: "/:pathMatch(.*)*",
     component: ErrorPage,
   },
 ];

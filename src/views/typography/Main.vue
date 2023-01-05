@@ -1,12 +1,16 @@
 <template>
-  <div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto">Policies</h2>
-  </div>
-  <div class="grid grid-cols-12 gap-6 mt-5">
+  <Header></Header>
+
+
+  <div class="grid grid-cols-12 gap-6 mt-5 md:w-3/4 mx-auto box1 px-10 pb-10">
+    <div class="col-span-12 intro-y text-center mt-3">
+        <h2 class="text-lg font-medium mr-auto">Policies</h2>
+      </div>
     <div
-      class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
+      class="intro-y col-span-12 flex  flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-primary shadow-md mr-2" href="/Howard/add-policies">Add Policies</a>
+      
+      <a class="btn btn-dark shadow-md mr-2" href="/Howard/add-policies">Add Policies</a>
       
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
@@ -14,7 +18,7 @@
       
     </div>
     <!-- BEGIN: Data List -->
-    <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+    <div class="intro-y col-span-12 overflow-auto">
       <table class="table table-report -mt-2">
         <thead>
           <tr>
@@ -168,7 +172,7 @@
         >
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary w-24">Save</button>
+        <button type="submit" class="btn btn-dark w-24">Save</button>
       </div>
     </form>
     </ModalBody>
@@ -281,4 +285,14 @@ created() {
             }
                 }
   }
+</script>
+
+<script setup>
+import { onMounted } from "vue";
+import Header from "../../global-components/Header/Main.vue";
+
+onMounted(() => {
+  dom("body").removeClass("main").removeClass("error-page").removeClass("login").removeClass("landing").addClass("forms");
+});
+
 </script>

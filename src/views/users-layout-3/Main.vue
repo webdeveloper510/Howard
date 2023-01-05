@@ -4,7 +4,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <button class="btn btn-primary shadow-md mr-2">Add New User</button>
+      <button class="btn btn-dark shadow-md mr-2">Add New User</button>
       <Dropdown>
         <DropdownToggle class="btn px-2 box">
           <span class="w-5 h-5 flex items-center justify-center">
@@ -93,7 +93,7 @@
         <div
           class="text-center lg:text-right p-5 border-t border-slate-200/60 dark:border-darkmode-400"
         >
-          <button class="btn btn-primary py-1 px-2 mr-2">Message</button>
+          <button class="btn btn-dark py-1 px-2 mr-2">Message</button>
           <button class="btn btn-outline-secondary py-1 px-2">Profile</button>
         </div>
       </div>

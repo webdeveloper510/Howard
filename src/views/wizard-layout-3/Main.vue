@@ -10,7 +10,7 @@
       <div
         class="intro-x lg:text-center flex items-center lg:block flex-1 z-10"
       >
-        <button class="w-10 h-10 rounded-full btn btn-primary">1</button>
+        <button class="w-10 h-10 rounded-full btn btn-dark">1</button>
         <div class="lg:w-32 font-medium text-base lg:mt-3 ml-3 lg:mx-auto">
           Create New Account
         </div>
@@ -135,7 +135,7 @@
           class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5"
         >
           <button class="btn btn-secondary w-24">Previous</button>
-          <button class="btn btn-primary w-24 ml-2">Next</button>
+          <button class="btn btn-dark w-24 ml-2">Next</button>
         </div>
       </div>
     </div>
