@@ -4,7 +4,7 @@
     <h2 class="intro-y text-lg text-center font-medium mt-10">Employee Access Badge List</h2>
   <div class="grid grid-cols-12 gap-6 mt-5">
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-      <a class="btn btn-dark shadow-md mr-2" href="/Howard/employeeAccess">Add Employee Access Badge </a>
+      <a class="btn btn-dark shadow-md mr-2" href="/employeeAccess">Add Employee Access Badge </a>
 
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries

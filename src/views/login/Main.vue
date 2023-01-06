@@ -7,7 +7,7 @@
         <!-- BEGIN: Login Info -->
 
         <div class="hidden xl:flex flex-col min-h-screen">
-          <a href="/Howard/" class="-intro-x flex items-center pt-5">
+          <a href="/" class="-intro-x flex items-center pt-5">
             <img alt="Midone Tailwind HTML Admin Template"
               src="https://www.cognitoforms.com/file/PY98Tpd3p2cUH_ojupJJzh6dKQWEicACg9A7BuMhySwbN2I0NPclvU6pOcXxgN0-" />
           </a>

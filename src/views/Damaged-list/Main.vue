@@ -7,7 +7,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-dark shadow-md mr-2" href="/Howard/Damaged">Add Damaged & Lost Equipment Report </a>
+      <a class="btn btn-dark shadow-md mr-2" href="/Damaged">Add Damaged & Lost Equipment Report </a>
 
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries

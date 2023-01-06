@@ -6,7 +6,7 @@
     <div
       class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2"
     >
-      <a class="btn btn-dark shadow-md mr-2" href="/Howard/NewHireITEquipment">Add Equipment Request </a>
+      <a class="btn btn-dark shadow-md mr-2" href="/NewHireITEquipment">Add Equipment Request </a>
 
       <div class="hidden md:block mx-auto text-slate-500">
         Showing 1 to 10 of 150 entries
