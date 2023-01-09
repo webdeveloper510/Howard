@@ -7,6 +7,10 @@
 
         <!-- BEGIN: Product Information -->
         <div class="intro-y box1 p-5 mt-5 md:w-3/4 mx-auto">
+          <router-link :to="{ name: 'tab' }" tag="a" class="font-medium -intro-x md:flex mt-2 justify-end -mb-10">
+                   <div class="font-bold">View Departments
+                    </div>
+                </router-link>
           <div class="intro-y text-center my-5">
             <h2 class="text-lg font-medium mr-auto">Add Department</h2>
           </div>

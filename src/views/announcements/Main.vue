@@ -1,7 +1,7 @@
 <template>
   <Header></Header>
   
-  <div class="intro-y box1 p-5 md:w-3/4 mx-auto gap-6 mt-5">
+  <div class="intro-y box1 h-screen p-5 md:w-3/4 mx-auto gap-6 mt-5">
     <div class="w-full sm:w-auto flex justify-end mt-4 sm:mt-0">
       <a href="/post" class="btn btn-dark space shadow-md mr-2">Add New Announcements/News</a>
     </div>

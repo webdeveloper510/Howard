@@ -1163,7 +1163,7 @@ const routes = [
     component: Purchasing,
   },
   {
-    path: "/",
+    path: "/Howard",
     name: "landing",
     component: Landing,
   },

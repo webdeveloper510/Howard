@@ -2,7 +2,7 @@
   <Header></Header>
   <div>
     <div class="my-5 intro-y">
-      <h2 class="text-3xl font-medium space large-tittle  leading-none mt-3 text-center">Purchasing</h2>
+      <h2 class="font-medium text-center uppercase space text-3xl mx-auto mt-3">Purchasing</h2>
       <div class="saprater"></div>
       <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 lg:col-span-8 md:col-span-8">    
@@ -17,7 +17,7 @@
             <img src="https://img.freepik.com/free-photo/closeup-people-using-digital-tablet_53876-16081.jpg?w=2000"/>
           </div>
         </div>
-      <h2 class="text-3xl font-medium space leading-none mt-5 text-center">Purchasing Department Duties and Responsibilities</h2>
+      <h2 class="font-medium text-center uppercase space text-3xl mx-auto mt-5">Purchasing Department Duties and Responsibilities</h2>
       <div class="saprater"></div>
      
       <p class="text-lg text-center space mt-3">After establishing an effective purchase policy, the organization can implement 
@@ -98,6 +98,7 @@
             <p class="space ">During these negotiations, vendors and suppliers should be managed properly. The procurement policy should emphasize the importance of efficient vendor management. Ensuring accurate order placements, issuing detailed purchase orders, and sending advance intimations for urgent purchases are some policies that the organization must follow. These will help in building and sustaining a reliable,
                profitable, and long-term business partnership with vendors while preventing vendor fraud. </p>
         </div>
+        <div class="intro-y col-span-12 lg:col-span-4  p-5 text-center"></div>
         <div class="intro-y col-span-12 lg:col-span-4 box p-5 text-center">
             <h1 class="text-xl font-medium mb-3 space ">Legal Liabilities</h1>
             <p class="space ">Throughout this procedure, the purchasing policy must also adhere to state and federal purchasing laws. Under these strict guidelines, the staff should work coherently with government agencies.

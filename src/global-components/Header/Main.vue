@@ -36,7 +36,7 @@
                  <div class="font-bold"> Home </div> 
                 </router-link>
                 <div class="dropdown inline-block landing-side" data-tw-placement="top" >
-                  <a class="dropdown-toggle font-medium  -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
+                  <a class="dropdown-toggle font-medium  -intro-x flex mt-2 cursor-pointer" aria-expanded="false" data-tw-toggle="dropdown">
                     <LayoutIcon class="block mr-3"/>
                    <div class="font-bold"> Forms </div></a>
                   <div class="dropdown-menu w-40  landing-dropdown">
@@ -85,7 +85,7 @@
                   </div>
                 </div>
                 <div class="dropdown inline-block landing-side" data-tw-placement="top" >
-                  <a class="dropdown-toggle font-medium  -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
+                  <a class="dropdown-toggle font-medium cursor-pointer -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
                     <LayoutIcon class="block mr-3"/>
                    <div class="font-bold"> Lists </div></a>
                   <div class="dropdown-menu w-40  landing-dropdown">

@@ -1,6 +1,6 @@
 <template>
   <Header></Header>
-  <h2 class="intro-y text-3xl font-medium leading-none my-3 text-center space">HR Department Input – Intranet</h2>
+  <h2 class="intro-y text-3xl font-medium leading-none my-3 uppercase text-center space">HR Department Input – Intranet</h2>
     <div class="saprater"></div>
   <div class=" p-4 md:w-3/4 mb-5 mx-auto">
   <h2 class="intro-y text-lg text-center space font-medium mt-3">Department Responsibilities</h2>

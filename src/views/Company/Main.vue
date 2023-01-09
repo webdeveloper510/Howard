@@ -24,7 +24,7 @@
   </div>
 
   <div class="intro-y">
-    <h1 class="font-bold text-center text-2xl space mt-8">Company Values</h1>
+    <h1 class="font-bold text-center uppercase text-2xl space mt-8">Company Values</h1>
     <div class="saprater"></div>
     <div class="intro-y box grid grid-cols-12 gap-6 p-5 mt-5">
       <div class="col-span-12 md:col-span-4 space lg:col-span-4 p-5 ">
@@ -79,7 +79,7 @@
   </div>
 
   <div class="intro-y space">
-    <h1 class="font-bold text-center text-2xl space mt-8">Leadership Team</h1>
+    <h1 class="font-bold text-center uppercase text-2xl space mt-8">Leadership Team</h1>
     <div class="saprater"></div>
     <p class="text-center space mt-5">This will be a photo album page. It will list key personnel, their titles and include a
           biography that they will submit for publishing.</p>

@@ -5,6 +5,10 @@
       <div class="intro-y col-span-11 2xl:col-span-9">
         <!-- BEGIN: Product Information -->
         <div class="intro-y box1 p-5 mt-5 mx-auto md:w-3/4">
+          <router-link :to="{ name: 'product-list' }" tag="a" class="font-medium -intro-x md:flex mt-2 justify-end -mb-10">
+                   <div class="font-bold">View Employee Onboarding
+                    </div>
+                </router-link>
           <div class="intro-y text-center my-5">
             <h2 class="text-lg font-medium mr-auto">Add Employee</h2>
           </div>

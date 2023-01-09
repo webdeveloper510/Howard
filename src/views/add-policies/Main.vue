@@ -6,9 +6,14 @@
 
         <!-- BEGIN: Product Information -->
         <div class="intro-y box1 p-5 mt-5 md:w-3/4 mx-auto">
+          <router-link :to="{ name: 'typography' }" tag="a" class="font-medium -intro-x md:flex mt-2 justify-end -mb-10">
+                   <div class="font-bold">View Policies
+                    </div>
+                </router-link>
           <div class="intro-y text-center my-5">
             <h2 class="text-lg font-medium mr-auto">Add Policy</h2>
           </div>
+         
           <div class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5">
             <div
               class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5">
