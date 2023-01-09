@@ -3,7 +3,7 @@
     <div class="top-bar-boxed flex items-center my-4">
       <!-- BEGIN: Logo -->
       <router-link :to="{ name: 'landing' }" tag="a" class="-intro-x md:flex mx-auto">
-        <img class="h-16" alt="Logo"
+        <img class="h-24" alt="Logo"
           src="../../assets/images/Website_logo.svg" />
       </router-link>
       <!-- END: Logo -->
@@ -14,7 +14,7 @@
 
         <!-- BEGIN: Small Slide Over Toggle -->
         <button data-tw-toggle="modal" data-tw-target="#small-slide-over-size-preview" class="btn ">
-          <AlignJustifyIcon class="block mx-auto" />
+          <AlignJustifyIcon class="block mx-auto w-10 h-10" />
         </button>
         <!-- END: Small Slide Over Toggle -->
 

@@ -100,7 +100,7 @@
     </div>
 
     <div class="py-5 md:mx-6 intro-y">
-      <h1 class="font-medium text-center space text-3xl mx-auto mt-3">Calendar</h1>
+      <h1 class="font-medium text-center uppercase space text-3xl mx-auto mt-3">Calendar</h1>
          <div class="saprater"></div>
       <div class="grid grid-cols-12 gap-5 mt-5">
     <!-- BEGIN: Calendar Side Menu -->
@@ -305,7 +305,7 @@
   </div>
 
   <div class="py-5 md:mx-6 intro-y">
-      <h1 class="font-medium text-center space text-3xl mx-auto mt-3">Map</h1>
+      <h1 class="font-medium text-center space uppercase text-3xl mx-auto mt-3">Map</h1>
          <div class="saprater"></div>
          <div class="my-3 ">
           <img src="../../assets/images/map1.jpg" class="w-full rounded-md" data-action="zoom"/>
@@ -349,7 +349,7 @@
       </div>
       <div class="intro-y grid grid-cols-12 gap-6 mt-5">
         <div class="col-span-12 md:col-span-12 lg:col-span-12 cursor-pointer pt-5 ">
-          <h2 class="text-3xl font-medium leading-none text-center space pt-1"> Contact Us</h2>
+          <h2 class="text-3xl font-medium leading-none text-center uppercase space pt-1"> Contact Us</h2>
           <div class="saprater"></div>
         </div>
         <div class="col-span-12 md:col-span-3 lg:col-span-3"></div>
