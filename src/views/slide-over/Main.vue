@@ -565,12 +565,12 @@
           <Preview>
             <!-- BEGIN: Slide Over Toggle -->
             <div class="text-center">
-              <a
-                href="javascript:;"
-                @click="headerFooterSlideOverPreview = true"
-                class="btn btn-primary"
-                >Show Slide Over</a
-              >
+                <a
+                  href="javascript:;"
+                  @click="headerFooterSlideOverPreview = true"
+                  class="btn btn-primary"
+                  >Show Slide Over</a
+                >
             </div>
             <!-- END: Slide Over Toggle -->
             <!-- BEGIN: Slide Over Content -->

@@ -13,17 +13,30 @@
         <!-- BEGIN: Slide Over Toggle -->
 
         <!-- BEGIN: Small Slide Over Toggle -->
-        <button data-tw-toggle="modal" data-tw-target="#small-slide-over-size-preview" class="btn ">
-          <AlignJustifyIcon class="block mx-auto w-10 h-10" />
-        </button>
+        <a href="javascript:;"
+                @click="headerFooterSlideOverPreview = true"
+                class="btn btn-secondary-soft"
+                > <AlignJustifyIcon class="block mx-auto w-10 h-10" /></a
+              >
+       
         <!-- END: Small Slide Over Toggle -->
 
         <!-- END: Slide Over Toggle -->
         <!-- BEGIN: Slide Over Content -->
-        <div id="small-slide-over-size-preview" class="modal modal-slide-over" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <div class="modal-header block py-5">
+        <Modal
+              backdrop="static"
+              :slideOver="true"
+              :show="headerFooterSlideOverPreview"
+              @hidden="headerFooterSlideOverPreview = false"
+            >
+              <a
+                @click="headerFooterSlideOverPreview = false"
+                class="absolute top-0 left-0 right-auto mt-4 -ml-12"
+                href="javascript:;"
+              >
+                <XIcon class="w-8 h-8 text-slate-400" />
+              </a>
+              <ModalHeader class="block py-5">
                 <img
                   src="../../assets/images/Website_logo.svg"
                   class="img-fluid mx-auto my-3" />
@@ -32,8 +45,8 @@
                         <UserIcon class="w-4 h-4 mr-2" /> Login
                     </button>
                 </router-link>
-              </div>
-              <div class="modal-body p-0 h-screen">
+              </ModalHeader>
+              <ModalBody class="p-0 h-screen">
                 <router-link :to="{ name: 'landing' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium landing-side -intro-x flex  mt-2 ">
                   <HomeIcon class="block mr-3"  />
@@ -72,42 +85,42 @@
                   <div class="dropdown-menu w-40  landing-dropdown">
                     <ul class="dropdown-content">
                       <li>
-                        <router-link :to="{ name: 'Employee-Access' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Employee-Access' }" tag="a" class="-intro-x md:flex dropdown-item"  @click="headerFooterSlideOverPreview = false">
                           Employee Access Badge Request
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'Facilities-Maintenance' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Facilities-Maintenance' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           Facilities Maintenance Request
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'Employee-Custody' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Employee-Custody' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           Equipment Custody Record
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'Hardware' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Hardware' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           Hardware & Software Request
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'NewHireITEquipment' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'NewHireITEquipment' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           New Hire IT Equipment Form
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'Modula-Termination-Notice' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Modula-Termination-Notice' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           Modula Termination Notice
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'IT-Move' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'IT-Move' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                           IT Move Request
                           </router-link>
                       </li>
                       <li>
-                        <router-link :to="{ name: 'Damaged' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                        <router-link :to="{ name: 'Damaged' }" tag="a" class="-intro-x md:flex dropdown-item" @click="headerFooterSlideOverPreview = false">
                             Damaged & Lost Equipment
                           </router-link>
                       </li>
@@ -271,13 +284,15 @@
                    <div class="font-bold"> Safety </div>
                 </router-link> -->
                
-              </div>
-            </div>
-          </div>
-        </div>
+              </ModalBody>
+           </Modal>
         <!-- END: Slide Over Content -->
       </div>
       <!-- END: Account Menu -->
     </div>
   </div>
 </template>
+<script setup>
+import { ref } from "vue";
+const headerFooterSlideOverPreview = ref(false);
+</script>
