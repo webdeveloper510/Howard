@@ -43,7 +43,7 @@
                                 {{ faker.phones[0].directory }}
                             </td>
                             <td class="text-center">
-                                <a href="" class="font-medium whitespace-nowrap">{{ faker.phones[0].ext }}</a>
+                                <p class="font-medium whitespace-nowrap">{{ faker.phones[0].ext }}</p>
                             </td>
                             <td class="text-center capitalize">
                                 {{ faker.phones[0].cell }}

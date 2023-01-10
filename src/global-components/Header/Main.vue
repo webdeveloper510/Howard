@@ -27,13 +27,43 @@
                 <img
                   src="../../assets/images/Website_logo.svg"
                   class="img-fluid mx-auto my-3" />
-                <h2 class="font-medium text-base text-center">User Name</h2>
+                  <router-link :to="{ name: 'login' }" tag="a" class="-intro-x  ">
+                    <button class="btn btn-elevated-rounded-dark md:flex mx-auto  mb-2">
+                        <UserIcon class="w-4 h-4 mr-2" /> Login
+                    </button>
+                </router-link>
               </div>
-              <div class="modal-body p-0">
+              <div class="modal-body p-0 h-screen">
                 <router-link :to="{ name: 'landing' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium landing-side -intro-x flex  mt-2 ">
                   <HomeIcon class="block mr-3"  />
                  <div class="font-bold"> Home </div> 
+                </router-link>
+                <router-link :to="{ name: 'company' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side ">
+                  <TargetIcon class="block mr-3"/>
+                   <div class="font-bold">
+                     Company Strategy & Goals
+                   </div>
+                </router-link>
+                <router-link :to="{ name: 'announcements' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side ">
+                  <RssIcon class="block mr-3"/>
+                   <div class="font-bold"> News & Announcements </div>
+                </router-link>
+                <router-link :to="{ name: 'typography' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side">
+                  <MapIcon class="block mr-3"/>
+                   <div class="font-bold">
+                    Policies
+                    </div>
+                </router-link>
+                <router-link :to="{ name: 'PhoneNo' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex mt-2 landing-side">
+                  <PhoneIcon class="block mr-3"/>
+                   <div class="font-bold">
+                     Phone Number
+                   </div> 
                 </router-link>
                 <div class="dropdown inline-block landing-side" data-tw-placement="top" >
                   <a class="dropdown-toggle font-medium  -intro-x flex mt-2 cursor-pointer" aria-expanded="false" data-tw-toggle="dropdown">
@@ -84,7 +114,12 @@
                     </ul>
                   </div>
                 </div>
-                <div class="dropdown inline-block landing-side" data-tw-placement="top" >
+                <router-link :to="{ name: 'Training' }" tag="a" data-tw-dismiss="modal"
+                  class="font-medium -intro-x md:flex  mt-2 landing-side">
+                  <WindIcon class="block mr-3"/>
+                   <div class="font-bold"> Training </div>
+                </router-link>
+                <!-- <div class="dropdown inline-block landing-side" data-tw-placement="top" >
                   <a class="dropdown-toggle font-medium cursor-pointer -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
                     <LayoutIcon class="block mr-3"/>
                    <div class="font-bold"> Lists </div></a>
@@ -132,34 +167,71 @@
                       </li>
                     </ul>
                   </div>
+                </div> -->
+                <div class="dropdown inline-block landing-side" data-tw-placement="top" >
+                  <a class="dropdown-toggle font-medium cursor-pointer -intro-x flex mt-2" aria-expanded="false" data-tw-toggle="dropdown">
+                    <LayoutIcon class="block mr-3"/>
+                   <div class="font-bold"> Departments </div></a>
+                  <div class="dropdown-menu w-40  landing-dropdown">
+                    <ul class="dropdown-content">
+                      <li>
+                        <router-link :to="{ name: 'Access-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Business Development 
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'Facilities-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Customer Service 
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'Custody-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Facilities
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'HrInput' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          HR
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'Equipment-Request-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Information Technology
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'IT-Move-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Marketing
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'Damaged-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Operations
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'safety' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Safety & EHS 
+                          </router-link>
+                      </li>
+                      <li>
+                        <router-link :to="{ name: 'Damaged-list' }" tag="a" class="-intro-x md:flex dropdown-item" data-tw-dismiss="modal">
+                          Sales 
+                          </router-link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <router-link :to="{ name: 'announcements' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium -intro-x md:flex mt-2 landing-side ">
-                  <RssIcon class="block mr-3"/>
-                   <div class="font-bold"> News & Announcements </div>
-                </router-link>
-                <router-link :to="{ name: 'company' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium -intro-x md:flex mt-2 landing-side ">
-                  <TargetIcon class="block mr-3"/>
-                   <div class="font-bold">
-                     Company Strategy & Goals
-                   </div>
-                </router-link>
-                <router-link :to="{ name: 'HrInput' }" tag="a" data-tw-dismiss="modal"
+                
+                <!-- <router-link :to="{ name: 'HrInput' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side ">
                   <TargetIcon class="block mr-3"/>
                    <div class="font-bold">
                     HR Department Input
                    </div>
                 </router-link>
-                <router-link :to="{ name: 'typography' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium -intro-x md:flex mt-2 landing-side">
-                  <MapIcon class="block mr-3"/>
-                   <div class="font-bold">
-                    Policies
-                    </div>
-                </router-link>
-                <router-link :to="{ name: 'product-list' }" tag="a" data-tw-dismiss="modal"
+                 -->
+                <!-- <router-link :to="{ name: 'product-list' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side">
                   <UserPlusIcon class="block mr-3"/>
                    <div class="font-bold">New Employee Onboarding
@@ -172,13 +244,7 @@
                      Purchasing
                    </div> 
                 </router-link>
-                <router-link :to="{ name: 'PhoneNo' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium -intro-x md:flex mt-2 landing-side">
-                  <PhoneIcon class="block mr-3"/>
-                   <div class="font-bold">
-                     Phone Number
-                   </div> 
-                </router-link>
+               
                 <router-link :to="{ name: 'Corporate' }" tag="a" data-tw-dismiss="modal"
                   class=" font-medium -intro-x md:flex mt-2 landing-side">
                   <FileIcon class="block mr-3"/>
@@ -192,27 +258,19 @@
                    <div class="font-bold">
                     Paylocity
                     </div>
-                </a>
-                <router-link :to="{ name: 'tab' }" tag="a" data-tw-dismiss="modal"
+                </a> -->
+                <!-- <router-link :to="{ name: 'tab' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex  mt-2 landing-side">
                   <GitPullRequestIcon class="block mr-3"/>
                    <div class="font-bold"> Departments </div>
                 </router-link>
-                <router-link :to="{ name: 'Training' }" tag="a" data-tw-dismiss="modal"
-                  class="font-medium -intro-x md:flex  mt-2 landing-side">
-                  <WindIcon class="block mr-3"/>
-                   <div class="font-bold"> Training </div>
-                </router-link>
+               
                 <router-link :to="{ name: 'safety' }" tag="a" data-tw-dismiss="modal"
                   class="font-medium -intro-x md:flex mt-2 landing-side">
                   <ShieldIcon class="block mr-3"/>
                    <div class="font-bold"> Safety </div>
-                </router-link>
-                <router-link :to="{ name: 'login' }" tag="a" class="-intro-x md:flex ml-5">
-                    <button class="btn btn-elevated-rounded-dark ml-5 mr-2 mb-2">
-                        <UserIcon class="w-4 h-4 mr-2" /> Login
-                    </button>
-                </router-link>
+                </router-link> -->
+               
               </div>
             </div>
           </div>

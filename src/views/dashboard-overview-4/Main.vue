@@ -515,9 +515,9 @@
                     </div>
                   </td>
                   <td>
-                    <a href="" class="font-medium whitespace-nowrap">{{
+                    <p class="font-medium whitespace-nowrap">{{
                       faker.products[0].name
-                    }}</a>
+                    }}</p>
                     <div
                       class="text-slate-500 text-xs whitespace-nowrap mt-0.5"
                     >

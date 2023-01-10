@@ -80,16 +80,15 @@
               <input class="form-check-input" type="checkbox" />
             </td>
             <td class="w-40 !py-4">
-              <a
-                href=""
+              <p
                 class="underline decoration-dotted whitespace-nowrap"
-                >{{ "#INV-" + faker.totals[0] + "807556" }}</a
+                >{{ "#INV-" + faker.totals[0] + "807556" }}</p
               >
             </td>
             <td class="w-40">
-              <a href="" class="font-medium whitespace-nowrap">{{
+              <p class="font-medium whitespace-nowrap">{{
                 faker.users[0].name
-              }}</a>
+              }}</p>
               <div
                 v-if="faker.trueFalse[0]"
                 class="text-slate-500 text-xs whitespace-nowrap mt-0.5"

@@ -169,9 +169,9 @@
                         :content="`Uploaded at ${faker.dates[0]}`"
                       />
                     </div>
-                    <a href="" class="font-medium whitespace-nowrap ml-4">{{
+                    <p class="font-medium whitespace-nowrap ml-4">{{
                       faker.products[0].name
-                    }}</a>
+                    }}</p>
                   </div>
                 </td>
                 <td class="text-right">${{ faker.totals[0] + ",000.00" }}</td>

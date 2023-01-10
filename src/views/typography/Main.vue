@@ -41,9 +41,9 @@
               }}
           </td>
             <td>
-              <a href="" class="font-medium whitespace-nowrap">
+              <p class="font-medium whitespace-nowrap">
                 {{ policy.name }}
-              </a>
+              </p>
             
             </td> 
             <td>

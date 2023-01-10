@@ -261,7 +261,11 @@
 
 .slider-content {
   position: absolute;
-  left: 6%;
-  top: 24%;
+  left: 0;
+  padding-top: 13%;
+  height: 100%;
+  width: 100%;
+  background-color: #18171745;
+  text-align: center;
   color: white !important;
 }

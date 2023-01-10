@@ -89,21 +89,20 @@
               </div>
             </td>
             <td>
-              <a href="" class="font-medium whitespace-nowrap">{{
+              <p class="font-medium whitespace-nowrap">{{
                 faker.categories[0].name
-              }}</a>
+              }}</p>
               <div class="text-slate-500 text-xs whitespace-nowrap mt-0.5">
                 Tags: {{ faker.categories[0].tags }}
               </div>
             </td>
             <td>
-              <a
+              <p
                 class="text-slate-500 flex items-center mr-3"
-                href="javascript:;"
               >
                 <ExternalLinkIcon class="w-4 h-4 mr-2" />
                 /categories/{{ faker.categories[0].slug }}
-              </a>
+            </p>
             </td>
             <td class="w-40">
               <div

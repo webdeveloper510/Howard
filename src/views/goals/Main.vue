@@ -29,9 +29,9 @@
                   <Tippy tag="img" alt="Midone - HTML Admin Template" class="rounded-lg border-1 border-white shadow-md"
                     :src="faker.images[0]" :content="`Uploaded at ${faker.dates[0]}`" />
                 </div>
-                <a href="" class="font-medium whitespace-nowrap ml-4">{{
+                <p class="font-medium whitespace-nowrap ml-4">{{
                     faker.products[0].name
-                }}</a>
+                }}</p>
               </div>
             </td>
             <td class="whitespace-nowrap">
