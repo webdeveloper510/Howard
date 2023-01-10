@@ -193,6 +193,23 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.fc-h-event  {
+  border-color: rgb(var(--color-dark) / var(--tw-border-opacity)) !important;
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-dark) / var(--tw-bg-opacity)) !important;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important ;
+}
+.fc-button-group .fc-button-primary.fc-button-active {
+  border-color: rgb(var(--color-dark) / var(--tw-border-opacity)) !important;
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-dark) / var(--tw-bg-opacity)) !important;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important ;
+}
+
+
 @media only screen and (max-width: 768px) {
 .landing {
   padding-top: 0 !important;
